@@ -30,14 +30,14 @@ const setupRevealAnimations = () => {
   const delayedRevealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.74) {
+        if (entry.intersectionRatio >= 0.5) {
           entry.target.classList.add('is-visible')
           delayedRevealObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.74],
+      threshold: [0.5],
       rootMargin: '0px 0px 0px 0px',
     }
   )
@@ -45,45 +45,45 @@ const setupRevealAnimations = () => {
   const warumTriggerObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.995) {
+        if (entry.intersectionRatio >= 0.22) {
           entry.target.classList.add('is-visible')
           warumTriggerObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.995],
-      rootMargin: '0px 0px 0px 0px',
+      threshold: [0.22],
+      rootMargin: '0px 0px -8% 0px',
     }
   )
 
   const processRevealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.18) {
+        if (entry.intersectionRatio >= 0.12) {
           entry.target.classList.add('is-visible')
           processRevealObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.18],
-      rootMargin: '0px 0px 4% 0px',
+      threshold: [0.12],
+      rootMargin: '0px 0px 6% 0px',
     }
   )
 
   const processSequenceObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.995) {
+        if (entry.intersectionRatio >= 0.2) {
           entry.target.classList.add('is-sequenced')
           processSequenceObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.995],
-      rootMargin: '0px 0px 0px 0px',
+      threshold: [0.2],
+      rootMargin: '0px 0px -10% 0px',
     }
   )
 

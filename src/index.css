@@ -79,145 +79,52 @@ textarea {
   transition-delay: 0.32s;
 }
 
-/* Process stage sequential glow */
-.process-stage.is-sequenced .process-card {
-  animation: processCardPulse 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-}
-
-.process-stage.is-sequenced .process-card:nth-of-type(1) {
-  animation-delay: 0.10s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(2) {
-  animation-delay: 0.32s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(3) {
-  animation-delay: 1.26s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(4) {
-  animation-delay: 0.76s;
-}
-
-.process-stage.is-sequenced .process-card .process-ring {
-  animation: processRingPulse 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-}
-
-.process-stage.is-sequenced .process-card:nth-of-type(1) .process-ring {
-  animation-delay: 0.10s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(2) .process-ring {
-  animation-delay: 0.32s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(3) .process-ring {
-  animation-delay: 1.26s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(4) .process-ring {
-  animation-delay: 0.76s;
-}
-
-.process-stage.is-sequenced .process-card .process-glow {
-  animation: processGlowPulse 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-}
-
-.process-stage.is-sequenced .process-card:nth-of-type(1) .process-glow {
-  animation-delay: 0.10s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(2) .process-glow {
-  animation-delay: 0.32s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(3) .process-glow {
-  animation-delay: 1.26s;
-}
-.process-stage.is-sequenced .process-card:nth-of-type(4) .process-glow {
-  animation-delay: 0.76s;
-}
-
-@keyframes processCardPulse {
-  0% {
-    transform: translate3d(0, 0, 0);
-    box-shadow: 0 14px 34px rgba(183,155,108,0.08);
-  }
-  35% {
-    transform: translate3d(0, -4px, 0);
-    box-shadow: 0 28px 60px rgba(183,155,108,0.18);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    box-shadow: 0 14px 34px rgba(183,155,108,0.08);
-  }
-}
-
-@keyframes processRingPulse {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 1;
-    box-shadow: inset 0 0 0 1px rgba(214,190,146,0.55);
-  }
-  100% {
-    opacity: 0;
-    box-shadow: inset 0 0 0 1px rgba(214,190,146,0);
-  }
-}
-
-@keyframes processGlowPulse {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Process stage sequence when fully visible */
+/* Process stage sequence */
 .process-stage .process-card,
 .process-stage .process-line {
   will-change: transform, opacity, box-shadow;
 }
 
 .process-stage.is-sequenced .process-card {
-  animation: processCardPulse 1.95s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation: processCardPulse 1.35s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
 }
 
-.process-stage.is-sequenced .process-card:nth-of-type(1) { animation-delay: 0.30s; }
-.process-stage.is-sequenced .process-card:nth-of-type(2) { animation-delay: 0.92s; }
-.process-stage.is-sequenced .process-card:nth-of-type(3) { animation-delay: 1.54s; }
-.process-stage.is-sequenced .process-card:nth-of-type(4) { animation-delay: 2.16s; }
+.process-stage.is-sequenced .process-card:nth-of-type(1) { animation-delay: 0.08s; }
+.process-stage.is-sequenced .process-card:nth-of-type(2) { animation-delay: 0.38s; }
+.process-stage.is-sequenced .process-card:nth-of-type(3) { animation-delay: 0.68s; }
+.process-stage.is-sequenced .process-card:nth-of-type(4) { animation-delay: 0.98s; }
 
 .process-stage.is-sequenced .process-card .process-ring {
-  animation: processRingPulse 1.95s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation: processRingPulse 1.35s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
 }
 
-.process-stage.is-sequenced .process-card:nth-of-type(1) .process-ring { animation-delay: 0.30s; }
-.process-stage.is-sequenced .process-card:nth-of-type(2) .process-ring { animation-delay: 0.92s; }
-.process-stage.is-sequenced .process-card:nth-of-type(3) .process-ring { animation-delay: 1.54s; }
-.process-stage.is-sequenced .process-card:nth-of-type(4) .process-ring { animation-delay: 2.16s; }
+.process-stage.is-sequenced .process-card:nth-of-type(1) .process-ring { animation-delay: 0.08s; }
+.process-stage.is-sequenced .process-card:nth-of-type(2) .process-ring { animation-delay: 0.38s; }
+.process-stage.is-sequenced .process-card:nth-of-type(3) .process-ring { animation-delay: 0.68s; }
+.process-stage.is-sequenced .process-card:nth-of-type(4) .process-ring { animation-delay: 0.98s; }
 
 .process-stage.is-sequenced .process-card .process-glow {
-  animation: processGlowPulse 1.95s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation: processGlowPulse 1.35s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
 }
 
-.process-stage.is-sequenced .process-card:nth-of-type(1) .process-glow { animation-delay: 0.30s; }
-.process-stage.is-sequenced .process-card:nth-of-type(2) .process-glow { animation-delay: 0.92s; }
-.process-stage.is-sequenced .process-card:nth-of-type(3) .process-glow { animation-delay: 1.54s; }
-.process-stage.is-sequenced .process-card:nth-of-type(4) .process-glow { animation-delay: 2.16s; }
+.process-stage.is-sequenced .process-card:nth-of-type(1) .process-glow { animation-delay: 0.08s; }
+.process-stage.is-sequenced .process-card:nth-of-type(2) .process-glow { animation-delay: 0.38s; }
+.process-stage.is-sequenced .process-card:nth-of-type(3) .process-glow { animation-delay: 0.68s; }
+.process-stage.is-sequenced .process-card:nth-of-type(4) .process-glow { animation-delay: 0.98s; }
 
 .process-stage.is-sequenced .line-1 {
-  animation: processLinePulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-  animation-delay: 0.64s;
+  animation: processLinePulse 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation-delay: 0.24s;
 }
 
 .process-stage.is-sequenced .line-2 {
-  animation: processLinePulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-  animation-delay: 1.26s;
+  animation: processLinePulse 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation-delay: 0.54s;
 }
 
 .process-stage.is-sequenced .line-3 {
-  animation: processLinePulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
-  animation-delay: 1.88s;
+  animation: processLinePulse 1.1s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  animation-delay: 0.84s;
 }
 
 @keyframes processCardPulse {
@@ -271,7 +178,6 @@ textarea {
   }
 }
 
-
 /* Softeres Reveal speziell für Warum-Nautilus-Boxen */
 .reveal-soft {
   transform: translate3d(0, 12px, 0);
@@ -284,7 +190,6 @@ textarea {
 .soft-delay-2 { transition-delay: 0.62s; }
 .soft-delay-3 { transition-delay: 1.12s; }
 .soft-delay-4 { transition-delay: 1.66s; }
-
 
 /* Warum-Nautilus: gemeinsamer Trigger, exakt gleichmäßige Staffelung */
 .warum-card {

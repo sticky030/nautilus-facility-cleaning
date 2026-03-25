@@ -198,7 +198,6 @@ export default function App() {
                 <p className="mt-5 max-w-[34rem] text-base leading-8 text-[#8A7E70]">
                   Maßgeblich sind Diskretion, klare Abstimmung und eine Arbeitsweise, die Ordnung, Kontinuität und Qualität im Tagesgeschäft sichert.
                 </p>
-
               </div>
 
               <div className="lg:col-span-7 warum-trigger">
@@ -213,10 +212,7 @@ export default function App() {
                           Diskrete Ausführung
                         </div>
                         <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
-                        <h3 className="mt-5 max-w-[14ch] text-[23px] font-semibold leading-[1.10] text-[#6F6559] lg:text-[27px]">
-                          Diskret im Auftritt
-                        </h3>
-                        <p className="mt-4 max-w-[20rem] text-[14px] leading-7 text-[#8A7E70]">
+                        <p className="mt-5 max-w-[20rem] text-[14px] leading-7 text-[#8A7E70]">
                           Passend für Umfelder, in denen Ruhe, Sorgfalt und saubere Abläufe erwartet werden.
                         </p>
                       </div>
@@ -230,10 +226,7 @@ export default function App() {
                           Klare Abstimmung
                         </div>
                         <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
-                        <h3 className="mt-5 max-w-[15ch] text-[25px] font-semibold leading-[1.08] text-[#6F6559] lg:text-[30px]">
-                          Klare Abstimmung
-                        </h3>
-                        <p className="mt-4 max-w-[21rem] text-[14px] leading-7 text-[#8A7E70]">
+                        <p className="mt-5 max-w-[21rem] text-[14px] leading-7 text-[#8A7E70]">
                           Nachvollziehbare Kommunikation und ruhige operative Abstimmung statt Reibung im Tagesgeschäft.
                         </p>
                       </div>
@@ -247,10 +240,7 @@ export default function App() {
                           Verlässliche Standards
                         </div>
                         <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
-                        <h3 className="mt-5 max-w-[15ch] text-[25px] font-semibold leading-[1.08] text-[#6F6559] lg:text-[30px]">
-                          Konstante Qualität
-                        </h3>
-                        <p className="mt-4 max-w-[21rem] text-[14px] leading-7 text-[#8A7E70]">
+                        <p className="mt-5 max-w-[21rem] text-[14px] leading-7 text-[#8A7E70]">
                           Nicht punktuell überzeugend, sondern im laufenden Betrieb dauerhaft sauber gehalten.
                         </p>
                       </div>
@@ -264,10 +254,7 @@ export default function App() {
                           Sensible Umfelder
                         </div>
                         <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
-                        <h3 className="mt-5 max-w-[14ch] text-[23px] font-semibold leading-[1.10] text-[#6F6559] lg:text-[27px]">
-                          Sensible Umfelder
-                        </h3>
-                        <p className="mt-4 max-w-[20rem] text-[14px] leading-7 text-[#8A7E70]">
+                        <p className="mt-5 max-w-[20rem] text-[14px] leading-7 text-[#8A7E70]">
                           Dort, wo ein gepflegtes Umfeld, Ordnung und Verlässlichkeit selbstverständlich sein müssen.
                         </p>
                       </div>
@@ -326,7 +313,8 @@ export default function App() {
 
             <div className="reveal process-stage mt-20 relative overflow-hidden rounded-[48px] border border-[#E7DED0] bg-[linear-gradient(180deg,#FFFDF9_0%,#F7F2E8_100%)] p-6 shadow-[0_18px_46px_rgba(183,155,108,0.08)] lg:p-10">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(183,155,108,0.08),transparent_30%)]" />
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.06),transparent_28%)]" />              <div className="process-line line-1 pointer-events-none absolute left-[23%] top-[23%] hidden h-[2px] w-[47%] bg-[linear-gradient(90deg,rgba(214,190,146,0.00)_0%,rgba(214,190,146,0.68)_18%,rgba(214,190,146,0.78)_52%,rgba(214,190,146,0.22)_100%)] blur-[0.4px] lg:block" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.06),transparent_28%)]" />
+              <div className="process-line line-1 pointer-events-none absolute left-[23%] top-[23%] hidden h-[2px] w-[47%] bg-[linear-gradient(90deg,rgba(214,190,146,0.00)_0%,rgba(214,190,146,0.68)_18%,rgba(214,190,146,0.78)_52%,rgba(214,190,146,0.22)_100%)] blur-[0.4px] lg:block" />
               <div className="process-line line-2 pointer-events-none absolute left-[63%] top-[31%] hidden h-[40%] w-[2px] rotate-[46deg] origin-top-left bg-[linear-gradient(180deg,rgba(214,190,146,0.00)_0%,rgba(214,190,146,0.66)_18%,rgba(214,190,146,0.78)_54%,rgba(214,190,146,0.20)_100%)] blur-[0.4px] lg:block" />
               <div className="process-line line-3 pointer-events-none absolute left-[33%] top-[73%] hidden h-[2px] w-[36%] bg-[linear-gradient(90deg,rgba(214,190,146,0.00)_0%,rgba(214,190,146,0.64)_18%,rgba(214,190,146,0.74)_56%,rgba(214,190,146,0.18)_100%)] blur-[0.4px] lg:block" />
 
@@ -411,6 +399,74 @@ export default function App() {
           </div>
         </section>
 
+        <section id="faq" className="bg-[#F7F4EE] py-24 lg:py-32">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+            <div className="reveal max-w-[54rem]">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#B79B6C]">
+                FAQ
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-[1.08] text-[#6F6559] lg:text-[48px]">
+                Häufige Fragen zur Gebäudereinigung in Berlin
+              </h2>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-[#8A7E70]">
+                Klare Antworten zu Praxisreinigung, Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Fensterreinigung und laufender Objektpflege im Berliner Einsatzgebiet.
+              </p>
+            </div>
+
+            <div className="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-2">
+              {[
+                {
+                  q: 'Welche Leistungen übernehmen Sie in Berlin?',
+                  a: 'Wir übernehmen Büroreinigung, Praxisreinigung, Treppenhausreinigung, Unterhaltsreinigung, Gebäudereinigung, Bauendreinigung, Grundreinigung und Fensterreinigung.',
+                },
+                {
+                  q: 'In welchen Bezirken sind Sie tätig?',
+                  a: 'Unser Fokus liegt auf Lichtenberg, Marzahn, Friedrichshain, Prenzlauer Berg und Mitte.',
+                },
+                {
+                  q: 'Arbeiten Sie auch für Arztpraxen und kleine Büros?',
+                  a: 'Ja. Genau diese Objektarten gehören zu unserem Fokus, weil dort Verlässlichkeit, feste Abläufe und saubere Ausführung entscheidend sind.',
+                },
+                {
+                  q: 'Bieten Sie auch regelmäßige Unterhaltsreinigung an?',
+                  a: 'Ja. Die laufende Unterhaltsreinigung für Gewerbeobjekte gehört zu unseren Kernleistungen.',
+                },
+                {
+                  q: 'Kann Fensterreinigung ergänzt werden?',
+                  a: 'Ja. Fensterreinigung kann einzeln oder ergänzend zur laufenden Objektpflege eingeplant werden.',
+                },
+                {
+                  q: 'Wie läuft eine Anfrage ab?',
+                  a: 'Nach dem Erstkontakt klären wir Objekt, Umfang und Turnus. Danach folgt bei Bedarf eine kurze Besichtigung und anschließend ein präzise gefasstes Angebot.',
+                },
+              ].map((item, index) => (
+                <details
+                  key={item.q}
+                  className={`reveal ${index % 2 === 1 ? 'delay-1' : ''} group rounded-[34px] border border-[#E6DDCF] bg-[linear-gradient(180deg,#FFFFFF_0%,#FBF9F4_100%)] p-7 shadow-[0_16px_40px_rgba(183,155,108,0.08)] transition duration-500 hover:-translate-y-[3px] hover:shadow-[0_24px_52px_rgba(183,155,108,0.14)] lg:p-8`}
+                >
+                  <summary className="flex cursor-pointer list-none items-start justify-between gap-5">
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.34em] text-[#A8874F]">
+                        Frage
+                      </div>
+                      <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
+                      <h3 className="mt-5 max-w-[20rem] text-[23px] font-semibold leading-[1.10] text-[#6F6559] lg:text-[27px]">
+                        {item.q}
+                      </h3>
+                    </div>
+                    <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E2D6C4] bg-white text-lg leading-none text-[#A8874F] transition duration-300 group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-6 max-w-[32rem] text-[15px] leading-8 text-[#8A7E70]">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="kontakt" className="bg-white py-24 lg:py-32">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-12 lg:px-10">
             <div className="reveal lg:col-span-5 lg:pr-8">
@@ -473,7 +529,8 @@ export default function App() {
 
       <footer className="bg-[#F3EFE7] py-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
-          <div className="flex items-start gap-4">            <div>
+          <div className="flex items-start gap-4">
+            <div>
               <div className="text-sm font-semibold tracking-[0.22em] text-[#B79B6C]">
                 NAUTILUS FACILITY CLEANING
               </div>

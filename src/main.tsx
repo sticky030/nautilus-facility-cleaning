@@ -60,30 +60,30 @@ const setupRevealAnimations = () => {
   const processRevealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.12) {
+        if (entry.intersectionRatio >= 0.26) {
           entry.target.classList.add('is-visible')
           processRevealObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.12],
-      rootMargin: '0px 0px 6% 0px',
+      threshold: [0.26],
+      rootMargin: '0px 0px 0px 0px',
     }
   )
 
   const processSequenceObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio >= 0.2) {
+        if (entry.intersectionRatio >= 0.34) {
           entry.target.classList.add('is-sequenced')
           processSequenceObserver.unobserve(entry.target)
         }
       })
     },
     {
-      threshold: [0.2],
-      rootMargin: '0px 0px -10% 0px',
+      threshold: [0.34],
+      rootMargin: '0px 0px -4% 0px',
     }
   )
 

@@ -399,74 +399,8 @@ export default function App() {
             </div>
           </div>
         </section>
+        <FAQSection />
 
-        <section id="faq" className="bg-[#F7F4EE] py-24 lg:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="reveal max-w-[54rem]">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#B79B6C]">
-                FAQ
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold leading-[1.08] text-[#6F6559] lg:text-[48px]">
-                Häufige Fragen zur Gebäudereinigung in Berlin
-              </h2>
-              <p className="mt-6 max-w-3xl text-base leading-8 text-[#8A7E70]">
-                Klare Antworten zu Praxisreinigung, Büroreinigung, Unterhaltsreinigung, Treppenhausreinigung, Fensterreinigung und laufender Objektpflege im Berliner Einsatzgebiet.
-              </p>
-            </div>
-
-            <div className="mt-16 grid grid-cols-1 gap-5 lg:grid-cols-2">
-              {[
-                {
-                  q: 'Welche Leistungen übernehmen Sie in Berlin?',
-                  a: 'Wir übernehmen Büroreinigung, Praxisreinigung, Treppenhausreinigung, Unterhaltsreinigung, Gebäudereinigung, Bauendreinigung, Grundreinigung und Fensterreinigung.',
-                },
-                {
-                  q: 'In welchen Bezirken sind Sie tätig?',
-                  a: 'Unser Fokus liegt auf Lichtenberg, Marzahn, Friedrichshain, Prenzlauer Berg und Mitte.',
-                },
-                {
-                  q: 'Arbeiten Sie auch für Arztpraxen und kleine Büros?',
-                  a: 'Ja. Genau diese Objektarten gehören zu unserem Fokus, weil dort Verlässlichkeit, feste Abläufe und saubere Ausführung entscheidend sind.',
-                },
-                {
-                  q: 'Bieten Sie auch regelmäßige Unterhaltsreinigung an?',
-                  a: 'Ja. Die laufende Unterhaltsreinigung für Gewerbeobjekte gehört zu unseren Kernleistungen.',
-                },
-                {
-                  q: 'Kann Fensterreinigung ergänzt werden?',
-                  a: 'Ja. Fensterreinigung kann einzeln oder ergänzend zur laufenden Objektpflege eingeplant werden.',
-                },
-                {
-                  q: 'Wie läuft eine Anfrage ab?',
-                  a: 'Nach dem Erstkontakt klären wir Objekt, Umfang und Turnus. Danach folgt bei Bedarf eine kurze Besichtigung und anschließend ein präzise gefasstes Angebot.',
-                },
-              ].map((item, index) => (
-                <details
-                  key={item.q}
-                  className={`reveal ${index % 2 === 1 ? 'delay-1' : ''} group rounded-[34px] border border-[#E6DDCF] bg-[linear-gradient(180deg,#FFFFFF_0%,#FBF9F4_100%)] p-7 shadow-[0_16px_40px_rgba(183,155,108,0.08)] transition duration-500 hover:-translate-y-[3px] hover:shadow-[0_24px_52px_rgba(183,155,108,0.14)] lg:p-8`}
-                >
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-5">
-                    <div>
-                      <div className="text-[10px] font-semibold uppercase tracking-[0.34em] text-[#A8874F]">
-                        Frage
-                      </div>
-                      <div className="mt-3 h-px w-12 bg-[#D8C29A]" />
-                      <h3 className="mt-5 max-w-[20rem] text-[23px] font-semibold leading-[1.10] text-[#6F6559] lg:text-[27px]">
-                        {item.q}
-                      </h3>
-                    </div>
-                    <span className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#E2D6C4] bg-white text-lg leading-none text-[#A8874F] transition duration-300 group-open:rotate-45">
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-6 max-w-[32rem] text-[15px] leading-8 text-[#8A7E70]">
-                    {item.a}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section id="kontakt" className="bg-white py-24 lg:py-32">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-12 lg:px-10">
@@ -526,7 +460,7 @@ export default function App() {
             </form>
           </div>
         </section>
-        <FAQSection /></main>
+        </main>
 
       <footer className="bg-[#F3EFE7] py-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">

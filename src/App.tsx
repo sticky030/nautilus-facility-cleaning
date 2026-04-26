@@ -97,7 +97,7 @@ export default function App() {
               <h1 className="text-[36px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[46px] lg:text-[58px]">
                 Unterhaltsreinigung in Berlin für Kanzleien, Praxen und Büros.
               </h1>
-              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light italic_off">
+              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
                 Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -345,7 +345,7 @@ export default function App() {
               <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">
                 NAUTILUS FACILITY CLEANING
               </div>
-              <p className="mt-4 max-w-md text-[14px] leading-7 text-[#8A7E70]">
+              <p className="mt-4 max-w-md text-[13px] leading-6 text-[#8A7E70]">
                 Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
                 Spezialisierte Gebäudereinigung für Berlin.
               </p>
@@ -361,6 +361,8 @@ export default function App() {
                   <span>Kanzleireinigung</span>
                   <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
                   <span>Praxisreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Treppenhausreinigung</span>
                   <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
                   <span>Bauendreinigung</span>
                 </div>

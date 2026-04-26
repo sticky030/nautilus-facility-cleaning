@@ -62,49 +62,26 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20">
       
-      {/* --- PREMIUM FLOATING HEADER --- */}
       <div className="fixed inset-x-0 top-6 z-50 flex justify-center px-4 pointer-events-none">
         <header className="pointer-events-auto w-full max-w-6xl rounded-full bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-4 py-3 transition-all duration-500">
           <div className="flex items-center justify-between gap-6 px-2">
             <a href="#start" className="flex min-w-0 items-center gap-3">
-              <img
-                src="/images/reinigung-trans.png"
-                alt="Nautilus Facility Cleaning"
-                className="h-14 w-14 shrink-0 object-contain"
-              />
+              <img src="/images/reinigung-trans.png" alt="Nautilus Facility Cleaning" className="h-14 w-14 shrink-0 object-contain" />
               <div className="min-w-0 text-left">
-                <div className="truncate text-sm font-semibold tracking-[0.28em] text-[#B79B6C]">
-                  NAUTILUS
-                </div>
-                <div className="truncate text-[11px] uppercase tracking-[0.34em] text-[#9A8C7B]">
-                  Facility Cleaning
-                </div>
+                <div className="truncate text-sm font-semibold tracking-[0.28em] text-[#B79B6C]">NAUTILUS</div>
+                <div className="truncate text-[11px] uppercase tracking-[0.34em] text-[#9A8C7B]">Facility Cleaning</div>
               </div>
             </a>
-
             <nav className="hidden items-center gap-8 lg:flex">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-[13px] font-semibold uppercase tracking-wider text-[#8A7E70] transition hover:text-[#B79B6C]"
-                >
-                  {item.label}
-                </a>
+                <a key={item.href} href={item.href} className="text-[13px] font-semibold uppercase tracking-wider text-[#8A7E70] transition hover:text-[#B79B6C]">{item.label}</a>
               ))}
             </nav>
-
-            <a
-              href="#kontakt"
-              className="inline-flex shrink-0 items-center rounded-full bg-[#B79B6C] px-7 py-3 text-[13px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]"
-            >
-              Anfrage stellen
-            </a>
+            <a href="#kontakt" className="inline-flex shrink-0 items-center rounded-full bg-[#B79B6C] px-7 py-3 text-[13px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Anfrage stellen</a>
           </div>
         </header>
       </div>
 
-      {/* HIER WAR DER FEHLER: overflow-x-hidden blockiert sticky. overflow-x-clip erlaubt es. */}
       <main className="overflow-x-clip">
         {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
@@ -125,12 +102,8 @@ export default function App() {
                 Wir betreuen Arztpraxen, Kanzleien und exklusive Gewerbeflächen in Berlin. Präzise Abstimmung, absolute Diskretion und ein Qualitätsanspruch, der im Hintergrund perfekt funktioniert.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
-                  Unverbindliche Anfrage
-                </a>
-                <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8] bg-white/50 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-[#6F6559] transition-all duration-300 hover:bg-white hover:border-[#B79B6C]/50">
-                  Expertise ansehen
-                </a>
+                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
+                <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8] bg-white/50 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-[#6F6559] transition-all duration-300 hover:bg-white hover:border-[#B79B6C]/50">Expertise ansehen</a>
               </div>
             </div>
           </div>
@@ -148,7 +121,7 @@ export default function App() {
             
             <div className="mt-20 grid grid-cols-1 gap-8 xl:grid-cols-3">
               {services.map((service) => (
-                <article key={service.title} className="reveal group flex flex-col h-full overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white p-10 shadow-[0_8px_20px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B79B6C]/50 hover:shadow-[0_30px_60px_rgba(183,155,108,0.12)]">
+                <article key={service.title} className="reveal group flex flex-col h-full overflow-hidden bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
                   <div className="flex flex-col flex-grow">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
@@ -159,7 +132,7 @@ export default function App() {
                     <ul className="mt-8 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[240px] xl:h-[220px] text-[15px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C]" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -194,7 +167,7 @@ export default function App() {
                   { title: 'Verlässliche Standards', desc: 'Durch internes Qualitätsmanagement sichern wir einen konstanten, kompromisslosen Standard.' },
                   { title: 'Sensible Umfelder', desc: 'Speziell geschultes, verschwiegenes Personal für Bereiche, in denen Vertrauen absolute Priorität hat.' }
                 ].map((item) => (
-                  <article key={item.title} className="reveal rounded-3xl border border-[#E5E1D8] bg-[#FCFBF8] p-10 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-white hover:border-[#B79B6C]/40 hover:shadow-[0_20px_50px_rgba(183,155,108,0.08)]">
+                  <article key={item.title} className="reveal bg-[#FCFBF8] rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.title}</div>
                     <div className="mt-5 h-px w-12 bg-gradient-to-r from-[#B79B6C] to-transparent" />
                     <p className="mt-5 text-[15px] leading-8 text-[#7E7367]">{item.desc}</p>
@@ -223,7 +196,7 @@ export default function App() {
                 </p>
               </div>
               <div className="reveal lg:col-span-7">
-                <div className="relative overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white shadow-[0_20px_50px_rgba(183,155,108,0.1)]">
+                <div className="relative overflow-hidden rounded-[32px] border border-[#E5E1D8]/80 bg-white shadow-[0_20px_50px_rgba(183,155,108,0.1)]">
                   <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
@@ -231,12 +204,11 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- PROZESS: PREMIUM STACK (JETZT MIT FUNKTIONIERENDEM STICKY) --- */}
+        {/* --- PROZESS --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
               
-              {/* Sticky linke Seite (bleibt stehen beim Scrollen) */}
               <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
@@ -247,7 +219,6 @@ export default function App() {
                 </p>
               </div>
               
-              {/* Interaktiver Karten-Stapel rechts */}
               <div className="lg:col-span-7 space-y-16 pb-32">
                 {[
                   { num: '01', title: 'Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
@@ -257,10 +228,9 @@ export default function App() {
                 ].map((item, idx) => (
                   <article 
                     key={item.num} 
-                    className="reveal sticky rounded-[2.5rem] border border-[#E5E1D8] bg-white p-10 lg:p-14 shadow-[0_20px_50px_rgba(183,155,108,0.08)] transition-all duration-500"
+                    className="reveal sticky bg-[#FCFBF8] rounded-[32px] border border-[#E5E1D8]/80 p-10 lg:p-12 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]"
                     style={{ top: `calc(10rem + ${idx * 2}rem)` }}
                   >
-                    {/* Edles Badge für die Nummer */}
                     <div className="absolute -top-5 left-8 lg:left-12 bg-white border border-[#E5E1D8] px-6 py-2 rounded-full shadow-sm flex items-center gap-3">
                       <span className="h-1.5 w-1.5 rounded-full bg-[#B79B6C]" />
                       <span className="text-[12px] font-bold tracking-[0.3em] text-[#B79B6C]">{item.num}</span>
@@ -296,7 +266,7 @@ export default function App() {
                     { title: 'Unser Versprechen', content: 'Transparente Angebote, feste Ansprechpartner und absolute Zuverlässigkeit ab dem ersten Tag.' },
                     { title: 'Der nächste Schritt', content: 'Sie beschreiben kurz Ihr Objekt. Wir melden uns mit einer ersten Einschätzung und einem Konzept.' }
                   ].map((box) => (
-                    <div key={box.title} className="rounded-3xl border border-[#E5E1D8] bg-white p-8 shadow-sm transition-all hover:border-[#B79B6C]/40">
+                    <div key={box.title} className="bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{box.title}</p>
                       <p className="mt-4 text-[16px] leading-8 text-[#6F6559] whitespace-pre-line">{box.content}</p>
                     </div>
@@ -304,8 +274,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* --- PREMIUM KONTAKTFORMULAR AUS DEM DUMP --- */}
-              <div className="reveal rounded-[40px] border border-[#E5E1D8] bg-white p-10 shadow-[0_30px_60px_rgba(0,0,0,0.04)] lg:p-14">
+              {/* --- PREMIUM KONTAKTFORMULAR --- */}
+              <div className="reveal bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 lg:p-14 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
                 <div className="mb-10">
                   <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Diskrete Anfrage</p>
                   <p className="mt-4 text-[16px] leading-8 text-[#7E7367]">
@@ -317,7 +287,7 @@ export default function App() {
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
                       <div className="relative">
-                        <select name="Objektart" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                        <select name="Objektart" className="w-full appearance-none rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
                           <option>Büro & Kanzlei</option>
                           <option>Arztpraxis</option>
                           <option>Treppenhaus & Objekt</option>
@@ -332,7 +302,7 @@ export default function App() {
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
                       <div className="relative">
-                        <select name="Turnus" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                        <select name="Turnus" className="w-full appearance-none rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
                           <option>Täglich</option>
                           <option>Mehrmals pro Woche</option>
                           <option>Wöchentlich</option>
@@ -347,22 +317,22 @@ export default function App() {
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
-                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
                     </div>
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
-                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
                     </div>
                   </div>
                   <div>
                     <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
-                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 resize-none" />
+                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 resize-none" />
                   </div>
                   
                   <div className="pt-2">
                     <input type="hidden" name="_subject" value="Neue exklusive Anfrage über nautilus-facility.de" />
                     <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                    <button type="submit" className="w-full rounded-2xl bg-[#B79B6C] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
+                    <button type="submit" className="w-full rounded-full bg-[#B79B6C] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
                       Anfrage sicher senden
                     </button>
                   </div>

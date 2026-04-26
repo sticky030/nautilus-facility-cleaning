@@ -34,16 +34,14 @@ export default function FAQSection() {
     <section id="faq" className="bg-[#F7F4EE] py-32 lg:py-40 border-b border-[#E5E1D8]/60">
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         
-        {/* ZENTRIERTER HEADER - WIE IM BILD GESEHEN */}
         <div className="reveal mb-16 flex flex-col items-center text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
         
-        {/* AKKORDEON BOXEN - EXAKT WIE IM SCREENSHOT */}
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="reveal bg-white border border-[#E5E1D8] rounded-3xl shadow-[0_4px_15px_rgba(0,0,0,0.03)] transition-all duration-300 hover:border-[#B79B6C]/50 hover:shadow-[0_8px_30px_rgba(183,155,108,0.1)]">
+            <div key={idx} className="reveal bg-white border border-[#E5E1D8]/80 rounded-[32px] shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)] hover:-translate-y-1.5">
               <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)} 
                 className="flex w-full items-center justify-between p-7 sm:p-9 text-left group"
@@ -51,7 +49,6 @@ export default function FAQSection() {
                 <span className="text-[17px] font-semibold text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors pr-6">
                   {faq.question}
                 </span>
-                {/* DER PFEILKREIS RECHTS WIE IM BILD */}
                 <span className={`flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full border border-[#D9CCB8] text-[#B79B6C] transition-all duration-500 ${openIndex === idx ? 'bg-[#B79B6C] text-white rotate-180 border-[#B79B6C]' : 'bg-transparent'}`}>
                   <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </span>

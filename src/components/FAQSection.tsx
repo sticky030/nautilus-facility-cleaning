@@ -32,9 +32,9 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
-      <div className="mx-auto max-w-4xl px-6 lg:px-10">
+      <div className="mx-auto max-w-4xl px-6 lg:px-10 text-[#6F6559]">
         <div className="reveal opacity-0 translate-y-10 transition-all duration-1000 mb-16">
-          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Details</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
         <div className="space-y-4">

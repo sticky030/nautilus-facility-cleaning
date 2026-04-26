@@ -294,7 +294,7 @@ export default function App() {
               <div className="reveal delay-1 lg:col-span-8">
                 <div className="relative overflow-hidden rounded-[44px] border border-[#E6DDCF] bg-white shadow-[0_18px_48px_rgba(183,155,108,0.16)]">
                   <img
-                    src="/images/why-nautilus.jpg"
+                    src="/images/nautilus-cleaning-team-berlin.jpg"
                     alt="Team von Nautilus Facility Cleaning"
                     className="mx-auto w-full max-w-[920px] max-h-[500px] object-cover"
                   />

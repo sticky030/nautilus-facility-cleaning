@@ -284,7 +284,7 @@ export default function App() {
                   Diskret im Auftritt. Präzise in der Ausführung. Konsequent im Standard.
                 </h2>
                 <p className="mt-6 text-base leading-8 text-[#8A7E70]">
-                  Nautilus Facility Cleaning steht für ein Arbeitsverständnis, das sich in professionelle Betriebsabläufe einfügt: zurückhaltend im Auftreten, sauber in der Abstimmung und verlässlich in der täglichen Ausführung.
+                  Nautilus Facility Cleaning steht für ein Arbeitsverständnis, das sich in effiziente und diskrete Werterhaltungsprozesse einfügt: zurückhaltend im Auftreten, sauber in der Abstimmung und verlässlich in der täglichen Ausführung.
                 </p>
                 <p className="mt-4 text-base leading-8 text-[#8A7E70]">
                   Gerade in Praxen, Büros und sensiblen Objektstrukturen zählt nicht Präsenz um ihrer selbst willen, sondern ein Team, das Standards sicher trägt und Qualität ohne Reibungsverluste liefert.

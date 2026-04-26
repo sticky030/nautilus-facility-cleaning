@@ -62,6 +62,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20">
       
+      {/* --- PREMIUM FLOATING HEADER --- */}
       <div className="fixed inset-x-0 top-6 z-50 flex justify-center px-4 pointer-events-none">
         <header className="pointer-events-auto w-full max-w-6xl rounded-full bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-4 py-3 transition-all duration-500">
           <div className="flex items-center justify-between gap-6 px-2">
@@ -103,7 +104,9 @@ export default function App() {
         </header>
       </div>
 
-      <main className="overflow-x-hidden">
+      {/* HIER WAR DER FEHLER: overflow-x-hidden blockiert sticky. overflow-x-clip erlaubt es. */}
+      <main className="overflow-x-clip">
+        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -133,6 +136,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* --- LEISTUNGEN --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="reveal max-w-3xl">
@@ -167,6 +171,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* --- WARUM NAUTILUS --- */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
@@ -200,6 +205,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* --- AUFTRETEN & HALTUNG --- */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden text-left">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
@@ -225,13 +231,13 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- PROZESS: PREMIUM FLOATING STACK --- */}
+        {/* --- PROZESS: PREMIUM STACK (JETZT MIT FUNKTIONIERENDEM STICKY) --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
               
-              {/* Sticky linke Seite */}
-              <div className="reveal lg:col-span-5 lg:pr-8 lg:sticky lg:top-40 self-start">
+              {/* Sticky linke Seite (bleibt stehen beim Scrollen) */}
+              <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
                   Ein reibungsloser Start. Ein dauerhaftes Ergebnis.
@@ -242,7 +248,7 @@ export default function App() {
               </div>
               
               {/* Interaktiver Karten-Stapel rechts */}
-              <div className="lg:col-span-7 flex flex-col gap-12 lg:gap-32 pb-10">
+              <div className="lg:col-span-7 space-y-16 pb-32">
                 {[
                   { num: '01', title: 'Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
                   { num: '02', title: 'Strategische Konzeption', text: 'Maßarbeit statt Standard. Wir entwerfen ein hybrides Reinigungskonzept, das operative Effizienz mit Ihrem Anspruch an ein repräsentatives und werterhaltendes Umfeld vereint.' },
@@ -252,7 +258,7 @@ export default function App() {
                   <article 
                     key={item.num} 
                     className="reveal sticky rounded-[2.5rem] border border-[#E5E1D8] bg-white p-10 lg:p-14 shadow-[0_20px_50px_rgba(183,155,108,0.08)] transition-all duration-500"
-                    style={{ top: `calc(8rem + ${idx * 3.5}rem)` }}
+                    style={{ top: `calc(10rem + ${idx * 2}rem)` }}
                   >
                     {/* Edles Badge für die Nummer */}
                     <div className="absolute -top-5 left-8 lg:left-12 bg-white border border-[#E5E1D8] px-6 py-2 rounded-full shadow-sm flex items-center gap-3">
@@ -298,7 +304,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* --- PREMIUM KONTAKTFORMULAR --- */}
+              {/* --- PREMIUM KONTAKTFORMULAR AUS DEM DUMP --- */}
               <div className="reveal rounded-[40px] border border-[#E5E1D8] bg-white p-10 shadow-[0_30px_60px_rgba(0,0,0,0.04)] lg:p-14">
                 <div className="mb-10">
                   <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Diskrete Anfrage</p>

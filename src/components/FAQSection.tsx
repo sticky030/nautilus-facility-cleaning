@@ -32,31 +32,25 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="reveal mb-16">
-          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Details</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="reveal bg-[#FCFBF8] border border-[#E5E1D8] rounded-3xl overflow-hidden transition-all duration-300 hover:border-[#B79B6C]/40">
+            <div key={idx} className="reveal border-b border-[#E5E1D8] last:border-0">
               <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)} 
-                className="flex w-full items-center justify-between p-8 text-left group"
+                className="flex w-full items-center justify-between py-8 text-left group"
               >
-                <span className="text-[17px] font-semibold text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors italic">
-                  {faq.question}
-                </span>
+                <span className="text-[17px] font-medium text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors italic">{faq.question}</span>
                 <span className={`ml-6 flex-shrink-0 text-[#B79B6C] transition-transform duration-500 ${openIndex === idx ? 'rotate-45' : ''}`}>
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" />
-                  </svg>
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" /></svg>
                 </span>
               </button>
-              <div className={`transition-all duration-500 ease-in-out ${openIndex === idx ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="px-8 pb-8 text-[16px] leading-8 text-[#7E7367] border-t border-[#E5E1D8]/30 pt-6">
-                  {faq.answer}
-                </div>
+              <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === idx ? 'max-h-[400px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}>
+                <p className="text-[16px] leading-8 text-[#7E7367] max-w-2xl">{faq.answer}</p>
               </div>
             </div>
           ))}

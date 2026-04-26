@@ -109,7 +109,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* Hero */}
+        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -135,100 +135,134 @@ export default function App() {
           </div>
         </section>
 
-        {/* Leistungen */}
+        {/* --- LEISTUNGEN --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="reveal max-w-3xl">
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Unsere Expertise</p>
               <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
                 Maßgeschneiderte Reinigungskonzepte für Objekte mit höchstem Anspruch.
               </h2>
             </div>
+            
             <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
               {services.map((service) => (
-                <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50">
-                  <div className="flex-grow">
+                <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
+                  <div className="flex flex-col flex-grow text-left">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
-                    <h3 className="mt-5 text-[24px] font-semibold text-[#2C2C2C]">{service.title}</h3>
-                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
+                    <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
+                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367] text-left">{service.text}</p>
                   </div>
-                  <ul className="mt-8 pt-8 border-t border-[#F7F4EE] space-y-4">
-                    {service.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-4 text-[15px]">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C]" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
+                    <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
+                    <ul className="mt-6 flex flex-col justify-start gap-4 text-[15px] leading-6 text-[#6F6559]">
+                      {service.bullets.map((bullet) => (
+                        <li key={bullet} className="flex items-start gap-4">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
+                          <span className="text-left">{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Warum Nautilus */}
+        {/* --- WARUM NAUTILUS --- */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
-              <div className="reveal lg:col-span-5">
+              <div className="reveal lg:col-span-5 lg:pr-10 text-left">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Warum Nautilus</p>
-                <h2 className="mt-6 text-3xl font-semibold text-[#2C2C2C] lg:text-[46px]">Ein Standard, der keine Kompromisse kennt.</h2>
-                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen.</p>
+                <h2 className="mt-6 max-w-[12ch] text-3xl font-semibold leading-[1.06] text-[#2C2C2C] lg:text-[46px]">
+                  Ein Standard, der keine Kompromisse kennt.
+                </h2>
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
+                  Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen. Ein makelloses Umfeld fördert die Produktivität und das Vertrauen Ihrer Klienten.
+                </p>
+                <p className="mt-5 text-[17px] leading-8 text-[#8A7E70]">
+                  Wir integrieren unsere Dienstleistung lautlos in Ihre Abläufe – für ein dauerhaftes Ergebnis, das Sie jeden Tag spüren, ohne es managen zu müssen.
+                </p>
               </div>
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="lg:col-span-7 grid grid-cols-1 gap-6 sm:grid-cols-2 text-left">
                 {[
-                  { title: 'Diskrete Ausführung', desc: 'Lautlose Integration in Ihr Tagesgeschäft. Unsere Teams agieren unsichtbar.' },
-                  { title: 'Klare Abstimmung', desc: 'Ein fester Ansprechpartner. Proaktive Kommunikation und vorausschauendes Handeln.' },
-                  { title: 'Verlässliche Standards', desc: 'Durch internes Qualitätsmanagement sichern wir einen konstanten Standard.' },
-                  { title: 'Sensible Umfelder', desc: 'Speziell geschultes Personal für Bereiche, in denen Vertrauen Priorität hat.' }
+                  { title: 'Diskrete Ausführung', desc: 'Lautlose Integration in Ihr Tagesgeschäft. Unsere Teams agieren unsichtbar – das Ergebnis ist unübersehbar.' },
+                  { title: 'Klare Abstimmung', desc: 'Ein fester, persönlicher Ansprechpartner. Proaktive Kommunikation und vorausschauendes Handeln.' },
+                  { title: 'Verlässliche Standards', desc: 'Durch internes Qualitätsmanagement sichern wir einen konstanten, kompromisslosen Standard.' },
+                  { title: 'Sensible Umfelder', desc: 'Speziell geschultes, verschwiegenes Personal für Bereiche, in denen Vertrauen absolute Priorität hat.' }
                 ].map((item) => (
-                  <div key={item.title} className="reveal bg-[#FCFBF8] border border-[#E5E1D8] p-8 rounded-xl transition-all hover:border-[#B79B6C]/50">
+                  <article key={item.title} className="reveal bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.title}</div>
-                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{item.desc}</p>
-                  </div>
+                    <div className="mt-4 h-px w-12 bg-gradient-to-r from-[#B79B6C] to-transparent" />
+                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367] text-left">{item.desc}</p>
+                  </article>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Haltung & Personal */}
+        {/* --- HALTUNG & PERSONAL --- */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden text-left">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
-            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-center">
-              <div className="reveal lg:col-span-5">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
+              <div className="reveal lg:col-span-5 lg:pr-6 text-left">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Haltung & Personal</p>
-                <h2 className="mt-6 text-3xl font-semibold text-[#2C2C2C] lg:text-[46px]">Diskret im Auftritt. Präzise in der Ausführung.</h2>
-                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70] font-light">Wir verstehen uns als unsichtbaren, aber essenziellen Teil Ihres Unternehmenserfolgs. Ein tadellos gepflegtes Erscheinungsbild unserer Mitarbeiter und absolute Verschwiegenheit sind für uns obligatorisch.</p>
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.1] text-[#2C2C2C] lg:text-[46px]">
+                  Diskret im Auftritt. Präzise in der Ausführung.
+                </h2>
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70] font-light">
+                  Wir verstehen uns als unsichtbaren, aber essenziellen Teil Ihres Unternehmenserfolgs. Ein tadellos gepflegtes Erscheinungsbild unserer Mitarbeiter und absolute Verschwiegenheit sind für uns obligatorisch.
+                </p>
+                <p className="mt-5 text-[17px] leading-8 text-[#8A7E70] font-light">
+                  Gerade in Notariaten, Privatpraxen und Vorstandsetagen zählt nicht die reine Anwesenheit des Personals – sondern die Fähigkeit, einen Raum mit höchster Präzision in seinen besten Zustand zu versetzen, ohne den Betrieb zu stören.
+                </p>
               </div>
               <div className="reveal lg:col-span-7">
-                <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Team" className="rounded-xl shadow-xl w-full object-cover max-h-[500px]" />
+                <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Ablauf */}
+        {/* --- ABLAUF --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
-              <div className="reveal lg:col-span-5 sticky top-32">
+              
+              <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start text-left">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
-                <h2 className="mt-6 text-3xl font-semibold text-[#2C2C2C] lg:text-[46px]">Vom ersten Kontakt bis zur Routine.</h2>
-                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Ein Wechsel des Dienstleisters muss geräuschlos funktionieren. Wir implementieren unseren Standard, ohne Ihren Betrieb zu stören.</p>
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
+                  Vom ersten Kontakt bis zur unsichtbaren Routine.
+                </h2>
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
+                  Ein Wechsel des Dienstleisters muss geräuschlos funktionieren. Wir implementieren unseren Standard, ohne Ihren laufenden Betrieb auch nur eine Minute zu stören.
+                </p>
               </div>
-              <div className="lg:col-span-7 space-y-8">
+              
+              <div className="lg:col-span-7 space-y-8 pb-20 text-left">
                 {[
-                  { num: '01', title: 'Das Objekt-Audit', text: 'Wir erfassen Ihr Objekt bis ins letzte Detail – von Oberflächen bis zu Sicherheitsvorgaben.' },
-                  { num: '02', title: 'Das lautlose Konzept', text: 'Wir entwickeln ein Reinigungsprotokoll, das sich unsichtbar in Ihren Berufsalltag einfügt.' },
-                  { num: '03', title: 'Nahtloses Onboarding', text: 'Keine Einarbeitungszeit für Sie. Ihr festes Stammpersonal wird objektspezifisch geschult.' },
-                  { num: '04', title: 'Autonomes Management', text: 'Wir kontrollieren uns selbst. Durch proaktives Monitoring garantieren wir ein makelloses Ergebnis.' }
-                ].map((item) => (
-                  <div key={item.num} className="reveal bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-sm transition-all hover:border-[#B79B6C]/50">
-                    <span className="text-[11px] font-bold tracking-[0.2em] text-[#B79B6C] border border-[#E5E1D8] bg-white px-3 py-1 rounded-full uppercase">Schritt {item.num}</span>
-                    <h3 className="mt-4 text-[22px] font-semibold text-[#2C2C2C]">{item.title}</h3>
-                    <p className="mt-3 text-[15px] leading-7 text-[#7E7367]">{item.text}</p>
-                  </div>
+                  { num: '01', title: 'Das Objekt-Audit', text: 'Wir erfassen Ihr Objekt bis ins letzte Detail – von empfindlichen Oberflächen bis zu strengen Sicherheitsvorgaben. Nichts wird dem Zufall überlassen.' },
+                  { num: '02', title: 'Das lautlose Konzept', text: 'Wir entwickeln ein Reinigungsprotokoll, das sich unsichtbar in Ihren Berufsalltag einfügt. Maximale Effizienz ohne die geringste Störung Ihres Betriebs.' },
+                  { num: '03', title: 'Nahtloses Onboarding', text: 'Keine Einarbeitungszeit für Sie. Ihr festes Stammpersonal wird im Vorfeld objektspezifisch geschult. Der Dienstleisterwechsel erfolgt absolut geräuschlos.' },
+                  { num: '04', title: 'Autonomes Management', text: 'Wir kontrollieren uns selbst. Durch proaktives Monitoring garantieren wir ein makelloses Ergebnis, das vom ersten Tag an konstant bleibt – ohne dass Sie jemals eingreifen müssen.' }
+                ].map((item, idx) => (
+                  <article 
+                    key={item.num} 
+                    className="reveal sticky bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] transition-all duration-500 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]"
+                    style={{ top: `calc(9rem + ${idx * 1.5}rem)` }}
+                  >
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-[11px] font-bold tracking-[0.2em] text-[#B79B6C] border border-[#E5E1D8] bg-white px-3 py-1 rounded-full uppercase">Schritt {item.num}</span>
+                    </div>
+                    <h3 className="text-[20px] lg:text-[24px] font-semibold text-[#2C2C2C] mb-3">{item.title}</h3>
+                    <p className="text-[15px] leading-7 text-[#7E7367] text-left">{item.text}</p>
+                  </article>
                 ))}
               </div>
             </div>
@@ -237,20 +271,25 @@ export default function App() {
 
         <FAQSection />
 
-        {/* Kontakt */}
+        {/* --- KONTAKT --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left border-b border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
-              <div className="reveal">
+              <div className="reveal text-left">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt & Anfrage</p>
-                <h2 className="mt-6 text-3xl font-semibold text-[#2C2C2C] lg:text-[46px]">Der erste Schritt zum Ergebnis.</h2>
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
+                  Der erste Schritt zu einem makellosen Ergebnis.
+                </h2>
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
+                  Hinterlassen Sie uns die wichtigsten Eckdaten Ihres Objekts. Wir behandeln Ihre Anfrage mit absoluter Diskretion und melden uns umgehend für eine erste Einschätzung.
+                </p>
                 <div className="mt-14 space-y-4">
                   {[
-                    { title: 'Unsere Mandanten', content: 'Arztpraxen, Kanzleien, Notariate, Hausverwaltungen und Bauprojekte.' },
+                    { title: 'Unsere Mandanten', content: 'Arztpraxen, Kanzleien, Notariate, Hausverwaltungen und exklusive Gewerbeimmobilien.' },
                     { title: 'Einsatzgebiete', content: 'Mitte · Pankow · Lichtenberg · Marzahn · Friedrichshain-Kreuzberg' },
-                    { title: 'Reaktionszeit', content: 'Anfrage-Prüfung und Rückmeldung innerhalb von 24 Stunden.' }
+                    { title: 'Reaktionszeit', content: 'Ihre Zeit ist wertvoll. Wir prüfen Ihr Anliegen absolut vertraulich und melden uns innerhalb von 24 Stunden bei Ihnen.' }
                   ].map((box) => (
-                    <div key={box.title} className="bg-white rounded-xl border border-[#E5E1D8] p-8 shadow-sm">
+                    <div key={box.title} className="bg-white rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50">
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{box.title}</p>
                       <p className="mt-3 text-[15px] leading-7 text-[#6F6559]">{box.content}</p>
                     </div>
@@ -268,12 +307,12 @@ export default function App() {
                     <p className="mt-4 text-[15px] text-[#7E7367]">Vielen Dank. Wir melden uns zeitnah bei Ihnen.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6 text-left">
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
                         <div className="relative">
-                          <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C] cursor-pointer">
+                          <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] cursor-pointer">
                             <option>Büro & Kanzlei</option>
                             <option>Arztpraxis</option>
                             <option>Treppenhaus & Objekt</option>
@@ -288,7 +327,7 @@ export default function App() {
                       <div>
                         <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
                         <div className="relative">
-                          <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C] cursor-pointer">
+                          <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] cursor-pointer">
                             <option>Täglich</option>
                             <option>Mehrmals pro Woche</option>
                             <option>Wöchentlich</option>
@@ -302,62 +341,79 @@ export default function App() {
                     </div>
                     <div>
                       <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
-                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C]" />
+                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]" />
                     </div>
                     <div>
                       <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
-                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C]" />
+                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]" />
                     </div>
                     <div>
-                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Nachricht</label>
-                      <textarea rows={4} name="Nachricht" required placeholder="Größe des Objekts, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C] resize-none" />
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
+                      <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C] resize-none" />
                     </div>
-                    <button type="submit" disabled={loading} className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase text-white shadow-md hover:bg-[#A98E60] transition-all disabled:opacity-50">
-                      {loading ? 'Wird gesendet...' : 'Anfrage sicher senden'}
-                    </button>
+                    
+                    <div className="pt-2">
+                      <button type="submit" disabled={loading} className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-md hover:bg-[#A98E60] transition-all duration-300 disabled:opacity-50">
+                        {loading ? 'Wird gesendet...' : 'Anfrage sicher senden'}
+                      </button>
+                    </div>
                   </form>
                 )}
               </div>
             </div>
           </div>
         </section>
+
       </main>
 
-      {/* Footer */}
       <footer className="bg-white py-20 text-left border-t border-[#E5E1D8]">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col gap-12 lg:gap-16">
             <div>
-              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">NAUTILUS FACILITY CLEANING</div>
-              <p className="mt-4 max-w-md text-[14px] text-[#8A7E70]">Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />Spezialisierte Gebäudereinigung für Berlin.</p>
+              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">
+                NAUTILUS FACILITY CLEANING
+              </div>
+              <p className="mt-4 max-w-md text-[14px] leading-7 text-[#8A7E70]">
+                Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
+                Spezialisierte Gebäudereinigung für Berlin.
+              </p>
             </div>
             <div className="flex flex-col gap-6">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Dienstleistungen</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
-                  <span>Unterhaltsreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Büroreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Kanzleireinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Praxisreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Treppenhausreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Unterhaltsreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Büroreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Kanzleireinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Praxisreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Treppenhausreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
                   <span>Bauendreinigung</span>
                 </div>
               </div>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Einsatzgebiete Berlin</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
-                  <span>Mitte</span><span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Pankow</span><span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Friedrichshain</span><span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Lichtenberg</span><span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Mitte</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Pankow</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Friedrichshain</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Lichtenberg</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
                   <span>Marzahn</span>
                 </div>
               </div>
             </div>
             <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium text-[#2C2C2C]">
-                <a href="mailto:kontakt@nautilus-facility.de" className="underline underline-offset-4 decoration-[#B79B6C]/30">kontakt@nautilus-facility.de</a>
-                <a href="tel:+4917622844636" className="underline underline-offset-4 decoration-[#B79B6C]/30">0176 22844636</a>
+                <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">kontakt@nautilus-facility.de</a>
+                <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">0176 22844636</a>
               </div>
               <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70]">
                 <a href="impressum/" className="hover:text-[#B79B6C]">Impressum</a>

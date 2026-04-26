@@ -46,7 +46,7 @@ const services = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20">
+    <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20 shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:bg-[#a3885c] transition-all duration-300">
       <div className="fixed inset-x-0 top-0 z-50">
         <header className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-10">
           <div className="rounded-full border border-white/40 bg-[#F8F4EC]/82 px-5 py-3 shadow-[0_12px_30px_rgba(183,155,108,0.16)] backdrop-blur-xl">
@@ -178,7 +178,7 @@ export default function App() {
                   <ul className="relative mt-7 space-y-3 text-[15px] leading-7 text-[#6F6559]/84">
                     {service.bullets.map((bullet) => (
                       <li key={bullet} className="flex items-start gap-3">
-                        <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#B79B6C]" />
+                        <span className="mt-2.5 h-1.5 w-1.5 rounded-full bg-[#B79B6C] shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:bg-[#a3885c] transition-all duration-300" />
                         <span>{bullet}</span>
                       </li>
                     ))}
@@ -542,7 +542,7 @@ export default function App() {
                     <div className="pt-2">
                       <input type="hidden" name="_subject" value="Neue Anfrage über nautilus-facility.de" />
                     <input type="hidden" name="_language" value="de" />
-                    <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+                    <input type="text" name="_gotcha" className="hidden focus:ring-2 focus:ring-[#B79B6C]/50 focus:border-[#B79B6C] transition-all duration-300 hover:bg-gray-50/50" tabIndex={-1} autoComplete="off" />
 
                     <button
                         id="contact-form-button"

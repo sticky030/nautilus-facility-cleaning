@@ -109,7 +109,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* HERO */}
+        {/* HERO SECTION */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -128,14 +128,14 @@ export default function App() {
                 Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
+                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
                 <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8] bg-white/50 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-[#6F6559] transition-all duration-300 hover:bg-white hover:border-[#B79B6C]/50">Expertise ansehen</a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* LEISTUNGEN - MIT FIXIERTER LINIE */}
+        {/* EXPERTISE SECTION - LINE ALIGNMENT FIX */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="reveal max-w-3xl">
@@ -145,22 +145,22 @@ export default function App() {
               </h2>
             </div>
             
-            <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 text-left">
               {services.map((service) => (
                 <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-lg">
-                  {/* Der obere Teil bekommt eine Mindesthöhe für die Linien-Ausrichtung */}
-                  <div className="flex flex-col flex-grow min-h-[260px] lg:min-h-[280px]">
+                  {/* Min-height ensures the line is pushed to the same spot on all cards */}
+                  <div className="flex flex-col flex-grow min-h-[300px] lg:min-h-[320px]">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
                   <div className="mt-8">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
-                    <ul className="mt-6 space-y-4 text-[15px] leading-6 text-[#6F6559] min-h-[180px]">
+                    <ul className="mt-6 space-y-4 text-[15px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
-                          <span>{bullet}</span>
+                          <span className="text-left">{bullet}</span>
                         </li>
                       ))}
                     </ul>
@@ -171,14 +171,15 @@ export default function App() {
           </div>
         </section>
 
-        {/* WARUM NAUTILUS */}
+        {/* WARUM NAUTILUS SECTION - TEXT RESTORED */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
-            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 text-left">
               <div className="reveal lg:col-span-5 lg:pr-10">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Warum Nautilus</p>
                 <h2 className="mt-6 max-w-[12ch] text-3xl font-semibold leading-[1.06] text-[#2C2C2C] lg:text-[46px]">Ein Standard, der keine Kompromisse kennt.</h2>
-                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen.</p>
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen. Ein makelloses Umfeld fördert die Produktivität und das Vertrauen Ihrer Klienten.</p>
+                <p className="mt-5 text-[17px] leading-8 text-[#8A7E70]">Wir integrieren unsere Dienstleistung lautlos in Ihre Abläufe – für ein dauerhaftes Ergebnis, das Sie jeden Tag spüren, ohne es managen zu müssen.</p>
               </div>
               <div className="lg:col-span-7 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {[
@@ -217,16 +218,16 @@ export default function App() {
           </div>
         </section>
 
-        {/* ABLAUF - STICKY STACKING CARDS */}
+        {/* ABLAUF SECTION - STICKY CARDS */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
-              <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start text-left">
+              <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Vom ersten Kontakt bis zur unsichtbaren Routine.</h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Ein Wechsel des Dienstleisters muss geräuschlos funktionieren. Wir implementieren unseren Standard, ohne Ihren laufenden Betrieb auch nur eine Minute zu stören.</p>
               </div>
-              <div className="lg:col-span-7 space-y-8 pb-20 text-left">
+              <div className="lg:col-span-7 space-y-8 pb-20">
                 {[
                   { num: '01', title: 'Das Objekt-Audit', text: 'Wir erfassen Ihr Objekt bis ins letzte Detail – von empfindlichen Oberflächen bis zu strengen Sicherheitsvorgaben. Nichts wird dem Zufall überlassen.' },
                   { num: '02', title: 'Das lautlose Konzept', text: 'Wir entwickeln ein Reinigungsprotokoll, das sich unsichtbar in Ihren Berufsalltag einfügt. Maximale Effizienz ohne die geringste Störung Ihres Betriebs.' },
@@ -238,7 +239,7 @@ export default function App() {
                       <span className="text-[11px] font-bold tracking-[0.2em] text-[#B79B6C] border border-[#E5E1D8] bg-white px-3 py-1 rounded-full uppercase">Schritt {item.num}</span>
                     </div>
                     <h3 className="text-[20px] lg:text-[24px] font-semibold text-[#2C2C2C] mb-3">{item.title}</h3>
-                    <p className="text-[15px] leading-7 text-[#7E7367]">{item.text}</p>
+                    <p className="text-[15px] leading-7 text-[#7E7367] text-left">{item.text}</p>
                   </article>
                 ))}
               </div>
@@ -248,9 +249,9 @@ export default function App() {
 
         <FAQSection />
 
-        {/* KONTAKT - MANDANTEN KORRIGIERT */}
+        {/* KONTAKT SECTION */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 border-b border-[#E5E1D8]/60">
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="grid items-start gap-20 lg:grid-cols-2 text-left">
               <div className="reveal">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt & Anfrage</p>
@@ -269,7 +270,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="reveal bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-12 shadow-sm relative overflow-hidden">
+              <div className="reveal bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-12 shadow-sm relative overflow-hidden text-left">
                 {submitted ? (
                   <div className="py-20 text-center animate-in fade-in duration-500">
                     <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#B79B6C]/10 text-[#B79B6C]">
@@ -320,8 +321,8 @@ export default function App() {
                       <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]" />
                     </div>
                     <div>
-                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
-                      <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C] resize-none" />
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Nachricht</label>
+                      <textarea rows={4} name="Nachricht" required placeholder="Größe des Objekts, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C] resize-none" />
                     </div>
                     <button type="submit" disabled={loading} className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase text-white shadow-md hover:bg-[#A98E60] transition-all disabled:opacity-50">
                       {loading ? 'Wird gesendet...' : 'Anfrage sicher senden'}

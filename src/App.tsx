@@ -83,7 +83,6 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* --- HERO SECTION: FINAL TEXT --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -201,7 +200,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- PROZESS --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -242,7 +240,7 @@ export default function App() {
 
         <FAQSection />
 
-        <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
+        <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left border-b border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
               <div className="reveal">
@@ -340,24 +338,69 @@ export default function App() {
 
       </main>
 
-      <footer className="bg-white py-16 border-t border-[#E5E1D8]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 lg:flex-row lg:items-start lg:justify-between lg:px-10">
-          <div>
-            <div className="text-[11px] font-bold tracking-[0.35em] text-[#B79B6C]">
-              NAUTILUS FACILITY CLEANING
+      {/* --- SEO FOOTER: HORIZONTAL FLOW (Vorschlag B) --- */}
+      <footer className="bg-white py-20 text-left">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          
+          <div className="flex flex-col gap-12 lg:gap-16">
+            
+            {/* Logo & Info Spalte */}
+            <div>
+              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">
+                NAUTILUS FACILITY CLEANING
+              </div>
+              <p className="mt-4 max-w-md text-[14px] leading-7 text-[#8A7E70]">
+                Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
+                Spezialisierte Gebäudereinigung für Berlin.
+              </p>
             </div>
-            <p className="mt-4 text-[14px] leading-7 text-[#8A7E70]">
-              Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
-              Exzellenz in der Reinigung für Berlin Mitte, Prenzlauer Berg, Friedrichshain, Lichtenberg und Marzahn.
-            </p>
-            <div className="mt-6 flex flex-col gap-2 text-[14px] text-[#2C2C2C] font-medium">
-              <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors">kontakt@nautilus-facility.de</a>
-              <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors">0176 22844636</a>
+
+            {/* SEO Zeilen - Dienstleistungen */}
+            <div className="flex flex-col gap-6">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Dienstleistungen</p>
+                <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
+                  <span>Unterhaltsreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Büroreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Kanzleireinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Praxisreinigung</span>
+                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Bauendreinigung</span>
+                </div>
+              </div>
+
+              {/* SEO Zeilen - Einsatzgebiete */}
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Einsatzgebiete Berlin</p>
+                <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
+                  <span>Mitte</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Pankow</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Friedrichshain</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Lichtenberg</span>
+                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Marzahn</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-wider text-[#8A7E70]">
-            <a href="impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
-            <a href="datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
+
+            {/* Bottom Row: Kontakt & Rechtliches */}
+            <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium text-[#2C2C2C]">
+                <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">kontakt@nautilus-facility.de</a>
+                <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">0176 22844636</a>
+              </div>
+              <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70]">
+                <a href="impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
+                <a href="datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </footer>

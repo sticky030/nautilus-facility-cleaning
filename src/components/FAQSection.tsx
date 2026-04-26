@@ -37,9 +37,9 @@ export default function FAQSection() {
           <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="reveal opacity-0 translate-y-10 transition-all duration-1000 border-b border-[#E5E1D8] last:border-0 overflow-hidden">
+            <div key={idx} className="reveal opacity-0 translate-y-10 transition-all duration-700 border-b border-[#E5E1D8] last:border-0 overflow-hidden">
               <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)} 
                 className="flex w-full items-center justify-between py-8 text-left group"

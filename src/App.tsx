@@ -83,22 +83,23 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
+        {/* --- HERO SECTION: SEO OPTIMIERT --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-[linear-gradient(96deg,rgba(247,244,238,0.94)_0%,rgba(247,244,238,0.90)_36%,rgba(247,244,238,0.70)_64%,rgba(247,244,238,0.34)_100%)]" />
           <div className="relative mx-auto grid w-full max-w-7xl px-6 pb-20 pt-36 lg:px-10 lg:pb-28 lg:pt-40 text-left">
-            <div className="reveal lg:max-w-3xl">
+            <div className="reveal lg:max-w-4xl">
               <div className="inline-flex items-center gap-3 mb-8">
                 <span className="h-px w-8 bg-[#B79B6C]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Exzellentes Facility Cleaning</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Gebäudereinigung Berlin</span>
               </div>
-              <h1 className="text-[38px] font-medium leading-[1.1] text-[#2C2C2C] sm:text-[48px] lg:text-[62px]">
-                Exzellenz in der Reinigung.<br />Für anspruchsvolle Objekte.
+              <h1 className="text-[36px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[46px] lg:text-[58px]">
+                Unterhaltsreinigung in Berlin für Kanzleien, Praxen und Büros.
               </h1>
               <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
-                Wir betreuen Arztpraxen, Kanzleien und exklusive Gewerbeflächen in Berlin. Präzise Abstimmung, absolute Diskretion und ein Qualitätsanspruch, der im Hintergrund perfekt funktioniert.
+                Diskretion, Zuverlässigkeit und ein Standard, der im Hintergrund perfekt funktioniert. Wir betreuen anspruchsvolle gewerbliche Objekte in den zentralen Berliner Bezirken.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
@@ -193,7 +194,7 @@ export default function App() {
               </div>
               <div className="reveal lg:col-span-7">
                 <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
-                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>

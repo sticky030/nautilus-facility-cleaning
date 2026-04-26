@@ -83,6 +83,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
+        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -94,10 +95,10 @@ export default function App() {
                 <span className="h-px w-8 bg-[#B79B6C]"></span>
                 <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Gebäudereinigung Berlin</span>
               </div>
-              <h1 className="text-[36px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[46px] lg:text-[58px]">
-                Unterhaltsreinigung in Berlin für Kanzleien, Praxen und Büros.
+              <h1 className="text-[34px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[44px] lg:text-[56px]">
+                Unterhaltsreinigung in Berlin für Praxen, Büros, Kanzleien und Hausverwaltungen.
               </h1>
-              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
+              <p className="mt-8 max-w-[40rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
                 Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">

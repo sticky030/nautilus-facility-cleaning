@@ -87,6 +87,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20 text-left">
       
+      {/* Header */}
       <div className="fixed inset-x-0 top-6 z-50 flex justify-center px-4 pointer-events-none">
         <header className="pointer-events-auto w-full max-w-6xl rounded-full bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-4 py-3 transition-all duration-500">
           <div className="flex items-center justify-between gap-6 px-2">
@@ -108,7 +109,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* --- HERO --- */}
+        {/* HERO */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -134,7 +135,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- LEISTUNGEN --- */}
+        {/* LEISTUNGEN - MIT FIXIERTER LINIE */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="reveal max-w-3xl">
@@ -147,7 +148,8 @@ export default function App() {
             <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
               {services.map((service) => (
                 <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-lg">
-                  <div className="flex flex-col flex-grow min-h-[240px] lg:min-h-[260px]">
+                  {/* Der obere Teil bekommt eine Mindesthöhe für die Linien-Ausrichtung */}
+                  <div className="flex flex-col flex-grow min-h-[260px] lg:min-h-[280px]">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
@@ -169,15 +171,14 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- WARUM NAUTILUS --- */}
+        {/* WARUM NAUTILUS */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
-            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 text-left">
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
               <div className="reveal lg:col-span-5 lg:pr-10">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Warum Nautilus</p>
                 <h2 className="mt-6 max-w-[12ch] text-3xl font-semibold leading-[1.06] text-[#2C2C2C] lg:text-[46px]">Ein Standard, der keine Kompromisse kennt.</h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen.</p>
-                <p className="mt-5 text-[17px] leading-8 text-[#8A7E70]">Wir integrieren unsere Dienstleistung lautlos in Ihre Abläufe – für ein dauerhaftes Ergebnis, das Sie jeden Tag spüren, ohne es managen zu müssen.</p>
               </div>
               <div className="lg:col-span-7 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {[
@@ -196,8 +197,9 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- HALTUNG & PERSONAL --- */}
+        {/* HALTUNG & PERSONAL */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10 text-left">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
               <div className="reveal lg:col-span-5 lg:pr-6">
@@ -215,7 +217,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- ABLAUF (STACKING CARDS) --- */}
+        {/* ABLAUF - STICKY STACKING CARDS */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -246,7 +248,7 @@ export default function App() {
 
         <FAQSection />
 
-        {/* --- KONTAKT --- */}
+        {/* KONTAKT - MANDANTEN KORRIGIERT */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 border-b border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2 text-left">
@@ -282,7 +284,7 @@ export default function App() {
                       <div>
                         <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
                         <div className="relative">
-                          <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none focus:border-[#B79B6C] cursor-pointer">
+                          <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C] cursor-pointer">
                             <option>Büro & Kanzlei</option>
                             <option>Arztpraxis</option>
                             <option>Treppenhaus & Objekt</option>
@@ -297,7 +299,7 @@ export default function App() {
                       <div>
                         <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
                         <div className="relative">
-                          <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none focus:border-[#B79B6C] cursor-pointer">
+                          <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all focus:border-[#B79B6C] cursor-pointer">
                             <option>Täglich</option>
                             <option>Mehrmals pro Woche</option>
                             <option>Wöchentlich</option>
@@ -332,15 +334,15 @@ export default function App() {
         </section>
       </main>
 
-      {/* --- FOOTER --- */}
+      {/* FOOTER */}
       <footer className="bg-white py-20 text-left border-t border-[#E5E1D8]">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
           <div className="flex flex-col gap-12 lg:gap-16">
             <div>
               <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">NAUTILUS FACILITY CLEANING</div>
               <p className="mt-4 max-w-md text-[14px] text-[#8A7E70]">Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />Spezialisierte Gebäudereinigung für Berlin.</p>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 text-left">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Dienstleistungen</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">

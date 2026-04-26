@@ -48,7 +48,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20 shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:bg-[#a3885c] transition-all duration-300">
       <div className="fixed inset-x-0 top-0 z-50">
-        <header className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-10">
+        <header className="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:px-10 sticky top-0 z-50 bg-[#F7F4EE]/90 backdrop-blur-md shadow-sm border-b border-[#E5E1D8]/50 transition-all duration-300">
           <div className="rounded-full border border-white/40 bg-[#F8F4EC]/82 px-5 py-3 shadow-[0_12px_30px_rgba(183,155,108,0.16)] backdrop-blur-xl">
             <div className="flex items-center justify-between gap-6">
               <a href="#start" className="flex min-w-0 items-center gap-3">

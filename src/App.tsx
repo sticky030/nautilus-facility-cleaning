@@ -144,7 +144,7 @@ export default function App() {
 
                   <div className="mt-10 flex flex-col justify-end">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
-                    <ul className="mt-8 flex flex-col justify-start gap-4 h-[180px] text-[15px] leading-6 text-[#6F6559]">
+                    <ul className="mt-8 flex flex-col justify-start gap-4 min-h-[240px] xl:min-h-[200px] h-full text-[15px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />

@@ -83,7 +83,6 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -109,7 +108,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- LEISTUNGEN --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="reveal max-w-3xl">
@@ -119,20 +117,20 @@ export default function App() {
               </h2>
             </div>
             
-            <div className="mt-20 grid grid-cols-1 gap-8 xl:grid-cols-3">
+            <div className="mt-16 grid grid-cols-1 gap-8 xl:grid-cols-3">
               {services.map((service) => (
-                <article key={service.title} className="reveal group flex flex-col h-full overflow-hidden bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
+                <article key={service.title} className="reveal group flex flex-col h-full overflow-hidden bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
                   <div className="flex flex-col flex-grow">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
-                    <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
-                    <p className="mt-5 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
+                    <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
+                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
-                  <div className="mt-10 flex flex-col justify-end shrink-0">
+                  <div className="mt-8 flex flex-col justify-end shrink-0">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
-                    <ul className="mt-8 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[240px] xl:h-[220px] text-[15px] leading-6 text-[#6F6559]">
+                    <ul className="mt-6 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[220px] text-[15px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C]" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -144,7 +142,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- WARUM NAUTILUS --- */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
@@ -167,10 +164,10 @@ export default function App() {
                   { title: 'Verlässliche Standards', desc: 'Durch internes Qualitätsmanagement sichern wir einen konstanten, kompromisslosen Standard.' },
                   { title: 'Sensible Umfelder', desc: 'Speziell geschultes, verschwiegenes Personal für Bereiche, in denen Vertrauen absolute Priorität hat.' }
                 ].map((item) => (
-                  <article key={item.title} className="reveal bg-[#FCFBF8] rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
+                  <article key={item.title} className="reveal bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.title}</div>
-                    <div className="mt-5 h-px w-12 bg-gradient-to-r from-[#B79B6C] to-transparent" />
-                    <p className="mt-5 text-[15px] leading-8 text-[#7E7367]">{item.desc}</p>
+                    <div className="mt-4 h-px w-12 bg-gradient-to-r from-[#B79B6C] to-transparent" />
+                    <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{item.desc}</p>
                   </article>
                 ))}
               </div>
@@ -178,7 +175,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- AUFTRETEN & HALTUNG --- */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden text-left">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
@@ -196,7 +192,7 @@ export default function App() {
                 </p>
               </div>
               <div className="reveal lg:col-span-7">
-                <div className="relative overflow-hidden rounded-[32px] border border-[#E5E1D8]/80 bg-white shadow-[0_20px_50px_rgba(183,155,108,0.1)]">
+                <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
                   <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
@@ -204,7 +200,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- PROZESS --- */}
+        {/* --- PROZESS: SCHLANKER STACK --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -219,7 +215,7 @@ export default function App() {
                 </p>
               </div>
               
-              <div className="lg:col-span-7 space-y-16 pb-32">
+              <div className="lg:col-span-7 space-y-8 pb-20">
                 {[
                   { num: '01', title: 'Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
                   { num: '02', title: 'Strategische Konzeption', text: 'Maßarbeit statt Standard. Wir entwerfen ein hybrides Reinigungskonzept, das operative Effizienz mit Ihrem Anspruch an ein repräsentatives und werterhaltendes Umfeld vereint.' },
@@ -228,16 +224,15 @@ export default function App() {
                 ].map((item, idx) => (
                   <article 
                     key={item.num} 
-                    className="reveal sticky bg-[#FCFBF8] rounded-[32px] border border-[#E5E1D8]/80 p-10 lg:p-12 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]"
-                    style={{ top: `calc(10rem + ${idx * 2}rem)` }}
+                    className="reveal sticky bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] transition-all duration-500 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]"
+                    style={{ top: `calc(9rem + ${idx * 1.5}rem)` }}
                   >
-                    <div className="absolute -top-5 left-8 lg:left-12 bg-white border border-[#E5E1D8] px-6 py-2 rounded-full shadow-sm flex items-center gap-3">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#B79B6C]" />
-                      <span className="text-[12px] font-bold tracking-[0.3em] text-[#B79B6C]">{item.num}</span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-[11px] font-bold tracking-[0.2em] text-[#B79B6C] border border-[#E5E1D8] bg-white px-3 py-1 rounded-full uppercase">Schritt {item.num}</span>
                     </div>
                     
-                    <h3 className="mt-4 text-[22px] lg:text-[26px] font-semibold text-[#2C2C2C] mb-4">{item.title}</h3>
-                    <p className="text-[16px] leading-8 text-[#7E7367]">{item.text}</p>
+                    <h3 className="text-[20px] lg:text-[24px] font-semibold text-[#2C2C2C] mb-3">{item.title}</h3>
+                    <p className="text-[15px] leading-7 text-[#7E7367]">{item.text}</p>
                   </article>
                 ))}
               </div>
@@ -245,10 +240,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- FAQ SECTION --- */}
         <FAQSection />
 
-        {/* --- KONTAKT --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
@@ -260,83 +253,82 @@ export default function App() {
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
                   Geben Sie uns einen ersten Überblick über Ihr Vorhaben. Wir melden uns zeitnah für eine vollkommen unverbindliche Erstbesichtigung.
                 </p>
-                <div className="mt-14 space-y-6">
+                <div className="mt-14 space-y-4">
                   {[
                     { title: 'Für wen wir arbeiten', content: 'Arztpraxen, Kanzleien, Hausverwaltungen und anspruchsvolle Gewerbeimmobilien in Berlin.' },
                     { title: 'Unser Versprechen', content: 'Transparente Angebote, feste Ansprechpartner und absolute Zuverlässigkeit ab dem ersten Tag.' },
                     { title: 'Der nächste Schritt', content: 'Sie beschreiben kurz Ihr Objekt. Wir melden uns mit einer ersten Einschätzung und einem Konzept.' }
                   ].map((box) => (
-                    <div key={box.title} className="bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-1.5 hover:border-[#B79B6C]/40 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
+                    <div key={box.title} className="bg-white rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]">
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{box.title}</p>
-                      <p className="mt-4 text-[16px] leading-8 text-[#6F6559] whitespace-pre-line">{box.content}</p>
+                      <p className="mt-3 text-[15px] leading-7 text-[#6F6559] whitespace-pre-line">{box.content}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* --- PREMIUM KONTAKTFORMULAR --- */}
-              <div className="reveal bg-white rounded-[32px] border border-[#E5E1D8]/80 p-10 lg:p-14 shadow-[0_8px_24px_rgba(0,0,0,0.03)] transition-all duration-500 hover:shadow-[0_24px_50px_rgba(183,155,108,0.1)]">
-                <div className="mb-10">
+              <div className="reveal bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-12 shadow-sm transition-all duration-500 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
+                <div className="mb-8">
                   <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Diskrete Anfrage</p>
-                  <p className="mt-4 text-[16px] leading-8 text-[#7E7367]">
+                  <p className="mt-3 text-[15px] leading-7 text-[#7E7367]">
                     Hinterlassen Sie uns die wichtigsten Eckdaten zu Ihrem Objekt für eine erste Einschätzung.
                   </p>
                 </div>
-                <form id="contact-form" action="https://formspree.io/f/mnjonren" method="POST" className="space-y-8">
-                  <div className="grid gap-6 sm:grid-cols-2">
+                <form id="contact-form" action="https://formspree.io/f/mnjonren" method="POST" className="space-y-6">
+                  <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
                       <div className="relative">
-                        <select name="Objektart" className="w-full appearance-none rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                        <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 cursor-pointer">
                           <option>Büro & Kanzlei</option>
                           <option>Arztpraxis</option>
                           <option>Treppenhaus & Objekt</option>
                           <option>Gewerbeeinheit</option>
                           <option>Bauprojekt</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#B79B6C]">
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#B79B6C]">
                           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
                       <div className="relative">
-                        <select name="Turnus" className="w-full appearance-none rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                        <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 cursor-pointer">
                           <option>Täglich</option>
                           <option>Mehrmals pro Woche</option>
                           <option>Wöchentlich</option>
                           <option>Nach Bedarf</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#B79B6C]">
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#B79B6C]">
                           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
-                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
+                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10" />
                     </div>
                     <div>
-                      <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
-                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
+                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10" />
                     </div>
                   </div>
                   <div>
-                    <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
-                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-[20px] border border-[#E5E1D8]/80 bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 resize-none" />
+                    <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
+                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 resize-none" />
                   </div>
                   
                   <div className="pt-2">
                     <input type="hidden" name="_subject" value="Neue exklusive Anfrage über nautilus-facility.de" />
                     <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                    <button type="submit" className="w-full rounded-full bg-[#B79B6C] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
+                    <button type="submit" className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
                       Anfrage sicher senden
                     </button>
                   </div>
-                  <p className="text-center text-[13px] text-[#9A8D7D] mt-6 flex items-center justify-center gap-2">
+                  <p className="text-center text-[12px] text-[#9A8D7D] mt-4 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     Ihre Daten werden SSL-verschlüsselt und absolut vertraulich behandelt.
                   </p>
@@ -354,16 +346,16 @@ export default function App() {
             <div className="text-[11px] font-bold tracking-[0.35em] text-[#B79B6C]">
               NAUTILUS FACILITY CLEANING
             </div>
-            <p className="mt-5 max-w-md text-[14px] leading-7 text-[#8A7E70]">
+            <p className="mt-4 text-[14px] leading-7 text-[#8A7E70]">
               Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
               Exzellenz in der Reinigung für Berlin Mitte, Prenzlauer Berg, Friedrichshain, Lichtenberg und Marzahn.
             </p>
-            <div className="mt-8 flex flex-col gap-3 text-[15px] text-[#2C2C2C] font-medium">
+            <div className="mt-6 flex flex-col gap-2 text-[14px] text-[#2C2C2C] font-medium">
               <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors">kontakt@nautilus-facility.de</a>
               <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors">0176 22844636</a>
             </div>
           </div>
-          <div className="flex gap-8 text-[14px] font-semibold uppercase tracking-wider text-[#8A7E70]">
+          <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-wider text-[#8A7E70]">
             <a href="impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
             <a href="datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
           </div>

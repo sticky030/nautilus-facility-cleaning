@@ -1,5 +1,3 @@
-import React from 'react';
-
 const faqs = [
   {
     question: 'Wie sicher sind meine Objektschlüssel bei Ihnen?',

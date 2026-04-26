@@ -97,8 +97,8 @@ export default function App() {
               <h1 className="text-[36px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[46px] lg:text-[58px]">
                 Unterhaltsreinigung in Berlin für Kanzleien, Praxen und Büros.
               </h1>
-              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
-                Professionelle Unterhaltsreinigung für Umfelder, in denen Vertrauen und Verschwiegenheit Voraussetzung sind. Wir integrieren uns reibungslos in Ihre Abläufe und garantieren durch feste Ansprechpartner eine Konstanz, die keine Fragen offen lässt.
+              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light italic_off">
+                Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
@@ -182,7 +182,7 @@ export default function App() {
               <div className="reveal lg:col-span-5 lg:pr-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Haltung & Personal</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.1] text-[#2C2C2C] lg:text-[46px]">
-                  Diskret im Auftritt.<br />Kompromisslos in der Qualität.
+                  Diskret im Auftritt. Präzise in der Ausführung.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70] font-light">
                   Wir verstehen uns als unsichtbaren, aber essenziellen Teil Ihres Unternehmenserfolgs. Ein tadellos gepflegtes Erscheinungsbild unserer Mitarbeiter und absolute Verschwiegenheit sind für uns obligatorisch.
@@ -338,13 +338,9 @@ export default function App() {
 
       </main>
 
-      {/* --- SEO FOOTER: HORIZONTAL FLOW (Vorschlag B) --- */}
       <footer className="bg-white py-20 text-left">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          
           <div className="flex flex-col gap-12 lg:gap-16">
-            
-            {/* Logo & Info Spalte */}
             <div>
               <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">
                 NAUTILUS FACILITY CLEANING
@@ -354,8 +350,6 @@ export default function App() {
                 Spezialisierte Gebäudereinigung für Berlin.
               </p>
             </div>
-
-            {/* SEO Zeilen - Dienstleistungen */}
             <div className="flex flex-col gap-6">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Dienstleistungen</p>
@@ -371,8 +365,6 @@ export default function App() {
                   <span>Bauendreinigung</span>
                 </div>
               </div>
-
-              {/* SEO Zeilen - Einsatzgebiete */}
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Einsatzgebiete Berlin</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
@@ -388,8 +380,6 @@ export default function App() {
                 </div>
               </div>
             </div>
-
-            {/* Bottom Row: Kontakt & Rechtliches */}
             <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium text-[#2C2C2C]">
                 <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">kontakt@nautilus-facility.de</a>
@@ -400,7 +390,6 @@ export default function App() {
                 <a href="datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
               </div>
             </div>
-
           </div>
         </div>
       </footer>

@@ -34,7 +34,7 @@ export default function FAQSection() {
     <section id="faq" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="reveal opacity-0 translate-y-10 transition-all duration-1000 mb-16">
-          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Details</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
         <div className="space-y-4">
@@ -44,7 +44,7 @@ export default function FAQSection() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)} 
                 className="flex w-full items-center justify-between py-8 text-left group"
               >
-                <span className="text-[17px] font-medium text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors italic">
+                <span className="text-[18px] font-medium text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors italic">
                   {faq.question}
                 </span>
                 <span className={`ml-6 flex-shrink-0 text-[#B79B6C] transition-transform duration-500 ${openIndex === idx ? 'rotate-45' : ''}`}>

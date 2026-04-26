@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const faqs = [
   {
     question: 'Wie sicher sind meine Objektschlüssel bei Ihnen?',
@@ -26,6 +28,12 @@ const faqs = [
 ];
 
 export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section id="faq" className="bg-[#F7F4EE] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -33,14 +41,54 @@ export default function FAQSection() {
           <h2 className="text-base font-semibold leading-7 text-[#B79B6C] uppercase tracking-widest">FAQ</h2>
           <p className="mt-2 text-4xl font-bold tracking-tight text-[#2C2C2C] sm:text-5xl">Häufige Fragen</p>
         </div>
-        <dl className="mt-20 space-y-8">
-          {faqs.map((faq) => (
-            <div key={faq.question} className="bg-white p-8 rounded-2xl shadow-sm border border-[#E5E1D8]">
-              <dt className="text-lg font-semibold leading-7 text-[#2C2C2C]">{faq.question}</dt>
-              <dd className="mt-4 text-base leading-7 text-[#8A7E70]">{faq.answer}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="mx-auto max-w-3xl mt-20 space-y-4">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={faq.question}
+                className={`bg-white rounded-2xl shadow-sm border transition-colors duration-300 ${
+                  isOpen ? 'border-[#B79B6C]' : 'border-[#E5E1D8] hover:border-[#B79B6C]/50'
+                }`}
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="flex w-full items-center justify-between px-8 py-6 text-left focus:outline-none"
+                >
+                  <span className="text-lg font-semibold text-[#2C2C2C] pr-4">{faq.question}</span>
+                  <span
+                    className={`ml-6 flex items-center justify-center shrink-0 h-8 w-8 rounded-full border transition-all duration-300 ${
+                      isOpen
+                        ? 'border-[#B79B6C] bg-[#B79B6C] text-white'
+                        : 'border-[#B79B6C]/40 text-[#B79B6C]'
+                    }`}
+                  >
+                    <svg
+                      className={`h-5 w-5 transition-transform duration-300 ease-in-out ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="pb-6 px-8 text-base leading-7 text-[#8A7E70]">{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

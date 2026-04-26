@@ -1,139 +1,49 @@
-import { useState } from 'react'
+import React from 'react';
 
 const faqs = [
   {
-    question: 'Welche Reinigungsleistungen bietet Nautilus Facility Cleaning in Berlin an?',
-    answer:
-      'Wir übernehmen Büroreinigung, Praxisreinigung, Treppenhausreinigung, Unterhaltsreinigung, Bauendreinigung, Grundreinigung und Fensterreinigung für gewerbliche Objekte in Berlin.',
+    question: 'Wie sicher sind meine Objektschlüssel bei Ihnen?',
+    answer: 'Sicherheit ist bei uns ein fester Prozess. Ihre Schlüssel werden anonymisiert und in einem gesicherten System verwaltet. Die Übergabe erfolgt ausschließlich an Ihr festes Stammpersonal gegen Protokoll. So behalten Sie jederzeit die volle Kontrolle.'
   },
   {
-    question: 'In welchen Berliner Bezirken ist Nautilus Facility Cleaning tätig?',
-    answer:
-      'Unser Einsatzgebiet umfasst Lichtenberg, Marzahn, Friedrichshain, Prenzlauer Berg und Berlin-Mitte. So halten wir Wege kurz und können Einsätze verlässlich organisieren. Weitere Berliner Bezirke sind auf Anfrage ebenfalls möglich.',
+    question: 'Ist die Besichtigung vor Ort für mich mit Kosten verbunden?',
+    answer: 'Nein. Wir verstehen uns als Partner auf Augenhöhe. Eine professionelle Erstbesichtigung ist für uns die Basis für ein faires und exakt kalkuliertes Angebot. Dieser Service ist für Sie vollkommen kostenfrei und unverbindlich.'
   },
   {
-    question: 'Reinigen Sie auch Arztpraxen und andere sensible Gewerbeobjekte?',
-    answer:
-      'Ja. Wir arbeiten für Arztpraxen, Büros und weitere gewerbliche Einheiten, in denen ein gepflegtes Umfeld, Diskretion und saubere Abläufe besonders wichtig sind.',
+    question: 'In welchen Berliner Bezirken sind Sie genau tätig?',
+    answer: 'Um unsere hohen Qualitätsstandards und absolute Pünktlichkeit zu garantieren, konzentrieren wir uns auf die Bezirke Mitte, Prenzlauer Berg, Friedrichshain, Lichtenberg und Marzahn. Weitere Bezirke bedienen wir gerne auf individuelle Anfrage.'
   },
   {
-    question: 'Bieten Sie auch regelmäßige Unterhaltsreinigung an?',
-    answer:
-      'Ja. Die regelmäßige Unterhaltsreinigung gehört zu unseren Kernleistungen. Umfang, Intervalle und Einsatzzeiten stimmen wir so ab, dass die Reinigung sauber in den laufenden Betrieb passt.',
+    question: 'Habe ich immer die gleichen Ansprechpartner vor Ort?',
+    answer: 'Ja. Kontinuität ist der Kern unserer Qualität. Sie erhalten ein festes Team, das Ihre Räumlichkeiten und individuellen Wünsche genau kennt. Das sorgt für konstante Ergebnisse und ein vertrauensvolles Miteinander.'
   },
   {
-    question: 'Ist auch eine Treppenhausreinigung für kleinere und mittlere Objekte möglich?',
-    answer:
-      'Ja. Wir übernehmen die laufende Reinigung von Treppenhäusern, Eingangsbereichen und Gemeinschaftsflächen für kleinere und mittlere Wohn- und Gewerbeobjekte.',
+    question: 'Was passiert, wenn bei der Reinigung ein Schaden entsteht?',
+    answer: 'Wo gearbeitet wird, können Fehler passieren – entscheidend ist der Umgang damit. Nautilus ist umfassend betriebshaftpflichtversichert. Wir kommunizieren Vorfälle sofort proaktiv und kümmern uns um die komplette Regulierung, ohne dass Sie Aufwand haben.'
   },
   {
-    question: 'Übernehmen Sie auch Bauendreinigung nach Umbau oder Ausbau?',
-    answer:
-      'Ja. Wir übernehmen Bauendreinigung und Feinreinigung nach Umbau-, Ausbau- und Sanierungsarbeiten, damit Flächen sauber übergeben oder direkt genutzt werden können.',
-  },
-  {
-    question: 'Ist die Besichtigung kostenlos?',
-    answer:
-      'Ja. Eine kurze Besichtigung vor Ort ist die Grundlage dafür, Leistungsumfang, Turnus und tatsächlichen Aufwand sauber einzuordnen. So kann das Angebot nachvollziehbar und passend auf das Objekt abgestimmt werden.',
-  },
-  {
-    question: 'Sind Anfahrt und Reinigungsmittel bereits im Angebot enthalten?',
-    answer:
-      'Im Regelfall werden Anfahrt und Reinigungsmittel in die Kalkulation integriert und nicht separat als verdeckte Nebenkosten nachgeschoben. Maßgeblich ist das konkret abgestimmte Leistungsbild des Objekts.',
-  },
-  {
-    question: 'Arbeiten Sie mit festen Ansprechpartnern und klaren Abläufen?',
-    answer:
-      'Ja. Entscheidend ist für uns nicht nur die Durchführung selbst, sondern auch eine nachvollziehbare Abstimmung, klare Zuständigkeiten und ein Standard, der im laufenden Betrieb verlässlich getragen wird.',
-  },
-  {
-    question: 'Wie läuft eine Anfrage bei Nautilus Facility Cleaning ab?',
-    answer:
-      'Nach dem Erstkontakt klären wir die wichtigsten Eckdaten zum Objekt, zum gewünschten Leistungsumfang und zum Turnus. Wenn erforderlich, folgt eine kurze Besichtigung vor Ort. Anschließend erstellen wir ein passendes Angebot.',
-  },
-  {
-    question: 'Wie schnell können Sie mit der Reinigung starten?',
-    answer:
-      'In vielen Fällen können wir kurzfristig starten. Der genaue Zeitpunkt hängt vom Objekt, dem Leistungsumfang und der gewünschten Frequenz ab.',
-  },
-  {
-    question: 'Warum ist eine Besichtigung vor Angebotsabgabe sinnvoll?',
-    answer:
-      'Eine Besichtigung schafft Klarheit über Flächen, Nutzung und tatsächlichen Reinigungsbedarf. So lässt sich der Leistungsumfang realistisch einordnen und das Angebot sauber auf das Objekt abstimmen.',
-  },
-]
+    question: 'Können für mein Objekt auch ökologische Reinigungsmittel eingesetzt werden?',
+    answer: 'Nachhaltigkeit ist ein wesentlicher Teil unseres Qualitätsanspruchs. Auf Wunsch setzen wir gezielt zertifizierte, ökologische Reinigungsprodukte ein. Diese sind besonders schadstoffarm und materialschonend, wodurch wir nicht nur die Umwelt entlasten, sondern auch ein gesundes, frisches Raumklima für Ihre Mitarbeiter und Kunden sicherstellen.'
+  }
+];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   return (
     <section id="faq" className="bg-[#F7F4EE] py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl px-6 lg:px-10">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#B79B6C]">
-            FAQ
-          </p>
-          <h2 className="mx-auto mt-4 max-w-[14ch] text-3xl font-semibold leading-[1.08] text-[#6F6559] lg:text-[48px]">
-            Häufige Fragen
-          </h2>
-          <p className="mx-auto mt-6 max-w-[42rem] text-base leading-8 text-[#8A7E70]">
-            Die wichtigsten Punkte zu Leistungen, Einsatzgebiet und Ablauf kompakt zusammengefasst.
-          </p>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-base font-semibold leading-7 text-[#B79B6C] uppercase tracking-widest">FAQ</h2>
+          <p className="mt-2 text-4xl font-bold tracking-tight text-[#2C2C2C] sm:text-5xl">Häufige Fragen</p>
         </div>
-
-        <div className="mt-14 space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index
-
-            return (
-              <div
-                key={faq.question}
-                className={`overflow-hidden rounded-[28px] border bg-white transition-all duration-300 ${
-                  isOpen
-                    ? 'border-[#D2B582] shadow-[0_18px_42px_rgba(183,155,108,0.10)]'
-                    : 'border-[#E6DED1] shadow-[0_10px_24px_rgba(183,155,108,0.04)]'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-start justify-between gap-6 px-6 py-6 text-left lg:px-8"
-                >
-                  <span className="max-w-[42rem] text-[17px] font-medium leading-8 text-[#6F6559] lg:text-[19px]">
-                    {faq.question}
-                  </span>
-
-                  <span
-                    className={`mt-1 relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-white transition-all duration-300 ${
-                      isOpen ? 'border-[#D2B582] shadow-[0_6px_16px_rgba(183,155,108,0.10)]' : 'border-[#E2D6C4]'
-                    }`}
-                  >
-                    <span
-                      className={`absolute h-[1.5px] w-[15px] rounded-full transition-all duration-300 ${
-                        isOpen ? 'bg-[#8F6830]' : 'bg-[#8C774E]'
-                      }`}
-                    />
-                    <span
-                      className={`absolute h-[15px] w-[1.5px] rounded-full transition-all duration-300 ${
-                        isOpen ? 'opacity-0 scale-y-75 bg-[#8F6830]' : 'opacity-100 scale-y-100 bg-[#8C774E]'
-                      }`}
-                    />
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-7 pt-0 lg:px-8">
-                    <div className="mb-5 h-px w-full bg-[#E9DFD0]" />
-                    <p className="max-w-[42rem] text-[15px] leading-8 text-[#7E7367] lg:text-[16px]">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
+        <dl className="mt-20 space-y-8">
+          {faqs.map((faq) => (
+            <div key={faq.question} className="bg-white p-8 rounded-2xl shadow-sm border border-[#E5E1D8]">
+              <dt className="text-lg font-semibold leading-7 text-[#2C2C2C]">{faq.question}</dt>
+              <dd className="mt-4 text-base leading-7 text-[#8A7E70]">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
-  )
+  );
 }

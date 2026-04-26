@@ -104,13 +104,20 @@ export default function FAQSection() {
                   </span>
 
                   <span
-                    className={`mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-white text-[22px] leading-none transition-all duration-300 ${
-                      isOpen
-                        ? 'rotate-45 border-[#D2B582] text-[#8F6830]'
-                        : 'border-[#E2D6C4] text-[#8C774E]'
+                    className={`mt-1 relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-white transition-all duration-300 ${
+                      isOpen ? 'border-[#D2B582] shadow-[0_6px_16px_rgba(183,155,108,0.10)]' : 'border-[#E2D6C4]'
                     }`}
                   >
-                    +
+                    <span
+                      className={`absolute h-[1.5px] w-[15px] rounded-full transition-all duration-300 ${
+                        isOpen ? 'bg-[#8F6830]' : 'bg-[#8C774E]'
+                      }`}
+                    />
+                    <span
+                      className={`absolute h-[15px] w-[1.5px] rounded-full transition-all duration-300 ${
+                        isOpen ? 'opacity-0 scale-y-75 bg-[#8F6830]' : 'opacity-100 scale-y-100 bg-[#8C774E]'
+                      }`}
+                    />
                   </span>
                 </button>
 

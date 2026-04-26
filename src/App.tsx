@@ -15,10 +15,10 @@ const services = [
     title: 'Praxis- & Kanzleireinigung',
     text: 'Branchenspezifische Hygienekonzepte für Arztpraxen und exklusive Büros. Wir arbeiten mit höchster Präzision und absoluter Diskretion, um Ihren laufenden Betrieb nicht zu stören.',
     bullets: [
-      'Klinische Hygiene in sensiblen Zonen',
-      'Repräsentative Pflege von Konferenzbereichen',
-      'Flexible Einsatzzeiten (Early-Bird / Late-Night)',
-      'Zertifizierte, werterhaltende Reinigungsmittel',
+      'Flächendesinfektion in sensiblen Zonen',
+      'Pflege von Empfangs- & Konferenzbereichen',
+      'Diskreter Service nach Ihren Bürozeiten',
+      'Nachhaltige, materialschonende Mittel',
     ],
   },
   {
@@ -26,10 +26,10 @@ const services = [
     title: 'Treppenhaus- & Foyer-Service',
     text: 'Der erste Eindruck zählt. Wir sorgen dafür, dass Foyers und Treppenhäuser die Hochwertigkeit Ihres Objekts nahtlos widerspiegeln – durch kontinuierliche, werterhaltende Detailpflege.',
     bullets: [
-      'Detailpflege von Entrees und Aufzügen',
-      'Schonende Behandlung von Naturstein und Holz',
-      'Saisonale Schmutzkontrolle und Mattenservice',
-      'Proaktives Mängel-Reporting an die Verwaltung',
+      'Repräsentative Pflege des Eingangsbereichs',
+      'Schonende Reinigung von Holz & Naturstein',
+      'Aufzug-, Geländer- & Fensterbrettreinigung',
+      'Verlässliche Intervalle & feste Teams',
     ],
   },
   {
@@ -37,10 +37,10 @@ const services = [
     title: 'Premium Bauendreinigung',
     text: 'Nach Abschluss anspruchsvoller Bau- oder Ausbauprojekte bringen wir Ihre Räumlichkeiten in einen bezugsfertigen Zustand. Termingerecht, staubfrei und bereit für die finale Abnahme.',
     bullets: [
-      'Termingenaue Feinreinigung für die Bauabnahme',
+      'Feinreinigung für Bau- und Objektabnahmen',
       'Rückstandslose Entfernung von Bauschmutz',
-      'Schonende Erstreinigung sensibler Oberflächen',
-      'Absolute Verlässlichkeit bei knappen Zeitfenstern',
+      'Fachgerechte Einpflege von Neu-Oberflächen',
+      'Absolute Terminsicherheit bei Übergaben',
     ],
   },
 ]
@@ -92,7 +92,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-hidden">
-        {/* --- HERO SECTION (WIEDER HELL) --- */}
+        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -124,7 +124,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- LEISTUNGEN (KURZE TEXTE + PERFEKTE AUSRICHTUNG) --- */}
+        {/* --- LEISTUNGEN --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="max-w-3xl">
@@ -138,18 +138,20 @@ export default function App() {
               {services.map((service) => (
                 <article key={service.title} className="group flex flex-col h-full overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white p-10 shadow-[0_8px_20px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B79B6C]/50 hover:shadow-[0_30px_60px_rgba(183,155,108,0.12)]">
                   
+                  {/* flex-grow drückt den unteren Bereich nach ganz unten */}
                   <div className="flex flex-col flex-grow">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-5 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
 
+                  {/* Der untere Bereich hat eine exakt festgelegte Höhe (h-[160px] für die ul). Dadurch bleibt die Linie immer perfekt waagerecht auf einer Linie mit den anderen Boxen. */}
                   <div className="mt-10 flex flex-col justify-end">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
-                    <ul className="mt-8 space-y-4 text-[15px] leading-7 text-[#6F6559] min-h-[160px]">
+                    <ul className="mt-8 flex flex-col justify-between h-[160px] text-[15px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
-                          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
                           <span>{bullet}</span>
                         </li>
                       ))}
@@ -195,7 +197,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- AUFTRETEN & HALTUNG (WIEDER HELL) --- */}
+        {/* --- AUFTRETEN & HALTUNG --- */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
@@ -226,20 +228,20 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
               <div className="lg:col-span-5 lg:pr-8">
-                <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Prozess</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                  Vom ersten Kontakt bis zum makellosen Ergebnis.
+                  Ein reibungsloser Start. Ein dauerhaftes Ergebnis.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
-                  Ein bewährter Prozess garantiert Ergebnisse auf höchstem Niveau. Wir überlassen nichts dem Zufall, sondern definieren jeden Schritt von der ersten Begehung bis zur täglichen Umsetzung präzise.
+                  Ein bewährter Prozess garantiert Ihnen Ergebnisse auf höchstem Niveau. Wir überlassen nichts dem Zufall, sondern definieren jeden Schritt – von der ersten Begehung bis zur täglichen Umsetzung.
                 </p>
               </div>
               <div className="lg:col-span-7 space-y-6">
                 {[
-                  { step: '01 · Präzise Analyse', text: 'Wir erfassen Ihre Räumlichkeiten und Anforderungen im Detail, um den genauen Leistungsumfang einzuordnen.' },
-                  { step: '02 · Transparente Abstimmung', text: 'Sie erhalten ein exakt kalkuliertes Reinigungskonzept, das sich reibungslos in Ihren Zeitplan einfügt.' },
-                  { step: '03 · Nahtlose Umsetzung', text: 'Ruhige und professionelle Integration unseres festen Stammpersonals in Ihre Gebäudeabläufe.' },
-                  { step: '04 · Premium Qualitätssicherung', text: 'Kontinuierliches Monitoring und proaktive Kommunikation sichern unseren Standard langfristig ab.' }
+                  { step: '01 · Besichtigung vor Ort', text: 'Wir begehen Ihr Objekt persönlich. Nur so können wir Flächen, Materialien und Ihre spezifischen Anforderungen exakt aufnehmen.' },
+                  { step: '02 · Maßgeschneidertes Konzept', text: 'Sie erhalten ein faires, transparentes Angebot. Wir definieren Turnus und Leistungsumfang klar – ohne versteckte Kosten.' },
+                  { step: '03 · Geräuschloses Onboarding', text: 'Unser festes Stammpersonal wird detailliert in Ihr Objekt eingewiesen. Der Start verläuft geräuschlos und professionell.' },
+                  { step: '04 · Laufende Betreuung', text: 'Wir bleiben im Austausch. Ein fester Ansprechpartner und regelmäßige Qualitätskontrollen sichern unser hohes Niveau dauerhaft.' }
                 ].map((item) => (
                   <article key={item.step} className="rounded-3xl border border-[#E5E1D8] bg-[#FCFBF8] p-10 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-white hover:border-[#B79B6C]/40 hover:shadow-[0_20px_40px_rgba(183,155,108,0.08)]">
                     <div className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.step}</div>
@@ -255,23 +257,23 @@ export default function App() {
         {/* --- FAQ SECTION --- */}
         <FAQSection />
 
-        {/* --- KONTAKT (MIT DROPDOWN PFEILEN) --- */}
+        {/* --- KONTAKT --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
               <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt</p>
+                <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt & Anfrage</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                  Teilen Sie uns Ihre Wünsche mit. Den Rest übernehmen wir.
+                  Wir freuen uns auf Ihr Objekt.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
-                  Für exklusive Büros, Arztpraxen und anspruchsvolle Gewerbeobjekte in Berlin. Eine kurze, diskrete Anfrage genügt – Ihr persönlicher Ansprechpartner meldet sich zeitnah.
+                  Geben Sie uns einen ersten, kurzen Überblick über Ihr Vorhaben. Ihr persönlicher Ansprechpartner meldet sich zeitnah, um alles Weitere mit Ihnen abzustimmen.
                 </p>
                 <div className="mt-14 space-y-6">
                   {[
-                    { title: 'Fokus', content: 'Repräsentative Büros · Medizinische Einrichtungen · Gehobene Immobilien' },
-                    { title: 'Ablauf', content: 'Anfrage · Besichtigung · Angebot · Start der Reinigung' },
-                    { title: 'Einsatzgebiet', content: 'Mitte · Prenzlauer Berg · Friedrichshain · Lichtenberg · Marzahn' }
+                    { title: 'Für wen wir arbeiten', content: 'Arztpraxen, Kanzleien, Hausverwaltungen und anspruchsvolle Gewerbeimmobilien in Berlin.' },
+                    { title: 'Unser Versprechen', content: 'Transparente Angebote, feste Ansprechpartner und absolute Zuverlässigkeit ab dem ersten Tag.' },
+                    { title: 'Der nächste Schritt', content: 'Sie beschreiben kurz Ihr Objekt. Wir melden uns für eine Erstbesichtigung und ein individuelles Konzept.' }
                   ].map((box) => (
                     <div key={box.title} className="rounded-3xl border border-[#E5E1D8] bg-white p-8 shadow-sm">
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{box.title}</p>
@@ -349,7 +351,7 @@ export default function App() {
                     <input type="hidden" name="_subject" value="Neue exklusive Anfrage über nautilus-facility.de" />
                     <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
                     <button type="submit" className="w-full rounded-2xl bg-[#B79B6C] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
-                      Anfrage diskret senden
+                      Anfrage sicher senden
                     </button>
                   </div>
                   <p className="text-center text-[13px] text-[#9A8D7D] mt-6 flex items-center justify-center gap-2">

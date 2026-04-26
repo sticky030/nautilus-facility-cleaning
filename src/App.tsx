@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import FAQSection from './components/FAQSection'
 
 const navItems = [
@@ -47,6 +47,9 @@ const services = [
 ]
 
 export default function App() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -58,6 +61,28 @@ export default function App() {
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/mnjonren", {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error("Fehler beim Senden");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20">
@@ -83,7 +108,6 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -98,7 +122,7 @@ export default function App() {
               <h1 className="text-[34px] font-medium leading-[1.15] text-[#2C2C2C] sm:text-[44px] lg:text-[56px]">
                 Unterhaltsreinigung in Berlin für Praxen, Büros, Kanzleien und Hausverwaltungen.
               </h1>
-              <p className="mt-8 max-w-[40rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
+              <p className="mt-8 max-w-[40rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light italic_off">
                 Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -109,6 +133,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* ... Restlicher Content bleibt gleich ... */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="reveal max-w-3xl">
@@ -204,7 +229,6 @@ export default function App() {
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
-              
               <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
@@ -214,7 +238,6 @@ export default function App() {
                   Ein Wechsel des Dienstleisters muss geräuschlos funktionieren. Wir implementieren unseren Standard, ohne Ihren laufenden Betrieb auch nur eine Minute zu stören.
                 </p>
               </div>
-              
               <div className="lg:col-span-7 space-y-8 pb-20">
                 {[
                   { num: '01', title: 'Das Objekt-Audit', text: 'Wir erfassen Ihr Objekt bis ins letzte Detail – von empfindlichen Oberflächen bis zu strengen Sicherheitsvorgaben. Nichts wird dem Zufall überlassen.' },
@@ -266,72 +289,54 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="reveal bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-12 shadow-sm transition-all duration-500 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
-                <div className="mb-8">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Diskrete Anfrage</p>
-                  <p className="mt-3 text-[15px] leading-7 text-[#7E7367]">
-                    Hinterlassen Sie uns die wichtigsten Eckdaten zu Ihrem Objekt für eine erste Einschätzung.
-                  </p>
-                </div>
-                <form id="contact-form" action="https://formspree.io/f/mnjonren" method="POST" className="space-y-6">
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
-                      <div className="relative">
-                        <select name="Objektart" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 cursor-pointer">
+              <div className="reveal bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-12 shadow-sm">
+                {submitted ? (
+                  <div className="py-20 text-center animate-in fade-in duration-500">
+                    <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#B79B6C]/10 text-[#B79B6C]">
+                      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                    </div>
+                    <h3 className="text-2xl font-semibold text-[#2C2C2C]">Anfrage wurde gesendet</h3>
+                    <p className="mt-4 text-[15px] text-[#7E7367]">Vielen Dank. Wir melden uns zeitnah bei Ihnen.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid gap-5 sm:grid-cols-2">
+                      <div>
+                        <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
+                        <select name="Objektart" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]">
                           <option>Büro & Kanzlei</option>
                           <option>Arztpraxis</option>
                           <option>Treppenhaus & Objekt</option>
-                          <option>Gewerbeeinheit</option>
+                          <option>Hausverwaltung</option>
                           <option>Bauprojekt</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#B79B6C]">
-                          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
-                      <div className="relative">
-                        <select name="Turnus" className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 cursor-pointer">
+                      <div>
+                        <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
+                        <select name="Turnus" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]">
                           <option>Täglich</option>
                           <option>Mehrmals pro Woche</option>
                           <option>Wöchentlich</option>
-                          <option>Nach Bedarf</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#B79B6C]">
-                          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
-                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10" />
+                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]" />
                     </div>
                     <div>
                       <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
-                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10" />
+                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C]" />
                     </div>
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
-                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-2 focus:ring-[#B79B6C]/10 resize-none" />
-                  </div>
-                  
-                  <div className="pt-2">
-                    <input type="hidden" name="_subject" value="Neue exklusive Anfrage über nautilus-facility.de" />
-                    <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                    <button type="submit" className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
-                      Anfrage sicher senden
+                    <div>
+                      <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Nachricht</label>
+                      <textarea rows={4} name="Nachricht" required placeholder="Größe des Objekts, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C] resize-none" />
+                    </div>
+                    <button type="submit" disabled={loading} className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase text-white hover:bg-[#A98E60] transition-all disabled:opacity-50">
+                      {loading ? 'Wird gesendet...' : 'Anfrage sicher senden'}
                     </button>
-                  </div>
-                  <p className="text-center text-[12px] text-[#9A8D7D] mt-4 flex items-center justify-center gap-2">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                    Ihre Daten werden SSL-verschlüsselt und absolut vertraulich behandelt.
-                  </p>
-                </form>
+                  </form>
+                )}
               </div>
             </div>
           </div>
@@ -343,54 +348,40 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="flex flex-col gap-12 lg:gap-16">
             <div>
-              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">
-                NAUTILUS FACILITY CLEANING
-              </div>
-              <p className="mt-4 max-w-md text-[13px] leading-6 text-[#8A7E70]">
-                Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
-                Spezialisierte Gebäudereinigung für Berlin.
-              </p>
+              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">NAUTILUS FACILITY CLEANING</div>
+              <p className="mt-4 max-w-md text-[13px] text-[#8A7E70]">Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />Spezialisierte Gebäudereinigung für Berlin.</p>
             </div>
             <div className="flex flex-col gap-6">
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Dienstleistungen</p>
+                <p className="text-[10px] font-bold uppercase text-[#B79B6C] mb-3">Dienstleistungen</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
-                  <span>Unterhaltsreinigung</span>
-                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Büroreinigung</span>
-                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Kanzleireinigung</span>
-                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Praxisreinigung</span>
-                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
-                  <span>Treppenhausreinigung</span>
-                  <span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Unterhaltsreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Büroreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Kanzleireinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Praxisreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
+                  <span>Treppenhausreinigung</span><span className="mx-4 h-3 w-px bg-[#E5E1D8]"></span>
                   <span>Bauendreinigung</span>
                 </div>
               </div>
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#B79B6C] mb-3">Einsatzgebiete Berlin</p>
+                <p className="text-[10px] font-bold uppercase text-[#B79B6C] mb-3">Einsatzgebiete Berlin</p>
                 <div className="flex flex-wrap items-center gap-y-2 text-[14px] font-medium text-[#2C2C2C]">
-                  <span>Mitte</span>
-                  <span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Pankow</span>
-                  <span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Friedrichshain</span>
-                  <span className="mx-4 text-[#E5E1D8]">·</span>
-                  <span>Lichtenberg</span>
-                  <span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Mitte</span><span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Pankow</span><span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Friedrichshain</span><span className="mx-4 text-[#E5E1D8]">·</span>
+                  <span>Lichtenberg</span><span className="mx-4 text-[#E5E1D8]">·</span>
                   <span>Marzahn</span>
                 </div>
               </div>
             </div>
-            <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium text-[#2C2C2C]">
-                <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">kontakt@nautilus-facility.de</a>
-                <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors underline decoration-[#B79B6C]/30 underline-offset-4">0176 22844636</a>
+            <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium">
+                <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors underline underline-offset-4">kontakt@nautilus-facility.de</a>
+                <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors underline underline-offset-4">0176 22844636</a>
               </div>
-              <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70]">
-                <a href="impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
-                <a href="datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
+              <div className="flex gap-8 text-[13px] font-semibold uppercase text-[#8A7E70]">
+                <a href="impressum/" className="hover:text-[#B79B6C]">Impressum</a>
+                <a href="datenschutz/" className="hover:text-[#B79B6C]">Datenschutz</a>
               </div>
             </div>
           </div>

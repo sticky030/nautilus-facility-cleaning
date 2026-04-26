@@ -31,33 +31,34 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60">
-      <div className="mx-auto max-w-4xl px-6 lg:px-10">
+    <section id="faq" className="bg-[#F7F4EE] py-32 lg:py-40 border-b border-[#E5E1D8]/60">
+      <div className="mx-auto max-w-5xl px-6 lg:px-10">
         
-        {/* ZENTRIERTER HEADER */}
+        {/* ZENTRIERTER HEADER - WIE IM BILD GESEHEN */}
         <div className="reveal mb-16 flex flex-col items-center text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">FAQ</p>
           <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">Häufige Fragen.</h2>
         </div>
         
-        {/* AKKORDEON BOXEN */}
+        {/* AKKORDEON BOXEN - EXAKT WIE IM SCREENSHOT */}
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="reveal bg-[#FCFBF8] border border-[#E5E1D8] rounded-3xl shadow-sm transition-all duration-300 hover:border-[#B79B6C]/50 hover:shadow-md">
+            <div key={idx} className="reveal bg-white border border-[#E5E1D8] rounded-3xl shadow-[0_4px_15px_rgba(0,0,0,0.03)] transition-all duration-300 hover:border-[#B79B6C]/50 hover:shadow-[0_8px_30px_rgba(183,155,108,0.1)]">
               <button 
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)} 
-                className="flex w-full items-center justify-between p-6 sm:p-8 text-left group"
+                className="flex w-full items-center justify-between p-7 sm:p-9 text-left group"
               >
-                <span className="text-[17px] font-semibold text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors pr-4 italic">
+                <span className="text-[17px] font-semibold text-[#2C2C2C] group-hover:text-[#B79B6C] transition-colors pr-6">
                   {faq.question}
                 </span>
-                <span className={`flex-shrink-0 text-[#B79B6C] transition-transform duration-500 ${openIndex === idx ? 'rotate-45' : ''}`}>
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m8-8H4" /></svg>
+                {/* DER PFEILKREIS RECHTS WIE IM BILD */}
+                <span className={`flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-full border border-[#D9CCB8] text-[#B79B6C] transition-all duration-500 ${openIndex === idx ? 'bg-[#B79B6C] text-white rotate-180 border-[#B79B6C]' : 'bg-transparent'}`}>
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
                 </span>
               </button>
               
               <div className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === idx ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="px-6 sm:px-8 pb-8 text-[16px] leading-8 text-[#7E7367] border-t border-[#E5E1D8]/50 pt-6 text-left">
+                <div className="px-7 sm:px-9 pb-9 text-[16px] leading-8 text-[#7E7367] border-t border-[#E5E1D8]/50 pt-7 text-left whitespace-pre-line">
                   {faq.answer}
                 </div>
               </div>

@@ -35,7 +35,7 @@ const services = [
   },
   {
     eyebrow: 'Spezial- & Projektbezogen',
-    title: 'Premium Bauendreinigung',
+    title: 'Präzise Bauendreinigung',
     text: 'Nach Abschluss von Bau- oder Sanierungsprojekten bringen wir Ihre Räumlichkeiten in einen bezugsfertigen Zustand. Termingerecht, staubfrei und perfekt vorbereitet für die finale Objektabnahme.',
     bullets: [
       'Baugrob- & Feinreinigung bis Bezugsfertigkeit',
@@ -92,7 +92,7 @@ export default function App() {
             <div className="reveal lg:max-w-3xl">
               <div className="inline-flex items-center gap-3 mb-8">
                 <span className="h-px w-8 bg-[#B79B6C]"></span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Premium Facility Cleaning</span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Exzellentes Facility Cleaning</span>
               </div>
               <h1 className="text-[38px] font-medium leading-[1.1] text-[#2C2C2C] sm:text-[48px] lg:text-[62px]">
                 Exzellenz in der Reinigung.<br />Für anspruchsvolle Objekte.
@@ -154,7 +154,7 @@ export default function App() {
                   Wir arbeiten für Kunden, die Perfektion nicht als Zufall, sondern als systematischen Prozess verstehen. Ein makelloses Umfeld fördert die Produktivität und das Vertrauen Ihrer Klienten.
                 </p>
                 <p className="mt-5 text-[17px] leading-8 text-[#8A7E70]">
-                  Wir integrieren unsere Dienstleistung lautlos in Ihre Abläufe – für ein dauerhaftes Premium-Ergebnis, das Sie jeden Tag spüren, ohne es managen zu müssen.
+                  Wir integrieren unsere Dienstleistung lautlos in Ihre Abläufe – für ein dauerhaftes Ergebnis, das Sie jeden Tag spüren, ohne es managen zu müssen.
                 </p>
               </div>
               <div className="lg:col-span-7 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -193,14 +193,14 @@ export default function App() {
               </div>
               <div className="reveal lg:col-span-7">
                 <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
-                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* --- PROZESS: SCHLANKER STACK --- */}
+        {/* --- PROZESS --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -208,19 +208,19 @@ export default function App() {
               <div className="reveal lg:col-span-5 lg:pr-8 sticky top-32 lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                  Ein reibungsloser Start. Ein dauerhaftes Ergebnis.
+                  Vom ersten Kontakt bis zur unsichtbaren Routine.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
-                  Ein bewährter Prozess garantiert Ergebnisse auf höchstem Niveau. Wir überlassen nichts dem Zufall, sondern definieren jeden Schritt – von der ersten Begehung bis zur täglichen Umsetzung.
+                  Ein Wechsel des Dienstleisters muss geräuschlos funktionieren. Wir implementieren unseren Standard, ohne Ihren laufenden Betrieb auch nur eine Minute zu stören.
                 </p>
               </div>
               
               <div className="lg:col-span-7 space-y-8 pb-20">
                 {[
-                  { num: '01', title: 'Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
-                  { num: '02', title: 'Strategische Konzeption', text: 'Maßarbeit statt Standard. Wir entwerfen ein hybrides Reinigungskonzept, das operative Effizienz mit Ihrem Anspruch an ein repräsentatives und werterhaltendes Umfeld vereint.' },
-                  { num: '03', title: 'Präzise Implementierung', text: 'Lautlose Integration in Ihren Alltag. Unser festes Stammpersonal wird objektspezifisch instruiert und fügt sich ohne Reibungsverluste in Ihre bestehenden Gebäudeabläufe ein.' },
-                  { num: '04', title: 'Kontinuierliches Management', text: 'Beständigkeit auf höchstem Niveau. Durch proaktives Management und regelmäßige Qualitätskontrollen stellen wir sicher, dass unser Premium-Standard dauerhaft erfüllt wird.' }
+                  { num: '01', title: 'Das Objekt-Audit', text: 'Wir erfassen Ihr Objekt bis ins letzte Detail – von empfindlichen Oberflächen bis zu strengen Sicherheitsvorgaben. Nichts wird dem Zufall überlassen.' },
+                  { num: '02', title: 'Das lautlose Konzept', text: 'Wir entwickeln ein Reinigungsprotokoll, das sich unsichtbar in Ihren Berufsalltag einfügt. Maximale Effizienz ohne die geringste Störung Ihres Betriebs.' },
+                  { num: '03', title: 'Nahtloses Onboarding', text: 'Keine Einarbeitungszeit für Sie. Ihr festes Stammpersonal wird im Vorfeld objektspezifisch geschult. Der Dienstleisterwechsel erfolgt absolut geräuschlos.' },
+                  { num: '04', title: 'Autonomes Management', text: 'Wir kontrollieren uns selbst. Durch proaktives Monitoring garantieren wir ein makelloses Ergebnis, das vom ersten Tag an konstant bleibt – ohne dass Sie jemals eingreifen müssen.' }
                 ].map((item, idx) => (
                   <article 
                     key={item.num} 
@@ -230,7 +230,6 @@ export default function App() {
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-[11px] font-bold tracking-[0.2em] text-[#B79B6C] border border-[#E5E1D8] bg-white px-3 py-1 rounded-full uppercase">Schritt {item.num}</span>
                     </div>
-                    
                     <h3 className="text-[20px] lg:text-[24px] font-semibold text-[#2C2C2C] mb-3">{item.title}</h3>
                     <p className="text-[15px] leading-7 text-[#7E7367]">{item.text}</p>
                   </article>
@@ -242,26 +241,27 @@ export default function App() {
 
         <FAQSection />
 
+        {/* --- KONTAKT --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
               <div className="reveal">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt & Anfrage</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                  Wir freuen uns auf Ihr Objekt.
+                  Ihr direkter Weg zu kompromissloser Qualität.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
-                  Geben Sie uns einen ersten Überblick über Ihr Vorhaben. Wir melden uns zeitnah für eine vollkommen unverbindliche Erstbesichtigung.
+                  Hinterlassen Sie uns die wichtigsten Eckdaten Ihres Objekts. Wir behandeln Ihre Anfrage mit absoluter Diskretion und melden uns umgehend für eine erste Einschätzung.
                 </p>
                 <div className="mt-14 space-y-4">
                   {[
-                    { title: 'Für wen wir arbeiten', content: 'Arztpraxen, Kanzleien, Hausverwaltungen und anspruchsvolle Gewerbeimmobilien in Berlin.' },
-                    { title: 'Unser Versprechen', content: 'Transparente Angebote, feste Ansprechpartner und absolute Zuverlässigkeit ab dem ersten Tag.' },
-                    { title: 'Der nächste Schritt', content: 'Sie beschreiben kurz Ihr Objekt. Wir melden uns mit einer ersten Einschätzung und einem Konzept.' }
+                    { title: 'Unsere Mandanten', content: 'Arztpraxen, Kanzleien, Notariate, exklusive Gewerbeimmobilien sowie anspruchsvolle Bauprojekte (Bauendreinigung).' },
+                    { title: 'Einsatzgebiete', content: 'Kurze Wege garantieren Ausfallsicherheit. Wir fokussieren uns auf Mitte, Pankow, Lichtenberg, Marzahn und Friedrichshain-Kreuzberg.' },
+                    { title: 'Reaktionszeit', content: 'Ihre Zeit ist wertvoll. Wir prüfen Ihr Anliegen absolut vertraulich und melden uns innerhalb von 24 Stunden bei Ihnen.' }
                   ].map((box) => (
                     <div key={box.title} className="bg-white rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]">
                       <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{box.title}</p>
-                      <p className="mt-3 text-[15px] leading-7 text-[#6F6559] whitespace-pre-line">{box.content}</p>
+                      <p className="mt-3 text-[15px] leading-7 text-[#6F6559]">{box.content}</p>
                     </div>
                   ))}
                 </div>

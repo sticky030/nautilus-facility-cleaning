@@ -13,9 +13,9 @@ const services = [
   {
     eyebrow: 'Regelmäßige Unterhaltsreinigung',
     title: 'Praxis- & Kanzleireinigung',
-    text: 'Ein makelloses Umfeld ist die Visitenkarte Ihres Unternehmens. Wir bieten branchenspezifische Hygienekonzepte für Arztpraxen, Notariate und exklusive Büros. Unsere geschulten Teams arbeiten mit höchster Präzision und absoluter Diskretion, um den laufenden Betrieb niemals zu stören und Ihre Räumlichkeiten dauerhaft im besten Licht zu präsentieren.',
+    text: 'Branchenspezifische Hygienekonzepte für Arztpraxen und exklusive Büros. Wir arbeiten mit höchster Präzision und absoluter Diskretion, um Ihren laufenden Betrieb nicht zu stören.',
     bullets: [
-      'Klinische Hygiene in Behandlungs- und Wartezonen',
+      'Klinische Hygiene in sensiblen Zonen',
       'Repräsentative Pflege von Konferenzbereichen',
       'Flexible Einsatzzeiten (Early-Bird / Late-Night)',
       'Zertifizierte, werterhaltende Reinigungsmittel',
@@ -24,9 +24,9 @@ const services = [
   {
     eyebrow: 'Hochwertige Objektpflege',
     title: 'Treppenhaus- & Foyer-Service',
-    text: 'Der erste Eindruck Ihrer Immobilie entsteht bereits im Eingangsbereich. Wir sorgen dafür, dass Foyers, Treppenhäuser und Gemeinschaftsflächen die Hochwertigkeit Ihres Objekts nahtlos widerspiegeln. Durch kontinuierliche Detailpflege und den Einsatz schonender Spezialmittel erhalten wir langfristig die Substanz und Ästhetik Ihrer Architektur.',
+    text: 'Der erste Eindruck zählt. Wir sorgen dafür, dass Foyers und Treppenhäuser die Hochwertigkeit Ihres Objekts nahtlos widerspiegeln – durch kontinuierliche, werterhaltende Detailpflege.',
     bullets: [
-      'Detailpflege von Entrees, Aufzügen und Podesten',
+      'Detailpflege von Entrees und Aufzügen',
       'Schonende Behandlung von Naturstein und Holz',
       'Saisonale Schmutzkontrolle und Mattenservice',
       'Proaktives Mängel-Reporting an die Verwaltung',
@@ -35,10 +35,10 @@ const services = [
   {
     eyebrow: 'Spezial- & Projektbezogen',
     title: 'Premium Bauendreinigung',
-    text: 'Nach Abschluss anspruchsvoller Bau-, Sanierungs- oder Ausbauprojekte bringen wir Ihre Räumlichkeiten in einen bezugsfertigen Zustand. Wir entfernen Baufeinstaub und Rückstände schonend und übergeben Ihr Objekt termingerecht, staubfrei und in perfekter Präsentationsqualität für die finale und erfolgreiche Abnahme.',
+    text: 'Nach Abschluss anspruchsvoller Bau- oder Ausbauprojekte bringen wir Ihre Räumlichkeiten in einen bezugsfertigen Zustand. Termingerecht, staubfrei und bereit für die finale Abnahme.',
     bullets: [
       'Termingenaue Feinreinigung für die Bauabnahme',
-      'Rückstandslose Entfernung von Farb- & Kleberesten',
+      'Rückstandslose Entfernung von Bauschmutz',
       'Schonende Erstreinigung sensibler Oberflächen',
       'Absolute Verlässlichkeit bei knappen Zeitfenstern',
     ],
@@ -83,7 +83,7 @@ export default function App() {
 
             <a
               href="#kontakt"
-              className="inline-flex shrink-0 items-center rounded-full bg-gradient-to-r from-[#C2A57A] to-[#A98E60] px-7 py-3 text-[13px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)]"
+              className="inline-flex shrink-0 items-center rounded-full bg-[#B79B6C] px-7 py-3 text-[13px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_25px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]"
             >
               Anfrage stellen
             </a>
@@ -92,13 +92,13 @@ export default function App() {
       </div>
 
       <main className="overflow-x-hidden">
-        {/* --- HERO SECTION --- */}
-        <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#1A1A1A]">
-          <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover opacity-60 mix-blend-overlay">
+        {/* --- HERO SECTION (WIEDER HELL) --- */}
+        <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
+          <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1A1A1A] via-[#1A1A1A]/90 to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(183,155,108,0.15),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(96deg,rgba(247,244,238,0.94)_0%,rgba(247,244,238,0.90)_36%,rgba(247,244,238,0.70)_64%,rgba(247,244,238,0.34)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(183,155,108,0.16),transparent_28%)]" />
 
           <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 gap-12 px-6 pb-20 pt-36 lg:grid-cols-12 lg:px-10 lg:pb-28 lg:pt-40">
             <div className="lg:col-span-8 lg:self-end lg:pb-14">
@@ -106,17 +106,17 @@ export default function App() {
                 <span className="h-px w-8 bg-[#B79B6C]"></span>
                 <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#B79B6C]">Premium Facility Cleaning</span>
               </div>
-              <h1 className="text-[38px] font-medium leading-[1.1] text-white sm:text-[48px] lg:text-[62px]">
+              <h1 className="text-[38px] font-medium leading-[1.1] text-[#2C2C2C] sm:text-[48px] lg:text-[62px]">
                 Exzellenz in der Reinigung.<br />Für anspruchsvolle Objekte.
               </h1>
-              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#D9CCB8] lg:text-[19px] font-light">
+              <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
                 Wir betreuen Arztpraxen, Kanzleien und exklusive Gewerbeflächen in Berlin. Präzise Abstimmung, absolute Diskretion und ein Qualitätsanspruch, der im Hintergrund perfekt funktioniert.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#C2A57A] to-[#A98E60] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)]">
+                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
                   Unverbindliche Anfrage
                 </a>
-                <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8]/30 bg-white/5 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white/10 hover:border-[#D9CCB8]/50">
+                <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8] bg-white/50 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-[#6F6559] transition-all duration-300 hover:bg-white hover:border-[#B79B6C]/50">
                   Expertise ansehen
                 </a>
               </div>
@@ -124,29 +124,26 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- LEISTUNGEN (PERFEKTE AUSRICHTUNG) --- */}
+        {/* --- LEISTUNGEN (KURZE TEXTE + PERFEKTE AUSRICHTUNG) --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="max-w-3xl">
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Unsere Expertise</p>
-              <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#1A1A1A] lg:text-[46px]">
+              <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
                 Maßgeschneiderte Reinigungskonzepte für Objekte mit höchstem Anspruch.
               </h2>
             </div>
             
-            {/* Das Grid-Layout für die Karten */}
             <div className="mt-20 grid grid-cols-1 gap-8 xl:grid-cols-3">
               {services.map((service) => (
                 <article key={service.title} className="group flex flex-col h-full overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white p-10 shadow-[0_8px_20px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B79B6C]/50 hover:shadow-[0_30px_60px_rgba(183,155,108,0.12)]">
                   
-                  {/* Oberer Bereich mit flex-grow (drückt die Linie nach unten) */}
                   <div className="flex flex-col flex-grow">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
-                    <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#1A1A1A]">{service.title}</h3>
-                    <p className="mt-5 text-[16px] leading-8 text-[#7E7367]">{service.text}</p>
+                    <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
+                    <p className="mt-5 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
 
-                  {/* Unterer Bereich (Linie und Bullets sind jetzt auf exakt gleicher Höhe) */}
                   <div className="mt-10 flex flex-col justify-end">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
                     <ul className="mt-8 space-y-4 text-[15px] leading-7 text-[#6F6559] min-h-[160px]">
@@ -170,7 +167,7 @@ export default function App() {
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
               <div className="lg:col-span-5 lg:pr-10">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Philosophie</p>
-                <h2 className="mt-6 max-w-[12ch] text-3xl font-semibold leading-[1.06] text-[#1A1A1A] lg:text-[46px]">
+                <h2 className="mt-6 max-w-[12ch] text-3xl font-semibold leading-[1.06] text-[#2C2C2C] lg:text-[46px]">
                   Ein Standard, der keine Kompromisse kennt.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
@@ -198,27 +195,26 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- AUFTRETEN & HALTUNG (DARK MODE LUXURY) --- */}
-        <section className="bg-[#1A1A1A] py-32 lg:py-48 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.15),transparent_50%)]" />
+        {/* --- AUFTRETEN & HALTUNG (WIEDER HELL) --- */}
+        <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-5 lg:pr-6">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Haltung & Personal</p>
-                <h2 className="mt-6 text-3xl font-semibold leading-[1.1] text-white lg:text-[46px]">
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.1] text-[#2C2C2C] lg:text-[46px]">
                   Diskret im Auftritt.<br />Kompromisslos in der Qualität.
                 </h2>
-                <p className="mt-8 text-[17px] leading-8 text-[#D9CCB8] font-light">
+                <p className="mt-8 text-[17px] leading-8 text-[#8A7E70] font-light">
                   Wir verstehen uns als unsichtbaren, aber essenziellen Teil Ihres Unternehmenserfolgs. Ein tadellos gepflegtes Erscheinungsbild unserer Mitarbeiter und absolute Verschwiegenheit sind für uns obligatorisch.
                 </p>
-                <p className="mt-5 text-[17px] leading-8 text-[#D9CCB8] font-light">
-                  Gerade in Notariaten, Privatpraxen und Vorstandsetagen zählt nicht die reine Anwesenheit des Personals – sondern die Fähigkeit, einen Raum mit chirurgischer Präzision in seinen besten Zustand zu versetzen, ohne den Betrieb auch nur eine Sekunde zu stören.
+                <p className="mt-5 text-[17px] leading-8 text-[#8A7E70] font-light">
+                  Gerade in Notariaten, Privatpraxen und Vorstandsetagen zählt nicht die reine Anwesenheit des Personals – sondern die Fähigkeit, einen Raum mit höchster Präzision in seinen besten Zustand zu versetzen, ohne den Betrieb zu stören.
                 </p>
               </div>
               <div className="lg:col-span-7">
-                <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#232323] shadow-[0_30px_60px_rgba(0,0,0,0.6)]">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-transparent to-transparent z-10 opacity-60" />
-                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover opacity-85 hover:scale-105 transition-transform duration-1000" />
+                <div className="relative overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white shadow-[0_20px_50px_rgba(183,155,108,0.1)]">
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>
@@ -231,7 +227,7 @@ export default function App() {
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
               <div className="lg:col-span-5 lg:pr-8">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Prozess</p>
-                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#1A1A1A] lg:text-[46px]">
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
                   Vom ersten Kontakt bis zum makellosen Ergebnis.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
@@ -240,10 +236,10 @@ export default function App() {
               </div>
               <div className="lg:col-span-7 space-y-6">
                 {[
-                  { step: '01 · Präzise Analyse', text: 'Wir erfassen Ihre Räumlichkeiten und spezifischen Anforderungen bis ins letzte Detail, um den genauen Leistungsumfang einzuordnen.' },
-                  { step: '02 · Transparente Abstimmung', text: 'Sie erhalten ein transparentes, exakt kalkuliertes Reinigungskonzept, das sich reibungslos in Ihren Zeitplan einfügt.' },
+                  { step: '01 · Präzise Analyse', text: 'Wir erfassen Ihre Räumlichkeiten und Anforderungen im Detail, um den genauen Leistungsumfang einzuordnen.' },
+                  { step: '02 · Transparente Abstimmung', text: 'Sie erhalten ein exakt kalkuliertes Reinigungskonzept, das sich reibungslos in Ihren Zeitplan einfügt.' },
                   { step: '03 · Nahtlose Umsetzung', text: 'Ruhige und professionelle Integration unseres festen Stammpersonals in Ihre Gebäudeabläufe.' },
-                  { step: '04 · Premium Qualitätssicherung', text: 'Kontinuierliches Monitoring und proaktive Kommunikation sichern unseren hohen Standard langfristig ab.' }
+                  { step: '04 · Premium Qualitätssicherung', text: 'Kontinuierliches Monitoring und proaktive Kommunikation sichern unseren Standard langfristig ab.' }
                 ].map((item) => (
                   <article key={item.step} className="rounded-3xl border border-[#E5E1D8] bg-[#FCFBF8] p-10 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-white hover:border-[#B79B6C]/40 hover:shadow-[0_20px_40px_rgba(183,155,108,0.08)]">
                     <div className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.step}</div>
@@ -259,13 +255,13 @@ export default function App() {
         {/* --- FAQ SECTION --- */}
         <FAQSection />
 
-        {/* --- KONTAKT --- */}
+        {/* --- KONTAKT (MIT DROPDOWN PFEILEN) --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt</p>
-                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#1A1A1A] lg:text-[46px]">
+                <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
                   Teilen Sie uns Ihre Wünsche mit. Den Rest übernehmen wir.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
@@ -295,45 +291,64 @@ export default function App() {
                 </div>
                 <form id="contact-form" action="https://formspree.io/f/mnjonren" method="POST" className="space-y-8">
                   <div className="grid gap-6 sm:grid-cols-2">
+                    
+                    {/* Select: Objektart */}
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objektart</label>
-                      <select name="Objektart" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#1A1A1A] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
-                        <option>Büro & Kanzlei</option>
-                        <option>Arztpraxis</option>
-                        <option>Treppenhaus & Objekt</option>
-                        <option>Gehobene Gewerbeeinheit</option>
-                        <option>Bauprojekt</option>
-                      </select>
+                      <div className="relative">
+                        <select name="Objektart" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                          <option>Büro & Kanzlei</option>
+                          <option>Arztpraxis</option>
+                          <option>Treppenhaus & Objekt</option>
+                          <option>Gehobene Gewerbeeinheit</option>
+                          <option>Bauprojekt</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#B79B6C]">
+                          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
+                    
+                    {/* Select: Turnus */}
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Turnus</label>
-                      <select name="Turnus" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#1A1A1A] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
-                        <option>Täglich</option>
-                        <option>Mehrmals pro Woche</option>
-                        <option>Wöchentlich</option>
-                        <option>Nach Bedarf</option>
-                      </select>
+                      <div className="relative">
+                        <select name="Turnus" className="w-full appearance-none rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer">
+                          <option>Täglich</option>
+                          <option>Mehrmals pro Woche</option>
+                          <option>Wöchentlich</option>
+                          <option>Nach Bedarf</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#B79B6C]">
+                          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
+
                   </div>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Name</label>
-                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#1A1A1A] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <input type="text" name="Name" required placeholder="Ihr Name" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
                     </div>
                     <div>
                       <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">E-Mail</label>
-                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#1A1A1A] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
+                      <input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10" />
                     </div>
                   </div>
                   <div>
                     <label className="mb-3 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
-                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#1A1A1A] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 resize-none" />
+                    <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-2xl border border-[#E5E1D8] bg-[#FCFBF8] px-6 py-4 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 placeholder:text-[#B0A596] focus:border-[#B79B6C] focus:bg-white focus:ring-4 focus:ring-[#B79B6C]/10 resize-none" />
                   </div>
                   
                   <div className="pt-2">
                     <input type="hidden" name="_subject" value="Neue exklusive Anfrage über nautilus-facility.de" />
                     <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
-                    <button type="submit" className="w-full rounded-2xl bg-gradient-to-r from-[#C2A57A] to-[#A98E60] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)]">
+                    <button type="submit" className="w-full rounded-2xl bg-[#B79B6C] px-6 py-5 text-[15px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">
                       Anfrage diskret senden
                     </button>
                   </div>
@@ -359,7 +374,7 @@ export default function App() {
               Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />
               Exzellenz in der Reinigung für Berlin Mitte, Prenzlauer Berg, Friedrichshain, Lichtenberg und Marzahn.
             </p>
-            <div className="mt-8 flex flex-col gap-3 text-[15px] text-[#1A1A1A] font-medium">
+            <div className="mt-8 flex flex-col gap-3 text-[15px] text-[#2C2C2C] font-medium">
               <a href="mailto:kontakt@nautilus-facility.de" className="hover:text-[#B79B6C] transition-colors">kontakt@nautilus-facility.de</a>
               <a href="tel:+4917622844636" className="hover:text-[#B79B6C] transition-colors">0176 22844636</a>
             </div>

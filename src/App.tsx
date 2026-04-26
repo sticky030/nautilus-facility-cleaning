@@ -581,12 +581,12 @@ export default function App() {
                 <br />
                 Praxisreinigung, Büroreinigung und laufende Objektpflege für ausgewählte Gewerbeobjekte in Lichtenberg · Marzahn · Friedrichshain · Prenzlauer Berg · Berlin-Mitte
                 <br />
-                <a href="mailto:<a href="mailto:kontakt@nautilus-facility.de" className="hover:underline">kontakt@nautilus-facility.de</a>" className="transition hover:text-[#6F6559]">
-                  <a href="mailto:kontakt@nautilus-facility.de" className="hover:underline">kontakt@nautilus-facility.de</a>
+                <a href="mailto:<a href="mailto:kontakt@nautilus-facility.de" className="hover:underline"><a href="mailto:kontakt@nautilus-facility.de" className="hover:underline">kontakt@nautilus-facility.de</a></a>" className="transition hover:text-[#6F6559]">
+                  <a href="mailto:kontakt@nautilus-facility.de" className="hover:underline"><a href="mailto:kontakt@nautilus-facility.de" className="hover:underline">kontakt@nautilus-facility.de</a></a>
                 </a>
                 <br />
                 <a href="tel:+493095857615" className="transition hover:text-[#6F6559]">
-                  <a href="tel:+4917622844636" className="hover:underline">0176 22844636</a>
+                  <a href="tel:+4917622844636" className="hover:underline"><a href="tel:+4917622844636" className="hover:underline">0176 22844636</a></a>
                 </a>
               </p>
             </div>

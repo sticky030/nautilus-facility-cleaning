@@ -246,7 +246,7 @@ export default function App() {
               <div className="reveal">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Kontakt & Anfrage</p>
                 <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                  Ihr direkter Weg zu kompromissloser Qualität.
+                  Der erste Schritt zu einem makellosen Ergebnis.
                 </h2>
                 <p className="mt-8 text-[17px] leading-8 text-[#8A7E70]">
                   Hinterlassen Sie uns die wichtigsten Eckdaten Ihres Objekts. Wir behandeln Ihre Anfrage mit absoluter Diskretion und melden uns umgehend für eine erste Einschätzung.

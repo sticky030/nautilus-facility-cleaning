@@ -83,7 +83,7 @@ export default function App() {
       </div>
 
       <main className="overflow-x-clip">
-        {/* --- HERO SECTION: SEO OPTIMIERT --- */}
+        {/* --- HERO SECTION: FINAL TEXT --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -99,7 +99,7 @@ export default function App() {
                 Unterhaltsreinigung in Berlin für Kanzleien, Praxen und Büros.
               </h1>
               <p className="mt-8 max-w-[38rem] text-[17px] leading-8 text-[#7E7367] lg:text-[19px] font-light">
-                Diskretion, Zuverlässigkeit und ein Standard, der im Hintergrund perfekt funktioniert. Wir betreuen anspruchsvolle gewerbliche Objekte in den zentralen Berliner Bezirken.
+                Professionelle Unterhaltsreinigung für Umfelder, in denen Vertrauen und Verschwiegenheit Voraussetzung sind. Wir integrieren uns reibungslos in Ihre Abläufe und garantieren durch feste Ansprechpartner eine Konstanz, die keine Fragen offen lässt.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
@@ -201,6 +201,7 @@ export default function App() {
           </div>
         </section>
 
+        {/* --- PROZESS --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">

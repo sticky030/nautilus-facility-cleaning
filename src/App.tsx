@@ -193,14 +193,13 @@ export default function App() {
               </div>
               <div className="reveal lg:col-span-7">
                 <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
-                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Premium Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* --- PROZESS --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -241,7 +240,6 @@ export default function App() {
 
         <FAQSection />
 
-        {/* --- KONTAKT --- */}
         <section id="kontakt" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid items-start gap-20 lg:grid-cols-2">
@@ -255,8 +253,8 @@ export default function App() {
                 </p>
                 <div className="mt-14 space-y-4">
                   {[
-                    { title: 'Unsere Mandanten', content: 'Arztpraxen, Kanzleien, Notariate, exklusive Gewerbeimmobilien sowie anspruchsvolle Bauprojekte (Bauendreinigung).' },
-                    { title: 'Einsatzgebiete', content: 'Kurze Wege garantieren Ausfallsicherheit. Wir fokussieren uns auf Mitte, Pankow, Lichtenberg, Marzahn und Friedrichshain-Kreuzberg.' },
+                    { title: 'Unsere Mandanten', content: 'Arztpraxen, Kanzleien, Notariate, exklusive Gewerbeimmobilien und anspruchsvolle Bauprojekte.' },
+                    { title: 'Einsatzgebiete', content: 'Mitte · Pankow · Lichtenberg · Marzahn · Friedrichshain-Kreuzberg' },
                     { title: 'Reaktionszeit', content: 'Ihre Zeit ist wertvoll. Wir prüfen Ihr Anliegen absolut vertraulich und melden uns innerhalb von 24 Stunden bei Ihnen.' }
                   ].map((box) => (
                     <div key={box.title} className="bg-white rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]">

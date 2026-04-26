@@ -62,7 +62,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F7F4EE] text-[#6F6559] antialiased selection:bg-[#B79B6C]/20">
       
-      {/* --- PREMIUM FLOATING HEADER --- */}
       <div className="fixed inset-x-0 top-6 z-50 flex justify-center px-4 pointer-events-none">
         <header className="pointer-events-auto w-full max-w-6xl rounded-full bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.06)] px-4 py-3 transition-all duration-500">
           <div className="flex items-center justify-between gap-6 px-2">
@@ -105,7 +104,6 @@ export default function App() {
       </div>
 
       <main className="overflow-x-hidden">
-        {/* --- HERO SECTION --- */}
         <section id="start" className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#F3EFE7]">
           <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
             <source src="/videos/hero.mp4" type="video/mp4" />
@@ -135,7 +133,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- LEISTUNGEN (DIE LÖSUNG FÜR DIE LINIEN) --- */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="reveal max-w-3xl">
@@ -148,15 +145,11 @@ export default function App() {
             <div className="mt-20 grid grid-cols-1 gap-8 xl:grid-cols-3">
               {services.map((service) => (
                 <article key={service.title} className="reveal group flex flex-col h-full overflow-hidden rounded-3xl border border-[#E5E1D8] bg-white p-10 shadow-[0_8px_20px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[#B79B6C]/50 hover:shadow-[0_30px_60px_rgba(183,155,108,0.12)]">
-                  
-                  {/* Der Text wächst flexibel (flex-grow) und drückt die Linie immer bis zur unteren Grenze */}
                   <div className="flex flex-col flex-grow">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-6 text-[26px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-5 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
-
-                  {/* Hier ist der magische Anker: Die Liste bekommt auf Desktops eine feste Höhe (xl:h-[220px]), damit die Linie drüber bei allen 3 Boxen exakt einrastet. Auf dem Handy (h-auto) darf sie wachsen. */}
                   <div className="mt-10 flex flex-col justify-end shrink-0">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
                     <ul className="mt-8 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[240px] xl:h-[220px] text-[15px] leading-6 text-[#6F6559]">
@@ -174,7 +167,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- WARUM NAUTILUS --- */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
@@ -208,7 +200,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- AUFTRETEN & HALTUNG --- */}
         <section className="bg-[#F7F4EE] py-32 lg:py-48 relative overflow-hidden text-left">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(183,155,108,0.1),transparent_50%)]" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10 relative z-10">
@@ -234,10 +225,11 @@ export default function App() {
           </div>
         </section>
 
-        {/* --- PROZESS --- */}
+        {/* --- PROZESS: PREMIUM FLOATING STACK --- */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60 text-left">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+              
               {/* Sticky linke Seite */}
               <div className="reveal lg:col-span-5 lg:pr-8 lg:sticky lg:top-40 self-start">
                 <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Ablauf & Prozesse</p>
@@ -248,17 +240,28 @@ export default function App() {
                   Ein bewährter Prozess garantiert Ergebnisse auf höchstem Niveau. Wir überlassen nichts dem Zufall, sondern definieren jeden Schritt – von der ersten Begehung bis zur täglichen Umsetzung.
                 </p>
               </div>
-              <div className="lg:col-span-7 space-y-6">
+              
+              {/* Interaktiver Karten-Stapel rechts */}
+              <div className="lg:col-span-7 flex flex-col gap-12 lg:gap-32 pb-10">
                 {[
-                  { step: '01 · Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
-                  { step: '02 · Strategische Konzeption', text: 'Maßarbeit statt Standard. Wir entwerfen ein hybrides Reinigungskonzept, das operative Effizienz mit Ihrem Anspruch an ein repräsentatives und werterhaltendes Umfeld vereint.' },
-                  { step: '03 · Präzise Implementierung', text: 'Lautlose Integration in Ihren Alltag. Unser festes Stammpersonal wird objektspezifisch instruiert und fügt sich ohne Reibungsverluste in Ihre bestehenden Gebäudeabläufe ein.' },
-                  { step: '04 · Kontinuierliches Management', text: 'Beständigkeit auf höchstem Niveau. Durch proaktives Management und regelmäßige Qualitätskontrollen stellen wir sicher, dass unser Premium-Standard dauerhaft erfüllt wird.' }
-                ].map((item) => (
-                  <article key={item.step} className="reveal rounded-3xl border border-[#E5E1D8] bg-[#FCFBF8] p-10 shadow-sm transition-all duration-500 ease-out hover:-translate-y-2 hover:bg-white hover:border-[#B79B6C]/40 hover:shadow-[0_20px_40px_rgba(183,155,108,0.08)]">
-                    <div className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{item.step}</div>
-                    <div className="mt-5 h-px w-12 bg-gradient-to-r from-[#B79B6C] to-transparent" />
-                    <p className="mt-5 text-[16px] leading-8 text-[#7E7367]">{item.text}</p>
+                  { num: '01', title: 'Fundierte Bedarfsanalyse', text: 'Exzellenz beginnt mit Detailtiefe. Wir analysieren Ihr Objekt vor Ort, um ein präzises Verständnis für Architektur, Materialien und Ihre individuellen Diskretionsvorgaben zu entwickeln.' },
+                  { num: '02', title: 'Strategische Konzeption', text: 'Maßarbeit statt Standard. Wir entwerfen ein hybrides Reinigungskonzept, das operative Effizienz mit Ihrem Anspruch an ein repräsentatives und werterhaltendes Umfeld vereint.' },
+                  { num: '03', title: 'Präzise Implementierung', text: 'Lautlose Integration in Ihren Alltag. Unser festes Stammpersonal wird objektspezifisch instruiert und fügt sich ohne Reibungsverluste in Ihre bestehenden Gebäudeabläufe ein.' },
+                  { num: '04', title: 'Kontinuierliches Management', text: 'Beständigkeit auf höchstem Niveau. Durch proaktives Management und regelmäßige Qualitätskontrollen stellen wir sicher, dass unser Premium-Standard dauerhaft erfüllt wird.' }
+                ].map((item, idx) => (
+                  <article 
+                    key={item.num} 
+                    className="reveal sticky rounded-[2.5rem] border border-[#E5E1D8] bg-white p-10 lg:p-14 shadow-[0_20px_50px_rgba(183,155,108,0.08)] transition-all duration-500"
+                    style={{ top: `calc(8rem + ${idx * 3.5}rem)` }}
+                  >
+                    {/* Edles Badge für die Nummer */}
+                    <div className="absolute -top-5 left-8 lg:left-12 bg-white border border-[#E5E1D8] px-6 py-2 rounded-full shadow-sm flex items-center gap-3">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#B79B6C]" />
+                      <span className="text-[12px] font-bold tracking-[0.3em] text-[#B79B6C]">{item.num}</span>
+                    </div>
+                    
+                    <h3 className="mt-4 text-[22px] lg:text-[26px] font-semibold text-[#2C2C2C] mb-4">{item.title}</h3>
+                    <p className="text-[16px] leading-8 text-[#7E7367]">{item.text}</p>
                   </article>
                 ))}
               </div>
@@ -295,7 +298,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* --- PREMIUM KONTAKTFORMULAR AUS DEM DUMP --- */}
+              {/* --- PREMIUM KONTAKTFORMULAR --- */}
               <div className="reveal rounded-[40px] border border-[#E5E1D8] bg-white p-10 shadow-[0_30px_60px_rgba(0,0,0,0.04)] lg:p-14">
                 <div className="mb-10">
                   <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Diskrete Anfrage</p>
@@ -369,7 +372,7 @@ export default function App() {
 
       </main>
 
-      <footer className="bg-white py-16 border-t border-[#E5E1D8] text-left">
+      <footer className="bg-white py-16 border-t border-[#E5E1D8]">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 lg:flex-row lg:items-start lg:justify-between lg:px-10">
           <div>
             <div className="text-[11px] font-bold tracking-[0.35em] text-[#B79B6C]">

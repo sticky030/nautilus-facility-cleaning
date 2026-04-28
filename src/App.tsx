@@ -128,14 +128,14 @@ export default function App() {
                 Wir entlasten Sie von jeglichem Aufwand rund um Ihr Objekt. Unsere eingespielten Abläufe garantieren jeden Morgen einen perfekten Empfang für Ihre Mandanten und Patienten – verschwiegen, autonom und verlässlich. Damit Sie sich voll auf das Wesentliche konzentrieren können.
               </p>
               <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
+                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-[#B79B6C] px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-[0_8px_20px_rgba(183,155,108,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(183,155,108,0.4)] hover:bg-[#A98E60]">Unverbindliche Anfrage</a>
                 <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-[#D9CCB8] bg-white/50 backdrop-blur-md px-9 py-4 text-[14px] font-bold uppercase tracking-wider text-[#6F6559] transition-all duration-300 hover:bg-white hover:border-[#B79B6C]/50">Expertise ansehen</a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* EXPERTISE - ABSOLUTE ALIGNMENT FIX */}
+        {/* EXPERTISE */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="reveal max-w-3xl mb-16">
@@ -148,13 +148,11 @@ export default function App() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {services.map((service) => (
                 <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
-                  {/* Der obere Textbereich ist flex-grow und dehnt sich aus */}
                   <div className="flex flex-col flex-grow text-left">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
-                  {/* Die Liste unten hat eine feste Höhe (220px), dadurch liegt der Strich bei allen Boxen exakt gleich */}
                   <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
                     <ul className="mt-6 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[220px] text-[15px] leading-6 text-[#6F6559]">
@@ -172,7 +170,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* WARUM NAUTILUS - TEXTE RESTAURIERT */}
+        {/* WARUM NAUTILUS */}
         <section id="warum-nautilus" className="bg-white py-32 lg:py-40 border-y border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 text-left">
@@ -217,14 +215,14 @@ export default function App() {
               </div>
               <div className="reveal lg:col-span-7">
                 <div className="relative overflow-hidden rounded-xl border border-[#E5E1D8] bg-white shadow-lg">
-                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Cleaning Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/nautilus-cleaning-team-berlin.jpg" alt="Team" className="mx-auto w-full max-h-[550px] object-cover hover:scale-105 transition-transform duration-1000" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ABLAUF - TEXT WIEDERHERGESTELLT */}
+        {/* ABLAUF */}
         <section id="ablauf" className="bg-white py-32 lg:py-40 border-b border-[#E5E1D8]/60">
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 items-start">
@@ -332,9 +330,15 @@ export default function App() {
                       <label className="mb-2 block text-[11px] font-bold uppercase tracking-[0.2em] text-[#8A7E70]">Objekt kurz beschreiben</label>
                       <textarea rows={4} name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..." className="w-full rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 text-[15px] outline-none focus:border-[#B79B6C] resize-none" />
                     </div>
+                    
                     <button type="submit" disabled={loading} className="w-full rounded-full bg-[#B79B6C] px-6 py-4 text-[14px] font-bold uppercase tracking-wider text-white shadow-md hover:bg-[#A98E60] transition-all disabled:opacity-50">
-                      {loading ? 'Wird gesendet...' : 'Anfrage sicher senden'}
+                      {loading ? 'Wird gesendet...' : 'ANFRAGE SENDEN'}
                     </button>
+                    
+                    <p className="text-center text-[12px] text-[#9A8D7D] mt-4 flex items-center justify-center gap-1.5">
+                      <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                      Ihre Daten werden SSL-verschlüsselt übertragen.
+                    </p>
                   </form>
                 )}
               </div>
@@ -343,11 +347,11 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="bg-white py-20 border-t border-[#E5E1D8] text-left">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <footer className="bg-white py-20 text-left border-t border-[#E5E1D8]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
           <div className="flex flex-col gap-12 lg:gap-16">
             <div>
-              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C] mb-8">NAUTILUS FACILITY CLEANING</div>
+              <div className="text-[12px] font-bold tracking-[0.35em] text-[#B79B6C]">NAUTILUS FACILITY CLEANING</div>
               <p className="mt-4 max-w-md text-[14px] text-[#8A7E70]">Ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt).<br />Spezialisierte Gebäudereinigung für Berlin.</p>
             </div>
             <div className="flex flex-col gap-6 text-left">

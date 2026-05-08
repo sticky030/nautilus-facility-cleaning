@@ -86,138 +86,80 @@
         --white: #FFFFFF;
         --text: #2C2C2C;
         --muted: #7E7367;
-        --soft: #A79B8B;
         --line: #E5E1D8;
         --gold: #B79B6C;
-        --gold-soft: rgba(183,155,108,.16);
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
 
       body {
         margin: 0;
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: var(--bg);
-        color: var(--text);
+        background: #F7F4EE;
+        color: #2C2C2C;
         -webkit-font-smoothing: antialiased;
       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+      a { color: inherit; text-decoration: none; }
 
       .nav {
         position: sticky;
         top: 0;
         z-index: 50;
         border-bottom: 1px solid rgba(229,225,216,.72);
-        background: rgba(243,239,231,.92);
-        backdrop-filter: blur(16px);
+        background: rgba(247,244,238,.92);
+        backdrop-filter: blur(18px);
       }
 
       .nav-inner {
-        max-width: 1240px;
+        max-width: 1280px;
         margin: 0 auto;
-        padding: 16px 28px;
+        padding: 18px 32px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        gap: 28px;
+        align-items: center;
       }
 
       .brand {
         font-size: 11px;
-        letter-spacing: .30em;
-        text-transform: uppercase;
         font-weight: 800;
-        color: var(--text);
+        letter-spacing: .34em;
+        text-transform: uppercase;
+        color: #2C2C2C;
       }
 
       .nav-links {
         display: flex;
-        align-items: center;
-        gap: 26px;
+        gap: 28px;
         font-size: 13px;
-        color: var(--muted);
+        color: #7E7367;
       }
 
-      .nav-links a {
-        transition: color .25s ease;
-      }
+      .nav-links a:hover { color: #B79B6C; }
 
-      .nav-links a:hover {
-        color: var(--gold);
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        padding: 15px 24px;
-        background: var(--text);
-        color: white;
-        font-size: 14px;
-        font-weight: 750;
-        border: 1px solid var(--text);
-        transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-      }
-
-      .button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 18px 45px rgba(44,44,44,.16);
-      }
-
-      .button.secondary {
-        background: transparent;
-        color: var(--text);
-        border: 1px solid var(--line);
-      }
-
-      .button.secondary:hover {
-        border-color: rgba(183,155,108,.55);
-        box-shadow: 0 16px 38px rgba(183,155,108,.10);
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
       }
 
       .hero {
-        position: relative;
-        overflow: hidden;
         background: #F3EFE7;
-        padding: 128px 28px 110px;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: auto -16% -46% 52%;
-        height: 320px;
-        background: radial-gradient(circle, rgba(255,255,255,.28), transparent 70%);
-        pointer-events: none;
-      }
-
-      .container {
-        max-width: 1240px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
+        padding: 132px 32px 124px;
+        overflow: hidden;
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+        grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr);
         gap: 72px;
         align-items: center;
       }
 
       .eyebrow {
-        color: var(--gold);
+        color: #B79B6C;
         font-size: 11px;
         font-weight: 850;
         letter-spacing: .36em;
@@ -226,8 +168,8 @@
 
       h1 {
         margin: 26px 0 0;
-        max-width: 900px;
-        font-size: clamp(44px, 6.4vw, 86px);
+        max-width: 940px;
+        font-size: clamp(44px, 6.4vw, 84px);
         line-height: .96;
         letter-spacing: -0.06em;
         font-weight: 650;
@@ -235,8 +177,8 @@
 
       .lead {
         margin-top: 30px;
-        max-width: 720px;
-        color: var(--muted);
+        max-width: 740px;
+        color: #7E7367;
         font-size: 18px;
         line-height: 1.9;
       }
@@ -248,40 +190,71 @@
         gap: 14px;
       }
 
+      .button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        padding: 15px 24px;
+        background: #2C2C2C;
+        color: #FFFFFF;
+        border: 1px solid #2C2C2C;
+        font-size: 14px;
+        font-weight: 750;
+        transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 15px 40px rgba(44,44,44,.16);
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: #2C2C2C;
+        border-color: #E5E1D8;
+      }
+
+      .button.secondary:hover {
+        border-color: rgba(183,155,108,.55);
+        box-shadow: 0 15px 40px rgba(183,155,108,.08);
+      }
+
       .hero-card {
-        background: rgba(255,255,255,.68);
-        border: 1px solid rgba(229,225,216,.86);
+        background: rgba(255,255,255,.64);
+        border: 1px solid #E5E1D8;
         border-radius: 28px;
-        padding: 38px;
-        box-shadow: 0 22px 60px rgba(44,44,44,.045);
+        padding: 40px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
       }
 
       .hero-card strong {
         display: block;
-        font-size: 20px;
-        line-height: 1.25;
+        font-size: 22px;
+        line-height: 1.2;
+        letter-spacing: -0.035em;
         margin-bottom: 18px;
-        letter-spacing: -0.02em;
       }
 
       .hero-card p {
-        color: var(--muted);
-        line-height: 1.85;
         margin: 0;
+        color: #7E7367;
         font-size: 15px;
+        line-height: 1.85;
       }
 
       section {
-        padding: 104px 28px;
+        padding: 112px 32px;
+        background: #F7F4EE;
       }
 
       section.white {
-        background: var(--white);
+        background: #FFFFFF;
       }
 
       .section-head {
-        max-width: 860px;
-        margin-bottom: 52px;
+        max-width: 880px;
+        margin-bottom: 56px;
       }
 
       h2 {
@@ -295,7 +268,7 @@
       .section-text {
         margin-top: 22px;
         max-width: 780px;
-        color: var(--muted);
+        color: #7E7367;
         font-size: 16px;
         line-height: 1.85;
       }
@@ -303,14 +276,14 @@
       .grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 26px;
+        gap: 28px;
       }
 
       .card {
         background: #FFFFFF;
         border: 1px solid #E5E1D8;
         border-radius: 22px;
-        padding: 32px;
+        padding: 34px;
         box-shadow: 0 4px 15px rgba(0,0,0,.02);
         transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
       }
@@ -327,14 +300,14 @@
 
       .card h3 {
         margin: 0;
-        font-size: 23px;
+        font-size: 24px;
         line-height: 1.18;
-        letter-spacing: -0.025em;
+        letter-spacing: -0.03em;
       }
 
       .card p {
         margin: 18px 0 0;
-        color: var(--muted);
+        color: #7E7367;
         line-height: 1.78;
         font-size: 15px;
       }
@@ -343,11 +316,10 @@
         list-style: none;
         padding: 22px 0 0;
         margin: 24px 0 0;
+        border-top: 1px solid #E5E1D8;
         display: grid;
         gap: 12px;
         color: #6F6559;
-        line-height: 1.55;
-        border-top: 1px solid rgba(229,225,216,.95);
       }
 
       ul.clean li {
@@ -355,6 +327,7 @@
         gap: 12px;
         align-items: flex-start;
         font-size: 14px;
+        line-height: 1.55;
       }
 
       ul.clean li::before {
@@ -362,7 +335,7 @@
         width: 6px;
         height: 6px;
         border-radius: 99px;
-        background: var(--gold);
+        background: #B79B6C;
         box-shadow: 0 0 8px rgba(183,155,108,.6);
         flex: 0 0 auto;
         margin-top: 8px;
@@ -370,19 +343,19 @@
 
       .steps {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
-        gap: 22px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
       }
 
       .step {
-        border-top: 1px solid var(--line);
+        border-top: 1px solid #E5E1D8;
         padding-top: 24px;
       }
 
       .step span {
-        color: var(--gold);
-        font-weight: 850;
+        color: #B79B6C;
         font-size: 12px;
+        font-weight: 850;
         letter-spacing: .24em;
       }
 
@@ -393,45 +366,15 @@
       }
 
       .step p {
-        color: var(--muted);
+        color: #7E7367;
         line-height: 1.75;
-      }
-
-      .faq {
-        display: grid;
-        gap: 14px;
-      }
-
-      details {
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 24px 26px;
-        box-shadow: 0 8px 28px rgba(44,44,44,.025);
-      }
-
-      .white details {
-        background: #FFFFFF;
-      }
-
-      summary {
-        cursor: pointer;
-        font-weight: 750;
-        font-size: 17px;
-        letter-spacing: -0.01em;
-      }
-
-      details p {
-        color: var(--muted);
-        line-height: 1.78;
-        margin: 16px 0 0;
       }
 
       .cta {
         background: #2C2C2C;
-        color: white;
+        color: #FFFFFF;
         border-radius: 34px;
-        padding: 52px;
+        padding: 54px;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 34px;
@@ -440,7 +383,7 @@
       }
 
       .cta h2 {
-        color: white;
+        color: #FFFFFF;
         margin-top: 0;
         max-width: 760px;
       }
@@ -452,30 +395,55 @@
       }
 
       .cta .button {
-        background: white;
+        background: #FFFFFF;
         color: #2C2C2C;
-        border-color: white;
+        border-color: #FFFFFF;
         white-space: nowrap;
       }
 
+      .faq {
+        display: grid;
+        gap: 14px;
+      }
+
+      details {
+        background: #FFFFFF;
+        border: 1px solid #E5E1D8;
+        border-radius: 18px;
+        padding: 24px 26px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+      }
+
+      summary {
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 750;
+      }
+
+      details p {
+        color: #7E7367;
+        line-height: 1.78;
+        margin: 16px 0 0;
+      }
+
       footer {
-        padding: 48px 28px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
+        background: #F7F4EE;
+        border-top: 1px solid #E5E1D8;
+        padding: 52px 32px;
+        color: #7E7367;
         font-size: 14px;
-        background: var(--bg);
       }
 
       footer strong {
-        color: var(--text);
+        color: #2C2C2C;
       }
 
       footer a {
-        color: var(--text);
+        color: #2C2C2C;
       }
 
       footer a:hover {
-        color: var(--gold);
+        color: #B79B6C;
       }
 
       @media (max-width: 980px) {
@@ -491,17 +459,15 @@
         }
 
         .hero {
-          padding-top: 86px;
+          padding: 92px 24px 88px;
         }
 
         section {
-          padding: 82px 22px;
+          padding: 82px 24px;
         }
 
-        .hero-card,
-        .card,
         .cta {
-          border-radius: 24px;
+          padding: 36px;
         }
       }
     </style>
@@ -516,7 +482,7 @@
           <a href="/bueroreinigung-berlin/">Büroreinigung</a>
           <a href="/treppenhausreinigung-berlin/">Treppenhausreinigung</a>
           <a href="/hausverwaltungen-berlin/">Hausverwaltungen</a>
-          <a href="https://nautilus-facility.de/#kontakt">Kontakt</a>
+          <a href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -531,7 +497,7 @@
               Nautilus Facility Cleaning bietet strukturierte Praxisreinigung für medizinisch genutzte Räume in Berlin. Im Fokus stehen klar abgestimmte Abläufe, hygienebewusste Reinigung, Kontaktflächen und eine verlässliche Umsetzung passend zum Praxisbetrieb.
             </p>
             <div class="hero-actions">
-              <a class="button" href="https://nautilus-facility.de/#kontakt">Kostenfreie Besichtigung anfragen</a>
+              <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Kostenfreie Besichtigung anfragen</a>
               <a class="button secondary" href="#leistungen">Leistungsumfang ansehen</a>
             </div>
           </div>
@@ -662,7 +628,7 @@
                 Senden Sie uns kurz Objektart, Adresse, gewünschten Turnus und besondere Anforderungen. Wir melden uns kurzfristig zurück und klären den passenden nächsten Schritt.
               </p>
             </div>
-            <a class="button" href="https://nautilus-facility.de/#kontakt">Anfrage stellen</a>
+            <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrage stellen</a>
           </div>
         </div>
       </section>

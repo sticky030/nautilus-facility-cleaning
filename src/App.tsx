@@ -26,6 +26,7 @@ const services = [
   },
   {
     id: 'praxisreinigung',
+    href: '/praxisreinigung-berlin/',
     eyebrow: 'Sensible Hygienebereiche',
     title: 'Praxisreinigung Berlin',
     text: 'Praxisreinigung für Arztpraxen, Zahnarztpraxen, Privatpraxen und medizinisch genutzte Räume in Berlin. Unsere Abläufe orientieren sich an relevanten RKI/KRINKO-Hygieneempfehlungen und klar getrennten Reinigungsbereichen.',
@@ -208,6 +209,14 @@ export default function App() {
                     <div className="min-h-[28px] text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 min-h-[64px] lg:h-[64px] text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 min-h-[168px] lg:h-[168px] text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
+                    {'href' in service && service.href ? (
+                      <a
+                        href={service.href}
+                        className="mt-5 inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-colors hover:text-[#2C2C2C]"
+                      >
+                        Mehr zur Praxisreinigung
+                      </a>
+                    ) : null}
                   </div>
                   <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
@@ -440,7 +449,7 @@ export default function App() {
                 <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
                 <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
                 <a href="#kanzleireinigung" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
-                <a href="#praxisreinigung" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
+                <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
                 <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>

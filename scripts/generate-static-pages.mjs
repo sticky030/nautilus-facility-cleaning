@@ -382,6 +382,70 @@ const html = `<!doctype html>
         line-height: 1.75;
       }
 
+
+      .content-split {
+        display: grid;
+        grid-template-columns: .95fr 1.05fr;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .premium-panel {
+        background: #FFFFFF;
+        border: 1px solid #E5E1D8;
+        border-radius: 28px;
+        padding: 38px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+      }
+
+      .premium-panel h3 {
+        margin: 18px 0 0;
+        font-size: 28px;
+        line-height: 1.16;
+        letter-spacing: -0.035em;
+      }
+
+      .premium-panel p {
+        margin: 18px 0 0;
+        color: #7E7367;
+        line-height: 1.82;
+      }
+
+      .detail-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .detail-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        color: #6F6559;
+        line-height: 1.65;
+        font-size: 15px;
+      }
+
+      .detail-item::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 99px;
+        background: #B79B6C;
+        box-shadow: 0 0 8px rgba(183,155,108,.6);
+        flex: 0 0 auto;
+        margin-top: 9px;
+      }
+
+      .area-note {
+        margin-top: 26px;
+        padding-top: 22px;
+        border-top: 1px solid #E5E1D8;
+        color: #7E7367;
+        line-height: 1.78;
+        font-size: 15px;
+      }
+
       .area-layout {
         display: grid;
         grid-template-columns: .92fr 1.08fr;
@@ -570,6 +634,7 @@ const html = `<!doctype html>
         .steps,
         .cta,
         .area-layout,
+        .content-split,
         .footer-grid {
           grid-template-columns: 1fr;
         }
@@ -678,6 +743,79 @@ const html = `<!doctype html>
       <section>
         <div class="container">
           <div class="section-head">
+            <div class="eyebrow">Praxisbereiche</div>
+            <h2>Welche Bereiche werden in der Praxisreinigung abgedeckt?</h2>
+            <p class="section-text">
+              Der Leistungsumfang wird objektbezogen abgestimmt. Entscheidend sind Praxisart, Raumstruktur, Patientenfrequenz, Sanitärbereiche, Kontaktflächen und das gewünschte Reinigungszeitfenster.
+            </p>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <h3>Empfang & Wartebereich</h3>
+              <p>Der erste Eindruck einer Praxis entsteht häufig im Empfang und im Wartezimmer. Diese Bereiche müssen sichtbar gepflegt, ruhig und professionell wirken.</p>
+              <ul class="clean">
+                <li>Empfangstresen und Ablageflächen</li>
+                <li>Wartezimmer, Sitzbereiche und Sichtflächen</li>
+                <li>Böden und häufig genutzte Kontaktflächen</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Sanitärbereiche</h3>
+              <p>Sanitärzonen benötigen eine klare, regelmäßige und nachvollziehbare Reinigung nach abgestimmtem Leistungsumfang.</p>
+              <ul class="clean">
+                <li>Waschbecken, Armaturen und Spiegel</li>
+                <li>WC-Bereiche und angrenzende Oberflächen</li>
+                <li>Verbrauchsbereiche nach Absprache</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Neben- & Personalbereiche</h3>
+              <p>Auch interne Flächen prägen den Gesamteindruck und unterstützen einen sauberen Ablauf im Praxisalltag.</p>
+              <ul class="clean">
+                <li>Personalräume und Teeküchen</li>
+                <li>Flure, Nebenflächen und Lagerbereiche</li>
+                <li>Reinigung nach Turnus und Zugänglichkeit</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="white">
+        <div class="container">
+          <div class="content-split">
+            <div class="section-head" style="margin-bottom:0;">
+              <div class="eyebrow">Hygieneorientierte Arbeitsweise</div>
+              <h2>Klare Bereichstrennung statt pauschaler Reinigung.</h2>
+              <p class="section-text">
+                In medizinisch genutzten Räumen reicht sichtbare Sauberkeit allein nicht aus. Deshalb arbeiten wir mit klar abgestimmten Reinigungszonen, getrennten Materialien und einer strukturierten Ablaufplanung.
+              </p>
+            </div>
+
+            <div class="premium-panel">
+              <div class="eyebrow">RKI/KRINKO-orientiert</div>
+              <h3>Reinigungslogik für sensible Praxisbereiche.</h3>
+              <p>
+                Unsere Praxisreinigung orientiert sich an relevanten Hygieneempfehlungen für sensible Praxisbereiche, insbesondere im Umgang mit Kontaktflächen, Sanitärbereichen und Flächenreinigung. Der konkrete Leistungsumfang wird vor Beginn sauber abgegrenzt.
+              </p>
+              <div class="detail-list">
+                <div class="detail-item">4-Farben-Tuchsystem zur Trennung unterschiedlicher Reinigungsbereiche</div>
+                <div class="detail-item">Reduzierung von Kreuzkontaminationen durch getrennte Materialien</div>
+                <div class="detail-item">Fokus auf patientennahe Kontaktflächen und stark frequentierte Bereiche</div>
+                <div class="detail-item">Klare Abstimmung von Reinigung und Flächendesinfektion</div>
+                <div class="detail-item">Keine Reinigung von Medizinprodukten, Instrumenten oder Behandlungsgeräten</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
             <div class="eyebrow">Geeignet für</div>
             <h2>Für Praxen mit Anspruch an Struktur, Diskretion und verlässliche Abläufe.</h2>
           </div>
@@ -735,9 +873,9 @@ const html = `<!doctype html>
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">Einsatzgebiet</div>
-            <h2>Praxisreinigung in Berlin.</h2>
+            <h2>Praxisreinigung in Berlin — mit Fokus auf kurze Wege und verlässliche Zeitfenster.</h2>
             <p class="section-text">
-              Unser Einsatzgebiet liegt in Berlin, insbesondere in Lichtenberg, Marzahn-Hellersdorf, Friedrichshain-Kreuzberg, Pankow und Mitte. Weitere Bezirke sind nach Abstimmung möglich.
+              Nautilus Facility Cleaning betreut Praxen und medizinisch genutzte Räume in Berlin. Unser Schwerpunkt liegt auf Objekten, bei denen klare Abläufe, feste Zeitfenster und eine zuverlässige Abstimmung mit Praxisleitung, Empfang oder Objektverantwortlichen entscheidend sind.
             </p>
           </div>
 
@@ -746,7 +884,7 @@ const html = `<!doctype html>
               <div class="eyebrow">Berlin</div>
               <h3>Schwerpunkt in Ihren relevanten Bezirken.</h3>
               <p>
-                Wir betreuen Praxen und gewerbliche Objekte in Berlin mit Fokus auf kurzen Wegen, klaren Zeitfenstern und verlässlicher Abstimmung.
+                Wir sind insbesondere in den Berliner Bezirken Lichtenberg, Marzahn-Hellersdorf, Friedrichshain-Kreuzberg, Pankow und Mitte aktiv. Weitere Bezirke prüfen wir objektbezogen nach Lage, Turnus und gewünschtem Zeitfenster.
               </p>
               <div class="area-pills" aria-label="Einsatzgebiete Berlin">
                 <span class="area-pill">Lichtenberg</span>
@@ -754,6 +892,9 @@ const html = `<!doctype html>
                 <span class="area-pill">Friedrichshain-Kreuzberg</span>
                 <span class="area-pill">Pankow</span>
                 <span class="area-pill">Mitte</span>
+              </div>
+              <div class="area-note">
+                Besonders geeignet für laufende Praxisreinigung vor oder nach dem Praxisbetrieb sowie für Einzeltermine, Grundreinigung, Sonderreinigung oder Reinigung vor Neueröffnung, Umbau und Praxisübergabe.
               </div>
             </aside>
 
@@ -798,6 +939,27 @@ const html = `<!doctype html>
               <summary>Erstellen Sie ein Angebot ohne Besichtigung?</summary>
               <p>Eine erste Einschätzung ist möglich. Für ein belastbares Angebot empfehlen wir eine kurze kostenfreie Besichtigung, damit Raumstruktur, Sanitärbereiche und Kontaktflächen sauber eingeordnet werden können.</p>
             </details>
+
+            <details>
+              <summary>Welche Praxisarten reinigen Sie?</summary>
+              <p>Wir reinigen Arztpraxen, Zahnarztpraxen, Privatpraxen, Facharztpraxen, Therapiepraxen und vergleichbare medizinisch genutzte Räume in Berlin. Der konkrete Leistungsumfang wird nach Raumstruktur, Nutzung und gewünschtem Turnus abgestimmt.</p>
+            </details>
+
+            <details>
+              <summary>Wird auch eine Grundreinigung für Praxen angeboten?</summary>
+              <p>Ja. Neben der laufenden Praxisreinigung übernehmen wir auch Grundreinigungen, Sonderreinigungen sowie Reinigungen nach Renovierung, Umbau, Neueröffnung oder vor Praxisübergabe.</p>
+            </details>
+
+            <details>
+              <summary>Wer stellt Reinigungsmaterial und Verbrauchsmaterial?</summary>
+              <p>Das wird objektbezogen abgestimmt. Je nach Auftrag können Materialstellung, Verbrauchsmaterialien und besondere Anforderungen im Leistungsumfang berücksichtigt werden.</p>
+            </details>
+
+            <details>
+              <summary>Gibt es ein unverbindliches Angebot?</summary>
+              <p>Ja. Nach kurzer Bedarfsklärung oder kostenfreier Besichtigung erstellen wir ein unverbindliches, objektbezogenes Angebot mit klar abgegrenztem Leistungsumfang.</p>
+            </details>
+
           </div>
         </div>
       </section>

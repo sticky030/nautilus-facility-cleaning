@@ -12,36 +12,99 @@ const navItems = [
 
 const services = [
   {
+    id: 'bueroreinigung',
     eyebrow: 'Regelmäßige Unterhaltsreinigung',
-    title: 'Praxis- & Kanzleireinigung',
-    text: 'Branchenspezifische Hygienekonzepte für Arztpraxen, Kanzleien und exklusive Büros. Wir arbeiten mit klinischer Präzision und absoluter Diskretion, um Ihren laufenden Betrieb niemals zu stören.',
+    title: 'Büroreinigung Berlin',
+    text: 'Professionelle Büroreinigung für Unternehmen, Agenturen, Verwaltungsflächen und gewerbliche Einheiten in Berlin. Wir sorgen für gepflegte Arbeitsplätze, saubere Gemeinschaftsbereiche und einen repräsentativen Gesamteindruck im laufenden Betrieb — abgestimmt auf Turnus, Fläche und Nutzungsintensität.',
     bullets: [
-      'Hygienische Sanitär- & Teeküchenreinigung',
-      'Pflege von IT- & Arbeitsplatzoberflächen',
-      'Aufbereitung von Konferenzbereichen',
-      'Diskretes Abfallmanagement & Leerung'
+      'Reinigung von Arbeitsplätzen, Schreibtischumfeldern und Oberflächen',
+      'Pflege von Besprechungsräumen, Empfangs- und Wartebereichen',
+      'Reinigung von Teeküchen, Aufenthaltsbereichen und Sanitärzonen',
+      'Bodenreinigung nach Bodenart und vereinbartem Leistungsumfang',
+      'Müllentsorgung und Austausch von Beuteln nach Absprache',
+      'Reinigung häufig genutzter Kontaktflächen wie Türklinken, Griffe und Schalter',
+      'Regelmäßige Sichtpflege für einen konstant gepflegten Gesamteindruck',
+      'Umsetzung außerhalb oder passend zu Ihren Betriebszeiten'
     ],
   },
   {
-    eyebrow: 'Hochwertige Objektpflege',
-    title: 'Treppenhaus- & Foyer-Service',
-    text: 'Der erste Eindruck zählt. Wir sorgen dafür, dass Foyers und Treppenhäuser die Hochwertigkeit Ihres Objekts widerspiegeln – durch kontinuierliche, werterhaltende Detailpflege für Bewohner und Besucher.',
+    id: 'praxisreinigung',
+    eyebrow: 'Sensible Hygienebereiche',
+    title: 'Praxisreinigung Berlin',
+    text: 'Praxisreinigung für Arztpraxen, Zahnarztpraxen, Privatpraxen und medizinisch genutzte Räume in Berlin. Unsere Abläufe orientieren sich an relevanten Hygieneempfehlungen, unter anderem den Empfehlungen von RKI/KRINKO zur Reinigung und Desinfektion von Flächen in medizinischen Bereichen. Im Fokus stehen klare Reinigungszonen, Kontaktflächen und ein 4-Farben-Tuchsystem zur Reduzierung von Kreuzkontaminationen.',
     bullets: [
-      'Streifenfreie Glas-, Portal- & Spiegelreinigung',
-      'Pflege von Briefkästen & Schmutzschleusen',
-      'Reinigung von Fahrstühlen & Handläufen',
-      'Fachgerechte Naturstein- & Bodenpflege'
+      'Reinigung von Empfangsbereichen, Wartezonen und patientennahen Kontaktflächen',
+      'RKI/KRINKO-orientierte Reinigungs- und Desinfektionslogik für sensible Praxisbereiche',
+      'Hygieneorientierte Sanitär- und Oberflächenreinigung nach abgestimmtem Plan',
+      '4-Farben-Tuchsystem zur klaren Trennung unterschiedlicher Reinigungsbereiche',
+      'Reduzierung von Kreuzkontaminationen durch getrennte Tücher und definierte Abläufe',
+      'Besondere Aufmerksamkeit für Türgriffe, Tresen, Lichtschalter und stark frequentierte Flächen',
+      'Umsetzung passend zu Praxiszeiten, Sprechstundenbetrieb und Zugangsregelung',
+      'Klare Abgrenzung von Reinigung, Flächendesinfektion und nicht beauftragten Medizinbereichen'
     ],
   },
   {
-    eyebrow: 'Spezial- & Projektbezogen',
-    title: 'Präzise Bauendreinigung',
-    text: 'Nach Abschluss von Bau- oder Sanierungsprojekten bringen wir Ihre Räumlichkeiten in einen bezugsfertigen Zustand. Termingerecht, staubfrei und perfekt vorbereitet für die finale Objektabnahme.',
+    id: 'kanzleireinigung',
+    eyebrow: 'Diskret & repräsentativ',
+    title: 'Kanzleireinigung Berlin',
+    text: 'Reinigung für Kanzleien, Beratungsbüros und repräsentative Geschäftsräume in Berlin. Wir achten auf gepflegte Mandantenbereiche, vertrauliche Arbeitsumgebungen und eine ruhige Durchführung außerhalb oder passend zu Ihren Bürozeiten.',
     bullets: [
-      'Baugrob- & Feinreinigung bis Bezugsfertigkeit',
-      'Intensive Fenster-, Falz- & Rahmenreinigung',
-      'Schonende Ersteinpflege von Neu-Oberflächen',
-      'Hygienische Erstreinigung der Sanitäranlagen'
+      'Reinigung von Büros, Besprechungsräumen und Konferenzbereichen',
+      'Pflege von Empfang, Wartebereich und mandantennahen Flächen',
+      'Reinigung von Schreibtischumfeldern und Oberflächen nach Abstimmung',
+      'Sanitär-, Küchen- und Aufenthaltsbereiche im vereinbarten Turnus',
+      'Diskrete Durchführung in abgestimmten Zeitfenstern',
+      'Besondere Rücksicht auf vertrauliche Arbeitsbereiche und sensible Unterlagen',
+      'Verlässlicher Reinigungsstandard für repräsentative Geschäftsräume',
+      'Gepflegter Eindruck für Mandanten, Mitarbeitende und Besucher'
+    ],
+  },
+  {
+    id: 'treppenhausreinigung',
+    eyebrow: 'Für Hausverwaltungen',
+    title: 'Treppenhausreinigung Berlin',
+    text: 'Treppenhausreinigung für Mehrfamilienhäuser, Wohn- und Geschäftshäuser sowie verwaltete Objekte in Berlin. Wir pflegen Eingangsbereiche, Podeste, Handläufe und Allgemeinflächen mit klarer Abstimmung und verlässlicher Umsetzung für Hausverwaltungen, Eigentümer und Objektverantwortliche.',
+    bullets: [
+      'Reinigung von Treppen, Podesten und Eingangsbereichen',
+      'Pflege von Handläufen, Kontaktflächen und Allgemeinflächen',
+      'Reinigung von Aufzugsbereichen nach Absprache',
+      'Reinigung von Briefkastenanlagen und Klingelbereichen nach Leistungsplan',
+      'Entfernung von Grobschmutz im vereinbarten Umfang',
+      'Objektbezogener Turnus nach Nutzung, Frequenz und Verwaltungsbedarf',
+      'Geeignet für Hausverwaltungen, WEGs, Eigentümer und kleinere Objektbestände',
+      'Klare Rückmeldung bei Auffälligkeiten im Objekt nach Abstimmung'
+    ],
+  },
+  {
+    id: 'grundreinigung',
+    eyebrow: 'Intensiv & objektbezogen',
+    title: 'Grundreinigung & Baufeinreinigung',
+    text: 'Intensive Reinigungsleistungen für Büros, Praxen, Treppenhäuser und Gewerbeflächen nach Nutzung, Renovierung, Umbau oder vor Übergabe. Umfang, Zustand und gewünschtes Ergebnis werden vorab sauber eingeordnet, damit die Leistung realistisch geplant und zuverlässig umgesetzt wird.',
+    bullets: [
+      'Grundreinigung von Böden, Oberflächen und stark beanspruchten Bereichen',
+      'Baufeinreinigung nach Renovierung, Umbau oder Sanierung',
+      'Entfernung von Staub, leichten Baustellenrückständen und Nutzungsspuren im vereinbarten Umfang',
+      'Reinigung von Sanitär-, Eingangs-, Neben- und Übergabebereichen',
+      'Intensive Pflege sichtbarer Flächen für einen sauberen Übergabezustand',
+      'Vorbereitung für Nutzung, Übergabe oder anschließende Unterhaltsreinigung',
+      'Objektbezogene Einschätzung von Aufwand, Material und Zeitfenster vor Beginn',
+      'Geeignet für Büros, Praxen, Treppenhäuser und kleinere Gewerbeobjekte'
+    ],
+  },
+  {
+    id: 'fensterreinigung',
+    eyebrow: 'Ergänzende Objektleistungen',
+    title: 'Fensterreinigung & Sonderreinigung',
+    text: 'Ergänzende Reinigungsleistungen für Glasflächen, Eingangsbereiche, Allgemeinflächen und objektbezogene Sonderbedarfe. Geeignet als Einzelauftrag, Zusatzleistung zur Unterhaltsreinigung oder zur gezielten Aufwertung sichtbarer Objektbereiche.',
+    bullets: [
+      'Fenster- und Glasflächenreinigung nach Objektstruktur',
+      'Reinigung von Eingangs-, Sicht- und Allgemeinflächen',
+      'Rahmenreinigung nach Absprache und Zugänglichkeit',
+      'Sonderreinigung nach besonderer Nutzung, Übergabe oder Zusatzbedarf',
+      'Reinigung einzelner Objektbereiche außerhalb des laufenden Turnus',
+      'Ergänzende Leistungen für Hausverwaltungen, Büros, Praxen und Gewerbeflächen',
+      'Objektbezogene Planung nach Besichtigung, Verschmutzungsgrad und Zugänglichkeit',
+      'Klare Abstimmung von Umfang, Zeitfenster und gewünschtem Ergebnis'
     ],
   },
 ]

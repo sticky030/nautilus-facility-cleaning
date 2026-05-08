@@ -509,12 +509,56 @@
         color: #B79B6C;
       }
 
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr 1fr 1fr;
+        gap: 38px;
+        align-items: start;
+      }
+
+      .footer-title {
+        color: #2C2C2C;
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: .24em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      .footer-links {
+        display: grid;
+        gap: 11px;
+      }
+
+      .footer-links a {
+        color: #7E7367;
+        line-height: 1.45;
+        transition: color .25s ease;
+      }
+
+      .footer-links a:hover {
+        color: #B79B6C;
+      }
+
+      .footer-meta {
+        margin-top: 30px;
+        padding-top: 24px;
+        border-top: 1px solid #E5E1D8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        color: #7E7367;
+        font-size: 13px;
+      }
+
+
       @media (max-width: 980px) {
         .hero-grid,
         .grid,
         .steps,
         .cta,
-        .area-layout {
+        .area-layout,
+        .footer-grid {
           grid-template-columns: 1fr;
         }
 
@@ -749,11 +793,63 @@
 
     <footer>
       <div class="container">
-        <strong>Nautilus Facility Cleaning</strong><br />
-        Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt)<br />
-        Telefon: 0176 22844636 · E-Mail: kontakt@nautilus-facility.de<br />
-        <br />
-        <a href="/">Startseite</a> · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a>
+        <div class="footer-grid">
+          <div>
+            <div class="footer-title">Nautilus Facility Cleaning</div>
+            <p style="margin:0; color:#7E7367; line-height:1.75;">
+              Professionelle Praxisreinigung in Berlin für Arztpraxen, Zahnarztpraxen, Privatpraxen und medizinisch genutzte Räume.
+            </p>
+            <p style="margin:18px 0 0; color:#7E7367; line-height:1.75;">
+              Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt)
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-title">Praxisreinigung Berlin</div>
+            <div class="footer-links">
+              <a href="#leistungen">Leistungsumfang Praxisreinigung</a>
+              <a href="#leistungen">4-Farben-Tuchsystem</a>
+              <a href="#leistungen">RKI/KRINKO-orientierte Reinigungslogik</a>
+              <a href="#leistungen">Reinigung von Kontaktflächen</a>
+              <a href="#leistungen">Sanitär- und Oberflächenreinigung</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-title">Weitere Leistungen</div>
+            <div class="footer-links">
+              <a href="/#bueroreinigung">Büroreinigung Berlin</a>
+              <a href="/#kanzleireinigung">Kanzleireinigung Berlin</a>
+              <a href="/#treppenhausreinigung">Treppenhausreinigung Berlin</a>
+              <a href="/#grundreinigung">Grundreinigung Berlin</a>
+              <a href="/#fensterreinigung">Fensterreinigung & Sonderreinigung</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-title">Kontakt</div>
+            <div class="footer-links">
+              <a href="tel:+4917622844636">0176 22844636</a>
+              <a href="mailto:kontakt@nautilus-facility.de">kontakt@nautilus-facility.de</a>
+              <a href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Kostenfreie Besichtigung anfragen</a>
+              <a href="/">Startseite</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-meta">
+          <span>Praxisreinigung Berlin</span>
+          <span>Arztpraxis Reinigung</span>
+          <span>Zahnarztpraxis Reinigung</span>
+          <span>Privatpraxis Reinigung</span>
+          <span>Berlin-Mitte</span>
+          <span>Pankow</span>
+          <span>Lichtenberg</span>
+          <span>Friedrichshain-Kreuzberg</span>
+          <span>Marzahn-Hellersdorf</span>
+          <span><a href="/impressum/">Impressum</a></span>
+          <span><a href="/datenschutz/">Datenschutz</a></span>
+        </div>
       </div>
     </footer>
   </body>

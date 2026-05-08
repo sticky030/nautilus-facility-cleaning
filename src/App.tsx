@@ -137,6 +137,14 @@ export default function App() {
 
         {/* EXPERTISE */}
         <section id="leistungen" className="bg-[#F7F4EE] py-32 lg:py-40">
+          <div className="sr-only" aria-hidden="true">
+            <span id="bueroreinigung"></span>
+            <span id="praxisreinigung"></span>
+            <span id="treppenhausreinigung"></span>
+            <span id="grundreinigung"></span>
+            <span id="hausverwaltungen"></span>
+            <span id="einsatzgebiet"></span>
+          </div>
           <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
             <div className="reveal max-w-3xl mb-16">
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Unsere Expertise</p>
@@ -377,7 +385,40 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between text-left">
+            <div className="mb-12 grid gap-10 border-t border-[#E5E1D8] pt-12 lg:grid-cols-3">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Leistungen in Berlin</div>
+              <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
+                <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Büroreinigung Berlin</a>
+                <a href="#praxisreinigung" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung Berlin</a>
+                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung Berlin</a>
+                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung Berlin</a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Für Verwaltungen</div>
+              <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
+                <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
+                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
+                <a href="#ablauf" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Unverbindliches Angebot anfragen</a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Einsatzgebiet</div>
+              <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
+                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Gebäudereinigung Berlin</a>
+                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
+                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
+                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Mitte</a>
+                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-12 border-t border-[#E5E1D8] flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between text-left">
               <div className="flex flex-col gap-4 sm:flex-row sm:gap-10 text-[15px] font-medium text-[#2C2C2C]">
                 <a href="mailto:kontakt@nautilus-facility.de" className="underline decoration-[#B79B6C]/30 underline-offset-4">kontakt@nautilus-facility.de</a>
                 <a href="tel:+4917622844636" className="underline decoration-[#B79B6C]/30 underline-offset-4">0176 22844636</a>

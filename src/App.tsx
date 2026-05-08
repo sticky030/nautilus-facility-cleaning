@@ -472,7 +472,7 @@ export default function App() {
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Dienstleistungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
-                <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
+                <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
                 <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
                 <a href="/kanzleireinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>

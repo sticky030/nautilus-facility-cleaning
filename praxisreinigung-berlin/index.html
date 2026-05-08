@@ -539,6 +539,12 @@
         border-radius: 18px;
         padding: 24px 26px;
         box-shadow: 0 4px 15px rgba(0,0,0,.02);
+        transition: border-color .3s ease, box-shadow .3s ease;
+      }
+
+      details[open] {
+        border-color: rgba(183,155,108,.45);
+        box-shadow: 0 15px 40px rgba(183,155,108,.06);
       }
 
       summary {
@@ -667,7 +673,7 @@
             <div class="eyebrow">Praxisreinigung Berlin</div>
             <h1>Praxisreinigung Berlin für Arztpraxen, Zahnarztpraxen und Privatpraxen</h1>
             <p class="lead">
-              Nautilus Facility Cleaning bietet strukturierte Praxisreinigung für medizinisch genutzte Räume in Berlin. Im Fokus stehen klar abgestimmte Abläufe, hygienebewusste Reinigung, Kontaktflächen und eine verlässliche Umsetzung passend zum Praxisbetrieb.
+              Nautilus Facility Cleaning bietet hochwertige Praxisreinigung für medizinisch genutzte Räume in Berlin. Der Fokus liegt auf klar getrennten Reinigungsbereichen, hygienebewussten Abläufen, gepflegten Kontaktflächen und einer verlässlichen Umsetzung passend zum Praxisbetrieb.
             </p>
             <div class="hero-actions">
               <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Kostenfreie Besichtigung anfragen</a>
@@ -676,9 +682,9 @@
           </div>
 
           <aside class="hero-card">
-            <strong>Für sensible Praxisbereiche</strong>
+            <strong>Strukturierte Reinigung für sensible Praxisflächen</strong>
             <p>
-              Die Reinigung wird objektbezogen auf Raumstruktur, Sanitärbereiche, Kontaktflächen, Turnus und Zeitfenster abgestimmt. So entsteht ein klares Leistungsbild statt pauschaler Schnellangaben.
+              Wir prüfen Raumstruktur, Sanitärbereiche, Kontaktflächen, Turnus und Zeitfenster objektbezogen. So entsteht ein klarer Leistungsumfang, der zum Praxisbetrieb passt und nicht auf pauschalen Annahmen basiert.
             </p>
           </aside>
         </div>
@@ -690,7 +696,7 @@
             <div class="eyebrow">Leistungsbild</div>
             <h2>Praxisreinigung mit klar getrennten Reinigungsbereichen.</h2>
             <p class="section-text">
-              Für Arztpraxen, Zahnarztpraxen und Privatpraxen zählt nicht nur sichtbare Sauberkeit. Entscheidend sind nachvollziehbare Abläufe, getrennte Reinigungsbereiche und eine Umsetzung, die sich ruhig in den Praxisbetrieb einfügt.
+              Für Arztpraxen, Zahnarztpraxen und Privatpraxen zählt nicht nur sichtbare Sauberkeit. Entscheidend sind nachvollziehbare Abläufe, getrennte Reinigungsbereiche und eine Umsetzung, die sich diskret, planbar und ruhig in den Praxisbetrieb einfügt.
             </p>
           </div>
 
@@ -805,7 +811,10 @@
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">Geeignet für</div>
-            <h2>Für Praxen mit Anspruch an Struktur, Diskretion und verlässliche Abläufe.</h2>
+            <h2>Für Praxen, die Reinigung nicht dem Zufall überlassen.</h2>
+            <p class="section-text">
+              Jede Praxis hat eine eigene Raumstruktur, Patientenfrequenz und Zeitlogik. Deshalb wird der Leistungsumfang nicht pauschal festgelegt, sondern passend zu Objekt, Nutzung und gewünschtem Standard abgestimmt.
+            </p>
           </div>
 
           <div class="grid">
@@ -889,18 +898,18 @@
             <div class="cta">
               <div>
                 <div class="eyebrow">Kostenfreie Besichtigung</div>
-                <h2>Praxisfläche prüfen lassen und objektbezogenes Angebot erhalten.</h2>
+                <h2>Praxisfläche prüfen lassen. Angebot klar und objektbezogen erhalten.</h2>
                 <p>
-                  Senden Sie uns kurz Objektart, Adresse, gewünschten Turnus und besondere Anforderungen. Wir melden uns kurzfristig zurück und klären den passenden nächsten Schritt.
+                  Wir ordnen Raumstruktur, Sanitärbereiche, Kontaktflächen, Turnus und gewünschtes Zeitfenster sauber ein. Danach erhalten Sie ein unverbindliches Angebot mit klar abgegrenztem Leistungsumfang.
                 </p>
               </div>
-              <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrage stellen</a>
+              <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Besichtigung anfragen</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="white">
+      <section id="faq" class="white">
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">FAQ</div>
@@ -910,44 +919,38 @@
           <div class="faq">
             <details>
               <summary>Orientiert sich die Praxisreinigung an RKI/KRINKO-Empfehlungen?</summary>
-              <p>Unsere Abläufe orientieren sich an relevanten Hygieneempfehlungen für sensible Praxisbereiche, unter anderem im Umgang mit Kontaktflächen, Sanitärbereichen und klar getrennten Reinigungszonen.</p>
+              <p>Unsere Abläufe orientieren sich an relevanten Hygieneempfehlungen für sensible Praxisbereiche, insbesondere bei Kontaktflächen, Sanitärbereichen, Reinigungszonen und Flächenreinigung. Der konkrete Leistungsumfang wird vor Beginn sauber abgestimmt.</p>
             </details>
 
             <details>
               <summary>Arbeiten Sie mit einem 4-Farben-Tuchsystem?</summary>
-              <p>Ja. Für getrennte Reinigungsbereiche nutzen wir ein 4-Farben-Tuchsystem, um unterschiedliche Bereiche klar voneinander abzugrenzen und Kreuzkontaminationen zu reduzieren.</p>
+              <p>Ja. Für getrennte Reinigungsbereiche nutzen wir ein 4-Farben-Tuchsystem. Dadurch werden unterschiedliche Bereiche klar voneinander abgegrenzt und Kreuzkontaminationen reduziert.</p>
+            </details>
+
+            <details>
+              <summary>Welche Praxisbereiche werden gereinigt?</summary>
+              <p>Typische Bereiche sind Empfang, Wartezimmer, Sanitärzonen, Flure, Personalbereiche, Böden sowie patientennahe Kontaktflächen. Behandlungsnahe Bereiche werden nur nach klarer Abstimmung und Leistungsabgrenzung gereinigt.</p>
             </details>
 
             <details>
               <summary>Reinigen Sie außerhalb der Praxiszeiten?</summary>
-              <p>Ja, passende Zeitfenster außerhalb oder rund um den Praxisbetrieb sind nach Abstimmung möglich. Entscheidend sind Zugang, Schließlogik und gewünschter Turnus.</p>
+              <p>Ja. Einsätze außerhalb oder passend zum Praxisbetrieb sind nach Abstimmung möglich. Entscheidend sind Zugang, Schließlogik, gewünschter Turnus und das passende Zeitfenster.</p>
             </details>
 
             <details>
-              <summary>Erstellen Sie ein Angebot ohne Besichtigung?</summary>
-              <p>Eine erste Einschätzung ist möglich. Für ein belastbares Angebot empfehlen wir eine kurze kostenfreie Besichtigung, damit Raumstruktur, Sanitärbereiche und Kontaktflächen sauber eingeordnet werden können.</p>
-            </details>
-
-            <details>
-              <summary>Welche Praxisarten reinigen Sie?</summary>
-              <p>Wir reinigen Arztpraxen, Zahnarztpraxen, Privatpraxen, Facharztpraxen, Therapiepraxen und vergleichbare medizinisch genutzte Räume in Berlin. Der konkrete Leistungsumfang wird nach Raumstruktur, Nutzung und gewünschtem Turnus abgestimmt.</p>
-            </details>
-
-            <details>
-              <summary>Wird auch eine Grundreinigung für Praxen angeboten?</summary>
+              <summary>Bieten Sie auch Grundreinigung für Praxen an?</summary>
               <p>Ja. Neben der laufenden Praxisreinigung übernehmen wir auch Grundreinigungen, Sonderreinigungen sowie Reinigungen nach Renovierung, Umbau, Neueröffnung oder vor Praxisübergabe.</p>
+            </details>
+
+            <details>
+              <summary>Wie wird das Angebot erstellt?</summary>
+              <p>Nach kurzer Bedarfsklärung oder kostenfreier Besichtigung erstellen wir ein unverbindliches, objektbezogenes Angebot mit klar abgegrenztem Leistungsumfang. Berücksichtigt werden Raumstruktur, Turnus, Sanitärbereiche, Kontaktflächen und Zeitfenster.</p>
             </details>
 
             <details>
               <summary>Wer stellt Reinigungsmaterial und Verbrauchsmaterial?</summary>
               <p>Das wird objektbezogen abgestimmt. Je nach Auftrag können Materialstellung, Verbrauchsmaterialien und besondere Anforderungen im Leistungsumfang berücksichtigt werden.</p>
             </details>
-
-            <details>
-              <summary>Gibt es ein unverbindliches Angebot?</summary>
-              <p>Ja. Nach kurzer Bedarfsklärung oder kostenfreier Besichtigung erstellen wir ein unverbindliches, objektbezogenes Angebot mit klar abgegrenztem Leistungsumfang.</p>
-            </details>
-
           </div>
         </div>
       </section>
@@ -969,11 +972,11 @@
           <div>
             <div class="footer-title">Praxisreinigung Berlin</div>
             <div class="footer-links">
-              <a href="#leistungen">Leistungsumfang Praxisreinigung</a>
+              <a href="#leistungen">Leistungsumfang</a>
               <a href="#leistungen">4-Farben-Tuchsystem</a>
-              <a href="#leistungen">RKI/KRINKO-orientierte Reinigungslogik</a>
-              <a href="#leistungen">Reinigung von Kontaktflächen</a>
-              <a href="#leistungen">Sanitär- und Oberflächenreinigung</a>
+              <a href="#leistungen">RKI/KRINKO-orientierte Abläufe</a>
+              <a href="#leistungen">Kontaktflächen und Sanitärbereiche</a>
+              <a href="#faq">Häufige Fragen</a>
             </div>
           </div>
 
@@ -1001,14 +1004,12 @@
 
         <div class="footer-meta">
           <span>Praxisreinigung Berlin</span>
-          <span>Arztpraxis Reinigung</span>
-          <span>Zahnarztpraxis Reinigung</span>
-          <span>Privatpraxis Reinigung</span>
-          <span>Berlin-Mitte</span>
-          <span>Pankow</span>
+          <span>Arztpraxen</span>
+          <span>Zahnarztpraxen</span>
+          <span>Privatpraxen</span>
           <span>Lichtenberg</span>
-          <span>Friedrichshain-Kreuzberg</span>
-          <span>Marzahn-Hellersdorf</span>
+          <span>Pankow</span>
+          <span>Mitte</span>
           <span><a href="/impressum/">Impressum</a></span>
           <span><a href="/datenschutz/">Datenschutz</a></span>
         </div>

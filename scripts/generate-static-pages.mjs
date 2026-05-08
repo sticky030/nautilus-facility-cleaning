@@ -208,9 +208,9 @@ const html = `<!doctype html>
         align-items: center;
         border-radius: 999px;
         padding: 15px 24px;
-        background: #2C2C2C;
+        background: #B79B6C;
         color: #FFFFFF;
-        border: 1px solid #2C2C2C;
+        border: 1px solid #B79B6C;
         font-size: 14px;
         font-weight: 750;
         transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
@@ -218,7 +218,7 @@ const html = `<!doctype html>
 
       .button:hover {
         transform: translateY(-1px);
-        box-shadow: 0 15px 40px rgba(44,44,44,.16);
+        box-shadow: 0 15px 40px rgba(183,155,108,.22);
       }
 
       .button.secondary {
@@ -466,14 +466,14 @@ const html = `<!doctype html>
       }
 
       .cta .button {
-        background: #2C2C2C;
+        background: #B79B6C;
         color: #FFFFFF;
-        border-color: #2C2C2C;
+        border-color: #B79B6C;
         white-space: nowrap;
       }
 
       .cta .button:hover {
-        box-shadow: 0 15px 40px rgba(44,44,44,.16);
+        box-shadow: 0 15px 40px rgba(183,155,108,.22);
       }
 
       .faq {

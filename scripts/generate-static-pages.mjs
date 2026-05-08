@@ -130,14 +130,14 @@ const html = `<!doctype html>
         top: 0;
         z-index: 50;
         border-bottom: 1px solid rgba(229,225,216,.72);
-        background: rgba(247,244,238,.88);
-        backdrop-filter: blur(18px);
+        background: rgba(247,244,238,.94);
+        backdrop-filter: blur(16px);
       }
 
       .nav-inner {
         max-width: 1240px;
         margin: 0 auto;
-        padding: 18px 28px;
+        padding: 16px 28px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -145,8 +145,8 @@ const html = `<!doctype html>
       }
 
       .brand {
-        font-size: 12px;
-        letter-spacing: .26em;
+        font-size: 11px;
+        letter-spacing: .30em;
         text-transform: uppercase;
         font-weight: 800;
         color: var(--text);
@@ -201,18 +201,16 @@ const html = `<!doctype html>
       .hero {
         position: relative;
         overflow: hidden;
-        background:
-          radial-gradient(circle at 80% 18%, rgba(183,155,108,.14), transparent 28%),
-          linear-gradient(180deg, #F3EFE7 0%, #F7F4EE 100%);
+        background: #F3EFE7;
         padding: 128px 28px 110px;
       }
 
       .hero::after {
         content: "";
         position: absolute;
-        inset: auto -10% -34% 45%;
-        height: 420px;
-        background: radial-gradient(circle, rgba(255,255,255,.66), transparent 66%);
+        inset: auto -12% -42% 48%;
+        height: 360px;
+        background: radial-gradient(circle, rgba(255,255,255,.42), transparent 68%);
         pointer-events: none;
       }
 
@@ -263,11 +261,11 @@ const html = `<!doctype html>
       }
 
       .hero-card {
-        background: rgba(255,255,255,.72);
-        border: 1px solid rgba(229,225,216,.9);
-        border-radius: 30px;
+        background: rgba(255,255,255,.68);
+        border: 1px solid rgba(229,225,216,.86);
+        border-radius: 28px;
         padding: 38px;
-        box-shadow: 0 30px 80px rgba(44,44,44,.065);
+        box-shadow: 0 22px 60px rgba(44,44,44,.045);
       }
 
       .hero-card strong {
@@ -325,14 +323,14 @@ const html = `<!doctype html>
         border: 1px solid var(--line);
         border-radius: 22px;
         padding: 32px;
-        box-shadow: 0 8px 30px rgba(44,44,44,.035);
-        transition: transform .32s ease, border-color .32s ease, box-shadow .32s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+        transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
       }
 
       .card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(183,155,108,.42);
-        box-shadow: 0 18px 46px rgba(183,155,108,.08);
+        transform: translateY(-4px);
+        border-color: rgba(183,155,108,.50);
+        box-shadow: 0 15px 40px rgba(183,155,108,.08);
       }
 
       .white .card {
@@ -442,9 +440,7 @@ const html = `<!doctype html>
       }
 
       .cta {
-        background:
-          radial-gradient(circle at 88% 20%, rgba(183,155,108,.22), transparent 28%),
-          #2C2C2C;
+        background: #2C2C2C;
         color: white;
         border-radius: 34px;
         padding: 52px;
@@ -452,7 +448,7 @@ const html = `<!doctype html>
         grid-template-columns: 1fr auto;
         gap: 34px;
         align-items: center;
-        box-shadow: 0 28px 80px rgba(44,44,44,.12);
+        box-shadow: 0 24px 70px rgba(44,44,44,.10);
       }
 
       .cta h2 {
@@ -475,7 +471,7 @@ const html = `<!doctype html>
       }
 
       footer {
-        padding: 52px 28px;
+        padding: 48px 28px;
         border-top: 1px solid var(--line);
         color: var(--muted);
         font-size: 14px;
@@ -532,7 +528,7 @@ const html = `<!doctype html>
           <a href="/bueroreinigung-berlin/">Büroreinigung</a>
           <a href="/treppenhausreinigung-berlin/">Treppenhausreinigung</a>
           <a href="/hausverwaltungen-berlin/">Hausverwaltungen</a>
-          <a href="/#kontakt">Kontakt</a>
+          <a href="https://nautilus-facility.de/#kontakt">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -547,7 +543,7 @@ const html = `<!doctype html>
               Nautilus Facility Cleaning bietet strukturierte Praxisreinigung für medizinisch genutzte Räume in Berlin. Im Fokus stehen klar abgestimmte Abläufe, hygienebewusste Reinigung, Kontaktflächen und eine verlässliche Umsetzung passend zum Praxisbetrieb.
             </p>
             <div class="hero-actions">
-              <a class="button" href="/#kontakt">Kostenfreie Besichtigung anfragen</a>
+              <a class="button" href="https://nautilus-facility.de/#kontakt">Kostenfreie Besichtigung anfragen</a>
               <a class="button secondary" href="#leistungen">Leistungsumfang ansehen</a>
             </div>
           </div>
@@ -678,7 +674,7 @@ const html = `<!doctype html>
                 Senden Sie uns kurz Objektart, Adresse, gewünschten Turnus und besondere Anforderungen. Wir melden uns kurzfristig zurück und klären den passenden nächsten Schritt.
               </p>
             </div>
-            <a class="button" href="/#kontakt">Anfrage stellen</a>
+            <a class="button" href="https://nautilus-facility.de/#kontakt">Anfrage stellen</a>
           </div>
         </div>
       </section>

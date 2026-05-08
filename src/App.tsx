@@ -88,6 +88,8 @@ const services = [
   },
   {
     id: 'fensterreinigung',
+    href: '/fensterreinigung-berlin/',
+    linkLabel: 'Mehr zur Fensterreinigung',
     eyebrow: 'Ergänzende Objektleistungen',
     title: 'Fensterreinigung & Sonderreinigung',
     text: 'Ergänzende Reinigungsleistungen für Glasflächen, Eingangsbereiche, Allgemeinflächen und objektbezogene Sonderbedarfe. Geeignet als Einzelauftrag oder Zusatzleistung zur laufenden Reinigung.',
@@ -473,8 +475,8 @@ export default function App() {
                 <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
                 <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
                 <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
-                <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
-                <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
+                <a href="/fensterreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+                <a href="/fensterreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
               </div>
             </div>
 

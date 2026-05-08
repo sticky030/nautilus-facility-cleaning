@@ -117,5 +117,31 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        if (!window.location.hash) return;
+
+        var targetId = window.location.hash.slice(1);
+        var attempts = 0;
+
+        var scrollToHash = function () {
+          var target = document.getElementById(targetId);
+
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+          }
+
+          attempts += 1;
+          if (attempts < 20) {
+            setTimeout(scrollToHash, 100);
+          }
+        };
+
+        setTimeout(scrollToHash, 150);
+      });
+    </script>
+
   </body>
 </html>

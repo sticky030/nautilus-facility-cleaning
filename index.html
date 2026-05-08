@@ -119,15 +119,22 @@
   <body>
     <div id="root"></div>
 
+
     <script>
       window.addEventListener("load", function () {
-        if (!window.location.hash) return;
+        var shouldScrollToContact =
+          window.location.hash === "#kontakt" ||
+          window.location.search.includes("kontakt=1") ||
+          sessionStorage.getItem("scrollToContact") === "1";
 
-        var targetId = window.location.hash.slice(1);
+        if (!shouldScrollToContact) return;
+
+        sessionStorage.removeItem("scrollToContact");
+
         var attempts = 0;
 
-        var scrollToHash = function () {
-          var target = document.getElementById(targetId);
+        function scrollToContact() {
+          var target = document.getElementById("kontakt");
 
           if (target) {
             target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -135,12 +142,12 @@
           }
 
           attempts += 1;
-          if (attempts < 20) {
-            setTimeout(scrollToHash, 100);
+          if (attempts < 30) {
+            setTimeout(scrollToContact, 100);
           }
-        };
+        }
 
-        setTimeout(scrollToHash, 150);
+        setTimeout(scrollToContact, 250);
       });
     </script>
 

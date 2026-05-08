@@ -222,22 +222,24 @@ export default function App() {
                     <div className="min-h-[28px] text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 min-h-[64px] lg:h-[64px] text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 min-h-[168px] lg:h-[168px] text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
-                    <div className="mt-5 flex flex-col items-start gap-3">
+                    <div className="mt-auto pt-6 flex min-h-[76px] flex-col items-start justify-end gap-3">
                       {'href' in service && service.href ? (
                         <a
                           href={service.href}
-                          className="inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-colors hover:text-[#2C2C2C]"
+                          className="group/link inline-flex w-fit items-center gap-2 border-b border-[#B79B6C]/35 pb-1 text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-all duration-300 hover:border-[#B79B6C] hover:text-[#2C2C2C]"
                         >
-                          {service.linkLabel ?? 'Mehr erfahren'}
+                          <span>{service.linkLabel ?? 'Mehr erfahren'}</span>
+                          <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>
                         </a>
                       ) : null}
 
                       {'secondaryHref' in service && service.secondaryHref ? (
                         <a
                           href={service.secondaryHref}
-                          className="inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#7E7367] transition-colors hover:text-[#B79B6C]"
+                          className="group/link inline-flex w-fit items-center gap-2 border-b border-[#B79B6C]/35 pb-1 text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-all duration-300 hover:border-[#B79B6C] hover:text-[#2C2C2C]"
                         >
-                          {service.secondaryLinkLabel ?? 'Weitere Informationen'}
+                          <span>{service.secondaryLinkLabel ?? 'Weitere Informationen'}</span>
+                          <span className="transition-transform duration-300 group-hover/link:translate-x-1">→</span>
                         </a>
                       ) : null}
                     </div>

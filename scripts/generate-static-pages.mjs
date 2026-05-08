@@ -321,7 +321,7 @@ const html = `<!doctype html>
       }
 
       .card:has(ul.clean) h3 {
-        min-height: 58px;
+        min-height: 68px;
       }
 
       .card p {
@@ -332,7 +332,7 @@ const html = `<!doctype html>
       }
 
       .card:has(ul.clean) > p {
-        min-height: 112px;
+        min-height: 156px;
       }
 
       ul.clean {
@@ -343,7 +343,7 @@ const html = `<!doctype html>
         display: grid;
         gap: 12px;
         color: #6F6559;
-        min-height: 132px;
+        min-height: 144px;
       }
 
       ul.clean li {

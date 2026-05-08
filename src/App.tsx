@@ -73,6 +73,8 @@ const services = [
   },
   {
     id: 'grundreinigung',
+    href: '/grundreinigung-berlin/',
+    linkLabel: 'Mehr zur Grundreinigung',
     eyebrow: 'Intensiv & objektbezogen',
     title: 'Grundreinigung & Baufeinreinigung',
     text: 'Intensive Reinigungsleistungen für Büros, Praxen, Treppenhäuser und Gewerbeflächen nach Nutzung, Renovierung, Umbau oder vor Übergabe. Umfang und Zielzustand werden vorab sauber eingeordnet.',
@@ -469,8 +471,8 @@ export default function App() {
                 <a href="#kanzleireinigung" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
                 <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
-                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
-                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
+                <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
+                <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
                 <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
                 <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
               </div>

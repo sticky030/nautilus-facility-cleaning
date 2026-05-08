@@ -56,6 +56,8 @@ const services = [
   },
   {
     id: 'treppenhausreinigung',
+    href: '/treppenhausreinigung-berlin/',
+    linkLabel: 'Mehr zur Treppenhausreinigung',
     eyebrow: 'Für Hausverwaltungen',
     title: 'Treppenhausreinigung Berlin',
     text: 'Treppenhausreinigung für Mehrfamilienhäuser, Wohn- und Geschäftshäuser sowie verwaltete Objekte in Berlin. Ideal für Hausverwaltungen, Eigentümer und Objektverantwortliche.',
@@ -453,7 +455,7 @@ export default function App() {
                 <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
                 <a href="#kanzleireinigung" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
-                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
+                <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
                 <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>

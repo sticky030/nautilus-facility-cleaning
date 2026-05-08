@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/generate-static-pages.mjs && node scripts/generate-bueroreinigung-page.mjs && node scripts/generate-treppenhausreinigung-page.mjs && node scripts/generate-hausverwaltungen-page.mjs && node scripts/generate-grundreinigung-page.mjs",
+    "build": "tsc -b && vite build && node scripts/generate-static-pages.mjs && node scripts/generate-bueroreinigung-page.mjs && node scripts/generate-treppenhausreinigung-page.mjs && node scripts/generate-hausverwaltungen-page.mjs && node scripts/generate-grundreinigung-page.mjs && node scripts/generate-fensterreinigung-page.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

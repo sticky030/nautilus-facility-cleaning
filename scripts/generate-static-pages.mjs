@@ -130,7 +130,7 @@ const html = `<!doctype html>
         top: 0;
         z-index: 50;
         border-bottom: 1px solid rgba(229,225,216,.72);
-        background: rgba(247,244,238,.94);
+        background: rgba(243,239,231,.92);
         backdrop-filter: blur(16px);
       }
 
@@ -208,9 +208,9 @@ const html = `<!doctype html>
       .hero::after {
         content: "";
         position: absolute;
-        inset: auto -12% -42% 48%;
-        height: 360px;
-        background: radial-gradient(circle, rgba(255,255,255,.42), transparent 68%);
+        inset: auto -16% -46% 52%;
+        height: 320px;
+        background: radial-gradient(circle, rgba(255,255,255,.28), transparent 70%);
         pointer-events: none;
       }
 
@@ -319,8 +319,8 @@ const html = `<!doctype html>
       }
 
       .card {
-        background: var(--white);
-        border: 1px solid var(--line);
+        background: #FFFFFF;
+        border: 1px solid #E5E1D8;
         border-radius: 22px;
         padding: 32px;
         box-shadow: 0 4px 15px rgba(0,0,0,.02);
@@ -334,7 +334,7 @@ const html = `<!doctype html>
       }
 
       .white .card {
-        background: var(--bg);
+        background: #FFFFFF;
       }
 
       .card h3 {
@@ -423,7 +423,7 @@ const html = `<!doctype html>
       }
 
       .white details {
-        background: var(--bg);
+        background: #FFFFFF;
       }
 
       summary {

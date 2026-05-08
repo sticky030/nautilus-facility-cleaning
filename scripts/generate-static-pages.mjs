@@ -298,6 +298,8 @@ const html = `<!doctype html>
         padding: 34px;
         box-shadow: 0 4px 15px rgba(0,0,0,.02);
         transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
+        display: flex;
+        flex-direction: column;
       }
 
       .card:hover {
@@ -327,7 +329,7 @@ const html = `<!doctype html>
       ul.clean {
         list-style: none;
         padding: 22px 0 0;
-        margin: 24px 0 0;
+        margin: auto 0 0;
         border-top: 1px solid #E5E1D8;
         display: grid;
         gap: 12px;

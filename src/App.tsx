@@ -387,12 +387,17 @@ export default function App() {
             </div>
             <div className="mb-12 grid gap-10 border-t border-[#E5E1D8] pt-12 lg:grid-cols-3">
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Leistungen in Berlin</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Dienstleistungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
-                <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Büroreinigung Berlin</a>
-                <a href="#praxisreinigung" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung Berlin</a>
-                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung Berlin</a>
-                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung Berlin</a>
+                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
+                <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
+                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
+                <a href="#praxisreinigung" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
+                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
+                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
+                <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
+                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
               </div>
             </div>
 
@@ -400,20 +405,20 @@ export default function App() {
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Für Verwaltungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
                 <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
-                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
+                <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
                 <a href="#ablauf" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Unverbindliches Angebot anfragen</a>
               </div>
             </div>
 
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Einsatzgebiet</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Einsatzgebiete Berlin</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
-                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Gebäudereinigung Berlin</a>
-                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
-                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
-                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Mitte</a>
-                <a href="#einsatzgebiet" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Mitte</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Marzahn-Hellersdorf</a>
               </div>
             </div>
           </div>

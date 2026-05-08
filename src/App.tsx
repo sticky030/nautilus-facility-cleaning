@@ -43,6 +43,8 @@ const services = [
   },
   {
     id: 'kanzleireinigung',
+    href: '/kanzleireinigung-berlin/',
+    linkLabel: 'Mehr zur Kanzleireinigung',
     eyebrow: 'Diskret & repräsentativ',
     title: 'Kanzleireinigung Berlin',
     text: 'Reinigung für Kanzleien, Beratungsbüros und repräsentative Geschäftsräume in Berlin. Wir achten auf gepflegte Mandantenbereiche, vertrauliche Arbeitsumgebungen und eine diskrete Durchführung.',
@@ -470,7 +472,7 @@ export default function App() {
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
                 <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
                 <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
-                <a href="#kanzleireinigung" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
+                <a href="/kanzleireinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
                 <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
                 <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>

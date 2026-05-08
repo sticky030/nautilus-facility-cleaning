@@ -488,7 +488,7 @@ export default function App() {
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Für Verwaltungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
                 <a href="/hausverwaltungen-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
-                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
+                <a href="/hausverwaltungen-berlin/" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Unverbindliches Angebot anfragen</a>
               </div>

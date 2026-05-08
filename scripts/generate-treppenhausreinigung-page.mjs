@@ -271,6 +271,11 @@ const html = `<!doctype html>
             <article class="card">
               <h3>Hausverwaltungen</h3>
               <p>Regelmäßige Treppenhausreinigung und objektbezogene Zusatzleistungen für verwaltete Wohn- und Geschäftshäuser.</p>
+              <p style="margin-top:18px;">
+                <a href="/hausverwaltungen-berlin/" style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">
+                  Reinigung für Hausverwaltungen ansehen
+                </a>
+              </p>
             </article>
             <article class="card">
               <h3>WEGs & Eigentümer</h3>

@@ -15,96 +15,78 @@ const services = [
     id: 'bueroreinigung',
     eyebrow: 'Regelmäßige Unterhaltsreinigung',
     title: 'Büroreinigung Berlin',
-    text: 'Professionelle Büroreinigung für Unternehmen, Agenturen, Verwaltungsflächen und gewerbliche Einheiten in Berlin. Wir sorgen für gepflegte Arbeitsplätze, saubere Gemeinschaftsbereiche und einen repräsentativen Gesamteindruck im laufenden Betrieb — abgestimmt auf Turnus, Fläche und Nutzungsintensität.',
+    text: 'Professionelle Büroreinigung für Unternehmen, Agenturen und gewerbliche Einheiten in Berlin. Wir sorgen für gepflegte Arbeitsbereiche, saubere Gemeinschaftsflächen und einen repräsentativen Eindruck im laufenden Betrieb.',
     bullets: [
-      'Reinigung von Arbeitsplätzen, Schreibtischumfeldern und Oberflächen',
-      'Pflege von Besprechungsräumen, Empfangs- und Wartebereichen',
-      'Reinigung von Teeküchen, Aufenthaltsbereichen und Sanitärzonen',
-      'Bodenreinigung nach Bodenart und vereinbartem Leistungsumfang',
-      'Müllentsorgung und Austausch von Beuteln nach Absprache',
-      'Reinigung häufig genutzter Kontaktflächen wie Türklinken, Griffe und Schalter',
-      'Regelmäßige Sichtpflege für einen konstant gepflegten Gesamteindruck',
-      'Umsetzung außerhalb oder passend zu Ihren Betriebszeiten'
+      'Arbeitsplätze, Oberflächen und Kontaktbereiche',
+      'Besprechungs-, Empfangs- und Aufenthaltsbereiche',
+      'Teeküchen, Sanitärzonen und Bodenreinigung',
+      'Müllentsorgung und laufende Sichtpflege',
+      'Umsetzung passend zu Ihren Betriebszeiten'
     ],
   },
   {
     id: 'praxisreinigung',
     eyebrow: 'Sensible Hygienebereiche',
     title: 'Praxisreinigung Berlin',
-    text: 'Praxisreinigung für Arztpraxen, Zahnarztpraxen, Privatpraxen und medizinisch genutzte Räume in Berlin. Unsere Abläufe orientieren sich an relevanten Hygieneempfehlungen, unter anderem den Empfehlungen von RKI/KRINKO zur Reinigung und Desinfektion von Flächen in medizinischen Bereichen. Im Fokus stehen klare Reinigungszonen, Kontaktflächen und ein 4-Farben-Tuchsystem zur Reduzierung von Kreuzkontaminationen.',
+    text: 'Praxisreinigung für Arztpraxen, Zahnarztpraxen, Privatpraxen und medizinisch genutzte Räume in Berlin. Unsere Abläufe orientieren sich an relevanten RKI/KRINKO-Hygieneempfehlungen und klar getrennten Reinigungsbereichen.',
     bullets: [
-      'Reinigung von Empfangsbereichen, Wartezonen und patientennahen Kontaktflächen',
-      'RKI/KRINKO-orientierte Reinigungs- und Desinfektionslogik für sensible Praxisbereiche',
-      'Hygieneorientierte Sanitär- und Oberflächenreinigung nach abgestimmtem Plan',
-      '4-Farben-Tuchsystem zur klaren Trennung unterschiedlicher Reinigungsbereiche',
-      'Reduzierung von Kreuzkontaminationen durch getrennte Tücher und definierte Abläufe',
-      'Besondere Aufmerksamkeit für Türgriffe, Tresen, Lichtschalter und stark frequentierte Flächen',
-      'Umsetzung passend zu Praxiszeiten, Sprechstundenbetrieb und Zugangsregelung',
-      'Klare Abgrenzung von Reinigung, Flächendesinfektion und nicht beauftragten Medizinbereichen'
+      'Empfang, Wartebereiche und patientennahe Kontaktflächen',
+      'RKI/KRINKO-orientierte Reinigungs- und Desinfektionslogik',
+      '4-Farben-Tuchsystem zur Bereichstrennung',
+      'Reduzierung von Kreuzkontaminationen durch definierte Abläufe',
+      'Umsetzung passend zu Praxiszeiten und Zugangsregelung'
     ],
   },
   {
     id: 'kanzleireinigung',
     eyebrow: 'Diskret & repräsentativ',
     title: 'Kanzleireinigung Berlin',
-    text: 'Reinigung für Kanzleien, Beratungsbüros und repräsentative Geschäftsräume in Berlin. Wir achten auf gepflegte Mandantenbereiche, vertrauliche Arbeitsumgebungen und eine ruhige Durchführung außerhalb oder passend zu Ihren Bürozeiten.',
+    text: 'Reinigung für Kanzleien, Beratungsbüros und repräsentative Geschäftsräume in Berlin. Wir achten auf gepflegte Mandantenbereiche, vertrauliche Arbeitsumgebungen und eine diskrete Durchführung.',
     bullets: [
-      'Reinigung von Büros, Besprechungsräumen und Konferenzbereichen',
-      'Pflege von Empfang, Wartebereich und mandantennahen Flächen',
-      'Reinigung von Schreibtischumfeldern und Oberflächen nach Abstimmung',
-      'Sanitär-, Küchen- und Aufenthaltsbereiche im vereinbarten Turnus',
+      'Büros, Besprechungsräume und Konferenzbereiche',
+      'Empfangs-, Warte- und Mandantenbereiche',
+      'Sanitär-, Küchen- und Aufenthaltsbereiche',
       'Diskrete Durchführung in abgestimmten Zeitfenstern',
-      'Besondere Rücksicht auf vertrauliche Arbeitsbereiche und sensible Unterlagen',
-      'Verlässlicher Reinigungsstandard für repräsentative Geschäftsräume',
-      'Gepflegter Eindruck für Mandanten, Mitarbeitende und Besucher'
+      'Verlässlicher Standard für repräsentative Räume'
     ],
   },
   {
     id: 'treppenhausreinigung',
     eyebrow: 'Für Hausverwaltungen',
     title: 'Treppenhausreinigung Berlin',
-    text: 'Treppenhausreinigung für Mehrfamilienhäuser, Wohn- und Geschäftshäuser sowie verwaltete Objekte in Berlin. Wir pflegen Eingangsbereiche, Podeste, Handläufe und Allgemeinflächen mit klarer Abstimmung und verlässlicher Umsetzung für Hausverwaltungen, Eigentümer und Objektverantwortliche.',
+    text: 'Treppenhausreinigung für Mehrfamilienhäuser, Wohn- und Geschäftshäuser sowie verwaltete Objekte in Berlin. Ideal für Hausverwaltungen, Eigentümer und Objektverantwortliche.',
     bullets: [
-      'Reinigung von Treppen, Podesten und Eingangsbereichen',
-      'Pflege von Handläufen, Kontaktflächen und Allgemeinflächen',
-      'Reinigung von Aufzugsbereichen nach Absprache',
-      'Reinigung von Briefkastenanlagen und Klingelbereichen nach Leistungsplan',
-      'Entfernung von Grobschmutz im vereinbarten Umfang',
-      'Objektbezogener Turnus nach Nutzung, Frequenz und Verwaltungsbedarf',
-      'Geeignet für Hausverwaltungen, WEGs, Eigentümer und kleinere Objektbestände',
-      'Klare Rückmeldung bei Auffälligkeiten im Objekt nach Abstimmung'
+      'Treppen, Podeste und Eingangsbereiche',
+      'Handläufe, Kontaktflächen und Allgemeinflächen',
+      'Aufzüge, Briefkästen und Klingelbereiche nach Absprache',
+      'Objektbezogener Turnus nach Nutzung und Frequenz',
+      'Rückmeldung bei Auffälligkeiten im Objekt nach Abstimmung'
     ],
   },
   {
     id: 'grundreinigung',
     eyebrow: 'Intensiv & objektbezogen',
     title: 'Grundreinigung & Baufeinreinigung',
-    text: 'Intensive Reinigungsleistungen für Büros, Praxen, Treppenhäuser und Gewerbeflächen nach Nutzung, Renovierung, Umbau oder vor Übergabe. Umfang, Zustand und gewünschtes Ergebnis werden vorab sauber eingeordnet, damit die Leistung realistisch geplant und zuverlässig umgesetzt wird.',
+    text: 'Intensive Reinigungsleistungen für Büros, Praxen, Treppenhäuser und Gewerbeflächen nach Nutzung, Renovierung, Umbau oder vor Übergabe. Umfang und Zielzustand werden vorab sauber eingeordnet.',
     bullets: [
-      'Grundreinigung von Böden, Oberflächen und stark beanspruchten Bereichen',
-      'Baufeinreinigung nach Renovierung, Umbau oder Sanierung',
-      'Entfernung von Staub, leichten Baustellenrückständen und Nutzungsspuren im vereinbarten Umfang',
-      'Reinigung von Sanitär-, Eingangs-, Neben- und Übergabebereichen',
-      'Intensive Pflege sichtbarer Flächen für einen sauberen Übergabezustand',
-      'Vorbereitung für Nutzung, Übergabe oder anschließende Unterhaltsreinigung',
-      'Objektbezogene Einschätzung von Aufwand, Material und Zeitfenster vor Beginn',
-      'Geeignet für Büros, Praxen, Treppenhäuser und kleinere Gewerbeobjekte'
+      'Grundreinigung von Böden und Oberflächen',
+      'Baufeinreinigung nach Renovierung oder Sanierung',
+      'Entfernung von Staub und Nutzungsspuren im vereinbarten Umfang',
+      'Sanitär-, Eingangs-, Neben- und Übergabebereiche',
+      'Vorbereitung für Nutzung, Übergabe oder Unterhaltsreinigung'
     ],
   },
   {
     id: 'fensterreinigung',
     eyebrow: 'Ergänzende Objektleistungen',
     title: 'Fensterreinigung & Sonderreinigung',
-    text: 'Ergänzende Reinigungsleistungen für Glasflächen, Eingangsbereiche, Allgemeinflächen und objektbezogene Sonderbedarfe. Geeignet als Einzelauftrag, Zusatzleistung zur Unterhaltsreinigung oder zur gezielten Aufwertung sichtbarer Objektbereiche.',
+    text: 'Ergänzende Reinigungsleistungen für Glasflächen, Eingangsbereiche, Allgemeinflächen und objektbezogene Sonderbedarfe. Geeignet als Einzelauftrag oder Zusatzleistung zur laufenden Reinigung.',
     bullets: [
       'Fenster- und Glasflächenreinigung nach Objektstruktur',
-      'Reinigung von Eingangs-, Sicht- und Allgemeinflächen',
+      'Eingangs-, Sicht- und Allgemeinflächen',
       'Rahmenreinigung nach Absprache und Zugänglichkeit',
-      'Sonderreinigung nach besonderer Nutzung, Übergabe oder Zusatzbedarf',
-      'Reinigung einzelner Objektbereiche außerhalb des laufenden Turnus',
-      'Ergänzende Leistungen für Hausverwaltungen, Büros, Praxen und Gewerbeflächen',
-      'Objektbezogene Planung nach Besichtigung, Verschmutzungsgrad und Zugänglichkeit',
-      'Klare Abstimmung von Umfang, Zeitfenster und gewünschtem Ergebnis'
+      'Sonderreinigung nach Nutzung, Übergabe oder Zusatzbedarf',
+      'Klare Abstimmung von Umfang, Zeitfenster und Ergebnis'
     ],
   },
 ]
@@ -221,7 +203,7 @@ export default function App() {
             
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {services.map((service) => (
-                <article id={service.id} key={service.title} className="reveal group scroll-mt-28 flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
+                <article id={service.id} key={service.title} className="reveal group scroll-mt-40 flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
                   <div className="flex flex-col flex-grow text-left">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>

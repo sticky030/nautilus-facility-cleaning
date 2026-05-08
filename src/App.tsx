@@ -206,8 +206,8 @@ export default function App() {
                 <article id={service.id} key={service.title} className="reveal group scroll-mt-40 flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
                   <div className="flex flex-col text-left">
                     <div className="min-h-[28px] text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
-                    <h3 className="mt-5 min-h-[64px] text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
-                    <p className="mt-4 min-h-[168px] text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
+                    <h3 className="mt-5 min-h-[64px] lg:h-[64px] text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
+                    <p className="mt-4 min-h-[168px] lg:h-[168px] text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
                   </div>
                   <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />

@@ -406,7 +406,7 @@ export default function App() {
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
                 <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
                 <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
-                <a href="#ablauf" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
+                <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Unverbindliches Angebot anfragen</a>
               </div>
             </div>

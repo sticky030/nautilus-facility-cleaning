@@ -149,13 +149,16 @@ export default function App() {
             <div className="reveal max-w-3xl mb-16">
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">Unsere Expertise</p>
               <h2 className="mt-6 text-3xl font-semibold leading-[1.08] text-[#2C2C2C] lg:text-[46px]">
-                Maßgeschneiderte Reinigungskonzepte für Objekte mit höchstem Anspruch.
+                Gebäudereinigung in Berlin für Praxen, Büros, Kanzleien und verwaltete Objekte.
               </h2>
+              <p className="mt-6 max-w-2xl text-[16px] leading-8 text-[#7E7367]">
+                Nautilus Facility Cleaning bietet strukturierte Reinigungsdienstleistungen für gewerbliche Objekte in Berlin. Unser Fokus liegt auf klar abgestimmten Abläufen, verlässlicher Durchführung und einem gepflegten Gesamteindruck — passend zu Nutzung, Objektstruktur und gewünschtem Anspruch.
+              </p>
             </div>
             
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {services.map((service) => (
-                <article key={service.title} className="reveal group flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
+                <article id={service.id} key={service.title} className="reveal group scroll-mt-28 flex flex-col h-full bg-white rounded-xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_15px_40px_rgba(183,155,108,0.08)]">
                   <div className="flex flex-col flex-grow text-left">
                     <div className="text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
@@ -163,7 +166,7 @@ export default function App() {
                   </div>
                   <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />
-                    <ul className="mt-6 flex flex-col justify-start gap-4 h-auto md:h-[200px] lg:h-[220px] text-[15px] leading-6 text-[#6F6559]">
+                    <ul className="mt-6 flex flex-col justify-start gap-3 text-[14px] leading-6 text-[#6F6559]">
                       {service.bullets.map((bullet) => (
                         <li key={bullet} className="flex items-start gap-4">
                           <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B79B6C] shadow-[0_0_8px_rgba(183,155,108,0.6)]" />
@@ -389,23 +392,23 @@ export default function App() {
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Dienstleistungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
-                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
+                <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Unterhaltsreinigung</a>
                 <a href="#bueroreinigung" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
-                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
+                <a href="#kanzleireinigung" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="#praxisreinigung" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
                 <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
                 <a href="#grundreinigung" className="hover:text-[#B79B6C] transition-colors">Baufein- / Bauendreinigung</a>
-                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
-                <a href="#leistungen" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
+                <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+                <a href="#fensterreinigung" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
               </div>
             </div>
 
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Für Verwaltungen</div>
               <div className="mt-5 flex flex-col gap-3 text-[14px] text-[#2C2C2C]">
-                <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
-                <a href="#hausverwaltungen" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
+                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Reinigung für Hausverwaltungen</a>
+                <a href="#treppenhausreinigung" className="hover:text-[#B79B6C] transition-colors">Allgemeinflächen und Objektpflege</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Kostenfreie Besichtigung</a>
                 <a href="#kontakt" className="hover:text-[#B79B6C] transition-colors">Unverbindliches Angebot anfragen</a>
               </div>

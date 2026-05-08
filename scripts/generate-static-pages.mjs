@@ -1020,6 +1020,8 @@ const html = `<!doctype html>
           <span>Zahnarztpraxen</span>
           <span>Privatpraxen</span>
           <span>Lichtenberg</span>
+          <span>Marzahn-Hellersdorf</span>
+          <span>Friedrichshain-Kreuzberg</span>
           <span>Pankow</span>
           <span>Mitte</span>
           <span><a href="/impressum/">Impressum</a></span>

@@ -370,35 +370,98 @@
         line-height: 1.75;
       }
 
+      .area-layout {
+        display: grid;
+        grid-template-columns: .92fr 1.08fr;
+        gap: 28px;
+        align-items: stretch;
+        margin-top: 36px;
+      }
+
+      .area-card {
+        background: #FFFFFF;
+        border: 1px solid #E5E1D8;
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+      }
+
+      .area-card h3 {
+        margin: 18px 0 0;
+        font-size: 26px;
+        line-height: 1.16;
+        letter-spacing: -0.035em;
+      }
+
+      .area-card p {
+        margin: 16px 0 0;
+        color: #7E7367;
+        line-height: 1.78;
+      }
+
+      .area-pills {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .area-pill {
+        border: 1px solid #E5E1D8;
+        background: #F7F4EE;
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: #6F6559;
+        font-size: 14px;
+        line-height: 1;
+      }
+
       .cta {
-        background: #2C2C2C;
-        color: #FFFFFF;
-        border-radius: 34px;
-        padding: 54px;
+        position: relative;
+        overflow: hidden;
+        background: #FFFFFF;
+        color: #2C2C2C;
+        border: 1px solid #E5E1D8;
+        border-radius: 28px;
+        padding: 40px;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 34px;
         align-items: center;
-        box-shadow: 0 24px 70px rgba(44,44,44,.10);
+        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, #B79B6C, rgba(183,155,108,.16), transparent);
       }
 
       .cta h2 {
-        color: #FFFFFF;
-        margin-top: 0;
+        color: #2C2C2C;
+        margin-top: 14px;
         max-width: 760px;
       }
 
       .cta p {
-        color: rgba(255,255,255,.72);
-        line-height: 1.8;
+        color: #7E7367;
+        line-height: 1.82;
         max-width: 740px;
       }
 
       .cta .button {
-        background: #FFFFFF;
-        color: #2C2C2C;
-        border-color: #FFFFFF;
+        background: #2C2C2C;
+        color: #FFFFFF;
+        border-color: #2C2C2C;
         white-space: nowrap;
+      }
+
+      .cta .button:hover {
+        box-shadow: 0 15px 40px rgba(44,44,44,.16);
       }
 
       .faq {
@@ -450,7 +513,8 @@
         .hero-grid,
         .grid,
         .steps,
-        .cta {
+        .cta,
+        .area-layout {
           grid-template-columns: 1fr;
         }
 
@@ -621,14 +685,32 @@
             </p>
           </div>
 
-          <div class="cta">
-            <div>
-              <h2>Kostenfreie Besichtigung für Ihre Praxis anfragen.</h2>
+          <div class="area-layout">
+            <aside class="area-card">
+              <div class="eyebrow">Berlin</div>
+              <h3>Schwerpunkt in Ihren relevanten Bezirken.</h3>
               <p>
-                Senden Sie uns kurz Objektart, Adresse, gewünschten Turnus und besondere Anforderungen. Wir melden uns kurzfristig zurück und klären den passenden nächsten Schritt.
+                Wir betreuen Praxen und gewerbliche Objekte in Berlin mit Fokus auf kurzen Wegen, klaren Zeitfenstern und verlässlicher Abstimmung.
               </p>
+              <div class="area-pills" aria-label="Einsatzgebiete Berlin">
+                <span class="area-pill">Lichtenberg</span>
+                <span class="area-pill">Marzahn-Hellersdorf</span>
+                <span class="area-pill">Friedrichshain-Kreuzberg</span>
+                <span class="area-pill">Pankow</span>
+                <span class="area-pill">Mitte</span>
+              </div>
+            </aside>
+
+            <div class="cta">
+              <div>
+                <div class="eyebrow">Kostenfreie Besichtigung</div>
+                <h2>Praxisfläche prüfen lassen und objektbezogenes Angebot erhalten.</h2>
+                <p>
+                  Senden Sie uns kurz Objektart, Adresse, gewünschten Turnus und besondere Anforderungen. Wir melden uns kurzfristig zurück und klären den passenden nächsten Schritt.
+                </p>
+              </div>
+              <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrage stellen</a>
             </div>
-            <a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrage stellen</a>
           </div>
         </div>
       </section>

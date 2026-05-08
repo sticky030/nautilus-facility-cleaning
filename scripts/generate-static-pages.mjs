@@ -300,6 +300,7 @@ const html = `<!doctype html>
         transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
         display: flex;
         flex-direction: column;
+        height: 100%;
       }
 
       .card:hover {
@@ -319,11 +320,19 @@ const html = `<!doctype html>
         letter-spacing: -0.03em;
       }
 
+      .card:has(ul.clean) h3 {
+        min-height: 58px;
+      }
+
       .card p {
         margin: 18px 0 0;
         color: #7E7367;
         line-height: 1.78;
         font-size: 15px;
+      }
+
+      .card:has(ul.clean) > p {
+        min-height: 112px;
       }
 
       ul.clean {
@@ -334,6 +343,7 @@ const html = `<!doctype html>
         display: grid;
         gap: 12px;
         color: #6F6559;
+        min-height: 132px;
       }
 
       ul.clean li {
@@ -666,6 +676,13 @@ const html = `<!doctype html>
         .cta {
           padding: 36px;
         }
+
+        .card:has(ul.clean) h3,
+        .card:has(ul.clean) > p,
+        ul.clean {
+          min-height: unset;
+        }
+
       }
     </style>
   </head>

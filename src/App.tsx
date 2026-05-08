@@ -58,6 +58,8 @@ const services = [
     id: 'treppenhausreinigung',
     href: '/treppenhausreinigung-berlin/',
     linkLabel: 'Mehr zur Treppenhausreinigung',
+    secondaryHref: '/hausverwaltungen-berlin/',
+    secondaryLinkLabel: 'Reinigung für Hausverwaltungen',
     eyebrow: 'Für Hausverwaltungen',
     title: 'Treppenhausreinigung Berlin',
     text: 'Treppenhausreinigung für Mehrfamilienhäuser, Wohn- und Geschäftshäuser sowie verwaltete Objekte in Berlin. Ideal für Hausverwaltungen, Eigentümer und Objektverantwortliche.',
@@ -214,14 +216,25 @@ export default function App() {
                     <div className="min-h-[28px] text-[10px] font-bold uppercase tracking-[0.35em] text-[#B79B6C]">{service.eyebrow}</div>
                     <h3 className="mt-5 min-h-[64px] lg:h-[64px] text-[24px] font-semibold leading-[1.2] text-[#2C2C2C]">{service.title}</h3>
                     <p className="mt-4 min-h-[168px] lg:h-[168px] text-[15px] leading-7 text-[#7E7367]">{service.text}</p>
-                    {'href' in service && service.href ? (
-                      <a
-                        href={service.href}
-                        className="mt-5 inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-colors hover:text-[#2C2C2C]"
-                      >
-                        {service.linkLabel ?? 'Mehr erfahren'}
-                      </a>
-                    ) : null}
+                    <div className="mt-5 flex flex-col items-start gap-3">
+                      {'href' in service && service.href ? (
+                        <a
+                          href={service.href}
+                          className="inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#B79B6C] transition-colors hover:text-[#2C2C2C]"
+                        >
+                          {service.linkLabel ?? 'Mehr erfahren'}
+                        </a>
+                      ) : null}
+
+                      {'secondaryHref' in service && service.secondaryHref ? (
+                        <a
+                          href={service.secondaryHref}
+                          className="inline-flex w-fit items-center text-[12px] font-bold uppercase tracking-[0.22em] text-[#7E7367] transition-colors hover:text-[#B79B6C]"
+                        >
+                          {service.secondaryLinkLabel ?? 'Weitere Informationen'}
+                        </a>
+                      ) : null}
+                    </div>
                   </div>
                   <div className="mt-8 flex flex-col justify-end shrink-0 text-left">
                     <div className="h-px w-full bg-gradient-to-r from-[#E5E1D8] via-[#B79B6C]/30 to-transparent" />

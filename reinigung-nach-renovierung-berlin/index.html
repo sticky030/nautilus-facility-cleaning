@@ -607,6 +607,27 @@
 
       }
     
+  .ssl-note {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+    color: #7e7367 !important;
+    font-weight: 700 !important;
+  }
+
+  .form-submit-row .button.secondary {
+    background: linear-gradient(135deg, #c8a15a 0%, #a77e34 100%) !important;
+    color: #ffffff !important;
+    border-color: rgba(190, 151, 82, 0.45) !important;
+    box-shadow: 0 14px 34px rgba(167, 126, 52, 0.22) !important;
+  }
+
+  .form-submit-row .button.secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 44px rgba(167, 126, 52, 0.30) !important;
+  }
+
   .hero-actions .button,
   .hero-actions .button.secondary {
     background: linear-gradient(135deg, #c8a15a 0%, #a77e34 100%) !important;
@@ -1268,9 +1289,6 @@
                 <div class="form-field full">
                   <label for="nachricht">Was soll gereinigt werden?</label>
                   <textarea id="nachricht" name="Nachricht" placeholder="Bitte kurz beschreiben: Räume, Küche, Bad, Fenster/Rahmen, Balkon, Verschmutzungsgrad, Besonderheiten."></textarea>
-                  <div class="photo-hint">
-                    Fotos senden Sie idealerweise direkt per WhatsApp. Besonders hilfreich sind Bilder von Küche, Bad, Böden, Fenstern/Rahmen und stärkeren Verschmutzungen.
-                  </div>
                 </div>
               </div>
 
@@ -1280,7 +1298,7 @@
               </div>
 
               <p id="contact-form-status" class="form-status"></p>
-              <p class="form-note">Ihre Daten werden SSL-verschlüsselt übertragen.</p>
+              <p class="form-note ssl-note">🔒 Ihre Daten werden SSL-verschlüsselt übertragen.</p>
             </form>
           </div>
         </div>

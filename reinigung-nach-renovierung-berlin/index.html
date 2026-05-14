@@ -634,6 +634,13 @@
         resize: vertical;
       }
 
+      .form-status {
+        margin: 10px 0 0;
+        color: var(--gold-dark);
+        font-weight: 800;
+        font-size: 14px;
+      }
+
       .form-note {
         color: var(--muted);
         font-size: 13px;
@@ -798,7 +805,7 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="/">
-          <img class="brand-logo" src="/assets/nautilus-facility-logo.png" alt="Nautilus Facility Cleaning Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <img class="brand-logo" src="/images/reinigung-trans.png" alt="Nautilus Facility Cleaning Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
           <div class="brand-title-wrap">
             <div class="brand-title">Nautilus Facility Cleaning</div>
             <div class="brand-subtitle">Reinigung in Berlin</div>
@@ -1035,11 +1042,11 @@
           </div>
 
           <div class="form-box">
-            <form action="https://formsubmit.co/kontakt@nautilus-facility.de" method="POST">
-              <input type="hidden" name="_subject" value="Neue Anfrage: Reinigung nach Renovierung Berlin" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="true" />
-              <input type="hidden" name="_next" value="https://nautilus-facility.de/reinigung-nach-renovierung-berlin/?anfrage=gesendet" />
+            <form id="contact-form" action="https://formspree.io/f/mnjonren" method="POST">
+              
+              
+              
+              
 
               <div class="field-grid">
                 <label>
@@ -1087,7 +1094,8 @@
                 <textarea name="Nachricht" placeholder="Bitte kurz beschreiben: Räume, Küche, Bad, Fenster/Rahmen, Balkon, Verschmutzungsgrad, Besonderheiten."></textarea>
               </label>
 
-              <button class="button primary" type="submit">Anfrage senden</button>
+              <button id="contact-form-button" class="button primary" type="submit">Anfrage senden</button>
+              <p id="contact-form-status" class="form-status"></p>
               <p class="form-note">
                 Hinweis: Beim ersten Absenden kann eine einmalige Bestätigung für das Formularsystem erforderlich sein. Danach werden Anfragen direkt per E-Mail zugestellt.
               </p>
@@ -1183,5 +1191,72 @@
         <span><a href="/datenschutz/">Datenschutz</a></span>
       </div>
     </footer>
+  
+    <script>
+      document.addEventListener('submit', async (event) => {
+        const target = event.target;
+        if (!target || target.id !== 'contact-form') return;
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const form = target;
+        const button = document.getElementById('contact-form-button');
+        const status = document.getElementById('contact-form-status');
+
+        if (button) {
+          button.disabled = true;
+          button.classList.add('opacity-70', 'cursor-not-allowed');
+          button.textContent = 'Anfrage wird gesendet...';
+        }
+
+        if (status) {
+          status.textContent = 'Anfrage wird gesendet...';
+        }
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+              Accept: 'application/json',
+            },
+          });
+
+          if (response.ok) {
+            form.reset();
+            if (status) {
+              status.textContent = 'Vielen Dank. Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns zeitnah.';
+            }
+          } else {
+            let message = 'Beim Senden ist ein Problem aufgetreten. Bitte senden Sie uns alternativ eine E-Mail oder WhatsApp-Nachricht.';
+            try {
+              const data = await response.json();
+              if (data && Array.isArray(data.errors) && data.errors.length > 0) {
+                message = data.errors
+                  .map((error) => error.message)
+                  .filter(Boolean)
+                  .join(', ');
+              }
+            } catch {}
+
+            if (status) {
+              status.textContent = message;
+            }
+          }
+        } catch {
+          if (status) {
+            status.textContent = 'Beim Senden ist ein Problem aufgetreten. Bitte senden Sie uns alternativ eine E-Mail oder WhatsApp-Nachricht.';
+          }
+        } finally {
+          if (button) {
+            button.disabled = false;
+            button.classList.remove('opacity-70', 'cursor-not-allowed');
+            button.textContent = 'Anfrage senden';
+          }
+        }
+      });
+    </script>
+
   </body>
 </html>

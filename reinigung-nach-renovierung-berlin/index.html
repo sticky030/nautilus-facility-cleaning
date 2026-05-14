@@ -607,6 +607,110 @@
 
       }
     
+
+  .nav .brand,
+
+  header.nav .brand {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 14px !important;
+
+    min-width: 0 !important;
+
+    position: static !important;
+
+  }
+
+  .renovation-logo-shell {
+
+    width: 54px !important;
+
+    height: 54px !important;
+
+    min-width: 54px !important;
+
+    max-width: 54px !important;
+
+    min-height: 54px !important;
+
+    max-height: 54px !important;
+
+    flex: 0 0 54px !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    position: relative !important;
+
+    z-index: 1 !important;
+
+    border-radius: 18px !important;
+
+    background: rgba(255,255,255,0.72) !important;
+
+  }
+
+  .renovation-logo-img {
+
+    width: 54px !important;
+
+    height: 54px !important;
+
+    max-width: 54px !important;
+
+    max-height: 54px !important;
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+    object-fit: contain !important;
+
+    display: block !important;
+
+    position: static !important;
+
+    inset: auto !important;
+
+    transform: none !important;
+
+    z-index: 1 !important;
+
+    opacity: 1 !important;
+
+  }
+
+  .brand img,
+
+  .nav img,
+
+  header.nav img {
+
+    width: 54px !important;
+
+    height: 54px !important;
+
+    max-width: 54px !important;
+
+    max-height: 54px !important;
+
+    object-fit: contain !important;
+
+    position: static !important;
+
+    transform: none !important;
+
+  }
+
+
   .contact-form {
     display: grid;
     gap: 18px;
@@ -713,7 +817,13 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="/">
-          <img src="/images/reinigung-trans.png" alt="Nautilus Facility Cleaning Logo" class="brand-logo" />
+          
+
+          <span class="renovation-logo-shell">
+
+            <img class="renovation-logo-img" src="/images/reinigung-trans.png" alt="Nautilus Facility Cleaning Logo" />
+
+          </span>
           <div>
             <div class="brand-title">Nautilus Facility Cleaning</div>
             <div class="brand-subtitle">Reinigung in Berlin</div>

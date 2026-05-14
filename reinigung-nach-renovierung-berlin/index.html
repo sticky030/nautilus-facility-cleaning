@@ -607,6 +607,88 @@
 
       }
     
+  .variant-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+  }
+
+  .variant-card {
+    background: #fffdf8;
+    border: 1px solid rgba(33, 30, 27, 0.12);
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 18px 48px rgba(41, 36, 30, 0.08);
+  }
+
+  .variant-card.featured {
+    background: linear-gradient(180deg, #fffdf8 0%, #f8f0e3 100%);
+    border-color: rgba(190, 151, 82, 0.34);
+  }
+
+  .variant-label {
+    display: inline-flex;
+    margin-bottom: 16px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(190, 151, 82, 0.13);
+    color: #a77e34;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .variant-card h3 {
+    margin: 0 0 12px;
+    font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    color: #25221f;
+  }
+
+  .variant-card p {
+    margin: 0;
+    color: #7e7367;
+    line-height: 1.75;
+  }
+
+  .variant-card .detail-list {
+    margin-top: 18px;
+  }
+
+  .variant-note {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(33, 30, 27, 0.10);
+    color: #7e7367;
+    font-size: 0.95rem;
+  }
+
+  .form-only-panel {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .form-submit-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 820px) {
+    .variant-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-submit-row {
+      display: grid;
+    }
+  }
+
 
   .nav .brand,
 
@@ -960,29 +1042,53 @@
       <section class="white">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Arbeitsweise</div>
-            <h2>Keine pauschale Zusage. Erst Zustand prüfen, dann sauber planen.</h2>
+            <div class="eyebrow">Angebotsvarianten</div>
+            <h2>Zwei klare Varianten statt ein pauschaler Blindpreis.</h2>
             <p class="section-text">
-              Bei Reinigung nach Renovierung und Bauarbeiten entscheidet der Ist-Zustand über Aufwand, Material, Zeitfenster und Preis. Deshalb wird der Auftrag vorab anhand Ihrer Angaben, Fotos oder bei Bedarf durch Besichtigung eingeordnet.
+              Bei Reinigung nach Renovierung, Auszug oder Bauarbeiten entscheidet der Zustand vor Ort über Aufwand und Preis. Deshalb unterscheiden wir zwischen einem klaren Kernumfang und einer umfassenden Komplettreinigung mit stärkerem Übergabe- und Detailfokus.
             </p>
           </div>
 
-          <div class="premium-panel">
-            <div>
-              <div class="eyebrow">Zwei Varianten</div>
-              <h3>Standard-Intensivreinigung oder Komplett-Baufeinreinigung.</h3>
+          <div class="variant-grid">
+            <article class="variant-card">
+              <span class="variant-label">Standard</span>
+              <h3>Standard-Intensivreinigung</h3>
               <p>
-                Je nach Objektzustand empfehlen wir entweder einen klaren Kernumfang oder eine umfassendere Reinigung mit stärkerem Übergabe- und Detailfokus.
+                Für Objekte, bei denen die wichtigsten Bereiche gründlich gereinigt werden sollen und der Leistungsumfang klar abgegrenzt ist.
               </p>
-            </div>
 
-            <ul class="detail-list">
-              <li>Standardumfang für klar abgegrenzte Reinigungsaufträge</li>
-              <li>Komplettumfang für Übergabe, Einzug, Vermietung oder Abnahme</li>
-              <li>Festpreis bei klarer Lage und eindeutigen Fotos möglich</li>
-              <li>Besichtigung nach Absprache bei größeren oder unklaren Objekten</li>
-              <li>Sonderaufwand wird vor Ausführung separat abgestimmt</li>
-            </ul>
+              <ul class="detail-list">
+                <li>Entfernung von sichtbarem Renovierungs- und Feinstaub</li>
+                <li>Reinigung von Böden und sichtbaren Oberflächen</li>
+                <li>Bad und Küche im üblichen Umfang</li>
+                <li>Türen, Türrahmen, Heizkörper und Kontaktflächen nach Abstimmung</li>
+                <li>geeignet für Auszug, Einzug, kleinere Renovierungen und klar erkennbare Zustände</li>
+              </ul>
+
+              <p class="variant-note">
+                Diese Variante ist sinnvoll, wenn der Auftrag schnell und wirtschaftlich umgesetzt werden soll, ohne unnötige Zusatzbereiche einzukalkulieren.
+              </p>
+            </article>
+
+            <article class="variant-card featured">
+              <span class="variant-label">Komplett</span>
+              <h3>Komplett-Baufeinreinigung</h3>
+              <p>
+                Für Kunden, die eine besonders gründliche Reinigung vor Übergabe, Einzug, Vermietung, Objektabnahme oder nach Bauarbeiten wünschen.
+              </p>
+
+              <ul class="detail-list">
+                <li>intensivere Entfernung von Baustaub und Renovierungsstaub</li>
+                <li>Detailreinigung von Randbereichen, Sockelleisten, Türen und Rahmen</li>
+                <li>Küche und Bad mit stärkerem Fokus auf Fliesen, Fugen, Kalk und Geräte nach Abstimmung</li>
+                <li>Fenster, Rahmen, Balkon und Zusatzbereiche nach Objektlage</li>
+                <li>geeignet für Übergabe, Abnahme, Baufeinreinigung und hochwertige Objektvorbereitung</li>
+              </ul>
+
+              <p class="variant-note">
+                Diese Variante ist die bessere Wahl, wenn das Objekt sauber präsentiert, übergeben oder direkt genutzt werden soll.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -1053,77 +1159,72 @@
 
       <section id="anfrage">
         <div class="container">
-          <div class="area-layout">
-            <aside class="area-card">
-              <div class="eyebrow">Anfrage</div>
-              <h3>Objektangaben senden. Aufwand realistisch einordnen.</h3>
-              <p>
-                Für eine belastbare Einschätzung benötigen wir Fläche, Bezirk, gewünschten Termin, Leistungsumfang und Fotos vom aktuellen Zustand.
-              </p>
-              <div class="area-pills" aria-label="Benötigte Angaben">
-                <span class="area-pill">Fläche</span>
-                <span class="area-pill">Bezirk</span>
-                <span class="area-pill">Termin</span>
-                <span class="area-pill">Fotos</span>
-                <span class="area-pill">Leistungsumfang</span>
-              </div>
-            </aside>
+          <div class="section-head center">
+            <div class="eyebrow">Anfrage</div>
+            <h2>Objektdaten senden und realistische Einschätzung erhalten.</h2>
+            <p class="section-text">
+              Je genauer Fläche, Termin, Zustand und Fotos sind, desto schneller können wir einschätzen, ob eine Standard-Intensivreinigung oder eine Komplett-Baufeinreinigung sinnvoll ist.
+            </p>
+          </div>
 
-            <div class="premium-panel">
-              <form id="contact-form" class="contact-form" action="https://formspree.io/f/mnjonren" method="POST">
-                <input type="hidden" name="Anfragequelle" value="Landingpage Reinigung nach Renovierung Berlin" />
+          <div class="premium-panel form-only-panel">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/mnjonren" method="POST">
+              <input type="hidden" name="Anfragequelle" value="Landingpage Reinigung nach Renovierung Berlin" />
 
-                <div class="form-grid">
-                  <div class="form-field">
-                    <label for="name">Name*</label>
-                    <input id="name" type="text" name="Name" required />
-                  </div>
-
-                  <div class="form-field">
-                    <label for="kontakt">Telefon oder E-Mail*</label>
-                    <input id="kontakt" type="text" name="Kontakt" required />
-                  </div>
-
-                  <div class="form-field">
-                    <label for="bezirk">Bezirk / Ort*</label>
-                    <input id="bezirk" type="text" name="Bezirk oder Ort" required />
-                  </div>
-
-                  <div class="form-field">
-                    <label for="flaeche">Fläche in qm</label>
-                    <input id="flaeche" type="text" name="Fläche in qm" placeholder="z. B. 80 qm" />
-                  </div>
-
-                  <div class="form-field">
-                    <label for="termin">Gewünschter Termin</label>
-                    <input id="termin" type="text" name="Gewünschter Termin" placeholder="z. B. nächste Woche" />
-                  </div>
-
-                  <div class="form-field">
-                    <label for="art">Art der Reinigung*</label>
-                    <select id="art" name="Art der Reinigung" required>
-                      <option value="">Bitte auswählen</option>
-                      <option>Reinigung nach Renovierung</option>
-                      <option>Bauendreinigung / Baufeinreinigung</option>
-                      <option>Grundreinigung</option>
-                      <option>Reinigung nach Auszug / Einzug</option>
-                      <option>Übergabereinigung</option>
-                      <option>Gewerbeobjekt</option>
-                      <option>Sonstiges</option>
-                    </select>
-                  </div>
-
-                  <div class="form-field full">
-                    <label for="nachricht">Was soll gereinigt werden?</label>
-                    <textarea id="nachricht" name="Nachricht" placeholder="Bitte kurz beschreiben: Räume, Küche, Bad, Fenster/Rahmen, Balkon, Verschmutzungsgrad, Besonderheiten."></textarea>
-                  </div>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="name">Name*</label>
+                  <input id="name" type="text" name="Name" required />
                 </div>
 
+                <div class="form-field">
+                  <label for="kontakt">Telefon oder E-Mail*</label>
+                  <input id="kontakt" type="text" name="Kontakt" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="bezirk">Bezirk / Ort*</label>
+                  <input id="bezirk" type="text" name="Bezirk oder Ort" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="flaeche">Fläche in qm</label>
+                  <input id="flaeche" type="text" name="Fläche in qm" placeholder="z. B. 80 qm" />
+                </div>
+
+                <div class="form-field">
+                  <label for="termin">Gewünschter Termin</label>
+                  <input id="termin" type="text" name="Gewünschter Termin" placeholder="z. B. nächste Woche" />
+                </div>
+
+                <div class="form-field">
+                  <label for="art">Art der Reinigung*</label>
+                  <select id="art" name="Art der Reinigung" required>
+                    <option value="">Bitte auswählen</option>
+                    <option>Reinigung nach Renovierung</option>
+                    <option>Bauendreinigung / Baufeinreinigung</option>
+                    <option>Grundreinigung</option>
+                    <option>Reinigung nach Auszug / Einzug</option>
+                    <option>Übergabereinigung</option>
+                    <option>Gewerbeobjekt</option>
+                    <option>Sonstiges</option>
+                  </select>
+                </div>
+
+                <div class="form-field full">
+                  <label for="nachricht">Was soll gereinigt werden?</label>
+                  <textarea id="nachricht" name="Nachricht" placeholder="Bitte kurz beschreiben: Räume, Küche, Bad, Fenster/Rahmen, Balkon, Verschmutzungsgrad, Besonderheiten."></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit-row">
                 <button id="contact-form-button" class="button" type="submit">Anfrage senden</button>
-                <p id="contact-form-status" class="form-status"></p>
-                <p class="form-note">Ihre Daten werden SSL-verschlüsselt übertragen.</p>
-              </form>
-            </div>
+                <a class="button secondary" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
+              </div>
+
+              <p id="contact-form-status" class="form-status"></p>
+              <p class="form-note">Ihre Daten werden SSL-verschlüsselt übertragen.</p>
+            </form>
           </div>
         </div>
       </section>
@@ -1132,28 +1233,51 @@
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">FAQ</div>
-            <h2>Häufige Fragen zur Reinigung nach Renovierung.</h2>
+            <h2>Wichtige Fragen vor der Beauftragung.</h2>
+            <p class="section-text">
+              Gerade bei Reinigung nach Renovierung, Bauarbeiten oder Übergabe entscheidet der tatsächliche Zustand über Aufwand und Preis. Deshalb klären wir die wichtigsten Punkte vorab.
+            </p>
           </div>
 
           <div class="faq">
             <details>
               <summary>Kann ein Festpreis nach Fotos erstellt werden?</summary>
-              <p>Ja, wenn Fläche, Zustand, Leistungsumfang und Fotos eindeutig sind. Bei größeren oder unklaren Objekten ist eine kurze Besichtigung nach Absprache sinnvoll.</p>
+              <p>Ja, wenn Fläche, Zustand, gewünschter Umfang und Fotos eindeutig sind. Besonders hilfreich sind Bilder von Küche, Bad, Böden, Fenstern, Rahmen, Balkon und stärkeren Verschmutzungen. Bei größeren oder unklaren Objekten ist eine kurze Besichtigung nach Absprache sinnvoller.</p>
             </details>
 
             <details>
-              <summary>Welche Fotos sind hilfreich?</summary>
-              <p>Hilfreich sind Fotos von Böden, Küche, Bad, Fenstern/Rahmen, stärkeren Verschmutzungen, Balkon und den wichtigsten Räumen.</p>
+              <summary>Welche Angaben brauchen Sie für eine realistische Einschätzung?</summary>
+              <p>Wir benötigen Objektart, Bezirk, ungefähre Fläche, gewünschten Termin, aktuellen Zustand, gewünschte Leistungen und idealerweise 3–5 Fotos. Je genauer die Angaben sind, desto schneller können wir Standard- oder Komplettumfang einschätzen.</p>
             </details>
 
             <details>
-              <summary>Sind Farbe, Klebereste oder Silikonreste enthalten?</summary>
-              <p>Größere Farb-, Lack-, Silikon- oder Klebereste gelten als Sonderaufwand und werden vorab separat abgestimmt.</p>
+              <summary>Was ist der Unterschied zwischen Standard-Intensivreinigung und Komplett-Baufeinreinigung?</summary>
+              <p>Die Standard-Intensivreinigung deckt die wichtigsten Bereiche ab und eignet sich für klar abgegrenzte Reinigungsaufträge. Die Komplett-Baufeinreinigung ist umfangreicher und stärker auf Übergabe, Einzug, Vermietung, Abnahme und Detailbereiche ausgerichtet.</p>
             </details>
 
             <details>
-              <summary>Für welche Objekte ist die Reinigung geeignet?</summary>
-              <p>Geeignet ist sie für Wohnungen, Büros, Praxen, Kanzleien, Gewerbeobjekte und Baustellenbereiche nach Renovierung, Bauarbeiten, Auszug, Einzug, Übergabe oder Abnahme.</p>
+              <summary>Sind Fenster, Rahmen, Küche, Bad und Balkon automatisch enthalten?</summary>
+              <p>Nicht automatisch. Diese Bereiche werden je nach Objektzustand und gewünschtem Umfang eingeplant. So bleibt das Angebot realistisch und es werden keine Leistungen einkalkuliert, die nicht benötigt werden.</p>
+            </details>
+
+            <details>
+              <summary>Sind Farbe, Klebereste, Silikon oder Bauschutt enthalten?</summary>
+              <p>Größere Farb-, Lack-, Silikon-, Klebereste, Bauschutt, Müllentsorgung oder Entrümpelung gelten als Sonderaufwand. Solche Punkte werden vor Ausführung separat abgestimmt und nicht ungefragt berechnet.</p>
+            </details>
+
+            <details>
+              <summary>Für welche Objekte ist diese Reinigung geeignet?</summary>
+              <p>Geeignet ist die Reinigung für Wohnungen, Büros, Praxen, Kanzleien, Gewerbeobjekte und Baustellenbereiche nach Renovierung, Umbau, Bauarbeiten, Auszug, Einzug, Leerstand, Übergabe oder Abnahme.</p>
+            </details>
+
+            <details>
+              <summary>Wie kurzfristig ist ein Termin möglich?</summary>
+              <p>Das hängt von Umfang, Objektlage und aktueller Auslastung ab. Für klar beschriebene Objekte mit Fotos können wir schneller reagieren. Bei größeren Objekten oder umfangreicher Baufeinreinigung sollte möglichst frühzeitig angefragt werden.</p>
+            </details>
+
+            <details>
+              <summary>Wie läuft die Beauftragung ab?</summary>
+              <p>Sie senden uns Eckdaten und Fotos. Wir prüfen den Aufwand, empfehlen eine passende Variante und nennen bei klarer Lage ein Angebot. Nach Bestätigung stimmen wir Zeitfenster, Zugang, Leistungsumfang und Ausführung ab.</p>
             </details>
           </div>
         </div>

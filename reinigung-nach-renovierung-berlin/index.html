@@ -607,6 +607,45 @@
 
       }
     
+  .hero-contact-line {
+    margin-top: 14px;
+    color: #7e7367;
+    font-weight: 700;
+  }
+
+  .hero-contact-line a {
+    color: #25221f;
+    font-weight: 900;
+  }
+
+  .price-next-step {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 22px;
+    background: #fffdf8;
+    border: 1px solid rgba(33, 30, 27, 0.12);
+    color: #7e7367;
+  }
+
+  .price-next-step strong {
+    color: #25221f;
+  }
+
+  .photo-hint {
+    margin-top: 10px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(190, 151, 82, 0.10);
+    border: 1px solid rgba(190, 151, 82, 0.22);
+    color: #7e7367;
+    font-size: 0.95rem;
+  }
+
+  .photo-hint a {
+    color: #25221f;
+    font-weight: 900;
+  }
+
   .variant-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -929,16 +968,21 @@
             <div class="eyebrow">Reinigung nach Renovierung Berlin</div>
             <h1>Reinigung nach Renovierung, Auszug oder Bauarbeiten in Berlin</h1>
             <p class="hero-text">
-              Nautilus Facility Cleaning übernimmt Baufeinreinigung, Bauendreinigung, Grundreinigung und Übergabereinigung für Wohnungen, Büros, Praxen, Kanzleien, Gewerbeobjekte und Baustellenbereiche in Berlin.
+              Nautilus Facility Cleaning übernimmt Reinigung nach Renovierung, Auszug, Einzug, Bauarbeiten und Übergabe für Wohnungen, Gewerbeobjekte und Baustellenbereiche in Berlin.
             </p>
             <p class="hero-text">
               Wir prüfen Fläche, Zustand, Termin und gewünschten Leistungsumfang, bevor wir ein Angebot nennen. So entsteht eine realistische Einschätzung statt eines pauschalen Blindpreises.
             </p>
 
             <div class="hero-actions">
-              <a class="button" href="#anfrage">Anfrage senden</a>
-              <a class="button secondary" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
+              <a class="button" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
+              <a class="button secondary" href="#anfrage">Anfrageformular öffnen</a>
+              <a class="button secondary" href="tel:+4917622844636">Direkt anrufen</a>
             </div>
+
+            <p class="hero-contact-line">
+              Direkt erreichbar: <a href="tel:+4917622844636">0176 2284 4636</a> · Fotos per WhatsApp möglich
+            </p>
           </div>
 
           <aside class="hero-card">
@@ -1119,6 +1163,10 @@
               <p>Baufeinreinigungen, Bauendreinigungen und Gewerbeobjekte werden objektbezogen kalkuliert.</p>
             </article>
           </div>
+
+          <div class="price-next-step">
+            <strong>Nächster Schritt:</strong> Senden Sie uns Fotos und Eckdaten zum Objekt. Danach nennen wir Ihnen eine realistische Standard- oder Komplettvariante.
+          </div>
         </div>
       </section>
 
@@ -1214,11 +1262,14 @@
                 <div class="form-field full">
                   <label for="nachricht">Was soll gereinigt werden?</label>
                   <textarea id="nachricht" name="Nachricht" placeholder="Bitte kurz beschreiben: Räume, Küche, Bad, Fenster/Rahmen, Balkon, Verschmutzungsgrad, Besonderheiten."></textarea>
+                  <div class="photo-hint">
+                    Fotos senden Sie idealerweise direkt per WhatsApp. Besonders hilfreich sind Bilder von Küche, Bad, Böden, Fenstern/Rahmen und stärkeren Verschmutzungen.
+                  </div>
                 </div>
               </div>
 
               <div class="form-submit-row">
-                <button id="contact-form-button" class="button" type="submit">Anfrage senden</button>
+                <button id="contact-form-button" class="button" type="submit">Anfrage absenden</button>
                 <a class="button secondary" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
               </div>
 

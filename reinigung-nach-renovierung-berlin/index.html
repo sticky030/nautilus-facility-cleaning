@@ -15,596 +15,789 @@
 
     <style>
       :root {
-        --bg: #F7F4EE;
-        --cream: #F3EFE7;
-        --white: #FFFFFF;
-        --text: #2C2C2C;
-        --muted: #7E7367;
-        --line: #E5E1D8;
-        --gold: #B79B6C;
+        --bg: #f7f1e8;
+        --paper: #fffaf2;
+        --paper-2: #f1e6d7;
+        --text: #1f1c18;
+        --muted: #756b60;
+        --muted-2: #9a8f83;
+        --line: rgba(50, 41, 31, 0.12);
+        --gold: #c8a15a;
+        --gold-2: #a97f35;
+        --sand: #eadcc8;
+        --cream: #fff6e8;
+        --white: #ffffff;
+        --green: #6c765f;
+        --shadow: 0 28px 90px rgba(57, 45, 31, 0.13);
+        --shadow-soft: 0 18px 55px rgba(57, 45, 31, 0.08);
+        --radius-xl: 42px;
+        --radius-lg: 30px;
+        --radius-md: 22px;
+        --container: 1180px;
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
 
-      html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
 
       body {
         margin: 0;
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #F7F4EE;
-        color: #2C2C2C;
-        -webkit-font-smoothing: antialiased;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 8% 0%, rgba(200, 161, 90, 0.22), transparent 32rem),
+          radial-gradient(circle at 92% 8%, rgba(255, 255, 255, 0.90), transparent 28rem),
+          linear-gradient(180deg, #fbf6ee 0%, #f6efe4 48%, #efe2d1 100%);
+        line-height: 1.55;
       }
 
-      a { color: inherit; text-decoration: none; }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 36px));
+        margin: 0 auto;
+      }
 
       .nav {
         position: sticky;
         top: 0;
-        z-index: 50;
-        border-bottom: 1px solid rgba(229,225,216,.72);
-        background: rgba(247,244,238,.92);
+        z-index: 20;
+        padding: 16px 0;
         backdrop-filter: blur(18px);
+        background: rgba(251, 246, 238, 0.78);
+        border-bottom: 1px solid rgba(50, 41, 31, 0.07);
       }
 
       .nav-inner {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 18px 32px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        gap: 24px;
       }
 
       .brand {
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: .34em;
-        text-transform: uppercase;
-        color: #2C2C2C;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .brand-mark {
+        width: 48px;
+        height: 48px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, #fffdf8, #ead9be);
+        border: 1px solid rgba(200, 161, 90, 0.34);
+        box-shadow: 0 18px 44px rgba(200, 161, 90, 0.20);
+        color: var(--gold-2);
+        font-weight: 950;
+        letter-spacing: -0.08em;
+        font-size: 22px;
+      }
+
+      .brand-title {
+        font-weight: 850;
+        letter-spacing: -0.035em;
+        font-size: 16px;
+      }
+
+      .brand-subtitle {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 1px;
       }
 
       .nav-links {
         display: flex;
-        gap: 28px;
-        font-size: 13px;
-        color: #7E7367;
+        align-items: center;
+        gap: 22px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 650;
       }
 
-      .nav-links a:hover { color: #B79B6C; }
+      .nav-links a:hover {
+        color: var(--text);
+      }
 
-      .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        position: relative;
+      .nav-pill {
+        background: var(--text);
+        color: white;
+        padding: 11px 16px;
+        border-radius: 999px;
+        font-weight: 800;
       }
 
       .hero {
-        background: #F3EFE7;
-        padding: 132px 32px 124px;
+        position: relative;
+        padding: 66px 0 56px;
         overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 36px 22px auto 22px;
+        height: 620px;
+        max-height: calc(100% - 60px);
+        background:
+          linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 246, 232, 0.72)),
+          radial-gradient(circle at 80% 18%, rgba(200, 161, 90, 0.18), transparent 22rem);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        border-radius: 54px;
+        z-index: -1;
+        box-shadow: var(--shadow-soft);
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(340px, .85fr);
-        gap: 72px;
+        grid-template-columns: 1.04fr 0.96fr;
+        gap: 42px;
         align-items: center;
       }
 
       .eyebrow {
-        color: #B79B6C;
-        font-size: 11px;
-        font-weight: 850;
-        letter-spacing: .36em;
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 8px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        color: var(--gold-2);
+        font-size: 12px;
+        font-weight: 900;
         text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--gold);
+        box-shadow: 0 0 0 5px rgba(200, 161, 90, 0.15);
       }
 
       h1 {
-        margin: 26px 0 0;
-        max-width: 940px;
-        font-size: clamp(44px, 6.4vw, 84px);
-        line-height: .96;
-        letter-spacing: -0.06em;
-        font-weight: 650;
+        margin: 0;
+        font-size: clamp(44px, 6.8vw, 88px);
+        line-height: 0.91;
+        letter-spacing: -0.078em;
+        max-width: 900px;
       }
 
-      .lead {
-        margin-top: 30px;
-        max-width: 740px;
-        color: #7E7367;
-        font-size: 18px;
-        line-height: 1.9;
+      .hero-copy {
+        margin: 28px 0 0;
+        max-width: 760px;
+        color: var(--muted);
+        font-size: clamp(18px, 2vw, 23px);
+        line-height: 1.48;
+      }
+
+      .hero-copy strong {
+        color: var(--text);
+        font-weight: 850;
       }
 
       .hero-actions {
-        margin-top: 42px;
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 13px;
+        margin-top: 30px;
       }
 
       .button {
         display: inline-flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 15px 21px;
         border-radius: 999px;
-        padding: 15px 24px;
-        background: #B79B6C;
-        color: #FFFFFF;
-        border: 1px solid #B79B6C;
-        font-size: 14px;
-        font-weight: 750;
-        transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+        font-weight: 850;
+        border: 1px solid transparent;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
       }
 
       .button:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 15px 40px rgba(183,155,108,.22);
+        transform: translateY(-2px);
+        box-shadow: 0 20px 48px rgba(57, 45, 31, 0.15);
+      }
+
+      .button.primary {
+        background: var(--text);
+        color: white;
       }
 
       .button.secondary {
-        background: transparent;
-        color: #2C2C2C;
-        border-color: #E5E1D8;
+        background: rgba(255, 255, 255, 0.74);
+        border-color: var(--line);
+        color: var(--text);
       }
 
-      .button.secondary:hover {
-        border-color: rgba(183,155,108,.55);
-        box-shadow: 0 15px 40px rgba(183,155,108,.08);
+      .proof-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-top: 30px;
       }
 
-      .hero-card {
-        background: rgba(255,255,255,.64);
-        border: 1px solid #E5E1D8;
-        border-radius: 28px;
-        padding: 40px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
+      .proof {
+        padding: 13px 14px;
+        border-radius: 19px;
+        background: rgba(255, 255, 255, 0.68);
+        border: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
       }
 
-      .hero-card strong {
-        display: block;
-        font-size: 22px;
-        line-height: 1.2;
-        letter-spacing: -0.035em;
-        margin-bottom: 18px;
+      .visual {
+        position: relative;
+        min-height: 610px;
+        border-radius: 46px;
+        overflow: hidden;
+        background:
+          linear-gradient(160deg, rgba(31, 28, 24, 0.12), rgba(255, 250, 242, 0.45)),
+          url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1500&q=82") center/cover;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.82);
       }
 
-      .hero-card p {
+      .visual::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 30%, rgba(31, 28, 24, 0.42) 100%);
+      }
+
+      .floating-card {
+        position: absolute;
+        left: 26px;
+        right: 26px;
+        bottom: 26px;
+        z-index: 2;
+        border-radius: 30px;
+        padding: 24px;
+        background: rgba(255, 250, 242, 0.90);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.78);
+        box-shadow: 0 22px 70px rgba(31, 28, 24, 0.16);
+      }
+
+      .floating-card h2 {
+        margin: 0 0 8px;
+        font-size: 28px;
+        line-height: 1.06;
+        letter-spacing: -0.055em;
+      }
+
+      .floating-card p {
         margin: 0;
-        color: #7E7367;
-        font-size: 15px;
-        line-height: 1.85;
+        color: var(--muted);
+      }
+
+      .mini-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .mini-tags span {
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: rgba(234, 220, 200, 0.72);
+        color: var(--gold-2);
+        font-size: 12px;
+        font-weight: 850;
       }
 
       section {
-        padding: 112px 32px;
-        background: #F7F4EE;
-      }
-
-      section.white {
-        background: #FFFFFF;
+        padding: 72px 0;
       }
 
       .section-head {
-        max-width: 880px;
-        margin-bottom: 56px;
+        max-width: 840px;
+        margin-bottom: 30px;
       }
 
-      h2 {
-        margin: 18px 0 0;
-        font-size: clamp(32px, 4.2vw, 54px);
-        line-height: 1.05;
-        letter-spacing: -0.045em;
-        font-weight: 650;
+      .section-head.center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .section-text {
-        margin-top: 22px;
-        max-width: 780px;
-        color: #7E7367;
-        font-size: 16px;
-        line-height: 1.85;
+      .section-head h2 {
+        margin: 0;
+        font-size: clamp(34px, 5vw, 64px);
+        line-height: 0.98;
+        letter-spacing: -0.065em;
+      }
+
+      .section-head p {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.62;
+      }
+
+      .white-panel {
+        background: rgba(255, 250, 242, 0.74);
+        border-top: 1px solid rgba(255,255,255,0.65);
+        border-bottom: 1px solid rgba(50,41,31,0.06);
       }
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 28px;
+        gap: 18px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid.four {
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .card {
-        background: #FFFFFF;
-        border: 1px solid #E5E1D8;
-        border-radius: 22px;
-        padding: 34px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
-        transition: transform .45s ease, border-color .45s ease, box-shadow .45s ease;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 28px;
+        box-shadow: var(--shadow-soft);
       }
 
-      .card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(183,155,108,.50);
-        box-shadow: 0 15px 40px rgba(183,155,108,.08);
-      }
-
-      .white .card {
-        background: #FFFFFF;
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 28px;
+        right: 28px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(200,161,90,0.55), transparent);
       }
 
       .card h3 {
-        margin: 0;
+        margin: 0 0 10px;
         font-size: 24px;
-        line-height: 1.18;
-        letter-spacing: -0.03em;
-      }
-
-      .card:has(ul.clean) h3 {
-        min-height: 68px;
+        line-height: 1.1;
+        letter-spacing: -0.045em;
       }
 
       .card p {
-        margin: 18px 0 0;
-        color: #7E7367;
-        line-height: 1.78;
-        font-size: 15px;
+        margin: 0;
+        color: var(--muted);
       }
 
-      .card:has(ul.clean) > p {
-        min-height: 156px;
+      .large-panel {
+        background:
+          radial-gradient(circle at top right, rgba(200,161,90,0.18), transparent 28rem),
+          rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--line);
+        border-radius: 44px;
+        padding: 40px;
+        box-shadow: var(--shadow);
       }
 
-      ul.clean {
-        list-style: none;
-        padding: 22px 0 0;
-        margin: auto 0 0;
-        border-top: 1px solid #E5E1D8;
+      .situation-grid {
         display: grid;
-        gap: 12px;
-        color: #6F6559;
-        min-height: 144px;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 22px;
+        align-items: stretch;
       }
 
-      ul.clean li {
+      .situation-copy {
+        border-radius: 36px;
+        padding: 34px;
+        background: var(--text);
+        color: white;
+        min-height: 100%;
         display: flex;
-        gap: 12px;
-        align-items: flex-start;
-        font-size: 14px;
-        line-height: 1.55;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
-      ul.clean li::before {
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-radius: 99px;
-        background: #B79B6C;
-        box-shadow: 0 0 8px rgba(183,155,108,.6);
-        flex: 0 0 auto;
-        margin-top: 8px;
+      .situation-copy h2 {
+        margin: 0;
+        font-size: clamp(32px, 4vw, 54px);
+        line-height: 1;
+        letter-spacing: -0.065em;
+      }
+
+      .situation-copy p {
+        color: rgba(255, 255, 255, 0.75);
+        margin: 18px 0 0;
+      }
+
+      .situation-tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .tag-card {
+        background: rgba(255, 255, 255, 0.74);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 18px;
+        color: var(--muted);
+        font-weight: 800;
+      }
+
+      .plans {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .plan {
+        background: rgba(255,255,255,0.82);
+        border: 1px solid var(--line);
+        border-radius: 38px;
+        padding: 34px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .plan.featured {
+        background:
+          radial-gradient(circle at top left, rgba(200, 161, 90, 0.20), transparent 20rem),
+          #fffdf8;
+        box-shadow: var(--shadow);
+      }
+
+      .plan-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: flex-start;
+        margin-bottom: 14px;
+      }
+
+      .plan h3 {
+        margin: 0;
+        font-size: 33px;
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+      }
+
+      .badge {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--sand);
+        color: var(--gold-2);
+        font-size: 12px;
+        font-weight: 950;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+      }
+
+      .plan p {
+        color: var(--muted);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+      }
+
+      li {
+        position: relative;
+        margin: 12px 0;
+        padding-left: 28px;
+        color: var(--muted);
+      }
+
+      li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--gold-2);
+        font-weight: 950;
+      }
+
+      .price-panel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+        align-items: center;
+      }
+
+      .price-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .price-item {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 16px 45px rgba(57,45,31,0.06);
+      }
+
+      .price-item strong {
+        display: block;
+        color: var(--text);
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+
+      .price-item span {
+        color: var(--muted);
       }
 
       .steps {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
       }
 
       .step {
-        border-top: 1px solid #E5E1D8;
-        padding-top: 24px;
+        background: rgba(255, 255, 255, 0.76);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 26px;
+        box-shadow: var(--shadow-soft);
       }
 
       .step span {
-        color: #B79B6C;
-        font-size: 12px;
-        font-weight: 850;
-        letter-spacing: .24em;
+        width: 42px;
+        height: 42px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        background: var(--text);
+        color: white;
+        font-weight: 950;
+        margin-bottom: 18px;
       }
 
       .step h3 {
-        margin: 18px 0 0;
-        font-size: 21px;
-        letter-spacing: -0.02em;
+        margin: 0 0 8px;
+        font-size: 22px;
+        letter-spacing: -0.045em;
       }
 
       .step p {
-        color: #7E7367;
-        line-height: 1.75;
-      }
-
-
-      .content-split {
-        display: grid;
-        grid-template-columns: .95fr 1.05fr;
-        gap: 36px;
-        align-items: start;
-      }
-
-      .premium-panel {
-        background: #FFFFFF;
-        border: 1px solid #E5E1D8;
-        border-radius: 28px;
-        padding: 38px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
-      }
-
-      .premium-panel h3 {
-        margin: 18px 0 0;
-        font-size: 28px;
-        line-height: 1.16;
-        letter-spacing: -0.035em;
-      }
-
-      .premium-panel p {
-        margin: 18px 0 0;
-        color: #7E7367;
-        line-height: 1.82;
-      }
-
-      .detail-list {
-        display: grid;
-        gap: 14px;
-        margin-top: 26px;
-      }
-
-      .detail-item {
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        color: #6F6559;
-        line-height: 1.65;
+        margin: 0;
+        color: var(--muted);
         font-size: 15px;
       }
 
-      .detail-item::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 99px;
-        background: #B79B6C;
-        box-shadow: 0 0 8px rgba(183,155,108,.6);
-        flex: 0 0 auto;
-        margin-top: 9px;
+      .cta-panel {
+        text-align: center;
+        border-radius: 52px;
+        padding: 54px 38px;
+        background:
+          radial-gradient(circle at top right, rgba(200,161,90,0.24), transparent 26rem),
+          linear-gradient(145deg, #fffdf8, #f0e1cb);
+        border: 1px solid rgba(255,255,255,0.78);
+        box-shadow: var(--shadow);
       }
 
-      .area-note {
-        margin-top: 26px;
-        padding-top: 22px;
-        border-top: 1px solid #E5E1D8;
-        color: #7E7367;
-        line-height: 1.78;
-        font-size: 15px;
+      .cta-panel h2 {
+        margin: 0 auto;
+        max-width: 880px;
+        font-size: clamp(38px, 6vw, 72px);
+        line-height: 0.96;
+        letter-spacing: -0.072em;
       }
 
-      .area-layout {
-        display: grid;
-        grid-template-columns: .92fr 1.08fr;
-        gap: 28px;
-        align-items: stretch;
-        margin-top: 36px;
-      }
-
-      .area-card {
-        background: #FFFFFF;
-        border: 1px solid #E5E1D8;
-        border-radius: 28px;
-        padding: 36px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
-      }
-
-      .area-card h3 {
-        margin: 18px 0 0;
-        font-size: 26px;
-        line-height: 1.16;
-        letter-spacing: -0.035em;
-      }
-
-      .area-card p {
-        margin: 16px 0 0;
-        color: #7E7367;
-        line-height: 1.78;
-      }
-
-      .area-pills {
-        margin-top: 26px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .area-pill {
-        border: 1px solid #E5E1D8;
-        background: #F7F4EE;
-        border-radius: 999px;
-        padding: 10px 14px;
-        color: #6F6559;
-        font-size: 14px;
-        line-height: 1;
-      }
-
-      .cta {
-        position: relative;
-        overflow: hidden;
-        background: #FFFFFF;
-        color: #2C2C2C;
-        border: 1px solid #E5E1D8;
-        border-radius: 28px;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 28px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
-      }
-
-      .cta::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, #B79B6C, rgba(183,155,108,.16), transparent);
-      }
-
-      .cta h2 {
-        color: #2C2C2C;
-        margin-top: 14px;
-        max-width: 680px;
-        font-size: clamp(32px, 3.6vw, 52px);
-        line-height: 1.04;
-        letter-spacing: -0.055em;
-      }
-
-      .cta p {
-        color: #7E7367;
-        line-height: 1.82;
-        max-width: 740px;
-      }
-
-      .cta .button {
-        background: #B79B6C;
-        color: #FFFFFF;
-        border-color: #B79B6C;
-        white-space: nowrap;
-        max-width: 100%;
-      }
-
-      .cta .button:hover {
-        box-shadow: 0 15px 40px rgba(183,155,108,.22);
+      .cta-panel p {
+        max-width: 720px;
+        margin: 20px auto 0;
+        color: var(--muted);
+        font-size: 18px;
       }
 
       .faq {
         display: grid;
-        gap: 14px;
+        gap: 12px;
       }
 
       details {
-        background: #FFFFFF;
-        border: 1px solid #E5E1D8;
-        border-radius: 18px;
-        padding: 24px 26px;
-        box-shadow: 0 4px 15px rgba(0,0,0,.02);
-        transition: border-color .3s ease, box-shadow .3s ease;
-      }
-
-      details[open] {
-        border-color: rgba(183,155,108,.45);
-        box-shadow: 0 15px 40px rgba(183,155,108,.06);
+        background: rgba(255,255,255,0.78);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 18px 20px;
       }
 
       summary {
         cursor: pointer;
-        font-size: 17px;
-        font-weight: 750;
+        font-weight: 850;
+        letter-spacing: -0.02em;
       }
 
       details p {
-        color: #7E7367;
-        line-height: 1.78;
-        margin: 16px 0 0;
+        margin: 12px 0 0;
+        color: var(--muted);
       }
 
       footer {
-        background: #F7F4EE;
-        border-top: 1px solid #E5E1D8;
-        padding: 52px 32px;
-        color: #7E7367;
-        font-size: 14px;
-      }
-
-      footer strong {
-        color: #2C2C2C;
-      }
-
-      footer a {
-        color: #2C2C2C;
-      }
-
-      footer a:hover {
-        color: #B79B6C;
+        padding: 54px 0 42px;
+        background: rgba(255, 250, 242, 0.58);
+        border-top: 1px solid var(--line);
       }
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.15fr 1fr 1fr 1fr;
-        gap: 38px;
-        align-items: start;
+        grid-template-columns: 1.3fr repeat(3, 1fr);
+        gap: 28px;
       }
 
       .footer-title {
-        color: #2C2C2C;
-        font-size: 12px;
-        font-weight: 850;
-        letter-spacing: .24em;
-        text-transform: uppercase;
-        margin-bottom: 18px;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin-bottom: 12px;
       }
 
       .footer-links {
         display: grid;
-        gap: 11px;
+        gap: 9px;
       }
 
-      .footer-links a {
-        color: #7E7367;
-        line-height: 1.45;
-        transition: color .25s ease;
-      }
-
-      .footer-links a:hover {
-        color: #B79B6C;
+      .footer-links a,
+      .footer-grid p {
+        color: var(--muted);
       }
 
       .footer-meta {
-        margin-top: 30px;
-        padding-top: 24px;
-        border-top: 1px solid #E5E1D8;
         display: flex;
         flex-wrap: wrap;
-        gap: 12px 18px;
-        color: #7E7367;
-        font-size: 13px;
+        gap: 9px;
+        margin-top: 34px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
       }
 
+      .footer-meta span {
+        color: var(--muted);
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.5);
+        padding: 7px 10px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 750;
+      }
 
       @media (max-width: 980px) {
         .hero-grid,
-        .grid,
-        .steps,
-        .cta,
-        .area-layout,
-        .content-split,
+        .situation-grid,
+        .price-panel,
         .footer-grid {
           grid-template-columns: 1fr;
+        }
+
+        .grid.three,
+        .grid.four,
+        .steps {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .proof-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .visual {
+          min-height: 500px;
         }
 
         .nav-links {
           display: none;
         }
+      }
+
+      @media (max-width: 680px) {
+        .container {
+          width: min(100% - 24px, var(--container));
+        }
 
         .hero {
-          padding: 92px 24px 88px;
+          padding: 36px 0 38px;
+        }
+
+        .hero::before {
+          inset: 16px 8px auto 8px;
+          height: 760px;
+          border-radius: 34px;
+        }
+
+        h1 {
+          font-size: 43px;
+        }
+
+        .hero-copy {
+          font-size: 17px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .proof-row,
+        .grid.two,
+        .grid.three,
+        .grid.four,
+        .plans,
+        .steps,
+        .situation-tags {
+          grid-template-columns: 1fr;
+        }
+
+        .visual {
+          min-height: 380px;
+          border-radius: 32px;
+        }
+
+        .floating-card {
+          left: 14px;
+          right: 14px;
+          bottom: 14px;
+          border-radius: 24px;
+          padding: 20px;
         }
 
         section {
-          padding: 82px 24px;
+          padding: 52px 0;
         }
 
-        .cta {
-          padding: 36px;
+        .large-panel,
+        .cta-panel {
+          padding: 26px;
+          border-radius: 32px;
         }
 
-        .card:has(ul.clean) h3,
-        .card:has(ul.clean) > p,
-        ul.clean {
-          min-height: unset;
+        .card,
+        .plan,
+        .step {
+          padding: 22px;
+          border-radius: 24px;
         }
-
       }
     </style>
 
@@ -651,7 +844,7 @@
           <a href="/grundreinigung-berlin/">Grundreinigung</a>
           <a href="/treppenhausreinigung-berlin/">Treppenhaus</a>
           <a href="/bueroreinigung-berlin/">Büroreinigung</a>
-          <a href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Kontakt</a>
+          <a href="https://wa.me/4917622844636" target="_blank" rel="noopener" class="nav-pill">Fotos senden</a>
         </nav>
       </div>
     </header>
@@ -661,80 +854,80 @@
         <div class="container hero-grid">
           <div>
             <div class="eyebrow">Berlin · Renovierung · Baufeinreinigung · Übergabe</div>
-            <h1>Reinigung nach Renovierung, Auszug oder Bauarbeiten in Berlin.</h1>
-            <p class="hero-text">
-              Nautilus Facility Cleaning übernimmt gründliche Baufeinreinigung, Bauendreinigung, Grundreinigung und Übergabereinigung für Wohnungen, Büros, Praxen, Kanzleien, Gewerbeobjekte und Baustellenbereiche in Berlin.
+            <h1>Reinigung nach Renovierung, Auszug oder Bauarbeiten.</h1>
+
+            <p class="hero-copy">
+              Nautilus Facility Cleaning übernimmt gründliche <strong>Baufeinreinigung, Bauendreinigung,
+              Grundreinigung und Übergabereinigung</strong> für Wohnungen, Büros, Praxen, Kanzleien,
+              Gewerbeobjekte und Baustellenbereiche in Berlin.
             </p>
-            <p class="hero-text">
-              Senden Sie uns Fläche, Wunschtermin und 3–5 Fotos. Wir prüfen den Aufwand und nennen Ihnen eine realistische Standard- oder Komplettvariante.
+
+            <p class="hero-copy">
+              Senden Sie uns Fläche, Wunschtermin und 3–5 Fotos. Wir prüfen den Aufwand und nennen Ihnen
+              eine realistische Standard- oder Komplettvariante.
             </p>
 
             <div class="hero-actions">
-              <a class="button" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos senden & Einschätzung erhalten</a>
+              <a class="button primary" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos senden & Einschätzung erhalten</a>
               <a class="button secondary" href="tel:+4917622844636">Direkt anrufen</a>
             </div>
 
-            <div class="hero-meta">
-              <span>Objektbezogene Festpreise</span>
-              <span>Rechnung möglich</span>
-              <span>Kostenfreie Einschätzung nach Fotos</span>
-              <span>Besichtigung nach Absprache</span>
+            <div class="proof-row">
+              <div class="proof">Objektbezogene Festpreise</div>
+              <div class="proof">Rechnung möglich</div>
+              <div class="proof">Einschätzung nach Fotos</div>
+              <div class="proof">Besichtigung nach Absprache</div>
             </div>
           </div>
 
-          <aside class="hero-card">
-            <div class="eyebrow">Für saubere Übergaben</div>
-            <h2>Renovierungsstaub, Baustaub und Übergabeschmutz strukturiert entfernen.</h2>
-            <p>
-              Ideal nach Malerarbeiten, Bodenarbeiten, Trockenbau, Umbau, Auszug, Einzug, Leerstand, Objektabnahme oder Bauarbeiten.
-            </p>
-            <div class="hero-card-list">
-              <span>Renovierung</span>
-              <span>Baufeinreinigung</span>
-              <span>Grundreinigung</span>
-              <span>Übergabe</span>
+          <div class="visual" aria-label="Reinigung nach Renovierung Berlin">
+            <div class="floating-card">
+              <h2>Für saubere Übergaben statt Staub im Detail.</h2>
+              <p>Renovierungsstaub, Baustaub, Küche, Bad, Fenster, Rahmen und Zusatzbereiche werden strukturiert nach Objektzustand abgestimmt.</p>
+              <div class="mini-tags">
+                <span>Renovierung</span>
+                <span>Baufeinreinigung</span>
+                <span>Grundreinigung</span>
+                <span>Übergabe</span>
+              </div>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
-      <section class="white">
-        <div class="container">
-          <div class="section-head">
-            <div class="eyebrow">Ausgangslage</div>
-            <h2>Wenn normale Reinigung nicht mehr reicht.</h2>
-            <p class="section-text">
-              Nach Renovierungs-, Maler-, Boden-, Trockenbau-, Umbau- oder Bauarbeiten bleibt häufig Feinstaub, Baustaub und Übergabeschmutz zurück. Genau dafür ist diese Reinigung ausgelegt.
-            </p>
+      <section class="white-panel">
+        <div class="container situation-grid">
+          <div class="situation-copy">
+            <div>
+              <div class="eyebrow">Ausgangslage</div>
+              <h2>Wenn normale Reinigung nicht mehr reicht.</h2>
+              <p>
+                Nach Renovierungs-, Maler-, Boden-, Trockenbau-, Umbau- oder Bauarbeiten bleibt häufig Feinstaub,
+                Baustaub und Übergabeschmutz zurück. Genau dafür ist diese Reinigung ausgelegt.
+              </p>
+            </div>
+            <p>Geeignet vor Einzug, Auszug, Vermietung, Objektübergabe oder Abnahme.</p>
           </div>
 
-          <div class="grid four">
-            <article class="card">
-              <h3>Renovierung & Umbau</h3>
-              <p>Reinigung nach Renovierungsarbeiten, Malerarbeiten, Bodenarbeiten, Trockenbau und Umbau.</p>
-            </article>
-            <article class="card">
-              <h3>Auszug & Einzug</h3>
-              <p>Grundreinigung und Übergabereinigung für Wohnungen, Büros und Gewerbeobjekte vor Nutzung oder Abnahme.</p>
-            </article>
-            <article class="card">
-              <h3>Baufeinreinigung</h3>
-              <p>Entfernung von Baustaub, Feinstaub und Verschmutzungen nach Bau- oder Handwerkerarbeiten.</p>
-            </article>
-            <article class="card">
-              <h3>Bauendreinigung</h3>
-              <p>Objektbezogene Endreinigung vor Übergabe, Einzug, Vermietung oder Bau-/Objektabnahme.</p>
-            </article>
+          <div class="situation-tags">
+            <div class="tag-card">Renovierungsarbeiten</div>
+            <div class="tag-card">Maler- und Bodenarbeiten</div>
+            <div class="tag-card">Trockenbau und Umbau</div>
+            <div class="tag-card">Bauarbeiten und Baustaub</div>
+            <div class="tag-card">Baufeinreinigung vor Übergabe</div>
+            <div class="tag-card">Bauendreinigung vor Abnahme</div>
+            <div class="tag-card">Auszug oder Einzug</div>
+            <div class="tag-card">Wohnungs- oder Objektabnahme</div>
           </div>
         </div>
       </section>
 
       <section id="leistungen">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head center">
             <div class="eyebrow">Leistungsumfang</div>
             <h2>Was wir reinigen.</h2>
-            <p class="section-text">
+            <p>
               Der Leistungsumfang wird objektbezogen abgestimmt. So wird klar, was enthalten ist und welcher Sonderaufwand separat geprüft werden muss.
             </p>
           </div>
@@ -744,10 +937,12 @@
               <h3>Räume & Oberflächen</h3>
               <p>Böden, Sockelleisten, Türen, Türrahmen, Heizkörper, Steckdosen, Lichtschalter, Kontaktflächen und sichtbare Randbereiche.</p>
             </article>
+
             <article class="card">
               <h3>Küche & Bad</h3>
               <p>Küchenflächen, Fronten, erreichbare Schrankbereiche, Einbaugeräte nach Absprache, Bad, Sanitärbereiche, Fliesen, Fugen und Kalk im üblichen Umfang.</p>
             </article>
+
             <article class="card">
               <h3>Fenster, Rahmen & Baustellenbereiche</h3>
               <p>Fenster und Rahmen nach Absprache, Balkontür, Balkon, Übergabebereiche, Baustaub, Randbereiche und Sonderflächen je nach Objektzustand.</p>
@@ -756,24 +951,24 @@
         </div>
       </section>
 
-      <section class="white">
+      <section class="white-panel">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head center">
             <div class="eyebrow">Angebotslogik</div>
             <h2>Zwei klare Varianten statt Blindpreis.</h2>
-            <p class="section-text">
+            <p>
               Jedes Objekt ist anders. Deshalb kalkulieren wir anhand von Fläche, Zustand, Fotos, Termin und gewünschtem Leistungsumfang.
             </p>
           </div>
 
-          <div class="grid two">
-            <article class="premium-panel">
-              <div class="eyebrow">Standard</div>
-              <h3>Standard-Intensivreinigung</h3>
-              <p>
-                Für Objekte, bei denen die wichtigsten Bereiche nach Renovierung, Auszug oder Bauarbeiten gründlich gereinigt werden sollen.
-              </p>
-              <ul class="detail-list">
+          <div class="plans">
+            <article class="plan">
+              <div class="plan-head">
+                <h3>Standard-Intensivreinigung</h3>
+                <span class="badge">Kernumfang</span>
+              </div>
+              <p>Für Objekte, bei denen die wichtigsten Bereiche nach Renovierung, Auszug oder Bauarbeiten gründlich gereinigt werden sollen.</p>
+              <ul>
                 <li>Böden und sichtbare Oberflächen</li>
                 <li>Bad und Küche im üblichen Umfang</li>
                 <li>Türen, Rahmen und Kontaktflächen</li>
@@ -782,13 +977,13 @@
               </ul>
             </article>
 
-            <article class="premium-panel">
-              <div class="eyebrow">Komplett</div>
-              <h3>Komplett-Baufeinreinigung</h3>
-              <p>
-                Für Kunden, die eine besonders gründliche Baufein- oder Bauendreinigung vor Übergabe, Einzug, Vermietung oder Abnahme wünschen.
-              </p>
-              <ul class="detail-list">
+            <article class="plan featured">
+              <div class="plan-head">
+                <h3>Komplett-Baufeinreinigung</h3>
+                <span class="badge">Übergabe</span>
+              </div>
+              <p>Für Kunden, die eine besonders gründliche Baufein- oder Bauendreinigung vor Übergabe, Einzug, Vermietung oder Abnahme wünschen.</p>
+              <ul>
                 <li>Erweiterte Detailreinigung</li>
                 <li>Entfernung von Baustaub und Renovierungsstaub</li>
                 <li>Küche intensiver, Geräte nach Absprache</li>
@@ -801,45 +996,44 @@
       </section>
 
       <section>
-        <div class="container">
-          <div class="premium-panel">
-            <div class="section-head" style="margin-bottom: 24px;">
-              <div class="eyebrow">Preislogik</div>
-              <h2>Wovon der Preis abhängt.</h2>
-              <p class="section-text">
-                Der Preis richtet sich nach Fläche, Zustand, Verschmutzungsgrad, Küche, Bad, Fenstern, Rahmen, Balkon, gewünschtem Termin und Leistungsumfang.
-              </p>
-            </div>
-
-            <div class="grid three">
-              <article class="card">
-                <h3>Kleinere Einsätze</h3>
-                <p>Starten häufig ab ca. 290 €, je nach Zustand, Umfang, Lage und gewünschtem Termin.</p>
-              </article>
-              <article class="card">
-                <h3>Wohnungen nach Renovierung</h3>
-                <p>Liegen je nach Umfang oft im Bereich von ca. 390 € bis 850 €.</p>
-              </article>
-              <article class="card">
-                <h3>Gewerbe & Baustellenbereiche</h3>
-                <p>Baufeinreinigungen, Bauendreinigungen, Gewerbeobjekte und Baustellenbereiche werden objektbezogen kalkuliert.</p>
-              </article>
-            </div>
-
-            <p class="section-text" style="margin-top: 22px;">
-              Der konkrete Preis wird erst nach Fotos, Objektangaben oder Besichtigung festgelegt. So vermeiden wir unrealistische Pauschalen und unnötige Nachkalkulationen.
+        <div class="container large-panel price-panel">
+          <div>
+            <div class="eyebrow">Preislogik</div>
+            <h2>Wovon der Preis abhängt.</h2>
+            <p class="hero-copy" style="font-size:18px;">
+              Der Preis richtet sich nach Fläche, Zustand, Verschmutzungsgrad, Küche, Bad, Fenstern, Rahmen,
+              Balkon, gewünschtem Termin und Leistungsumfang. Der konkrete Preis wird erst nach Fotos,
+              Objektangaben oder Besichtigung festgelegt.
             </p>
+          </div>
+
+          <div class="price-list">
+            <div class="price-item">
+              <strong>Kleinere Einsätze</strong>
+              <span>Starten häufig ab ca. 290 €, je nach Zustand, Umfang, Lage und Termin.</span>
+            </div>
+
+            <div class="price-item">
+              <strong>Wohnungen nach Renovierung</strong>
+              <span>Liegen je nach Umfang oft im Bereich von ca. 390 € bis 850 €.</span>
+            </div>
+
+            <div class="price-item">
+              <strong>Gewerbe & Baustellenbereiche</strong>
+              <span>Baufeinreinigungen, Bauendreinigungen und Gewerbeobjekte werden objektbezogen kalkuliert.</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="white">
+      <section class="white-panel">
         <div class="container">
-          <div class="section-head">
-            <div class="eyebrow">Sonderaufwand</div>
-            <h2>Zusätzlichen Aufwand stimmen wir vorher ab.</h2>
-            <p class="section-text">
-              Sollte vor Ort ein deutlich höherer Aufwand entstehen, sprechen wir diesen vorher mit Ihnen ab. Es entstehen keine ungefragten Zusatzkosten.
+          <div class="section-head center">
+            <div class="eyebrow">Sicherheit</div>
+            <h2>Sonderaufwand stimmen wir vorher ab.</h2>
+            <p>
+              Sollte vor Ort ein deutlich höherer Aufwand entstehen, sprechen wir diesen vorher mit Ihnen ab.
+              Es entstehen keine ungefragten Zusatzkosten.
             </p>
           </div>
 
@@ -848,10 +1042,12 @@
               <h3>Rückstände</h3>
               <p>Größere Farb-, Lack-, Silikon- oder Klebereste werden separat eingeschätzt.</p>
             </article>
+
             <article class="card">
               <h3>Entsorgung & Belastungen</h3>
               <p>Müllentsorgung, Entrümpelung, Schimmel oder biologische Belastungen sind nicht automatisch enthalten.</p>
             </article>
+
             <article class="card">
               <h3>Spezialflächen</h3>
               <p>Spezialbehandlung von Holzböden, schwer zugängliche Außenfenster oder extreme Verschmutzung werden gesondert abgestimmt.</p>
@@ -862,7 +1058,7 @@
 
       <section>
         <div class="container">
-          <div class="section-head">
+          <div class="section-head center">
             <div class="eyebrow">Ablauf</div>
             <h2>Von Fotos zur realistischen Einschätzung.</h2>
           </div>
@@ -873,16 +1069,19 @@
               <h3>Fotos senden</h3>
               <p>Senden Sie Fläche, Bezirk, Wunschtermin, Leistungsumfang und 3–5 Fotos vom aktuellen Zustand.</p>
             </div>
+
             <div class="step">
               <span>02</span>
               <h3>Aufwand prüfen</h3>
               <p>Wir prüfen, ob Standard-Intensivreinigung oder Komplett-Baufeinreinigung sinnvoller ist.</p>
             </div>
+
             <div class="step">
               <span>03</span>
               <h3>Angebot erhalten</h3>
               <p>Bei klarer Lage erhalten Sie einen Festpreis. Bei größeren Objekten ist eine kurze Besichtigung nach Absprache möglich.</p>
             </div>
+
             <div class="step">
               <span>04</span>
               <h3>Termin abstimmen</h3>
@@ -892,53 +1091,30 @@
         </div>
       </section>
 
-      <section class="white">
-        <div class="container">
-          <div class="area-layout">
-            <aside class="area-card">
-              <div class="eyebrow">Einsatzgebiet</div>
-              <h3>Reinigung nach Renovierung und Bauarbeiten in Berlin.</h3>
-              <p>
-                Wir reinigen insbesondere in Lichtenberg, Marzahn-Hellersdorf, Friedrichshain-Kreuzberg, Pankow, Weißensee, Prenzlauer Berg und Mitte. Weitere Bezirke und Berliner Umland prüfen wir nach Objektlage, Umfang und Termin.
-              </p>
-              <div class="area-pills" aria-label="Einsatzgebiete Berlin">
-                <span class="area-pill">Lichtenberg</span>
-                <span class="area-pill">Marzahn-Hellersdorf</span>
-                <span class="area-pill">Friedrichshain-Kreuzberg</span>
-                <span class="area-pill">Pankow</span>
-                <span class="area-pill">Weißensee</span>
-                <span class="area-pill">Prenzlauer Berg</span>
-                <span class="area-pill">Mitte</span>
-              </div>
-            </aside>
+      <section class="white-panel">
+        <div class="container cta-panel">
+          <div class="eyebrow">Jetzt einschätzen lassen</div>
+          <h2>Sie benötigen eine Reinigung nach Renovierung, Auszug oder Bauarbeiten?</h2>
+          <p>
+            Senden Sie uns Fläche, Termin und ein paar Fotos. Wir prüfen den Aufwand und melden uns mit einer realistischen Einschätzung.
+          </p>
 
-            <div class="cta">
-              <div>
-                <div class="eyebrow">Jetzt einschätzen lassen</div>
-                <h2>Fläche, Termin und Fotos senden.</h2>
-                <p>
-                  Wir prüfen den Aufwand und melden uns mit einer realistischen Einschätzung. Bei klarer Lage erhalten Sie ein Festpreisangebot.
-                </p>
-              </div>
-              <a class="button" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
-            </div>
+          <div class="hero-actions" style="justify-content:center;">
+            <a class="button primary" href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
+            <a class="button secondary" href="mailto:kontakt@nautilus-facility.de">Per E-Mail anfragen</a>
+            <a class="button secondary" href="tel:+4917622844636">Jetzt anrufen</a>
           </div>
         </div>
       </section>
 
       <section id="faq">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head center">
             <div class="eyebrow">FAQ</div>
-            <h2>Häufige Fragen zur Reinigung nach Renovierung.</h2>
+            <h2>Häufige Fragen.</h2>
           </div>
 
           <div class="faq">
-            <details>
-              <summary>Was ist der Unterschied zwischen Reinigung nach Renovierung, Baufeinreinigung und Bauendreinigung?</summary>
-              <p>Reinigung nach Renovierung ist der Oberbegriff für Reinigungen nach Handwerker-, Maler-, Boden- oder Umbauarbeiten. Baufeinreinigung und Bauendreinigung sind stärker auf Baustaub, Übergabe und Abnahme ausgerichtet.</p>
-            </details>
-
             <details>
               <summary>Kann ein Festpreis nach Fotos erstellt werden?</summary>
               <p>Ja, wenn Fläche, Zustand, Leistungsumfang und Fotos eindeutig sind. Bei größeren oder unklaren Objekten ist eine kurze Besichtigung nach Absprache sinnvoll.</p>
@@ -969,66 +1145,58 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="footer-title">Nautilus Facility Cleaning</div>
-            <p style="margin:0; color:#7E7367; line-height:1.75;">
-              Reinigung nach Renovierung, Baufeinreinigung, Bauendreinigung, Grundreinigung und Übergabereinigung in Berlin.
-            </p>
-            <p style="margin:18px 0 0; color:#7E7367; line-height:1.75;">
-              Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt)
-            </p>
-          </div>
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-title">Nautilus Facility Cleaning</div>
+          <p>Reinigung nach Renovierung, Baufeinreinigung, Bauendreinigung, Grundreinigung und Übergabereinigung in Berlin.</p>
+          <p>Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt)</p>
+        </div>
 
-          <div>
-            <div class="footer-title">Leistungen</div>
-            <div class="footer-links">
-              <a href="#leistungen">Reinigung nach Renovierung</a>
-              <a href="#leistungen">Baufeinreinigung</a>
-              <a href="#leistungen">Bauendreinigung</a>
-              <a href="/grundreinigung-berlin/">Grundreinigung Berlin</a>
-              <a href="/treppenhausreinigung-berlin/">Treppenhausreinigung Berlin</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="footer-title">Weitere Seiten</div>
-            <div class="footer-links">
-              <a href="/bueroreinigung-berlin/">Büroreinigung Berlin</a>
-              <a href="/praxisreinigung-berlin/">Praxisreinigung Berlin</a>
-              <a href="/kanzleireinigung-berlin/">Kanzleireinigung Berlin</a>
-              <a href="/hausverwaltungen-berlin/">Reinigung für Hausverwaltungen</a>
-              <a href="/fensterreinigung-berlin/">Fensterreinigung Berlin</a>
-            </div>
-          </div>
-
-          <div>
-            <div class="footer-title">Kontakt</div>
-            <div class="footer-links">
-              <a href="tel:+4917622844636">0176 22844636</a>
-              <a href="mailto:kontakt@nautilus-facility.de">kontakt@nautilus-facility.de</a>
-              <a href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
-              <a href="/">Startseite</a>
-            </div>
+        <div>
+          <div class="footer-title">Leistungen</div>
+          <div class="footer-links">
+            <a href="#leistungen">Reinigung nach Renovierung</a>
+            <a href="#leistungen">Baufeinreinigung</a>
+            <a href="#leistungen">Bauendreinigung</a>
+            <a href="/grundreinigung-berlin/">Grundreinigung Berlin</a>
           </div>
         </div>
 
-        <div class="footer-meta">
-          <span>Reinigung nach Renovierung Berlin</span>
-          <span>Baufeinreinigung</span>
-          <span>Bauendreinigung</span>
-          <span>Grundreinigung</span>
-          <span>Übergabereinigung</span>
-          <span>Baustellenbereiche</span>
-          <span>Lichtenberg</span>
-          <span>Marzahn-Hellersdorf</span>
-          <span>Friedrichshain-Kreuzberg</span>
-          <span>Pankow</span>
-          <span>Mitte</span>
-          <span><a href="/impressum/">Impressum</a></span>
-          <span><a href="/datenschutz/">Datenschutz</a></span>
+        <div>
+          <div class="footer-title">Weitere Seiten</div>
+          <div class="footer-links">
+            <a href="/bueroreinigung-berlin/">Büroreinigung Berlin</a>
+            <a href="/praxisreinigung-berlin/">Praxisreinigung Berlin</a>
+            <a href="/treppenhausreinigung-berlin/">Treppenhausreinigung Berlin</a>
+            <a href="/hausverwaltungen-berlin/">Hausverwaltungen</a>
+          </div>
         </div>
+
+        <div>
+          <div class="footer-title">Kontakt</div>
+          <div class="footer-links">
+            <a href="tel:+4917622844636">0176 22844636</a>
+            <a href="mailto:kontakt@nautilus-facility.de">kontakt@nautilus-facility.de</a>
+            <a href="https://wa.me/4917622844636" target="_blank" rel="noopener">Fotos per WhatsApp senden</a>
+            <a href="/">Startseite</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-meta">
+        <span>Reinigung nach Renovierung Berlin</span>
+        <span>Baufeinreinigung</span>
+        <span>Bauendreinigung</span>
+        <span>Grundreinigung</span>
+        <span>Übergabereinigung</span>
+        <span>Baustellenbereiche</span>
+        <span>Lichtenberg</span>
+        <span>Marzahn-Hellersdorf</span>
+        <span>Friedrichshain-Kreuzberg</span>
+        <span>Pankow</span>
+        <span>Mitte</span>
+        <span><a href="/impressum/">Impressum</a></span>
+        <span><a href="/datenschutz/">Datenschutz</a></span>
       </div>
     </footer>
   </body>

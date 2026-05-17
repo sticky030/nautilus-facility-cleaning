@@ -28,12 +28,13 @@ const services = [
   ["Hausverwaltungen", "/hausverwaltungen-berlin/"],
   ["Grundreinigung", "/grundreinigung-berlin/"],
   ["Fensterreinigung", "/fensterreinigung-berlin/"],
+  ["Sonderreinigung", "/grundreinigung-berlin/"],
 ];
 
 const faq = [
   ["Ist Nautilus Facility Cleaning ein Berliner Unternehmen?", "Ja. Nautilus Facility Cleaning ist ein Berliner Reinigungsdienstleister für objektbezogene Reinigung von Wohn-, Gewerbe-, Praxis-, Kanzlei- und Verwaltungsobjekten."],
   ["Welche Gesellschaft steht hinter Nautilus Facility Cleaning?", "Nautilus Facility Cleaning ist ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt). Die Gesellschaft ist im Handelsregister Berlin unter HRB 282199 B eingetragen."],
-  ["Welche Reinigungsleistungen bietet Nautilus Facility Cleaning an?", "Wir übernehmen unter anderem Reinigung nach Auszug, Übergabereinigung, Reinigung nach Renovierung, Bauendreinigung, Grundreinigung, Treppenhausreinigung, Büroreinigung, Praxisreinigung, Kanzleireinigung, Reinigung für Hausverwaltungen sowie Fenster- und Rahmenreinigung nach Abstimmung."],
+  ["Welche Reinigungsleistungen bietet Nautilus Facility Cleaning an?", "Wir übernehmen unter anderem Reinigung nach Auszug, Übergabereinigung, Reinigung nach Renovierung, Bauendreinigung, Grundreinigung, Sonderreinigung, Treppenhausreinigung, Büroreinigung, Praxisreinigung, Kanzleireinigung, Reinigung für Hausverwaltungen sowie Fenster- und Rahmenreinigung nach Abstimmung."],
   ["In welchen Berliner Bezirken arbeitet Nautilus Facility Cleaning?", "Wir prüfen Anfragen in ganz Berlin, mit besonderem Fokus auf Lichtenberg, Marzahn-Hellersdorf, Pankow, Prenzlauer Berg, Weißensee, Friedrichshain-Kreuzberg, Mitte und angrenzende Bezirke."],
   ["Wie läuft eine Anfrage ab?", "Für eine erste Einschätzung reichen Bezirk, Fläche, Objektart, gewünschter Termin und einige Fotos. Danach klären wir, ob ein objektbezogenes Angebot direkt möglich ist oder eine kurze Besichtigung sinnvoll wäre."],
 ];
@@ -49,7 +50,7 @@ const organizationSchema = {
   founder: { "@type": "Person", name: "Philipp De Boer" },
   address: { "@type": "PostalAddress", addressLocality: "Berlin", addressCountry: "DE" },
   areaServed: ["Berlin", "Lichtenberg", "Marzahn-Hellersdorf", "Pankow", "Prenzlauer Berg", "Weißensee", "Friedrichshain-Kreuzberg", "Berlin-Mitte"],
-  knowsAbout: ["Reinigung nach Auszug", "Übergabereinigung", "Bauendreinigung", "Treppenhausreinigung", "Büroreinigung", "Praxisreinigung", "Kanzleireinigung", "Hausverwaltungen"],
+  knowsAbout: ["Reinigung nach Auszug", "Übergabereinigung", "Bauendreinigung", "Treppenhausreinigung", "Büroreinigung", "Praxisreinigung", "Kanzleireinigung", "Hausverwaltungen", "Grundreinigung", "Fensterreinigung", "Sonderreinigung"],
 };
 
 const breadcrumbSchema = {

@@ -3,6 +3,7 @@ import { writeFileSync } from "node:fs";
 const urls = [
   "/",
   "/ueber-uns/",
+  "/kontakt/",
   "/praxisreinigung-berlin/",
   "/bueroreinigung-berlin/",
   "/treppenhausreinigung-berlin/",

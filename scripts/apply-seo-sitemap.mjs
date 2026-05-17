@@ -1,9 +1,14 @@
 import { writeFileSync } from "node:fs";
 
+const base = "https://nautilus-facility.de";
+
 const urls = [
   "/",
   "/ueber-uns/",
   "/kontakt/",
+  "/reinigung-kosten-berlin/",
+  "/checkliste-wohnungsuebergabe-berlin/",
+  "/treppenhausreinigung-kosten-berlin/",
   "/praxisreinigung-berlin/",
   "/bueroreinigung-berlin/",
   "/treppenhausreinigung-berlin/",
@@ -26,11 +31,8 @@ const urls = [
   "/impressum/"
 ];
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((url) => `  <url>\n    <loc>https://nautilus-facility.de${url}</loc>\n  </url>`).join("\n")}
-</urlset>
-`;
+const rows = urls.map((path) => `  <url>\n    <loc>${base}${path}</loc>\n  </url>`).join("\n");
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows}\n</urlset>\n`;
 
 writeFileSync("dist/sitemap.xml", xml, "utf8");
 console.log("SEO sitemap generated: dist/sitemap.xml");

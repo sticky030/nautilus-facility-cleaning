@@ -124,18 +124,20 @@ function bottomCtaBlock() {
               <p>Für eine erste Einschätzung reichen Bezirk, Fläche, gewünschter Termin und ein paar Informationen zum Objekt. Bei Auszug, Übergabe, Renovierung oder Bauarbeiten helfen Fotos besonders schnell weiter.</p>
             </div>
             <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:flex-end;">
-              <a class="button" href="${contactHref}" onclick="${contactOnclick}">Kontaktformular öffnen</a>
-              <a class="button secondary" href="${whatsappHref}">Fotos per WhatsApp senden</a>
+              <a class="button" href="${whatsappHref}">Fotos per WhatsApp senden</a>
+              <a class="button" href="${contactHref}" onclick="${contactOnclick}">Anfrageformular nutzen</a>
             </div>
           </div>
         </div>
       </section>`;
 }
 
-function addTopContactButton(html) {
-  if (html.includes("Kontaktformular öffnen")) return html;
-  const button = `<a class="button secondary" href="${contactHref}" onclick="${contactOnclick}">Kontaktformular öffnen</a>`;
-  return html.replace(/(<div class="hero-actions">\s*)/, `$1\n              ${button}\n              `);
+function normalizeCtaButtons(html) {
+  return html
+    .replace(/<a class="button secondary" href="https:\/\/nautilus-facility\.de\/\?kontakt=1#kontakt" onclick="sessionStorage\.setItem\('scrollToContact', '1'\)">Kontaktformular öffnen<\/a>\s*/g, "")
+    .replace(/<a class="button secondary" href="https:\/\/nautilus-facility\.de\/\?kontakt=1#kontakt" onclick="sessionStorage\.setItem\('scrollToContact', '1'\)">Anfrageformular nutzen<\/a>/g, `<a class="button" href="${contactHref}" onclick="${contactOnclick}">Anfrageformular nutzen</a>`)
+    .replace(/<a class="button secondary" href="([^\"]*)">Fotos per WhatsApp senden<\/a>/g, '<a class="button" href="$1">Fotos per WhatsApp senden</a>')
+    .replace(/Kontaktformular öffnen/g, "Anfrageformular nutzen");
 }
 
 function addBeforeMainClose(html, block) {
@@ -153,12 +155,13 @@ const entries = readdirSync(distDir).filter((entry) => {
 for (const slug of entries) {
   const file = join(distDir, slug, "index.html");
   let html = readFileSync(file, "utf8");
-  html = addTopContactButton(html);
+  html = normalizeCtaButtons(html);
   if (pagePolish[slug]) {
     html = addBeforeMainClose(html, polishBlock(pagePolish[slug]));
   }
   html = addBeforeMainClose(html, bottomCtaBlock());
+  html = normalizeCtaButtons(html);
   writeFileSync(file, html, "utf8");
 }
 
-console.log("Final SEO polish applied: contact buttons and content depth.");
+console.log("Final SEO polish applied: two gold CTA buttons and content depth.");

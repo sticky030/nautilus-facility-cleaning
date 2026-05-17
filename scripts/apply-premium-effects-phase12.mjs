@@ -29,8 +29,6 @@ const premiumCss = `
       .premium-stack-kicker { color:#B79B6C; font-size:11px; text-transform:uppercase; letter-spacing:.28em; font-weight:850; }
       .premium-stack-card h3 { margin:12px 0 0; color:#2C2C2C; font-size:28px; line-height:1.18; letter-spacing:-.04em; }
       .premium-stack-card p { margin:0; color:#7E7367; font-size:16px; line-height:1.85; }
-      .home-services-bento > article { transform-style:preserve-3d; }
-      .home-services-bento > article:hover { transform:translateY(-7px) perspective(900px) rotateX(1.5deg) rotateY(-1.5deg) !important; }
       .check-progress-wrap { margin:0; padding:22px 26px; border-bottom:1px solid #EEE8DE; background:#FCFBF8; }
       .check-progress-label { display:flex; justify-content:space-between; gap:18px; color:#2C2C2C; font-size:14px; font-weight:750; margin-bottom:10px; }
       .check-progress-bar { height:9px; border-radius:999px; background:#EEE8DE; overflow:hidden; }
@@ -44,7 +42,7 @@ const premiumCss = `
       .rg-bento .card:nth-child(1) { grid-row:span 2; }
       @media(max-width:980px){ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} .premium-stack-card{grid-template-columns:1fr; position:relative; top:auto !important;} .rg-bento{grid-template-columns:1fr;} .rg-bento .card:nth-child(1){grid-row:auto;} }
       @media(max-width:760px){ .process-grid{grid-template-columns:1fr !important;} .checklist-cta{display:block;} .checklist-cta .button{margin-top:18px;} }
-      @media(prefers-reduced-motion:reduce){ .premium-reveal{opacity:1;transform:none;transition:none}.premium-marquee-track{animation:none}.home-services-bento > article:hover{transform:none!important} }
+      @media(prefers-reduced-motion:reduce){ .premium-reveal{opacity:1;transform:none;transition:none}.premium-marquee-track{animation:none} }
 `;
 
 const premiumJs = `<script>
@@ -54,6 +52,11 @@ const premiumJs = `<script>
     document.querySelectorAll('main h2, main .section-head, main .card, main .hero-card, main .cta, main .editorial-list, main .contact-panel, main .homepage-form-panel').forEach(function(el){ el.classList.add('premium-reveal'); });
     var obs = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if(entry.isIntersecting) entry.target.classList.add('is-visible'); }); }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.premium-reveal').forEach(function(el){ obs.observe(el); });
+    var connected = document.querySelector('.connected-process');
+    if (connected) {
+      var cobs = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if(entry.isIntersecting && !connected.classList.contains('is-active')) connected.classList.add('is-active'); }); }, {threshold:0.55});
+      cobs.observe(connected);
+    }
     document.querySelectorAll('.process-grid .card').forEach(function(el, i){ if(!el.getAttribute('data-step')) el.setAttribute('data-step', String(i+1).padStart(2,'0')); });
     var checks = Array.prototype.slice.call(document.querySelectorAll('.interactive-checklist input[type="checkbox"]'));
     var fill = document.querySelector('.check-progress-fill');
@@ -93,30 +96,10 @@ function insertStackedCards(slug, html) {
   if (html.includes('premium-stack-section')) return html;
   let data = null;
   if (slug === 'hausverwaltungen-berlin') {
-    data = {
-      kicker: 'Objektbedarf strukturiert bündeln',
-      title: 'Hausverwaltungen brauchen klare Leistungsbereiche.',
-      lead: 'Treppenhäuser, Allgemeinflächen, Sonderreinigungen und Übergaben müssen getrennt gedacht, aber sauber koordiniert werden.',
-      cards: [
-        ['Treppenhausreinigung', 'Regelmäßige Reinigung von Treppen, Podesten, Handläufen, Eingangsbereichen und Kontaktflächen nach abgestimmtem Turnus.'],
-        ['Grund- und Sonderreinigung', 'Gezielte Zusatzleistungen für stärkere Verschmutzung, Renovierungsspuren, Leerstand, Allgemeinflächen oder saisonalen Bedarf.'],
-        ['Übergabe und Zusatzbedarf', 'Reinigung vor Neuvermietung, nach Auszug oder bei einzelnen Objektanlässen, wenn ein klarer Übergabezustand gebraucht wird.'],
-        ['Fenster und Allgemeinflächen', 'Ergänzende Reinigung von Glasflächen, Rahmen, Eingangsbereichen und Nebenflächen nach Objektstruktur und Zugänglichkeit.'],
-      ]
-    };
+    data = { kicker: 'Objektbedarf strukturiert bündeln', title: 'Hausverwaltungen brauchen klare Leistungsbereiche.', lead: 'Treppenhäuser, Allgemeinflächen, Sonderreinigungen und Übergaben müssen getrennt gedacht, aber sauber koordiniert werden.', cards: [['Treppenhausreinigung','Regelmäßige Reinigung von Treppen, Podesten, Handläufen, Eingangsbereichen und Kontaktflächen nach abgestimmtem Turnus.'],['Grund- und Sonderreinigung','Gezielte Zusatzleistungen für stärkere Verschmutzung, Renovierungsspuren, Leerstand, Allgemeinflächen oder saisonalen Bedarf.'],['Übergabe und Zusatzbedarf','Reinigung vor Neuvermietung, nach Auszug oder bei einzelnen Objektanlässen, wenn ein klarer Übergabezustand gebraucht wird.'],['Fenster und Allgemeinflächen','Ergänzende Reinigung von Glasflächen, Rahmen, Eingangsbereichen und Nebenflächen nach Objektstruktur und Zugänglichkeit.']] };
   }
   if (slug === 'praxisreinigung-berlin') {
-    data = {
-      kicker: 'Praxisarten präzise einordnen',
-      title: 'Reinigung für unterschiedliche Praxisumfelder.',
-      lead: 'Praxisreinigung braucht klare Bereichstrennung, verlässliche Abläufe und ein Verständnis für sensible Kontaktflächen.',
-      cards: [
-        ['Arztpraxis', 'Empfang, Wartebereich, Behandlungsnähe, Sanitärzonen und Kontaktflächen werden nach abgestimmtem Leistungsbild gereinigt.'],
-        ['Zahnarztpraxis', 'Besonders sensible Bereiche, klare Abläufe und getrennte Reinigungslogik für patientennahe und allgemeine Flächen.'],
-        ['Privatpraxis', 'Diskrete Ausführung, repräsentative Räume und ein gepflegtes Umfeld für Patienten mit erhöhtem Anspruch an Erscheinungsbild und Ruhe.'],
-        ['Therapie- und Beratungsräume', 'Ruhige Umsetzung außerhalb der Behandlungszeiten mit Fokus auf Kontaktflächen, Böden, Sanitär und Empfangsbereiche.'],
-      ]
-    };
+    data = { kicker: 'Praxisarten präzise einordnen', title: 'Reinigung für unterschiedliche Praxisumfelder.', lead: 'Praxisreinigung braucht klare Bereichstrennung, verlässliche Abläufe und ein Verständnis für sensible Kontaktflächen.', cards: [['Arztpraxis','Empfang, Wartebereich, Behandlungsnähe, Sanitärzonen und Kontaktflächen werden nach abgestimmtem Leistungsbild gereinigt.'],['Zahnarztpraxis','Besonders sensible Bereiche, klare Abläufe und getrennte Reinigungslogik für patientennahe und allgemeine Flächen.'],['Privatpraxis','Diskrete Ausführung, repräsentative Räume und ein gepflegtes Umfeld für Patienten mit erhöhtem Anspruch an Erscheinungsbild und Ruhe.'],['Therapie- und Beratungsräume','Ruhige Umsetzung außerhalb der Behandlungszeiten mit Fokus auf Kontaktflächen, Böden, Sanitär und Empfangsbereiche.']] };
   }
   if (!data) return html;
   const cards = data.cards.map((card, i) => `<article class="premium-stack-card"><div><div class="premium-stack-kicker">0${i+1}</div><h3>${card[0]}</h3></div><p>${card[1]}</p></article>`).join('');
@@ -162,4 +145,4 @@ if (existsSync(home)) {
   writeFileSync(home, html, 'utf8');
 }
 
-console.log('Premium effects phase 1+2 applied: reveals, process cards, checklist progress, bento, stacked cards and district marquees.');
+console.log('Premium effects phase 1+2 applied: reveals, connected process trigger, process cards, checklist progress, stacked cards and district marquees.');

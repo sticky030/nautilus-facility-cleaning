@@ -609,6 +609,67 @@
         }
 
       }
+    
+      .cluster-grid-2,
+      .cluster-grid-3 {
+        gap: 24px !important;
+        align-items: stretch;
+      }
+      .cluster-grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .cluster-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+      .cluster-grid-2 .card,
+      .cluster-grid-3 .card {
+        min-height: 280px !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .cluster-grid-2 .card h3,
+      .cluster-grid-3 .card h3 {
+        margin-bottom: 14px;
+      }
+      .cluster-grid-2 .card p,
+      .cluster-grid-3 .card p {
+        line-height: 1.78;
+      }
+      .cluster-grid-2 .card p:last-child,
+      .cluster-grid-3 .card p:last-child {
+        margin-top: auto;
+      }
+      .cluster-compact .card {
+        min-height: 235px !important;
+      }
+      .cluster-statement {
+        border: 1px solid #E5D9C8;
+        background: linear-gradient(135deg, #FFFFFF 0%, #FCFBF8 100%);
+        border-radius: 30px;
+        padding: 38px;
+        box-shadow: 0 24px 70px rgba(60,48,35,.07);
+      }
+      .cluster-statement strong {
+        display:block;
+        color:#2C2C2C;
+        font-size:20px;
+        line-height:1.35;
+        margin-bottom:12px;
+      }
+      .cluster-statement p {
+        color:#7E7367;
+        line-height:1.85;
+        margin:0;
+      }
+      @media(max-width:980px){
+        .cluster-grid-3{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+      }
+      @media(max-width:760px){
+        .cluster-grid-2,.cluster-grid-3{grid-template-columns:1fr !important;}
+        .cluster-grid-2 .card,.cluster-grid-3 .card,.cluster-compact .card{min-height:0 !important;}
+      }
+
     </style>
     
     <style>
@@ -626,12 +687,12 @@
   <body>
     <header class="nav"><div class="nav-inner"><a class="brand" href="/">Nautilus Facility Cleaning</a><nav class="nav-links" aria-label="Navigation"><a href="/">Startseite</a><a href="/kontakt/">Kontakt</a><a href="/ueber-uns/">Über uns</a><a href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrage</a></nav></div></header>
     <main>
-      <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Reinigungskosten Berlin</div><h1>Reinigungskosten in Berlin – objektbezogen kalkuliert.</h1><p class="lead">Reinigungskosten hängen nicht nur von Quadratmetern ab. Entscheidend sind Objektart, Zustand, Leistungsumfang, Zugang, Zeitfenster und das gewünschte Ergebnis.</p><p>Nautilus Facility Cleaning kalkuliert Reinigungsleistungen objektbezogen. Das schützt Auftraggeber vor unklaren Pauschalen und sorgt dafür, dass Umfang, Erwartung und Aufwand vor Beginn sauber abgestimmt sind.</p><div class="hero-actions"><a class="button" href="https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20Reinigungsanfrage%20f%C3%BCr%20Berlin%20stellen.%20Ich%20sende%20Ihnen%20Bezirk%2C%20Fl%C3%A4che%2C%20Termin%20und%20Fotos.">Fotos per WhatsApp senden</a><a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrageformular nutzen</a></div></div><aside class="hero-card"><strong>Keine pauschale Scheinpräzision.</strong><p>Ein realistisches Angebot entsteht erst, wenn Objekt, Zustand und Leistungsumfang klar sind. Genau dafür strukturieren wir die Anfrage vorab.</p></aside></div></section>
+      <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Reinigungskosten Berlin</div><h1>Reinigungskosten in Berlin – objektbezogen kalkuliert.</h1><p class="lead">Reinigungskosten in Berlin entstehen nicht aus einer Quadratmeterzahl allein. Entscheidend sind Objektart, Zustand, Reinigungsziel, Leistungsumfang, Zugänglichkeit, Zeitfenster und die Frage, ob eine Fläche nur gepflegt oder wirklich übergabefähig vorbereitet werden soll.</p><p>Nautilus Facility Cleaning kalkuliert Reinigungsleistungen objektbezogen und nachvollziehbar. So werden Umfang, Erwartung und Aufwand vor Beginn sauber abgegrenzt – ohne starre Preisversprechen, die bei Zustand, Termin oder Zusatzflächen später nicht tragen.</p><div class="hero-actions"><a class="button" href="https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20Reinigungsanfrage%20f%C3%BCr%20Berlin%20stellen.%20Ich%20sende%20Ihnen%20Bezirk%2C%20Fl%C3%A4che%2C%20Termin%20und%20Fotos.">Fotos per WhatsApp senden</a><a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrageformular nutzen</a></div></div><aside class="hero-card"><strong>Objektbezogene Kalkulation statt Pauschalversprechen.</strong><p>Ein belastbares Angebot braucht Kontext: Objektart, Zustand, Flächenstruktur, Termin, Zugang und gewünschtes Ergebnis. Genau diese Punkte strukturieren wir vor der Kalkulation.</p></aside></div></section>
       
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Preisfaktoren</div><h2>Was Reinigungskosten in Berlin beeinflusst.</h2><p class="section-text">Der Preis einer Reinigung entsteht aus mehreren Faktoren. Ein kleiner Raum mit starkem Reinigungsbedarf kann aufwendiger sein als eine größere, gut vorbereitete Fläche. Deshalb ist eine saubere Einordnung vorab der professionellere Weg.</p></div><div class="grid cluster-grid-2"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Fläche und Objektart</h3><p>Wohnung, Treppenhaus, Büro, Praxis, Kanzlei oder Baustellenbereich haben unterschiedliche Anforderungen. Entscheidend ist nicht nur die Größe, sondern auch die Nutzung und Flächenstruktur.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Zustand und Verschmutzung</h3><p>Leichte Unterhaltsreinigung, Übergabezustand, Renovierungsstaub, Bauverschmutzung oder intensive Grundreinigung führen zu sehr unterschiedlichen Aufwänden.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Leistungsumfang</h3><p>Böden, Sanitär, Küche, Kontaktflächen, Fenster, Rahmen, Türen, Heizkörper, Treppen, Aufzug oder Allgemeinflächen müssen klar abgegrenzt werden.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Termin, Zugang und Zeitfenster</h3><p>Kurzfristige Termine, eingeschränkter Zugang, enge Zeitfenster oder Arbeiten außerhalb normaler Zeiten beeinflussen Planung und Aufwand.</p></article></div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Reinigungsarten</div><h2>Unterschiedliche Leistungen, unterschiedliche Kalkulation.</h2></div><div class="grid cluster-grid-3"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Auszug & Übergabe</h3><p>Bei Auszug und Übergabe zählt der aktuelle Zustand. Küche, Bad, Böden, Fenster, Rahmen und schwer erreichbare Bereiche beeinflussen den Aufwand deutlich.</p><p style="margin-top:auto;"><a href="/reinigung-nach-auszug-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Auszug ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Renovierung & Bauendreinigung</h3><p>Nach Renovierung, Malerarbeiten, Bodenarbeiten oder Bauarbeiten geht es häufig um Staub, Rückstände, Rahmen, Kanten und eine übergabefähige Gesamtwirkung.</p><p style="margin-top:auto;"><a href="/reinigung-nach-renovierung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Renovierung ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Treppenhaus & Gewerbe</h3><p>Bei Treppenhäusern, Büros, Praxen und Kanzleien sind Turnus, Zeitfenster, Leistungsbild, Kontaktflächen und Zugänglichkeit die zentralen Kostenfaktoren.</p><p style="margin-top:auto;"><a href="/treppenhausreinigung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Treppenhaus ansehen</a></p></article></div></div></section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Preisfaktoren</div><h2>Was Reinigungskosten in Berlin beeinflusst.</h2><p class="section-text">Ein kleiner Raum mit starkem Reinigungsbedarf kann mehr Aufwand verursachen als eine größere, gut vorbereitete Fläche. Deshalb betrachten wir nicht nur Quadratmeter, sondern den tatsächlichen Zustand, die Nutzung, den Leistungsumfang und das Ziel der Reinigung.</p></div><div class="grid cluster-grid-2"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Fläche und Objektart</h3><p>Wohnung, Treppenhaus, Büro, Praxis, Kanzlei oder Baustellenbereich haben unterschiedliche Anforderungen. Entscheidend sind Flächenstruktur, Nutzung, Material, Möblierung, Zugänglichkeit und die Frage, ob es um laufende Pflege, Übergabe oder Sonderreinigung geht.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Zustand und Verschmutzung</h3><p>Leichte Unterhaltsreinigung, Übergabezustand, Renovierungsstaub, Bauverschmutzung, Kalk, Fett oder intensive Grundreinigung liegen operativ weit auseinander. Der sichtbare Zustand entscheidet über Zeit, Mittel und Ablauf.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Leistungsumfang</h3><p>Böden, Sanitär, Küche, Kontaktflächen, Fenster, Rahmen, Türen, Heizkörper, Treppen, Aufzug und Allgemeinflächen müssen klar definiert sein. Nur so ist transparent, was enthalten ist und was separat abgestimmt wird.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Termin, Zugang und Zeitfenster</h3><p>Kurzfristige Termine, eingeschränkter Zugang, enge Zeitfenster, Schlüsselorganisation oder Arbeiten außerhalb normaler Zeiten beeinflussen Planung, Einsatzlogik und Aufwand. Diese Punkte gehören in die Einschätzung.</p></article></div></div></section>
+      <section><div class="container"><div class="section-head"><div class="eyebrow">Reinigungsarten</div><h2>Unterschiedliche Leistungen, unterschiedliche Kalkulation.</h2></div><div class="grid cluster-grid-3 cluster-compact"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Auszug & Übergabe</h3><p>Bei Auszug und Übergabe zählt der aktuelle Zustand. Küche, Bad, Böden, Fenster, Rahmen und schwer erreichbare Bereiche beeinflussen den Aufwand deutlich.</p><p style="margin-top:auto;"><a href="/reinigung-nach-auszug-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Auszug ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Renovierung & Bauendreinigung</h3><p>Nach Renovierung, Malerarbeiten, Bodenarbeiten oder Bauarbeiten geht es häufig um Staub, Rückstände, Rahmen, Kanten und eine übergabefähige Gesamtwirkung.</p><p style="margin-top:auto;"><a href="/reinigung-nach-renovierung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Renovierung ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Treppenhaus & Gewerbe</h3><p>Bei Treppenhäusern, Büros, Praxen und Kanzleien sind Turnus, Zeitfenster, Leistungsbild, Kontaktflächen und Zugänglichkeit die zentralen Kostenfaktoren.</p><p style="margin-top:auto;"><a href="/treppenhausreinigung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Treppenhaus ansehen</a></p></article></div></div></section>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Einordnung</div><h2>Welche Informationen für eine realistische Einschätzung helfen.</h2><p class="section-text">Je klarer die Ausgangslage beschrieben ist, desto schneller kann der Aufwand eingeordnet werden. Fotos ersetzen nicht immer eine Besichtigung, beschleunigen aber viele Anfragen deutlich.</p></div><div class="area-pills"><span class="area-pill">Bezirk</span><span class="area-pill">Objektart</span><span class="area-pill">Fläche</span><span class="area-pill">gewünschter Termin</span><span class="area-pill">aktueller Zustand</span><span class="area-pill">Leistungsumfang</span><span class="area-pill">Fotos</span><span class="area-pill">Zugang / Zeitfenster</span><span class="area-pill">einmalig oder regelmäßig</span><span class="area-pill">besondere Bereiche</span></div></div></section>
-      <section><div class="container"><div class="info-band"><strong>Professionelle Kalkulation ist kein Preistrick, sondern Risikominimierung.</strong><p>Wenn Leistungsumfang und Erwartung vorher sauber geklärt sind, entstehen weniger Missverständnisse. Auftraggeber erhalten ein nachvollziehbares Angebot, und die Umsetzung kann mit realistischem Zeit- und Leistungsrahmen geplant werden.</p></div></div></section>
+      <section><div class="container"><div class="cluster-statement"><strong>Ein sauberer Preis entsteht aus einem klaren Leistungsbild.</strong><p>Wenn Leistungsumfang, Zustand und Erwartung vorab sauber geklärt sind, sinkt das Risiko für Missverständnisse deutlich. Auftraggeber erhalten ein nachvollziehbares Angebot, und die Umsetzung kann mit realistischem Zeit- und Leistungsrahmen geplant werden.</p></div></div></section>
   
       <section><div class="container"><div class="cta"><div><div class="eyebrow">Anfrage</div><h2>Reinigungsbedarf einschätzen lassen.</h2><p>Für eine erste Rückmeldung reichen Bezirk, Objektart, Fläche, Termin und einige Angaben zum Zustand. Bei sichtbarem Reinigungsbedarf beschleunigen Fotos die Einordnung.</p></div><div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;"><a class="button" href="https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20Reinigungsanfrage%20f%C3%BCr%20Berlin%20stellen.%20Ich%20sende%20Ihnen%20Bezirk%2C%20Fl%C3%A4che%2C%20Termin%20und%20Fotos.">Fotos per WhatsApp senden</a><a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrageformular nutzen</a></div></div></div></section>
       <section id="faq" class="white"><div class="container"><div class="section-head"><div class="eyebrow">FAQ</div><h2>Häufige Fragen.</h2></div><div class="faq"><details><summary>Kann man Reinigungskosten pauschal nennen?</summary><p>Nur sehr eingeschränkt. Fläche, Zustand, Reinigungsart, Zugang, Zeitfenster und gewünschtes Ergebnis beeinflussen den Aufwand deutlich.</p></details><details><summary>Warum nennt Nautilus Facility Cleaning keine starren Pauschalpreise?</summary><p>Weil pauschale Preise häufig zu unklaren Erwartungen führen. Wir kalkulieren lieber objektbezogen und nachvollziehbar.</p></details><details><summary>Welche Angaben brauche ich für eine Preiseinschätzung?</summary><p>Bezirk, Objektart, Fläche, Termin, Zustand, Leistungsumfang und Fotos helfen bei einer realistischen Einschätzung.</p></details><details><summary>Sind Fotos für ein Angebot hilfreich?</summary><p>Ja. Besonders bei Auszug, Übergabe, Renovierung, Bauendreinigung und Grundreinigung helfen Fotos, den Aufwand schneller einzuordnen.</p></details><details><summary>Gibt es auch Angebote für regelmäßige Reinigung?</summary><p>Ja. Für Büros, Praxen, Kanzleien, Treppenhäuser und Allgemeinflächen prüfen wir Turnus, Zeitfenster und Leistungsumfang.</p></details></div></div></section>

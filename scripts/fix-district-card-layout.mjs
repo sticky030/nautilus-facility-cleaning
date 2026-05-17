@@ -30,6 +30,14 @@ const css = `
       }
 `;
 
+function markFirstThreeFourCardGrids(html) {
+  let count = 0;
+  return html.replace(/<div class="grid">/g, (match) => {
+    count += 1;
+    return count <= 3 ? '<div class="grid district-two-col">' : match;
+  });
+}
+
 for (const slug of slugs) {
   const file = `dist/${slug}/index.html`;
   if (!existsSync(file)) continue;
@@ -39,9 +47,9 @@ for (const slug of slugs) {
     html = html.replace("</style>", `${css}\n    </style>`);
   }
 
-  html = html.replace(/<div class="grid">/g, '<div class="grid district-two-col">');
+  html = markFirstThreeFourCardGrids(html);
 
   writeFileSync(file, html, "utf8");
 }
 
-console.log("District card layout fixed: two columns, aligned cards, responsive mobile fallback.");
+console.log("District card layout fixed: only four-card sections use two columns.");

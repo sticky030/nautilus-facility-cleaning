@@ -68,8 +68,12 @@ const newFooter = `      <footer className="bg-white py-20 text-left border-t bo
           </div>
 
           <div className="pt-8 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between text-left">
-            <div className="text-[12px] leading-6 text-[#8A7E70]">
-              Berlin · Lichtenberg · Marzahn-Hellersdorf · Pankow · Friedrichshain-Kreuzberg · Mitte
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] leading-6 text-[#8A7E70]">
+              <a href="/reinigungsfirma-lichtenberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
+              <a href="/reinigungsfirma-marzahn-hellersdorf-berlin/" className="hover:text-[#B79B6C] transition-colors">Marzahn-Hellersdorf</a>
+              <a href="/reinigungsfirma-pankow-berlin/" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
+              <a href="/reinigungsfirma-friedrichshain-kreuzberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
+              <a href="/reinigungsfirma-berlin-mitte/" className="hover:text-[#B79B6C] transition-colors">Berlin-Mitte</a>
             </div>
             <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70]">
               <a href="/impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
@@ -81,4 +85,4 @@ const newFooter = `      <footer className="bg-white py-20 text-left border-t bo
 
 source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + '      </footer>'.length)}`;
 writeFileSync(file, source, "utf8");
-console.log("Home footer structure patched: premium layout with services, districts and contact links.");
+console.log("Home footer structure patched: all district mentions are linked.");

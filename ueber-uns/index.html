@@ -659,6 +659,43 @@
         }
       }
 
+    
+      .direct-form-panel {
+        border: 1px solid #E5D9C8;
+        border-radius: 30px;
+        background: #FFFFFF;
+        padding: 34px;
+        box-shadow: 0 26px 80px rgba(60,48,35,.08);
+      }
+      .direct-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+      .direct-form-field { display:flex; flex-direction:column; gap:8px; }
+      .direct-form-field label { font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#8A7E70; }
+      .direct-form-field input, .direct-form-field select, .direct-form-field textarea {
+        width:100%; border:1px solid #E5D9C8; border-radius:14px; background:#FCFBF8; padding:14px 16px; color:#2C2C2C; font-size:15px; outline:none;
+      }
+      .direct-form-field input:focus, .direct-form-field select:focus, .direct-form-field textarea:focus { border-color:#B79B6C; background:#fff; }
+      .direct-form-field.full { grid-column:1 / -1; }
+      .direct-form-note { margin-top:14px; color:#8A7E70; font-size:12px; line-height:1.65; }
+      .process-grid { grid-template-columns:repeat(4,minmax(0,1fr)) !important; gap:18px !important; }
+      .process-grid .card { min-height:220px !important; position:relative; overflow:hidden; padding-top:54px !important; }
+      .process-grid .card::before { content:attr(data-step); position:absolute; top:22px; left:24px; width:34px; height:34px; border-radius:999px; background:#B79B6C; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; letter-spacing:.08em; }
+      .process-grid .card h3 { margin-top:0 !important; }
+      .about-owner-card { margin-top:34px; border:1px solid #E5D9C8; border-radius:30px; background:linear-gradient(135deg,#fff 0%,#FCFBF8 100%); padding:34px; display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:center; box-shadow:0 24px 70px rgba(60,48,35,.07); }
+      .about-owner-avatar { width:68px; height:68px; border-radius:999px; background:#B79B6C; color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:800; letter-spacing:.08em; }
+      .about-owner-card h3 { margin:0 0 8px; color:#2C2C2C; font-size:20px; }
+      .about-owner-card p { margin:0; color:#7E7367; line-height:1.75; }
+      .article-meta { margin-top:18px; display:inline-flex; flex-wrap:wrap; gap:10px; align-items:center; color:#8A7E70; font-size:13px; font-weight:650; }
+      .article-meta span { border:1px solid #E5D9C8; border-radius:999px; padding:8px 13px; background:#fff; }
+      .interactive-checklist { margin-top:34px; border:1px solid #E5D9C8; border-radius:30px; background:#fff; overflow:hidden; box-shadow:0 24px 70px rgba(60,48,35,.07); }
+      .interactive-checklist-head { background:#2C2C2C; color:#fff; padding:22px 26px; display:flex; justify-content:space-between; gap:18px; align-items:center; }
+      .interactive-checklist-head strong { font-size:17px; }
+      .interactive-checklist-head button { border:1px solid rgba(255,255,255,.35); background:transparent; color:#fff; border-radius:999px; padding:9px 14px; font-weight:750; cursor:pointer; }
+      .interactive-checklist label { display:flex; gap:14px; align-items:flex-start; padding:18px 24px; border-bottom:1px solid #EEE8DE; color:#2C2C2C; font-size:15px; line-height:1.55; }
+      .interactive-checklist label:last-child { border-bottom:0; }
+      .interactive-checklist input { margin-top:4px; accent-color:#B79B6C; width:18px; height:18px; flex-shrink:0; }
+      @media(max-width:980px){ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} }
+      @media(max-width:760px){ .direct-form-grid,.process-grid{grid-template-columns:1fr !important;} .about-owner-card{grid-template-columns:1fr;} }
+
     </style>
   </head>
   <body>
@@ -681,7 +718,7 @@
 
       <section><div class="container"><div class="section-head"><div class="eyebrow">Objektlogik</div><h2>Warum objektbezogene Reinigung wichtig ist.</h2><p class="section-text">Viele Reinigungsanfragen scheitern nicht an der Ausführung, sondern an einer unklaren Erwartung. Eine Wohnung nach Auszug benötigt andere Abläufe als ein Treppenhaus. Eine Praxis hat andere Anforderungen als ein Büro. Eine Bauendreinigung nach Renovierung ist nicht mit einer normalen Unterhaltsreinigung vergleichbar.</p><p class="section-text">Deshalb arbeiten wir mit klarer Einordnung statt pauschaler Aussage. Wir klären vorab, was gebraucht wird, was realistisch ist und welcher Leistungsumfang sinnvoll ist. Das schützt beide Seiten: Auftraggeber erhalten eine belastbare Einschätzung, und die Reinigung kann sauber geplant werden.</p></div></div></section>
 
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft eine Anfrage bei Nautilus Facility Cleaning ab.</h2></div><div class="grid about-grid-2 about-process-grid"><article class="card" style="display:flex; flex-direction:column; min-height:240px;"><h3>1. Anfrage senden</h3><p>Sie senden uns Bezirk, Fläche, Objektart, gewünschten Termin und nach Möglichkeit Fotos vom aktuellen Zustand. Bei wiederkehrenden Objekten helfen zusätzlich Turnus, Zugang und Zeitfenster.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:240px;"><h3>2. Bedarf einordnen</h3><p>Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Zeitfenster und gewünschtes Ergebnis. So wird früh klar, ob eine direkte Einschätzung möglich ist oder Details vor Ort geklärt werden sollten.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:240px;"><h3>3. Angebot oder Besichtigung</h3><p>Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung. Das gilt besonders bei größeren Flächen, unklarem Zustand oder laufenden Objektleistungen.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:240px;"><h3>4. Reinigung abstimmen und umsetzen</h3><p>Nach Freigabe erfolgt die Reinigung nach klar vereinbartem Leistungsbild, Termin und Umfang. Damit ist vor Beginn nachvollziehbar, welche Bereiche enthalten sind und wie die Umsetzung geplant wird.</p></article></div></div></section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft eine Anfrage bei Nautilus Facility Cleaning ab.</h2></div><div class="grid about-grid-2 about-process-grid"><article class="card" data-step="01" style="display:flex; flex-direction:column; min-height:240px;"><h3>Anfrage senden</h3><p>Sie senden uns Bezirk, Fläche, Objektart, gewünschten Termin und nach Möglichkeit Fotos vom aktuellen Zustand. Bei wiederkehrenden Objekten helfen zusätzlich Turnus, Zugang und Zeitfenster.</p></article><article class="card" data-step="02" style="display:flex; flex-direction:column; min-height:240px;"><h3>Bedarf einordnen</h3><p>Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Zeitfenster und gewünschtes Ergebnis. So wird früh klar, ob eine direkte Einschätzung möglich ist oder Details vor Ort geklärt werden sollten.</p></article><article class="card" data-step="03" style="display:flex; flex-direction:column; min-height:240px;"><h3>Angebot oder Besichtigung</h3><p>Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung. Das gilt besonders bei größeren Flächen, unklarem Zustand oder laufenden Objektleistungen.</p></article><article class="card" data-step="04" style="display:flex; flex-direction:column; min-height:240px;"><h3>Reinigung abstimmen und umsetzen</h3><p>Nach Freigabe erfolgt die Reinigung nach klar vereinbartem Leistungsbild, Termin und Umfang. Damit ist vor Beginn nachvollziehbar, welche Bereiche enthalten sind und wie die Umsetzung geplant wird.</p></article></div></div></section>
 
       <section><div class="container"><div class="cta"><div><div class="eyebrow">Unternehmensdaten</div><h2>Nautilus Facility Cleaning</h2><p>Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt). Geschäftsführer: Philipp De Boer. Handelsregister: HRB 282199 B, Amtsgericht Charlottenburg. Kontakt: kontakt@nautilus-facility.de · 0176 2284 4636.</p></div><div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end;">
               <a class="button" href="https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20Nautilus%20Facility%20Cleaning%20kontaktieren.%20Bitte%20melden%20Sie%20sich%20bei%20mir.">Per WhatsApp kontaktieren</a>

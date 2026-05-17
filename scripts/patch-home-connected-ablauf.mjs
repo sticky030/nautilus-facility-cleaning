@@ -24,8 +24,8 @@ const processEffect = `  useEffect(() => {
       const viewportCenter = viewport / 2;
       const boxCenter = rect.top + rect.height / 2;
       const distance = Math.abs(boxCenter - viewportCenter);
-      const tolerance = Math.min(70, viewport * 0.08);
-      const readable = rect.top > viewport * 0.08 && rect.bottom < viewport * 0.96;
+      const tolerance = Math.min(120, viewport * 0.14);
+      const readable = rect.top > viewport * 0.03 && rect.bottom < viewport * 1.03;
 
       if (readable && distance <= tolerance) {
         played = true;
@@ -152,4 +152,4 @@ css = css.replace(/\n\/\* ===== Homepage connected Ablauf test ===== \*\/[\s\S]*
 css += cssBlock;
 writeFileSync(cssFile, css, "utf8");
 
-console.log("Homepage connected Ablauf test applied with idempotent React center trigger.");
+console.log("Homepage connected Ablauf test applied with earlier React center trigger.");

@@ -4,8 +4,8 @@ const appFile = "src/App.tsx";
 let app = readFileSync(appFile, "utf8");
 
 app = app.replace(
-  'className="grid grid-cols-1 gap-8 lg:grid-cols-3"',
-  'className="home-services-bento grid grid-cols-1 gap-8 lg:grid-cols-6"'
+  'className="home-services-bento grid grid-cols-1 gap-8 lg:grid-cols-6"',
+  'className="grid grid-cols-1 gap-8 lg:grid-cols-3"'
 );
 
 writeFileSync(appFile, app, "utf8");
@@ -15,30 +15,7 @@ let css = readFileSync(cssFile, "utf8");
 
 const block = `
 
-/* ===== Premium Phase 1 + 2: ruhige Bewegung, Bento, Stacked Cards ===== */
-.home-services-bento > article {
-  min-height: 100%;
-}
-
-@media (min-width: 1024px) {
-  .home-services-bento > article:nth-child(1),
-  .home-services-bento > article:nth-child(4) {
-    grid-column: span 3;
-  }
-
-  .home-services-bento > article:nth-child(2),
-  .home-services-bento > article:nth-child(3),
-  .home-services-bento > article:nth-child(5),
-  .home-services-bento > article:nth-child(6) {
-    grid-column: span 3;
-  }
-
-  .home-services-bento > article:nth-child(1) h3,
-  .home-services-bento > article:nth-child(4) h3 {
-    max-width: 13ch;
-  }
-}
-
+/* ===== Premium Phase 1 + 2: ruhige Bewegung ===== */
 .premium-reveal {
   opacity: 0;
   transform: translate3d(0, 22px, 0);
@@ -69,4 +46,4 @@ if (!css.includes("Premium Phase 1 + 2")) {
   writeFileSync(cssFile, css, "utf8");
 }
 
-console.log("Premium source UI patched: homepage bento class and motion CSS ready.");
+console.log("Premium source UI patched: homepage service grid restored to 3 columns and motion CSS ready.");

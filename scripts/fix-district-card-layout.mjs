@@ -32,6 +32,9 @@ const css = `
         display: flex;
         flex-direction: column;
       }
+      .district-process-grid .card {
+        min-height: 230px !important;
+      }
       .district-grid-2 .card p:last-child,
       .district-grid-3 .card p:last-child,
       .district-grid-auto .card p:last-child {
@@ -48,6 +51,9 @@ const css = `
         .district-grid-3,
         .district-grid-auto {
           grid-template-columns: 1fr !important;
+        }
+        .district-process-grid .card {
+          min-height: 0 !important;
         }
       }
 `;
@@ -109,10 +115,13 @@ function classifyGrids(html) {
     .replace(/ district-two-col/g, "")
     .replace(/ district-grid-2/g, "")
     .replace(/ district-grid-3/g, "")
-    .replace(/ district-grid-auto/g, "");
+    .replace(/ district-grid-auto/g, "")
+    .replace(/ district-process-grid/g, "");
 
   return next.replace(/<div class="grid">([\s\S]*?)<\/div>/g, (match, inner) => {
     const cardCount = (inner.match(/<article class="card"/g) || []).length;
+    const isProcess = inner.includes("1. Anfrage senden") && inner.includes("4. Reinigung nach abgestimmtem Leistungsumfang");
+    if (cardCount === 4 && isProcess) return `<div class="grid district-grid-2 district-process-grid">${inner}</div>`;
     if (cardCount === 4) return `<div class="grid district-grid-2">${inner}</div>`;
     if (cardCount === 3) return `<div class="grid district-grid-3">${inner}</div>`;
     if (cardCount > 4) return `<div class="grid district-grid-auto">${inner}</div>`;
@@ -132,4 +141,4 @@ for (const slug of slugs) {
   writeFileSync(file, html, "utf8");
 }
 
-console.log("District cards polished: 4-card sections use 2 columns, 3-card sections use 3 columns, card copy enriched.");
+console.log("District cards polished: 4-card sections use 2 columns, 3-card sections use 3 columns, process cards compacted.");

@@ -58,57 +58,14 @@ const css = `
         width: 0;
         background:#B79B6C;
       }
-      .horizontal-process.run-horizontal .horizontal-process-track::after {
-        animation: horizontalLine 2.75s cubic-bezier(.4,0,.2,1) forwards;
-      }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-      }
-      .horizontal-step h3 {
-        margin: 0;
-        color:#9A8D7D;
-        font-size: 18px;
-        line-height:1.25;
-      }
-      .horizontal-step p {
-        margin: 0;
-        color:#7E7367;
-        font-size:14px;
-        line-height:1.75;
-        opacity:.42;
-        transform:translate3d(0,8px,0);
-      }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse .92s ease 1;
-        animation-delay: calc(.12s + var(--h-step) * .72s), calc(.12s + var(--h-step) * .72s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 {
-        animation: horizontalTitle .42s ease forwards;
-        animation-delay: calc(.18s + var(--h-step) * .72s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step p {
-        animation: horizontalText .48s ease forwards;
-        animation-delay: calc(.24s + var(--h-step) * .72s);
-      }
+      .horizontal-process.run-horizontal .horizontal-process-track::after { animation: horizontalLine 2.75s cubic-bezier(.4,0,.2,1) forwards; }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
+      .horizontal-dot { width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; }
+      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
+      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation: horizontalDot .52s ease forwards, horizontalPulse .92s ease 1; animation-delay: calc(.12s + var(--h-step) * .72s), calc(.12s + var(--h-step) * .72s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .42s ease forwards; animation-delay: calc(.18s + var(--h-step) * .72s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .48s ease forwards; animation-delay: calc(.24s + var(--h-step) * .72s); }
       @keyframes horizontalLine { to { width: calc(75% - 44px); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }
@@ -142,8 +99,8 @@ const js = `<script id="nfc-horizontal-process-js">
         var rect = box.getBoundingClientRect();
         var center = rect.top + rect.height/2;
         var distance = Math.abs(center - viewport/2);
-        var tolerance = Math.min(150, viewport * 0.18);
-        var visible = rect.top < viewport * 0.84 && rect.bottom > viewport * 0.16;
+        var tolerance = Math.min(170, viewport * 0.20);
+        var visible = rect.top < viewport * 0.88 && rect.bottom > viewport * 0.12;
         if(visible && distance <= tolerance) play(box);
       });
     }
@@ -170,17 +127,39 @@ function inject(html) {
   return html;
 }
 
+function replaceAblaufSection(html, replacement) {
+  const sectionRegexes = [
+    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="steps">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="steps">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid process-grid[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid process-grid[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
+  ];
+
+  for (const regex of sectionRegexes) {
+    if (regex.test(html)) {
+      return { html: html.replace(regex, replacement), changed: true };
+    }
+  }
+  return { html, changed: false };
+}
+
 const dirs = readdirSync(dist).filter((name) => name !== "index.html" && existsSync(join(dist, name, "index.html")));
 let changed = 0;
 for (const slug of dirs) {
   const file = join(dist, slug, "index.html");
   let html = readFileSync(file, "utf8");
-  if (!html.includes('<div class="eyebrow">Ablauf')) continue;
+  if (!html.includes('<div class="eyebrow">Ablauf</div>')) continue;
+
   html = inject(html);
   const variant = variants[variantFor(slug)];
-  html = html.replace(/<div class="grid process-grid[\s\S]*?<\/div><\/div><\/section>/, `${processHtml(variant)}</div></section>`);
+  const replacement = `<section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft die Zusammenarbeit ab.</h2></div>${processHtml(variant)}</div></section>`;
+  const result = replaceAblaufSection(html, replacement);
+  html = result.html;
+
+  if (result.changed) changed++;
   writeFileSync(file, html, "utf8");
-  changed++;
 }
 
 console.log(`Horizontal connected process applied to ${changed} static pages.`);

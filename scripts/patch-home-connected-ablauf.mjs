@@ -76,10 +76,7 @@ const cssBlock = `
   background: radial-gradient(circle at top right, rgba(183,155,108,.11), transparent 46%);
   pointer-events: none;
 }
-.connected-process-head {
-  position: relative;
-  margin-bottom: 34px;
-}
+.connected-process-head { position: relative; margin-bottom: 34px; }
 .connected-process-head p {
   margin: 0 0 8px;
   color: #B79B6C;
@@ -102,14 +99,12 @@ const cssBlock = `
   gap: 22px;
   opacity: 0;
   transform: translate3d(0, 18px, 0);
+}
+.connected-process.is-active .connected-step {
   animation: connectedStepIn .48s cubic-bezier(.22,1,.36,1) forwards;
-  animation-delay: calc(.18s + var(--step-index) * .52s);
+  animation-delay: calc(.18s + var(--step-index) * .62s);
 }
-.connected-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.connected-left { display: flex; flex-direction: column; align-items: center; }
 .connected-dot {
   width: 42px;
   height: 42px;
@@ -124,8 +119,10 @@ const cssBlock = `
   font-weight: 850;
   letter-spacing: .08em;
   box-shadow: 0 12px 28px rgba(183,155,108,.12);
-  animation: connectedDotGold .38s ease forwards;
-  animation-delay: calc(.24s + var(--step-index) * .52s);
+}
+.connected-process.is-active .connected-dot {
+  animation: connectedDotGold .42s ease forwards, connectedDotPulse .7s ease 1;
+  animation-delay: calc(.22s + var(--step-index) * .62s), calc(.22s + var(--step-index) * .62s);
 }
 .connected-segment {
   position: relative;
@@ -141,8 +138,10 @@ const cssBlock = `
   inset: 0 0 auto 0;
   height: 0;
   background: #B79B6C;
-  animation: connectedLineFill .42s cubic-bezier(.4,0,.2,1) forwards;
-  animation-delay: calc(.46s + var(--step-index) * .52s);
+}
+.connected-process.is-active .connected-segment span {
+  animation: connectedLineFill .54s cubic-bezier(.4,0,.2,1) forwards;
+  animation-delay: calc(.48s + var(--step-index) * .62s);
 }
 .connected-right { padding: 2px 0 30px; }
 .connected-step:last-child .connected-right { padding-bottom: 0; }
@@ -164,8 +163,13 @@ const cssBlock = `
 @keyframes connectedStepIn { to { opacity: 1; transform: translate3d(0,0,0); } }
 @keyframes connectedLineFill { to { height: 100%; } }
 @keyframes connectedDotGold { to { background: #B79B6C; color: #fff; border-color: #B79B6C; } }
+@keyframes connectedDotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(183,155,108,.38), 0 12px 28px rgba(183,155,108,.12); }
+  100% { box-shadow: 0 0 0 14px rgba(183,155,108,0), 0 12px 28px rgba(183,155,108,.12); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .connected-step, .connected-dot, .connected-segment span { animation: none; opacity: 1; transform: none; }
+  .connected-step, .connected-process.is-active .connected-step { animation: none; opacity: 1; transform: none; }
+  .connected-process.is-active .connected-dot { animation: none; background:#B79B6C; color:#fff; border-color:#B79B6C; }
   .connected-segment span { height: 100%; }
 }
 @media (max-width: 760px) {

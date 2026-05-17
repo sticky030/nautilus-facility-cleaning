@@ -33,13 +33,17 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Einsatzgebiete</div>
               <div className="mt-6 grid gap-x-8 gap-y-3 text-[14px] font-medium text-[#2C2C2C] sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                <a href="/reinigungsfirma-lichtenberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
-                <a href="/reinigungsfirma-marzahn-hellersdorf-berlin/" className="hover:text-[#B79B6C] transition-colors">Marzahn-Hellersdorf</a>
-                <a href="/reinigungsfirma-pankow-berlin/" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
-                <a href="/reinigungsfirma-prenzlauer-berg-berlin/" className="hover:text-[#B79B6C] transition-colors">Prenzlauer Berg</a>
-                <a href="/reinigungsfirma-weissensee-berlin/" className="hover:text-[#B79B6C] transition-colors">Weißensee</a>
-                <a href="/reinigungsfirma-friedrichshain-kreuzberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
-                <a href="/reinigungsfirma-berlin-mitte/" className="hover:text-[#B79B6C] transition-colors">Berlin-Mitte</a>
+                <div className="flex flex-col gap-3">
+                  <a href="/reinigungsfirma-lichtenberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Lichtenberg</a>
+                  <a href="/reinigungsfirma-pankow-berlin/" className="hover:text-[#B79B6C] transition-colors">Pankow</a>
+                  <a href="/reinigungsfirma-weissensee-berlin/" className="hover:text-[#B79B6C] transition-colors">Weißensee</a>
+                  <a href="/reinigungsfirma-berlin-mitte/" className="hover:text-[#B79B6C] transition-colors">Berlin-Mitte</a>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <a href="/reinigungsfirma-marzahn-hellersdorf-berlin/" className="hover:text-[#B79B6C] transition-colors">Marzahn-Hellersdorf</a>
+                  <a href="/reinigungsfirma-prenzlauer-berg-berlin/" className="hover:text-[#B79B6C] transition-colors">Prenzlauer Berg</a>
+                  <a href="/reinigungsfirma-friedrichshain-kreuzberg-berlin/" className="hover:text-[#B79B6C] transition-colors">Friedrichshain-Kreuzberg</a>
+                </div>
               </div>
             </div>
 
@@ -71,4 +75,4 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
 
 source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + "      </footer>".length)}`;
 writeFileSync(file, source, "utf8");
-console.log("Home footer structure patched: simplified premium footer without duplicate CTA block.");
+console.log("Home footer structure patched: balanced district links in premium footer.");

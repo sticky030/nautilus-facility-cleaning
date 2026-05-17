@@ -22,10 +22,10 @@ app = app.replace(
   'className="home-service-card reveal group relative scroll-mt-40 flex flex-col h-full overflow-hidden bg-white rounded-2xl border border-[#E5E1D8] p-8 lg:p-10 shadow-[0_14px_45px_rgba(60,48,35,0.045)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#B79B6C]/55 hover:shadow-[0_24px_65px_rgba(183,155,108,0.13)]"'
 );
 
-// Give Why Nautilus cards a stronger premium hierarchy without changing the section structure.
+// Revert Why Nautilus cards to the clean balanced 2x2 look.
 app = app.replace(
-  'className="reveal bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]"',
-  'className="why-premium-card reveal bg-[#FCFBF8] rounded-2xl border border-[#E5E1D8] p-8 shadow-[0_12px_34px_rgba(60,48,35,0.045)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_18px_44px_rgba(183,155,108,0.10)]"'
+  'className="why-premium-card reveal bg-[#FCFBF8] rounded-2xl border border-[#E5E1D8] p-8 shadow-[0_12px_34px_rgba(60,48,35,0.045)] transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_18px_44px_rgba(183,155,108,0.10)]"',
+  'className="reveal bg-[#FCFBF8] rounded-xl border border-[#E5E1D8] p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#B79B6C]/50 hover:shadow-[0_10px_30px_rgba(183,155,108,0.08)]"'
 );
 
 writeFileSync(appFile, app, "utf8");
@@ -35,7 +35,7 @@ let css = readFileSync(cssFile, "utf8");
 
 const block = `
 
-/* ===== Homepage visual polish: hero, services, why section ===== */
+/* ===== Homepage visual polish: hero and services only ===== */
 .home-hero-premium::after {
   content: "";
   position: absolute;
@@ -74,31 +74,11 @@ const block = `
   opacity: 1;
   transform: translate3d(-10px, 10px, 0);
 }
-
-.why-premium-card:first-child {
-  background: #2C2C2C;
-  border-color: rgba(44,44,44,.9);
-  box-shadow: 0 26px 70px rgba(44,44,44,.14);
-}
-
-.why-premium-card:first-child div,
-.why-premium-card:first-child p {
-  color: rgba(255,255,255,.84) !important;
-}
-
-.why-premium-card:first-child div:first-child {
-  color: #D8BD8A !important;
-}
-
-@media (min-width: 640px) {
-  .why-premium-card:first-child {
-    grid-column: span 2;
-  }
-}
 `;
 
 css = css.replace(/\n\/\* ===== Homepage visual polish: hero, services, why section ===== \*\/[\s\S]*?(?=\n\/\*|$)/, "");
+css = css.replace(/\n\/\* ===== Homepage visual polish: hero and services only ===== \*\/[\s\S]*?(?=\n\/\*|$)/, "");
 css += block;
 writeFileSync(cssFile, css, "utf8");
 
-console.log("Homepage visual system polished: hero depth, service accents, why section hierarchy and duplicate private option cleaned.");
+console.log("Homepage visual system polished: hero depth and service accents kept, Why Nautilus hierarchy reverted, duplicate private option cleaned.");

@@ -789,57 +789,14 @@
         width: 0;
         background:#B79B6C;
       }
-      .horizontal-process.run-horizontal .horizontal-process-track::after {
-        animation: horizontalLine 2.75s cubic-bezier(.4,0,.2,1) forwards;
-      }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-      }
-      .horizontal-step h3 {
-        margin: 0;
-        color:#9A8D7D;
-        font-size: 18px;
-        line-height:1.25;
-      }
-      .horizontal-step p {
-        margin: 0;
-        color:#7E7367;
-        font-size:14px;
-        line-height:1.75;
-        opacity:.42;
-        transform:translate3d(0,8px,0);
-      }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse .92s ease 1;
-        animation-delay: calc(.12s + var(--h-step) * .72s), calc(.12s + var(--h-step) * .72s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 {
-        animation: horizontalTitle .42s ease forwards;
-        animation-delay: calc(.18s + var(--h-step) * .72s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step p {
-        animation: horizontalText .48s ease forwards;
-        animation-delay: calc(.24s + var(--h-step) * .72s);
-      }
+      .horizontal-process.run-horizontal .horizontal-process-track::after { animation: horizontalLine 2.75s cubic-bezier(.4,0,.2,1) forwards; }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
+      .horizontal-dot { width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; }
+      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
+      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation: horizontalDot .52s ease forwards, horizontalPulse .92s ease 1; animation-delay: calc(.12s + var(--h-step) * .72s), calc(.12s + var(--h-step) * .72s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .42s ease forwards; animation-delay: calc(.18s + var(--h-step) * .72s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .48s ease forwards; animation-delay: calc(.24s + var(--h-step) * .72s); }
       @keyframes horizontalLine { to { width: calc(75% - 44px); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }
@@ -1046,37 +1003,7 @@
         </div>
       </section>
 
-      <section class="white">
-        <div class="container">
-          <div class="section-head">
-            <div class="eyebrow">Ablauf</div>
-            <h2>Von der Bedarfsklärung zum objektbezogenen Angebot.</h2>
-          </div>
-
-          <div class="steps">
-            <div class="step">
-              <span>01</span>
-              <h3>Bedarf klären</h3>
-              <p>Objektart, Räume, Turnus, Zeitfenster und gewünschter Leistungsumfang.</p>
-            </div>
-            <div class="step">
-              <span>02</span>
-              <h3>Kostenfrei besichtigen</h3>
-              <p>Bei Bedarf prüfen wir die Kanzleifläche vor Ort und ordnen den Aufwand realistisch ein.</p>
-            </div>
-            <div class="step">
-              <span>03</span>
-              <h3>Angebot erhalten</h3>
-              <p>Sie erhalten ein unverbindliches Angebot mit klar abgegrenztem Leistungsumfang.</p>
-            </div>
-            <div class="step">
-              <span>04</span>
-              <h3>Start abstimmen</h3>
-              <p>Nach Freigabe erfolgt die Umsetzung im vereinbarten Zeitfenster.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft die Zusammenarbeit ab.</h2></div><div class="horizontal-process"><div class="horizontal-process-track"><article class="horizontal-step" style="--h-step:0"><div class="horizontal-dot">01</div><h3>Bedarf klären</h3><p>Objektart, Turnus, Zeitfenster, Zugang und gewünschte Leistungsbereiche kurz einordnen.</p></article><article class="horizontal-step" style="--h-step:1"><div class="horizontal-dot">02</div><h3>Objekt prüfen</h3><p>Bei Bedarf prüfen wir Flächen, Nutzung, Frequenz und Sonderbereiche direkt am Objekt.</p></article><article class="horizontal-step" style="--h-step:2"><div class="horizontal-dot">03</div><h3>Angebot abstimmen</h3><p>Sie erhalten ein klares Angebot mit Leistungsumfang, Turnus und nachvollziehbarer Objektlogik.</p></article><article class="horizontal-step" style="--h-step:3"><div class="horizontal-dot">04</div><h3>Reinigung starten</h3><p>Nach Freigabe erfolgt die Umsetzung strukturiert, ruhig und passend zum Objektalltag.</p></article></div></div></div></section>
 
       <section>
         <div class="container">
@@ -1259,8 +1186,8 @@
         var rect = box.getBoundingClientRect();
         var center = rect.top + rect.height/2;
         var distance = Math.abs(center - viewport/2);
-        var tolerance = Math.min(150, viewport * 0.18);
-        var visible = rect.top < viewport * 0.84 && rect.bottom > viewport * 0.16;
+        var tolerance = Math.min(170, viewport * 0.20);
+        var visible = rect.top < viewport * 0.88 && rect.bottom > viewport * 0.12;
         if(visible && distance <= tolerance) play(box);
       });
     }

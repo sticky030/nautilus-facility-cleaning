@@ -670,6 +670,40 @@
         .cluster-grid-2 .card,.cluster-grid-3 .card,.cluster-compact .card{min-height:0 !important;}
       }
 
+    
+      .editorial-list {
+        margin-top: 34px;
+        border: 1px solid #E5D9C8;
+        border-radius: 30px;
+        background: #FFFFFF;
+        overflow: hidden;
+        box-shadow: 0 24px 70px rgba(60,48,35,.07);
+      }
+      .editorial-row {
+        display: grid;
+        grid-template-columns: 0.85fr 1.65fr;
+        gap: 34px;
+        padding: 26px 30px;
+        border-bottom: 1px solid #EEE8DE;
+        align-items: start;
+      }
+      .editorial-row:last-child { border-bottom: 0; }
+      .editorial-row strong {
+        color: #2C2C2C;
+        font-size: 18px;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+      }
+      .editorial-row p {
+        margin: 0;
+        color: #7E7367;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+      @media(max-width:760px){
+        .editorial-row { grid-template-columns: 1fr; gap: 10px; padding: 24px; }
+      }
+
     </style>
     
     <style>
@@ -712,7 +746,7 @@
       <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">Treppenhausreinigung Kosten Berlin</div><h1>Treppenhausreinigung Kosten in Berlin – objektbezogen einschätzen.</h1><p class="lead">Die Kosten einer Treppenhausreinigung in Berlin hängen von Objektgröße, Etagen, Parteien, Turnus, Flächenstruktur, Zugänglichkeit, Nutzung und gewünschtem Leistungsumfang ab.</p><p>Nautilus Facility Cleaning erstellt Angebote für Treppenhäuser und Allgemeinflächen objektbezogen. So wird vor Beginn klar, welche Bereiche regelmäßig enthalten sind, welcher Turnus sinnvoll ist und welcher Sonderbedarf separat eingeordnet werden sollte.</p><div class="hero-actions"><a class="button" href="https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20Reinigungsanfrage%20f%C3%BCr%20Berlin%20stellen.%20Ich%20sende%20Ihnen%20Bezirk%2C%20Fl%C3%A4che%2C%20Termin%20und%20Fotos.">Fotos per WhatsApp senden</a><a class="button" href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrageformular nutzen</a></div></div><aside class="hero-card"><strong>Für Hausverwaltungen, WEGs und Eigentümer mit Objektverantwortung.</strong><p>Treppenhausreinigung muss zum Objektalltag passen: nachvollziehbarer Leistungsumfang, sauberer Turnus, klare Zugangslösung und realistische Planung statt unklarer Standardleistung.</p></aside></div></section>
       
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Kostenfaktoren</div><h2>Was den Aufwand im Treppenhaus bestimmt.</h2><p class="section-text">Treppenhäuser unterscheiden sich deutlich. Ein gepflegtes kleines Objekt mit wenigen Parteien benötigt eine andere Planung als ein stark frequentiertes Mehrparteienhaus mit Aufzug, Kellerzugängen, Eingangsbereich, Briefkastenanlage und erhöhtem Nutzungsdruck.</p></div><div class="grid cluster-grid-2"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Etagen und Parteien</h3><p>Anzahl der Etagen, Podeste, Wohneinheiten, Laufwege und Zwischenflächen beeinflussen den Zeitaufwand. Auch Bewohnerstruktur, Publikumsverkehr und Frequenz der Nutzung spielen eine Rolle.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Turnus und Leistungsbild</h3><p>Wöchentliche Reinigung, zweiwöchentlicher Turnus oder objektbezogene Intervalle sollten zur Nutzung, Verschmutzung und zum gewünschten Erscheinungsbild passen. Der Turnus ist ein zentraler Kostenhebel.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Allgemeinflächen</h3><p>Eingänge, Briefkästen, Aufzug, Kellerzugänge, Handläufe, Glasflächen und Nebenbereiche müssen klar definiert werden. Nur so bleibt nachvollziehbar, welche Flächen laufend gereinigt werden.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Sonderbedarf</h3><p>Starke Verschmutzung, Grundreinigung, Renovierungsspuren, Müllräume oder zusätzliche Fenster- und Rahmenreinigung sollten separat eingeordnet werden, damit die laufende Reinigung nicht unklar überladen wird.</p></article></div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Objektprüfung</div><h2>Welche Angaben für ein Angebot wichtig sind.</h2></div><div class="cluster-checklist"><article class="cluster-checkitem"><span>Adresse und Bezirk</span></article><article class="cluster-checkitem"><span>Anzahl Etagen</span></article><article class="cluster-checkitem"><span>Anzahl Parteien</span></article><article class="cluster-checkitem"><span>Eingangsbereich</span></article><article class="cluster-checkitem"><span>Aufzug</span></article><article class="cluster-checkitem"><span>Kellerzugänge</span></article><article class="cluster-checkitem"><span>Handläufe</span></article><article class="cluster-checkitem"><span>Fenster und Glas</span></article><article class="cluster-checkitem"><span>gewünschter Turnus</span></article><article class="cluster-checkitem"><span>aktueller Zustand</span></article><article class="cluster-checkitem"><span>Zugangslösung</span></article><article class="cluster-checkitem"><span>Sonderflächen</span></article></div></div></section>
+      <section><div class="container"><div class="section-head"><div class="eyebrow">Objektprüfung</div><h2>Welche Angaben für ein Angebot wichtig sind.</h2></div><div class="editorial-list"><div class="editorial-row"><strong>Adresse und Objektgröße</strong><p>Bezirk, Anzahl der Etagen, Parteien, Podeste und Laufwege bestimmen den Grundaufwand der Treppenhausreinigung.</p></div><div class="editorial-row"><strong>Eingang, Aufzug und Kellerzugänge</strong><p>Eingangsbereich, Briefkastenanlage, Aufzug, Kellerzugänge und Nebenflächen müssen klar definiert werden, damit der Leistungsumfang nachvollziehbar bleibt.</p></div><div class="editorial-row"><strong>Handläufe, Glas und Kontaktflächen</strong><p>Handläufe, Glasflächen, Türen, Griffe und Kontaktpunkte sind sichtbar und nutzungsintensiv. Sie sollten im Leistungsbild sauber eingeordnet werden.</p></div><div class="editorial-row"><strong>Turnus und Nutzungsdruck</strong><p>Wöchentliche oder zweiwöchentliche Reinigung hängt von Parteienzahl, Bewohnerstruktur, Frequenz und gewünschtem Erscheinungsbild ab.</p></div><div class="editorial-row"><strong>Zugangslösung</strong><p>Schlüssel, Zugangscode, Ansprechpartner, Hausordnung und mögliche Zeitfenster beeinflussen die praktische Umsetzbarkeit im Objektalltag.</p></div><div class="editorial-row"><strong>Sonderflächen und Grundreinigung</strong><p>Starke Verschmutzung, Renovierungsspuren, Müllräume, Fenster oder intensive Grundreinigung sollten separat vom laufenden Turnus betrachtet werden.</p></div></div></div></section>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Für Verwaltungen</div><h2>Warum objektbezogene Angebote bei Treppenhäusern sinnvoll sind.</h2></div><div class="grid cluster-grid-3 cluster-compact"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Klare Leistungsabgrenzung</h3><p>Vor Beginn wird definiert, welche Flächen, Bauteile und Zusatzbereiche enthalten sind. Das reduziert Missverständnisse im laufenden Objektbetrieb.</p><p style="margin-top:auto;"><a href="/treppenhausreinigung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Treppenhaus ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Planbarer Turnus</h3><p>Ein sauber abgestimmter Turnus sorgt dafür, dass Eingangsbereiche, Laufwege und Kontaktflächen regelmäßig betreut werden, ohne den Umfang unnötig aufzublähen.</p><p style="margin-top:auto;"><a href="/hausverwaltungen-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Hausverwaltung ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Sonderreinigung steuerbar</h3><p>Grundreinigung, Renovierungsspuren oder Zusatzflächen können gezielt eingeordnet werden, statt sie unklar in die laufende Reinigung zu mischen.</p><p style="margin-top:auto;"><a href="/grundreinigung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Grundreinigung ansehen</a></p></article></div></div></section>
       <section><div class="container"><div class="cluster-statement"><strong>Ein belastbarer Preis entsteht aus einem klaren Leistungsbild.</strong><p>Gerade bei Treppenhäusern ist entscheidend, dass Turnus, Flächen, Zugang und Sonderbedarf sauber definiert sind. So bleibt die Reinigung für Verwaltung, Eigentümer und Nutzer nachvollziehbar und planbar.</p></div></div></section>
   

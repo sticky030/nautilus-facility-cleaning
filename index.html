@@ -151,6 +151,30 @@
       });
     </script>
 
+  <script id="nfc-connected-hard-trigger">
+(function(){
+  function ready(fn){ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn(); }
+  ready(function(){
+    var box = document.querySelector('.connected-process');
+    if(!box) return;
+    box.classList.remove('run-connected');
+    var played = false;
+    function play(){
+      if(played) return;
+      played = true;
+      box.classList.remove('run-connected');
+      void box.offsetWidth;
+      box.classList.add('run-connected');
+    }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting && entry.intersectionRatio > 0.35) play();
+      });
+    }, { threshold: [0.35, 0.55, 0.75], rootMargin: '0px 0px -12% 0px' });
+    observer.observe(box);
+  });
+})();
+</script>
   <script>
 (function(){
   var ready = function(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); };

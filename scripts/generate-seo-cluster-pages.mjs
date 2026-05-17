@@ -4,7 +4,6 @@ const baseUrl = "https://nautilus-facility.de";
 const contactHref = "https://nautilus-facility.de/?kontakt=1#kontakt";
 const contactOnclick = "sessionStorage.setItem('scrollToContact', '1')";
 const whatsappPhotoHref = "https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20eine%20Reinigungsanfrage%20f%C3%BCr%20Berlin%20stellen.%20Ich%20sende%20Ihnen%20Bezirk%2C%20Fl%C3%A4che%2C%20Termin%20und%20Fotos.";
-const whatsappContactHref = "https://wa.me/4917622844636?text=Hallo%2C%20ich%20m%C3%B6chte%20Nautilus%20Facility%20Cleaning%20kontaktieren.%20Bitte%20melden%20Sie%20sich%20bei%20mir.";
 
 function sharedStyle() {
   const html = readFileSync("dist/praxisreinigung-berlin/index.html", "utf8");
@@ -21,8 +20,8 @@ function renderFaq(faq) {
   return faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
 }
 
-function renderList(items) {
-  return `<div class="area-pills">${items.map((item) => `<span class="area-pill">${item}</span>`).join("")}</div>`;
+function renderChecklist(items) {
+  return `<div class="cluster-checklist">${items.map((item) => `<article class="cluster-checkitem"><span>${item}</span></article>`).join("")}</div>`;
 }
 
 function layoutCss() {
@@ -32,11 +31,33 @@ function layoutCss() {
       .cluster-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; align-items: stretch; }
       .cluster-grid-2 .card, .cluster-grid-3 .card { height: 100%; display: flex; flex-direction: column; }
       .cluster-grid-2 .card p:last-child, .cluster-grid-3 .card p:last-child { margin-top: auto; }
+      .cluster-checklist {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 34px;
+      }
+      .cluster-checkitem {
+        min-height: 88px;
+        border: 1px solid #E5D9C8;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #FFFFFF 0%, #FCFBF8 100%);
+        display: flex;
+        align-items: center;
+        padding: 20px 22px;
+        box-shadow: 0 18px 48px rgba(60,48,35,.055);
+      }
+      .cluster-checkitem span {
+        color: #2C2C2C;
+        font-size: 15px;
+        line-height: 1.45;
+        font-weight: 760;
+      }
       .info-band { border: 1px solid #E5D9C8; background:#fff; border-radius:28px; padding:34px; box-shadow:0 24px 70px rgba(60,48,35,.07); }
       .info-band strong { display:block; color:#2C2C2C; font-size:18px; margin-bottom:10px; }
       .info-band p { color:#7E7367; line-height:1.8; margin:0; }
-      @media(max-width:980px){ .cluster-grid-3{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} }
-      @media(max-width:760px){ .cluster-grid-2,.cluster-grid-3{grid-template-columns:1fr !important;} }
+      @media(max-width:980px){ .cluster-grid-3{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} .cluster-checklist{grid-template-columns:repeat(2,minmax(0,1fr));} }
+      @media(max-width:760px){ .cluster-grid-2,.cluster-grid-3{grid-template-columns:1fr !important;} .cluster-checklist{grid-template-columns:1fr;} .cluster-checkitem{min-height:0;} }
     </style>`;
 }
 
@@ -107,10 +128,10 @@ pageShell({
   description: "Was beeinflusst Reinigungskosten in Berlin? Nautilus Facility Cleaning erklärt Preisfaktoren für Auszug, Übergabe, Renovierung, Grundreinigung, Treppenhaus und Gewerbe.",
   heroEyebrow: "Reinigungskosten Berlin",
   h1: "Reinigungskosten in Berlin – objektbezogen kalkuliert.",
-  lead: "Reinigungskosten hängen nicht nur von Quadratmetern ab. Entscheidend sind Objektart, Zustand, Leistungsumfang, Zugang, Zeitfenster und das gewünschte Ergebnis.",
-  intro: "Nautilus Facility Cleaning kalkuliert Reinigungsleistungen objektbezogen. Das schützt Auftraggeber vor unklaren Pauschalen und sorgt dafür, dass Umfang, Erwartung und Aufwand vor Beginn sauber abgestimmt sind.",
-  heroCardTitle: "Keine pauschale Scheinpräzision.",
-  heroCardText: "Ein realistisches Angebot entsteht erst, wenn Objekt, Zustand und Leistungsumfang klar sind. Genau dafür strukturieren wir die Anfrage vorab.",
+  lead: "Reinigungskosten in Berlin entstehen nicht aus einer Quadratmeterzahl allein. Entscheidend sind Objektart, Zustand, Reinigungsziel, Leistungsumfang, Zugänglichkeit, Zeitfenster und die Frage, ob eine Fläche nur gepflegt oder wirklich übergabefähig vorbereitet werden soll.",
+  intro: "Nautilus Facility Cleaning kalkuliert Reinigungsleistungen objektbezogen und nachvollziehbar. So werden Umfang, Erwartung und Aufwand vor Beginn sauber abgegrenzt – ohne starre Preisversprechen, die bei Zustand, Termin oder Zusatzflächen später nicht tragen.",
+  heroCardTitle: "Objektbezogene Kalkulation statt Pauschalversprechen.",
+  heroCardText: "Ein belastbares Angebot braucht Kontext: Objektart, Zustand, Flächenstruktur, Termin, Zugang und gewünschtes Ergebnis. Genau diese Punkte strukturieren wir vor der Kalkulation.",
   faq: [
     ["Kann man Reinigungskosten pauschal nennen?", "Nur sehr eingeschränkt. Fläche, Zustand, Reinigungsart, Zugang, Zeitfenster und gewünschtes Ergebnis beeinflussen den Aufwand deutlich."],
     ["Warum nennt Nautilus Facility Cleaning keine starren Pauschalpreise?", "Weil pauschale Preise häufig zu unklaren Erwartungen führen. Wir kalkulieren lieber objektbezogen und nachvollziehbar."],
@@ -119,19 +140,19 @@ pageShell({
     ["Gibt es auch Angebote für regelmäßige Reinigung?", "Ja. Für Büros, Praxen, Kanzleien, Treppenhäuser und Allgemeinflächen prüfen wir Turnus, Zeitfenster und Leistungsumfang."],
   ],
   body: `
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Preisfaktoren</div><h2>Was Reinigungskosten in Berlin beeinflusst.</h2><p class="section-text">Der Preis einer Reinigung entsteht aus mehreren Faktoren. Ein kleiner Raum mit starkem Reinigungsbedarf kann aufwendiger sein als eine größere, gut vorbereitete Fläche. Deshalb ist eine saubere Einordnung vorab der professionellere Weg.</p></div><div class="grid cluster-grid-2">${[
-        card("Fläche und Objektart", "Wohnung, Treppenhaus, Büro, Praxis, Kanzlei oder Baustellenbereich haben unterschiedliche Anforderungen. Entscheidend ist nicht nur die Größe, sondern auch die Nutzung und Flächenstruktur."),
-        card("Zustand und Verschmutzung", "Leichte Unterhaltsreinigung, Übergabezustand, Renovierungsstaub, Bauverschmutzung oder intensive Grundreinigung führen zu sehr unterschiedlichen Aufwänden."),
-        card("Leistungsumfang", "Böden, Sanitär, Küche, Kontaktflächen, Fenster, Rahmen, Türen, Heizkörper, Treppen, Aufzug oder Allgemeinflächen müssen klar abgegrenzt werden."),
-        card("Termin, Zugang und Zeitfenster", "Kurzfristige Termine, eingeschränkter Zugang, enge Zeitfenster oder Arbeiten außerhalb normaler Zeiten beeinflussen Planung und Aufwand."),
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Preisfaktoren</div><h2>Was Reinigungskosten in Berlin beeinflusst.</h2><p class="section-text">Ein kleiner Raum mit starkem Reinigungsbedarf kann mehr Aufwand verursachen als eine größere, gut vorbereitete Fläche. Deshalb betrachten wir nicht nur Quadratmeter, sondern den tatsächlichen Zustand, die Nutzung, den Leistungsumfang und das Ziel der Reinigung.</p></div><div class="grid cluster-grid-2">${[
+        card("Fläche und Objektart", "Wohnung, Treppenhaus, Büro, Praxis, Kanzlei oder Baustellenbereich haben unterschiedliche Anforderungen. Entscheidend sind Flächenstruktur, Nutzung, Material, Möblierung, Zugänglichkeit und die Frage, ob es um laufende Pflege, Übergabe oder Sonderreinigung geht."),
+        card("Zustand und Verschmutzung", "Leichte Unterhaltsreinigung, Übergabezustand, Renovierungsstaub, Bauverschmutzung, Kalk, Fett oder intensive Grundreinigung liegen operativ weit auseinander. Der sichtbare Zustand entscheidet über Zeit, Mittel und Ablauf."),
+        card("Leistungsumfang", "Böden, Sanitär, Küche, Kontaktflächen, Fenster, Rahmen, Türen, Heizkörper, Treppen, Aufzug und Allgemeinflächen müssen klar definiert sein. Nur so ist transparent, was enthalten ist und was separat abgestimmt wird."),
+        card("Termin, Zugang und Zeitfenster", "Kurzfristige Termine, eingeschränkter Zugang, enge Zeitfenster, Schlüsselorganisation oder Arbeiten außerhalb normaler Zeiten beeinflussen Planung, Einsatzlogik und Aufwand. Diese Punkte gehören in die Einschätzung."),
       ].join("")}</div></div></section>
       <section><div class="container"><div class="section-head"><div class="eyebrow">Reinigungsarten</div><h2>Unterschiedliche Leistungen, unterschiedliche Kalkulation.</h2></div><div class="grid cluster-grid-3">${[
         card("Auszug & Übergabe", "Bei Auszug und Übergabe zählt der aktuelle Zustand. Küche, Bad, Böden, Fenster, Rahmen und schwer erreichbare Bereiche beeinflussen den Aufwand deutlich.", { href: "/reinigung-nach-auszug-berlin/", label: "Auszug ansehen" }),
         card("Renovierung & Bauendreinigung", "Nach Renovierung, Malerarbeiten, Bodenarbeiten oder Bauarbeiten geht es häufig um Staub, Rückstände, Rahmen, Kanten und eine übergabefähige Gesamtwirkung.", { href: "/reinigung-nach-renovierung-berlin/", label: "Renovierung ansehen" }),
         card("Treppenhaus & Gewerbe", "Bei Treppenhäusern, Büros, Praxen und Kanzleien sind Turnus, Zeitfenster, Leistungsbild, Kontaktflächen und Zugänglichkeit die zentralen Kostenfaktoren.", { href: "/treppenhausreinigung-berlin/", label: "Treppenhaus ansehen" }),
       ].join("")}</div></div></section>
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Einordnung</div><h2>Welche Informationen für eine realistische Einschätzung helfen.</h2><p class="section-text">Je klarer die Ausgangslage beschrieben ist, desto schneller kann der Aufwand eingeordnet werden. Fotos ersetzen nicht immer eine Besichtigung, beschleunigen aber viele Anfragen deutlich.</p></div>${renderList(["Bezirk", "Objektart", "Fläche", "gewünschter Termin", "aktueller Zustand", "Leistungsumfang", "Fotos", "Zugang / Zeitfenster", "einmalig oder regelmäßig", "besondere Bereiche"] )}</div></section>
-      <section><div class="container"><div class="info-band"><strong>Professionelle Kalkulation ist kein Preistrick, sondern Risikominimierung.</strong><p>Wenn Leistungsumfang und Erwartung vorher sauber geklärt sind, entstehen weniger Missverständnisse. Auftraggeber erhalten ein nachvollziehbares Angebot, und die Umsetzung kann mit realistischem Zeit- und Leistungsrahmen geplant werden.</p></div></div></section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Einordnung</div><h2>Welche Informationen für eine realistische Einschätzung helfen.</h2><p class="section-text">Je klarer die Ausgangslage beschrieben ist, desto schneller kann der Aufwand eingeordnet werden. Fotos ersetzen nicht immer eine Besichtigung, beschleunigen aber viele Anfragen deutlich.</p></div>${renderChecklist(["Bezirk", "Objektart", "Fläche", "gewünschter Termin", "aktueller Zustand", "Leistungsumfang", "Fotos", "Zugang und Zeitfenster", "einmalig oder regelmäßig", "besondere Bereiche"] )}</div></section>
+      <section><div class="container"><div class="info-band"><strong>Ein sauberer Preis entsteht aus einem klaren Leistungsbild.</strong><p>Wenn Leistungsumfang, Zustand und Erwartung vorab sauber geklärt sind, sinkt das Risiko für Missverständnisse deutlich. Auftraggeber erhalten ein nachvollziehbares Angebot, und die Umsetzung kann mit realistischem Zeit- und Leistungsrahmen geplant werden.</p></div></div></section>
   `,
 });
 
@@ -141,10 +162,10 @@ pageShell({
   description: "Checkliste für die Wohnungsübergabe in Berlin: Reinigung, Fotos, Übergabeprotokoll, Küche, Bad, Fenster, Böden und professionelle Übergabereinigung.",
   heroEyebrow: "Checkliste Wohnungsübergabe Berlin",
   h1: "Checkliste Wohnungsübergabe in Berlin – sauber vorbereitet übergeben.",
-  lead: "Eine Wohnungsübergabe steht und fällt mit Vorbereitung, Zustand und klarer Dokumentation. Reinigung ist dabei ein zentraler Faktor.",
-  intro: "Diese Checkliste hilft Mietern, Eigentümern und Vermietern, typische Übergabepunkte strukturiert zu prüfen. Bei sichtbarem Reinigungsbedarf kann Nautilus Facility Cleaning die Übergabereinigung objektbezogen einordnen.",
-  heroCardTitle: "Übergabe ist kein Bauchgefühl.",
-  heroCardText: "Wer Zustand, Fotos, Schlüssel, Protokoll und Reinigung vorbereitet, reduziert Reibung beim Termin deutlich.",
+  lead: "Eine Wohnungsübergabe steht und fällt mit Vorbereitung, sichtbarem Zustand und sauberer Dokumentation. Reinigung ist dabei kein Nebenthema, sondern oft der Punkt, an dem Übergaben ruhig laufen oder unnötig eskalieren.",
+  intro: "Diese Checkliste hilft Mietern, Eigentümern und Vermietern, typische Übergabepunkte strukturiert zu prüfen. Wenn der Zustand nicht eindeutig ist oder wenig Zeit bleibt, ordnet Nautilus Facility Cleaning die Übergabereinigung objektbezogen nach Fläche, Zustand und Termin ein.",
+  heroCardTitle: "Übergabe braucht Vorbereitung, nicht Bauchgefühl.",
+  heroCardText: "Wer Reinigung, Fotos, Schlüssel, Zählerstände und Protokoll vorbereitet, reduziert Reibung beim Termin und schafft eine nachvollziehbare Ausgangslage.",
   schemaType: "Article",
   faq: [
     ["Was sollte vor einer Wohnungsübergabe gereinigt werden?", "Typische Bereiche sind Böden, Küche, Bad, Fenster, Rahmen, Türen, Heizkörper, Balkon, Abstellflächen und sichtbare Kontaktflächen."],
@@ -154,19 +175,19 @@ pageShell({
     ["Übernimmt Nautilus Facility Cleaning Übergabereinigung in Berlin?", "Ja. Wir prüfen Übergabereinigungen in Berlin objektbezogen nach Fläche, Zustand, Termin und gewünschtem Umfang."],
   ],
   body: `
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Vorbereitung</div><h2>Die wichtigsten Punkte vor dem Übergabetermin.</h2><p class="section-text">Eine gute Vorbereitung reduziert Stress am Übergabetag. Entscheidend sind nicht nur saubere Räume, sondern auch Zugänglichkeit, Dokumentation und ein realistischer Blick auf Bereiche, die häufig übersehen werden.</p></div><div class="grid cluster-grid-2">${[
-        card("Räume und Böden", "Alle Räume sollten frei zugänglich sein. Böden, Sockelleisten, Ecken, Türbereiche und Laufwege prägen den ersten Eindruck und sollten vor der Übergabe sorgfältig geprüft werden."),
-        card("Küche und Sanitär", "Küche und Bad sind kritische Bereiche. Armaturen, Fliesen, Spülbecken, Ablagen, Schränke, Duschbereich, WC und sichtbare Kalk- oder Fettrückstände fallen bei Übergaben schnell auf."),
-        card("Fenster, Rahmen und Türen", "Fensterflächen, Rahmen, Griffe, Türen, Zargen und Heizkörper werden häufig unterschätzt. Gerade Rahmen und Kanten sammeln bei Auszug und Renovierung sichtbare Rückstände."),
-        card("Fotos und Protokoll", "Dokumentieren Sie den Zustand vor der Übergabe mit Fotos. Zählerstände, Schlüssel, erkennbare Mängel und besondere Absprachen sollten für den Termin vorbereitet sein."),
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Vorbereitung</div><h2>Die wichtigsten Punkte vor dem Übergabetermin.</h2><p class="section-text">Eine gute Vorbereitung reduziert Stress am Übergabetag. Entscheidend sind nicht nur leere Räume, sondern der sichtbare Gesamteindruck, kritische Detailbereiche, Zugänglichkeit, Dokumentation und ein realistischer Blick auf Stellen, die bei Übergaben häufig beanstandet werden.</p></div><div class="grid cluster-grid-2">${[
+        card("Räume und Böden", "Alle Räume sollten frei zugänglich sein. Böden, Sockelleisten, Ecken, Türbereiche, Laufwege und sichtbare Rückstände prägen den ersten Eindruck und sollten vor der Übergabe strukturiert geprüft werden."),
+        card("Küche und Sanitär", "Küche und Bad sind besonders sensible Bereiche. Armaturen, Fliesen, Spülbecken, Ablagen, Schränke, Duschbereich, WC sowie sichtbare Kalk-, Seifen- oder Fettrückstände fallen bei Übergaben schnell auf."),
+        card("Fenster, Rahmen und Türen", "Fensterflächen, Rahmen, Griffe, Türen, Zargen, Heizkörper und Kanten werden häufig unterschätzt. Gerade nach Auszug oder Renovierung sammeln sich dort Staub, Abrieb und sichtbare Rückstände."),
+        card("Fotos und Protokoll", "Dokumentieren Sie den Zustand vor der Übergabe mit Fotos. Zählerstände, Schlüssel, erkennbare Mängel, vorhandene Schäden und besondere Absprachen sollten vor dem Termin geordnet vorliegen."),
       ].join("")}</div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Checkliste</div><h2>Bereiche, die vor der Übergabe geprüft werden sollten.</h2></div>${renderList(["Böden", "Sockelleisten", "Küche", "Bad", "Fenster", "Rahmen", "Türen", "Heizkörper", "Balkon", "Keller / Abstellraum", "Zählerstände", "Schlüssel", "Übergabeprotokoll", "Fotos"] )}</div></section>
+      <section><div class="container"><div class="section-head"><div class="eyebrow">Checkliste</div><h2>Bereiche, die vor der Übergabe geprüft werden sollten.</h2></div>${renderChecklist(["Böden", "Sockelleisten", "Küche", "Bad", "Fenster", "Rahmen", "Türen", "Heizkörper", "Balkon", "Keller oder Abstellraum", "Zählerstände", "Schlüssel", "Übergabeprotokoll", "Fotos"] )}</div></section>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Einordnung</div><h2>Wann professionelle Reinigung sinnvoll ist.</h2></div><div class="grid cluster-grid-3">${[
         card("Zeitdruck vor Übergabe", "Wenn Auszug, Transport, Renovierung und Übergabetermin eng beieinander liegen, ist professionelle Reinigung oft der sauberere Weg, um den Termin nicht zu gefährden.", { href: "/uebergabereinigung-berlin/", label: "Übergabe ansehen" }),
         card("Sichtbare Rückstände", "Kalk, Fett, Staub, Renovierungsspuren, Rahmenverschmutzung oder stark genutzte Sanitärbereiche lassen sich nicht immer mit kurzer Endreinigung beheben.", { href: "/grundreinigung-berlin/", label: "Grundreinigung ansehen" }),
         card("Objekt soll direkt weitergenutzt werden", "Bei Neuvermietung, Verkauf oder Anschlussnutzung zählt die Gesamtwirkung. Reinigung unterstützt einen geordneten, professionellen Übergabezustand.", { href: "/reinigung-nach-auszug-berlin/", label: "Auszug ansehen" }),
       ].join("")}</div></div></section>
-      <section><div class="container"><div class="info-band"><strong>Besenrein ist nicht automatisch übergabebereit.</strong><p>Was im Einzelfall erwartet wird, hängt von Vereinbarungen und Zustand ab. Für eine professionelle Einschätzung prüfen wir deshalb Objekt, Fotos, Flächen und gewünschtes Ergebnis statt pauschal zu urteilen.</p></div></div></section>
+      <section><div class="container"><div class="info-band"><strong>Besenrein ist nicht automatisch übergabefähig.</strong><p>Was im Einzelfall erwartet wird, hängt von Vereinbarungen, Ausgangszustand und Übergabesituation ab. Für eine professionelle Einschätzung prüfen wir deshalb Objekt, Fotos, Flächen und gewünschtes Ergebnis statt pauschal zu urteilen.</p></div></div></section>
   `,
 });
 
@@ -176,10 +197,10 @@ pageShell({
   description: "Was beeinflusst die Kosten der Treppenhausreinigung in Berlin? Faktoren: Etagen, Parteien, Turnus, Allgemeinflächen, Aufzug, Handläufe, Keller und Sonderreinigung.",
   heroEyebrow: "Treppenhausreinigung Kosten Berlin",
   h1: "Treppenhausreinigung Kosten in Berlin – objektbezogen einschätzen.",
-  lead: "Die Kosten einer Treppenhausreinigung hängen von Objektgröße, Etagen, Parteien, Turnus, Flächenstruktur, Zugänglichkeit und gewünschtem Leistungsumfang ab.",
-  intro: "Nautilus Facility Cleaning erstellt Angebote für Treppenhäuser und Allgemeinflächen objektbezogen. So wird klar, welche Bereiche enthalten sind, welcher Turnus sinnvoll ist und wo Sonderbedarf separat abgestimmt werden sollte.",
-  heroCardTitle: "Für Hausverwaltungen, WEGs und Eigentümer.",
-  heroCardText: "Treppenhausreinigung muss zum Objektalltag passen: regelmäßig, nachvollziehbar, klar abgestimmt und wirtschaftlich sinnvoll geplant.",
+  lead: "Die Kosten einer Treppenhausreinigung in Berlin hängen von Objektgröße, Etagen, Parteien, Turnus, Flächenstruktur, Zugänglichkeit, Nutzung und gewünschtem Leistungsumfang ab.",
+  intro: "Nautilus Facility Cleaning erstellt Angebote für Treppenhäuser und Allgemeinflächen objektbezogen. So wird vor Beginn klar, welche Bereiche regelmäßig enthalten sind, welcher Turnus sinnvoll ist und welcher Sonderbedarf separat eingeordnet werden sollte.",
+  heroCardTitle: "Für Hausverwaltungen, WEGs und Eigentümer mit Objektverantwortung.",
+  heroCardText: "Treppenhausreinigung muss zum Objektalltag passen: nachvollziehbarer Leistungsumfang, sauberer Turnus, klare Zugangslösung und realistische Planung statt unklarer Standardleistung.",
   faq: [
     ["Wovon hängen die Kosten einer Treppenhausreinigung ab?", "Von Etagen, Parteien, Flächen, Turnus, Verschmutzungsgrad, Zugang, Aufzug, Kellerbereichen, Handläufen und Sonderleistungen."],
     ["Ist eine Besichtigung sinnvoll?", "Bei verwalteten Objekten ist eine kurze Besichtigung oft sinnvoll, weil Treppenhaus, Eingänge und Allgemeinflächen sehr unterschiedlich aufgebaut sind."],
@@ -188,19 +209,19 @@ pageShell({
     ["Erstellt Nautilus Facility Cleaning Angebote für Hausverwaltungen?", "Ja. Wir prüfen einzelne Liegenschaften, Treppenhäuser, Allgemeinflächen, Sonderreinigungen und Übergabebedarf objektbezogen."],
   ],
   body: `
-      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Kostenfaktoren</div><h2>Was den Aufwand im Treppenhaus bestimmt.</h2><p class="section-text">Treppenhäuser unterscheiden sich stark. Ein gepflegtes kleines Objekt mit wenigen Parteien benötigt eine andere Planung als ein stark frequentiertes Mehrparteienhaus mit Aufzug, Kellerzugängen und Eingangsbereich.</p></div><div class="grid cluster-grid-2">${[
-        card("Etagen und Parteien", "Anzahl der Etagen, Podeste, Wohneinheiten und Laufwege beeinflussen den Zeitaufwand. Auch die Frequenz der Nutzung spielt eine Rolle."),
-        card("Turnus und Leistungsbild", "Wöchentliche Reinigung, zweiwöchentlicher Turnus oder objektbezogene Intervalle sollten zur Nutzung und zum gewünschten Erscheinungsbild passen."),
-        card("Allgemeinflächen", "Eingänge, Briefkästen, Aufzug, Kellerzugänge, Handläufe, Glasflächen und Nebenbereiche müssen klar definiert werden, damit der Umfang nachvollziehbar bleibt."),
-        card("Sonderbedarf", "Starke Verschmutzung, Grundreinigung, Renovierungsspuren, Müllräume oder zusätzliche Fenster- und Rahmenreinigung werden separat eingeordnet."),
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Kostenfaktoren</div><h2>Was den Aufwand im Treppenhaus bestimmt.</h2><p class="section-text">Treppenhäuser unterscheiden sich deutlich. Ein gepflegtes kleines Objekt mit wenigen Parteien benötigt eine andere Planung als ein stark frequentiertes Mehrparteienhaus mit Aufzug, Kellerzugängen, Eingangsbereich, Briefkastenanlage und erhöhtem Nutzungsdruck.</p></div><div class="grid cluster-grid-2">${[
+        card("Etagen und Parteien", "Anzahl der Etagen, Podeste, Wohneinheiten, Laufwege und Zwischenflächen beeinflussen den Zeitaufwand. Auch Bewohnerstruktur, Publikumsverkehr und Frequenz der Nutzung spielen eine Rolle."),
+        card("Turnus und Leistungsbild", "Wöchentliche Reinigung, zweiwöchentlicher Turnus oder objektbezogene Intervalle sollten zur Nutzung, Verschmutzung und zum gewünschten Erscheinungsbild passen. Der Turnus ist ein zentraler Kostenhebel."),
+        card("Allgemeinflächen", "Eingänge, Briefkästen, Aufzug, Kellerzugänge, Handläufe, Glasflächen und Nebenbereiche müssen klar definiert werden. Nur so bleibt nachvollziehbar, welche Flächen laufend gereinigt werden."),
+        card("Sonderbedarf", "Starke Verschmutzung, Grundreinigung, Renovierungsspuren, Müllräume oder zusätzliche Fenster- und Rahmenreinigung sollten separat eingeordnet werden, damit die laufende Reinigung nicht unklar überladen wird."),
       ].join("")}</div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Objektprüfung</div><h2>Welche Angaben für ein Angebot wichtig sind.</h2></div>${renderList(["Adresse / Bezirk", "Anzahl Etagen", "Anzahl Parteien", "Eingangsbereich", "Aufzug", "Kellerzugänge", "Handläufe", "Fenster / Glas", "gewünschter Turnus", "aktueller Zustand", "Zugangslösung", "Sonderflächen"] )}</div></section>
+      <section><div class="container"><div class="section-head"><div class="eyebrow">Objektprüfung</div><h2>Welche Angaben für ein Angebot wichtig sind.</h2></div>${renderChecklist(["Adresse und Bezirk", "Anzahl Etagen", "Anzahl Parteien", "Eingangsbereich", "Aufzug", "Kellerzugänge", "Handläufe", "Fenster und Glas", "gewünschter Turnus", "aktueller Zustand", "Zugangslösung", "Sonderflächen"] )}</div></section>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Für Verwaltungen</div><h2>Warum objektbezogene Angebote bei Treppenhäusern sinnvoll sind.</h2></div><div class="grid cluster-grid-3">${[
         card("Klare Leistungsabgrenzung", "Vor Beginn wird definiert, welche Flächen, Bauteile und Zusatzbereiche enthalten sind. Das reduziert Missverständnisse im laufenden Objektbetrieb.", { href: "/treppenhausreinigung-berlin/", label: "Treppenhaus ansehen" }),
         card("Planbarer Turnus", "Ein sauber abgestimmter Turnus sorgt dafür, dass Eingangsbereiche, Laufwege und Kontaktflächen regelmäßig betreut werden, ohne den Umfang unnötig aufzublähen.", { href: "/hausverwaltungen-berlin/", label: "Hausverwaltung ansehen" }),
         card("Sonderreinigung steuerbar", "Grundreinigung, Renovierungsspuren oder Zusatzflächen können gezielt eingeordnet werden, statt sie unklar in die laufende Reinigung zu mischen.", { href: "/grundreinigung-berlin/", label: "Grundreinigung ansehen" }),
       ].join("")}</div></div></section>
-      <section><div class="container"><div class="info-band"><strong>Ein guter Preis entsteht aus einem klaren Leistungsbild.</strong><p>Gerade bei Treppenhäusern ist entscheidend, dass Turnus, Flächen, Zugang und Sonderbedarf sauber definiert sind. So bleibt die Reinigung im Objektalltag nachvollziehbar und planbar.</p></div></div></section>
+      <section><div class="container"><div class="info-band"><strong>Ein belastbarer Preis entsteht aus einem klaren Leistungsbild.</strong><p>Gerade bei Treppenhäusern ist entscheidend, dass Turnus, Flächen, Zugang und Sonderbedarf sauber definiert sind. So bleibt die Reinigung für Verwaltung, Eigentümer und Nutzer nachvollziehbar und planbar.</p></div></div></section>
   `,
 });
 

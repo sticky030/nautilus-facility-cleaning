@@ -758,6 +758,109 @@
       @media(max-width:760px){ .process-grid{grid-template-columns:1fr !important;} .checklist-cta{display:block;} .checklist-cta .button{margin-top:18px;} }
       @media(prefers-reduced-motion:reduce){ .premium-reveal{opacity:1;transform:none;transition:none}.premium-marquee-track{animation:none} }
 
+    
+      .horizontal-process {
+        margin-top: 34px;
+        border: 1px solid #E5D9C8;
+        border-radius: 30px;
+        background: linear-gradient(135deg,#FFFFFF 0%,#FCFBF8 100%);
+        padding: 34px;
+        box-shadow: 0 24px 70px rgba(60,48,35,.07);
+        overflow: hidden;
+      }
+      .horizontal-process-track {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+      .horizontal-process-track::before {
+        content:"";
+        position:absolute;
+        left: calc(12.5% + 22px);
+        right: calc(12.5% + 22px);
+        top: 22px;
+        height: 2px;
+        background:#E5E1D8;
+      }
+      .horizontal-process-track::after {
+        content:"";
+        position:absolute;
+        left: calc(12.5% + 22px);
+        top: 22px;
+        height: 2px;
+        width: 0;
+        background:#B79B6C;
+      }
+      .horizontal-process.run-horizontal .horizontal-process-track::after {
+        animation: horizontalLine 2.75s cubic-bezier(.4,0,.2,1) forwards;
+      }
+      .horizontal-step {
+        position: relative;
+        z-index: 1;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .horizontal-dot {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: 1px solid rgba(183,155,108,.32);
+        background:#fff;
+        color:#B79B6C;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:12px;
+        font-weight:850;
+        letter-spacing:.08em;
+      }
+      .horizontal-step h3 {
+        margin: 0;
+        color:#9A8D7D;
+        font-size: 18px;
+        line-height:1.25;
+      }
+      .horizontal-step p {
+        margin: 0;
+        color:#7E7367;
+        font-size:14px;
+        line-height:1.75;
+        opacity:.42;
+        transform:translate3d(0,8px,0);
+      }
+      .horizontal-process.run-horizontal .horizontal-dot {
+        animation: horizontalDot .52s ease forwards, horizontalPulse .92s ease 1;
+        animation-delay: calc(.12s + var(--h-step) * .72s), calc(.12s + var(--h-step) * .72s);
+      }
+      .horizontal-process.run-horizontal .horizontal-step h3 {
+        animation: horizontalTitle .42s ease forwards;
+        animation-delay: calc(.18s + var(--h-step) * .72s);
+      }
+      .horizontal-process.run-horizontal .horizontal-step p {
+        animation: horizontalText .48s ease forwards;
+        animation-delay: calc(.24s + var(--h-step) * .72s);
+      }
+      @keyframes horizontalLine { to { width: calc(75% - 44px); } }
+      @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
+      @keyframes horizontalTitle { to { color:#2C2C2C; } }
+      @keyframes horizontalText { to { opacity:1; transform:translate3d(0,0,0); } }
+      @keyframes horizontalPulse { 0%{box-shadow:0 0 0 0 rgba(183,155,108,.46)} 100%{box-shadow:0 0 0 18px rgba(183,155,108,0)} }
+      @media(max-width:980px){
+        .horizontal-process-track{grid-template-columns:1fr; gap:0;}
+        .horizontal-process-track::before,.horizontal-process-track::after{display:none;}
+        .horizontal-step{min-height:0; display:grid; grid-template-columns:44px 1fr; gap:18px; padding-bottom:24px;}
+        .horizontal-step h3,.horizontal-step p{grid-column:2;}
+        .horizontal-dot{grid-row:1 / span 2;}
+      }
+      @media(prefers-reduced-motion:reduce){
+        .horizontal-process .horizontal-dot{background:#B79B6C;color:#fff;border-color:#B79B6C;}
+        .horizontal-step h3{color:#2C2C2C;}
+        .horizontal-step p{opacity:1;transform:none;}
+      }
+
     </style>
   
     <script type="application/ld+json" data-schema="breadcrumb">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://nautilus-facility.de/"},{"@type":"ListItem","position":2,"name":"Einsatzgebiete","item":"https://nautilus-facility.de/#einsatzgebiet"},{"@type":"ListItem","position":3,"name":"Reinigungsfirma Pankow Berlin","item":"https://nautilus-facility.de/reinigungsfirma-pankow-berlin/"}]}</script>
@@ -940,5 +1043,30 @@
             </details></div></div></section>
     </main>
     <footer><div class="container"><div class="footer-grid"><div><div class="footer-title">Nautilus Facility Cleaning</div><p style="margin:0; color:#7E7367; line-height:1.75;">Objektbezogene Reinigungsfirma in Berlin für Auszug, Übergabe, Renovierung, Gewerbe, Praxen, Kanzleien, Treppenhäuser und Hausverwaltungen.</p></div><div><div class="footer-title">Leistungen</div><div class="footer-links"><a href="/reinigung-nach-auszug-berlin/">Reinigung nach Auszug</a><a href="/uebergabereinigung-berlin/">Übergabereinigung</a><a href="/reinigung-nach-renovierung-berlin/">Reinigung nach Renovierung</a><a href="/treppenhausreinigung-berlin/">Treppenhausreinigung</a></div></div><div><div class="footer-title">Kontakt</div><div class="footer-links"><a href="tel:+4917622844636">0176 2284 4636</a><a href="mailto:kontakt@nautilus-facility.de">kontakt@nautilus-facility.de</a><a href="https://nautilus-facility.de/?kontakt=1#kontakt" onclick="sessionStorage.setItem('scrollToContact', '1')">Anfrageformular nutzen</a><a href="/">Startseite</a></div></div></div><div class="footer-meta"><span>Pankow</span><span>Berlin</span><span><a href="/impressum/">Impressum</a></span><span><a href="/datenschutz/">Datenschutz</a></span></div></div></footer>
+  <script id="nfc-horizontal-process-js">
+(function(){
+  function ready(fn){ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn(); }
+  ready(function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.horizontal-process'));
+    if(!boxes.length) return;
+    function play(box){ if(box.dataset.played) return; box.dataset.played='1'; box.classList.add('run-horizontal'); }
+    function check(){
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      boxes.forEach(function(box){
+        if(box.dataset.played) return;
+        var rect = box.getBoundingClientRect();
+        var center = rect.top + rect.height/2;
+        var distance = Math.abs(center - viewport/2);
+        var tolerance = Math.min(150, viewport * 0.18);
+        var visible = rect.top < viewport * 0.84 && rect.bottom > viewport * 0.16;
+        if(visible && distance <= tolerance) play(box);
+      });
+    }
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+    requestAnimationFrame(check);
+  });
+})();
+</script>
   </body>
 </html>

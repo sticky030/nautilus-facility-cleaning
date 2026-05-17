@@ -3,6 +3,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 const appFile = "src/App.tsx";
 let app = readFileSync(appFile, "utf8");
 
+// Remove accidental duplicate state declarations from prior non-idempotent runs.
+app = app.replace(/\n\s*const \[processActive, setProcessActive\] = useState\(false\);/g, "");
 app = app.replace(
   "  const [loading, setLoading] = useState(false);",
   "  const [loading, setLoading] = useState(false);\n  const [processActive, setProcessActive] = useState(false);"
@@ -43,9 +45,9 @@ const processEffect = `  useEffect(() => {
 
 `;
 
-if (!app.includes("checkProcessCenter")) {
-  app = app.replace(effectMarker, processEffect + effectMarker);
-}
+// Remove any older injected copies, then insert one clean copy.
+app = app.replace(/\n\s*useEffect\(\(\) => \{\n\s*let played = false;[\s\S]*?\n\s*\}, \[\]\);\n\n(?=\s*const handleSubmit)/, "\n");
+app = app.replace(effectMarker, processEffect + effectMarker);
 
 const start = app.indexOf("        {/* ABLAUF */}");
 const end = app.indexOf("\n\n        <FAQSection />", start);
@@ -121,119 +123,33 @@ const cssBlock = `
   pointer-events: none;
 }
 .connected-process-head { position: relative; margin-bottom: 34px; }
-.connected-process-head p {
-  margin: 0 0 8px;
-  color: #B79B6C;
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: .28em;
-  text-transform: uppercase;
-}
-.connected-process-head h3 {
-  margin: 0;
-  color: #2C2C2C;
-  font-size: 24px;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-}
-.connected-step {
-  position: relative;
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 22px;
-  opacity: 1;
-  transform: none;
-}
-.connected-right h4 {
-  margin: 0 0 8px;
-  color: #9A8D7D;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-.connected-right p {
-  margin: 0;
-  color: #7E7367;
-  font-size: 14px;
-  line-height: 1.75;
-  max-width: 58ch;
-  opacity: .34;
-  transform: translate3d(0, 8px, 0);
-}
+.connected-process-head p { margin: 0 0 8px; color: #B79B6C; font-size: 11px; font-weight: 850; letter-spacing: .28em; text-transform: uppercase; }
+.connected-process-head h3 { margin: 0; color: #2C2C2C; font-size: 24px; line-height: 1.2; letter-spacing: -0.035em; }
+.connected-step { position: relative; display: grid; grid-template-columns: 42px 1fr; gap: 22px; opacity: 1; transform: none; }
+.connected-right h4 { margin: 0 0 8px; color: #9A8D7D; font-size: 18px; line-height: 1.25; font-weight: 700; letter-spacing: -0.025em; }
+.connected-right p { margin: 0; color: #7E7367; font-size: 14px; line-height: 1.75; max-width: 58ch; opacity: .34; transform: translate3d(0, 8px, 0); }
 .connected-left { display: flex; flex-direction: column; align-items: center; }
-.connected-dot {
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  border: 1px solid rgba(183,155,108,.28);
-  background: #fff;
-  color: #B79B6C;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 850;
-  letter-spacing: .08em;
-}
-.connected-segment {
-  position: relative;
-  width: 2px;
-  min-height: 58px;
-  flex: 1;
-  background: #E5E1D8;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.connected-segment span {
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 0;
-  background: #B79B6C;
-}
+.connected-dot { width: 42px; height: 42px; border-radius: 999px; border: 1px solid rgba(183,155,108,.28); background: #fff; color: #B79B6C; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 850; letter-spacing: .08em; }
+.connected-segment { position: relative; width: 2px; min-height: 58px; flex: 1; background: #E5E1D8; overflow: hidden; margin: 0 auto; }
+.connected-segment span { position: absolute; inset: 0 0 auto 0; height: 0; background: #B79B6C; }
 .connected-right { padding: 2px 0 30px; }
 .connected-step:last-child .connected-right { padding-bottom: 0; }
-.connected-process.run-connected .connected-right h4 {
-  animation: connectedTitleIn .45s ease forwards;
-  animation-delay: calc(.28s + var(--step-index) * 1.05s);
-}
-.connected-process.run-connected .connected-right p {
-  animation: connectedTextIn .52s ease forwards;
-  animation-delay: calc(.38s + var(--step-index) * 1.05s);
-}
-.connected-process.run-connected .connected-dot {
-  animation: connectedDotGold .52s ease forwards, connectedDotPulse 1.05s ease 1;
-  animation-delay: calc(.18s + var(--step-index) * 1.05s), calc(.18s + var(--step-index) * 1.05s);
-}
-.connected-process.run-connected .connected-segment span {
-  animation: connectedLineFill .86s cubic-bezier(.4,0,.2,1) forwards;
-  animation-delay: calc(.62s + var(--step-index) * 1.05s);
-}
+.connected-process.run-connected .connected-right h4 { animation: connectedTitleIn .45s ease forwards; animation-delay: calc(.28s + var(--step-index) * 1.05s); }
+.connected-process.run-connected .connected-right p { animation: connectedTextIn .52s ease forwards; animation-delay: calc(.38s + var(--step-index) * 1.05s); }
+.connected-process.run-connected .connected-dot { animation: connectedDotGold .52s ease forwards, connectedDotPulse 1.05s ease 1; animation-delay: calc(.18s + var(--step-index) * 1.05s), calc(.18s + var(--step-index) * 1.05s); }
+.connected-process.run-connected .connected-segment span { animation: connectedLineFill .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay: calc(.62s + var(--step-index) * 1.05s); }
 @keyframes connectedTextIn { to { opacity: 1; transform: translate3d(0,0,0); } }
 @keyframes connectedTitleIn { to { color:#2C2C2C; } }
 @keyframes connectedLineFill { to { height: 100%; } }
 @keyframes connectedDotGold { to { background: #B79B6C; color: #fff; border-color: #B79B6C; } }
-@keyframes connectedDotPulse {
-  0% { box-shadow:0 0 0 0 rgba(183,155,108,.55), 0 12px 28px rgba(183,155,108,.12); transform:scale(1); }
-  38% { box-shadow:0 0 0 16px rgba(183,155,108,.18), 0 18px 38px rgba(183,155,108,.24); transform:scale(1.08); }
-  100% { box-shadow:0 0 0 24px rgba(183,155,108,0), 0 12px 28px rgba(183,155,108,.16); transform:scale(1); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .connected-right h4 { color:#2C2C2C; }
-  .connected-right p { opacity:1; transform:none; }
-  .connected-dot { background:#B79B6C; color:#fff; border-color:#B79B6C; }
-  .connected-segment span { height:100%; }
-}
-@media (max-width: 760px) {
-  .connected-process { padding: 30px 22px; }
-  .connected-step { grid-template-columns: 38px 1fr; gap: 18px; }
-  .connected-dot { width: 38px; height: 38px; }
-}
+@keyframes connectedDotPulse { 0% { box-shadow:0 0 0 0 rgba(183,155,108,.55), 0 12px 28px rgba(183,155,108,.12); transform:scale(1); } 38% { box-shadow:0 0 0 16px rgba(183,155,108,.18), 0 18px 38px rgba(183,155,108,.24); transform:scale(1.08); } 100% { box-shadow:0 0 0 24px rgba(183,155,108,0), 0 12px 28px rgba(183,155,108,.16); transform:scale(1); } }
+@media (prefers-reduced-motion: reduce) { .connected-right h4 { color:#2C2C2C; } .connected-right p { opacity:1; transform:none; } .connected-dot { background:#B79B6C; color:#fff; border-color:#B79B6C; } .connected-segment span { height:100%; } }
+@media (max-width: 760px) { .connected-process { padding: 30px 22px; } .connected-step { grid-template-columns: 38px 1fr; gap: 18px; } .connected-dot { width: 38px; height: 38px; } }
 `;
 
-if (!css.includes("Homepage connected Ablauf test")) {
-  css += cssBlock;
-  writeFileSync(cssFile, css, "utf8");
-}
+// Replace older versions of this CSS block instead of appending duplicates.
+css = css.replace(/\n\/\* ===== Homepage connected Ablauf test ===== \*\/[\s\S]*?(?=\n\/\*|$)/, "");
+css += cssBlock;
+writeFileSync(cssFile, css, "utf8");
 
-console.log("Homepage connected Ablauf test applied with React center trigger.");
+console.log("Homepage connected Ablauf test applied with idempotent React center trigger.");

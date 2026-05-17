@@ -54,15 +54,9 @@ const css = `
         animation: nfcConnectedLineFill .86s cubic-bezier(.4,0,.2,1) forwards !important;
         animation-delay: calc(.62s + var(--step-index) * 1.05s) !important;
       }
-      @keyframes nfcConnectedTextIn {
-        to { opacity: 1; transform: translate3d(0,0,0); }
-      }
-      @keyframes nfcConnectedTitleGold {
-        to { color:#2C2C2C; }
-      }
-      @keyframes nfcConnectedLineFill {
-        to { height: 100%; }
-      }
+      @keyframes nfcConnectedTextIn { to { opacity: 1; transform: translate3d(0,0,0); } }
+      @keyframes nfcConnectedTitleGold { to { color:#2C2C2C; } }
+      @keyframes nfcConnectedLineFill { to { height: 100%; } }
       @keyframes nfcConnectedDotGold {
         0% { background:#fff; color:#B79B6C; border-color:rgba(183,155,108,.28); }
         100% { background:#B79B6C; color:#fff; border-color:#B79B6C; }
@@ -88,27 +82,26 @@ const js = `<script id="nfc-connected-hard-trigger">
     if(!box) return;
     box.classList.remove('run-connected');
     var played = false;
-    function visibleEnough(){
+    function centeredEnough(){
       var rect = box.getBoundingClientRect();
       var viewport = window.innerHeight || document.documentElement.clientHeight;
-      var visible = Math.min(rect.bottom, viewport) - Math.max(rect.top, 0);
-      var ratio = visible / Math.max(rect.height, 1);
-      return ratio >= 0.78 && rect.top < viewport * 0.62;
+      var boxCenter = rect.top + rect.height / 2;
+      var viewportCenter = viewport / 2;
+      var distance = Math.abs(boxCenter - viewportCenter);
+      var tolerance = Math.min(90, viewport * 0.11);
+      var fullyReadable = rect.top > viewport * 0.12 && rect.bottom < viewport * 0.92;
+      return fullyReadable && distance <= tolerance;
     }
     function play(){
-      if(played || !visibleEnough()) return;
+      if(played || !centeredEnough()) return;
       played = true;
       box.classList.remove('run-connected');
       void box.offsetWidth;
-      setTimeout(function(){ box.classList.add('run-connected'); }, 180);
+      setTimeout(function(){ box.classList.add('run-connected'); }, 120);
     }
     window.addEventListener('scroll', play, { passive: true });
     window.addEventListener('resize', play);
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){ if(entry.isIntersecting) play(); });
-    }, { threshold: [0.65, 0.78, 0.9], rootMargin: '0px 0px -4% 0px' });
-    observer.observe(box);
-    setTimeout(play, 600);
+    requestAnimationFrame(play);
   });
 })();
 </script>`;
@@ -126,4 +119,4 @@ if (html.includes('id="nfc-connected-hard-trigger"')) {
 }
 
 writeFileSync(file, html, "utf8");
-console.log("Homepage connected Ablauf animation adjusted: later trigger and stronger visible sequence.");
+console.log("Homepage connected Ablauf animation trigger corrected: starts only when process block is centered.");

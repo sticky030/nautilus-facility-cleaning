@@ -3,6 +3,50 @@ import { readFileSync, writeFileSync } from "node:fs";
 const appFile = "src/App.tsx";
 let app = readFileSync(appFile, "utf8");
 
+app = app.replace(
+  "  const [loading, setLoading] = useState(false);",
+  "  const [loading, setLoading] = useState(false);\n  const [processActive, setProcessActive] = useState(false);"
+);
+
+const effectMarker = "  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {";
+const processEffect = `  useEffect(() => {
+    let played = false;
+
+    const checkProcessCenter = () => {
+      if (played) return;
+      const box = document.querySelector('.connected-process');
+      if (!box) return;
+
+      const rect = box.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const viewportCenter = viewport / 2;
+      const boxCenter = rect.top + rect.height / 2;
+      const distance = Math.abs(boxCenter - viewportCenter);
+      const tolerance = Math.min(70, viewport * 0.08);
+      const readable = rect.top > viewport * 0.08 && rect.bottom < viewport * 0.96;
+
+      if (readable && distance <= tolerance) {
+        played = true;
+        setProcessActive(true);
+      }
+    };
+
+    window.addEventListener('scroll', checkProcessCenter, { passive: true });
+    window.addEventListener('resize', checkProcessCenter);
+    requestAnimationFrame(checkProcessCenter);
+
+    return () => {
+      window.removeEventListener('scroll', checkProcessCenter);
+      window.removeEventListener('resize', checkProcessCenter);
+    };
+  }, []);
+
+`;
+
+if (!app.includes("checkProcessCenter")) {
+  app = app.replace(effectMarker, processEffect + effectMarker);
+}
+
 const start = app.indexOf("        {/* ABLAUF */}");
 const end = app.indexOf("\n\n        <FAQSection />", start);
 
@@ -23,7 +67,7 @@ const newSection = `        {/* ABLAUF */}
               </div>
 
               <div className="reveal lg:col-span-7">
-                <div className="connected-process" aria-label="Ablauf von der Anfrage bis zum Start">
+                <div className={\`connected-process \${processActive ? 'run-connected' : ''}\`} aria-label="Ablauf von der Anfrage bis zum Start">
                   <div className="connected-process-head">
                     <p>Ablauf</p>
                     <h3>Von der Anfrage zum laufenden Auftrag.</h3>
@@ -97,19 +141,32 @@ const cssBlock = `
   display: grid;
   grid-template-columns: 42px 1fr;
   gap: 22px;
-  opacity: 0;
-  transform: translate3d(0, 18px, 0);
+  opacity: 1;
+  transform: none;
 }
-.connected-process.is-active .connected-step {
-  animation: connectedStepIn .48s cubic-bezier(.22,1,.36,1) forwards;
-  animation-delay: calc(.18s + var(--step-index) * .62s);
+.connected-right h4 {
+  margin: 0 0 8px;
+  color: #9A8D7D;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.connected-right p {
+  margin: 0;
+  color: #7E7367;
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 58ch;
+  opacity: .34;
+  transform: translate3d(0, 8px, 0);
 }
 .connected-left { display: flex; flex-direction: column; align-items: center; }
 .connected-dot {
   width: 42px;
   height: 42px;
   border-radius: 999px;
-  border: 1px solid rgba(183,155,108,.35);
+  border: 1px solid rgba(183,155,108,.28);
   background: #fff;
   color: #B79B6C;
   display: flex;
@@ -118,11 +175,6 @@ const cssBlock = `
   font-size: 12px;
   font-weight: 850;
   letter-spacing: .08em;
-  box-shadow: 0 12px 28px rgba(183,155,108,.12);
-}
-.connected-process.is-active .connected-dot {
-  animation: connectedDotGold .42s ease forwards, connectedDotPulse .7s ease 1;
-  animation-delay: calc(.22s + var(--step-index) * .62s), calc(.22s + var(--step-index) * .62s);
 }
 .connected-segment {
   position: relative;
@@ -139,38 +191,38 @@ const cssBlock = `
   height: 0;
   background: #B79B6C;
 }
-.connected-process.is-active .connected-segment span {
-  animation: connectedLineFill .54s cubic-bezier(.4,0,.2,1) forwards;
-  animation-delay: calc(.48s + var(--step-index) * .62s);
-}
 .connected-right { padding: 2px 0 30px; }
 .connected-step:last-child .connected-right { padding-bottom: 0; }
-.connected-right h4 {
-  margin: 0 0 8px;
-  color: #2C2C2C;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.025em;
+.connected-process.run-connected .connected-right h4 {
+  animation: connectedTitleIn .45s ease forwards;
+  animation-delay: calc(.28s + var(--step-index) * 1.05s);
 }
-.connected-right p {
-  margin: 0;
-  color: #7E7367;
-  font-size: 14px;
-  line-height: 1.75;
-  max-width: 58ch;
+.connected-process.run-connected .connected-right p {
+  animation: connectedTextIn .52s ease forwards;
+  animation-delay: calc(.38s + var(--step-index) * 1.05s);
 }
-@keyframes connectedStepIn { to { opacity: 1; transform: translate3d(0,0,0); } }
+.connected-process.run-connected .connected-dot {
+  animation: connectedDotGold .52s ease forwards, connectedDotPulse 1.05s ease 1;
+  animation-delay: calc(.18s + var(--step-index) * 1.05s), calc(.18s + var(--step-index) * 1.05s);
+}
+.connected-process.run-connected .connected-segment span {
+  animation: connectedLineFill .86s cubic-bezier(.4,0,.2,1) forwards;
+  animation-delay: calc(.62s + var(--step-index) * 1.05s);
+}
+@keyframes connectedTextIn { to { opacity: 1; transform: translate3d(0,0,0); } }
+@keyframes connectedTitleIn { to { color:#2C2C2C; } }
 @keyframes connectedLineFill { to { height: 100%; } }
 @keyframes connectedDotGold { to { background: #B79B6C; color: #fff; border-color: #B79B6C; } }
 @keyframes connectedDotPulse {
-  0% { box-shadow: 0 0 0 0 rgba(183,155,108,.38), 0 12px 28px rgba(183,155,108,.12); }
-  100% { box-shadow: 0 0 0 14px rgba(183,155,108,0), 0 12px 28px rgba(183,155,108,.12); }
+  0% { box-shadow:0 0 0 0 rgba(183,155,108,.55), 0 12px 28px rgba(183,155,108,.12); transform:scale(1); }
+  38% { box-shadow:0 0 0 16px rgba(183,155,108,.18), 0 18px 38px rgba(183,155,108,.24); transform:scale(1.08); }
+  100% { box-shadow:0 0 0 24px rgba(183,155,108,0), 0 12px 28px rgba(183,155,108,.16); transform:scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .connected-step, .connected-process.is-active .connected-step { animation: none; opacity: 1; transform: none; }
-  .connected-process.is-active .connected-dot { animation: none; background:#B79B6C; color:#fff; border-color:#B79B6C; }
-  .connected-segment span { height: 100%; }
+  .connected-right h4 { color:#2C2C2C; }
+  .connected-right p { opacity:1; transform:none; }
+  .connected-dot { background:#B79B6C; color:#fff; border-color:#B79B6C; }
+  .connected-segment span { height:100%; }
 }
 @media (max-width: 760px) {
   .connected-process { padding: 30px 22px; }
@@ -184,4 +236,4 @@ if (!css.includes("Homepage connected Ablauf test")) {
   writeFileSync(cssFile, css, "utf8");
 }
 
-console.log("Homepage connected Ablauf test applied.");
+console.log("Homepage connected Ablauf test applied with React center trigger.");

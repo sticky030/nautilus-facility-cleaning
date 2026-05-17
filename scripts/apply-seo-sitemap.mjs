@@ -13,6 +13,13 @@ const urls = [
   "/reinigung-nach-auszug-berlin/",
   "/uebergabereinigung-berlin/",
   "/bauendreinigung-berlin/",
+  "/reinigungsfirma-lichtenberg-berlin/",
+  "/reinigungsfirma-marzahn-hellersdorf-berlin/",
+  "/reinigungsfirma-pankow-berlin/",
+  "/reinigungsfirma-prenzlauer-berg-berlin/",
+  "/reinigungsfirma-weissensee-berlin/",
+  "/reinigungsfirma-friedrichshain-kreuzberg-berlin/",
+  "/reinigungsfirma-berlin-mitte/",
   "/datenschutz/",
   "/impressum/",
 ];

@@ -3,8 +3,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 const file = "src/App.tsx";
 let source = readFileSync(file, "utf8");
 
-const footerStart = source.indexOf('      <footer className="bg-white py-20 text-left border-t border-[#E5E1D8]">');
-const footerEnd = source.indexOf('      </footer>', footerStart);
+const footerStart = source.indexOf("      <footer className=");
+const footerEnd = footerStart === -1 ? -1 : source.indexOf("      </footer>", footerStart);
 
 if (footerStart === -1 || footerEnd === -1) {
   throw new Error("Home footer block not found in src/App.tsx");
@@ -69,6 +69,6 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
         </div>
       </footer>`;
 
-source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + '      </footer>'.length)}`;
+source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + "      </footer>".length)}`;
 writeFileSync(file, source, "utf8");
 console.log("Home footer structure patched: simplified premium footer without duplicate CTA block.");

@@ -20,10 +20,10 @@ function sharedStyle() {
 
 function renderCards(cards) {
   return cards.map((card) => `
-            <article class="card">
+            <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
               <h3>${card.title}</h3>
-              <p>${card.text}</p>
-              ${card.link ? `<p><a href="${card.link.href}" style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">${card.link.label}</a></p>` : ""}
+              <p style="margin-bottom:${card.link ? "28px" : "0"};">${card.text}</p>
+              ${card.link ? `<p style="margin-top:auto; margin-bottom:0;"><a href="${card.link.href}" style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">${card.link.label}</a></p>` : ""}
             </article>`).join("\n");
 }
 
@@ -212,7 +212,7 @@ function renderPage(district) {
         { title: "Praxen, Kanzleien und Büros", text: "Für regelmäßige Reinigung sensibler, repräsentativer und gewerblicher Räume nach abgestimmtem Leistungsbild." },
         { title: "Hausverwaltungen und WEGs", text: "Für Treppenhäuser, Allgemeinflächen, Sonderreinigung, Objektbedarf und einzelne Liegenschaften." },
       ])}</div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft eine Anfrage für Reinigung in ${district.name} ab.</h2><p class="section-text">Senden Sie Bezirk, Fläche, gewünschtes Zeitfenster, Objektart und Fotos. Wir prüfen den Aufwand, stellen gezielte Rückfragen und klären, ob ein objektbezogenes Angebot direkt möglich ist oder eine kurze Besichtigung sinnvoll wäre.</p></div><div class="grid">${renderCards([
+      <section><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft eine Anfrage für Reinigung in ${district.name} ab.</h2><p class="section-text">Senden Sie Bezirk, Fläche, gewünschtes Zeitfenster, Objektart und Fotos. Wir prüfen den Bedarf, stellen gezielte Rückfragen und klären, ob ein objektbezogenes Angebot direkt möglich ist oder eine kurze Besichtigung sinnvoll wäre.</p></div><div class="grid">${renderCards([
         { title: "1. Anfrage senden", text: "Am schnellsten mit Bezirk, Fläche, Termin, Objektart und Fotos vom aktuellen Zustand." },
         { title: "2. Bedarf einordnen", text: "Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Turnus, Zeitfenster und gewünschtes Ergebnis." },
         { title: "3. Angebot oder Besichtigung", text: "Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung." },

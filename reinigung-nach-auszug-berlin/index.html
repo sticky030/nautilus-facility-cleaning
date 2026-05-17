@@ -735,51 +735,18 @@
         column-gap: 22px;
         row-gap: 26px;
       }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
       .horizontal-step:not(:last-child)::before,
-      .horizontal-step:not(:last-child)::after {
-        content:"";
-        position:absolute;
-        top:22px;
-        left:44px;
-        height:2px;
-        width:calc(100% + 22px - 44px);
-        pointer-events:none;
-      }
+      .horizontal-step:not(:last-child)::after { content:""; position:absolute; top:22px; left:44px; height:2px; width:calc(100% + 22px - 44px); pointer-events:none; }
       .horizontal-step:not(:last-child)::before { background:#E5E1D8; }
       .horizontal-step:not(:last-child)::after { background:#B79B6C; transform-origin:left center; transform:scaleX(0); }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-        position:relative;
-        z-index:2;
-      }
-      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
-      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1;
-        animation-delay: calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .45s ease forwards; animation-delay: calc(.28s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .52s ease forwards; animation-delay: calc(.38s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation: horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay: calc(.62s + var(--h-step) * 1.05s); }
+      .horizontal-dot { width:44px; height:44px; border-radius:999px; border:1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; position:relative; z-index:2; }
+      .horizontal-step h3 { margin:0; color:#9A8D7D; font-size:18px; line-height:1.25; }
+      .horizontal-step p { margin:0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation:horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1; animation-delay:calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation:horizontalTitle .45s ease forwards; animation-delay:calc(.28s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation:horizontalText .52s ease forwards; animation-delay:calc(.38s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation:horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay:calc(.62s + var(--h-step) * 1.05s); }
       @keyframes horizontalSegment { to { transform:scaleX(1); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }
@@ -902,29 +869,7 @@
         </div>
       </section>
 
-      <section class="white">
-        <div class="container">
-          <div class="content-split">
-            <div class="section-head" style="margin-bottom:0;">
-              <div class="eyebrow">Ablauf</div>
-              <h2>So läuft die Anfrage für eine Auszugsreinigung ab.</h2>
-              <p class="section-text">Wir starten mit einer realistischen Ersteinschätzung. Je klarer Zustand, Fläche und Termin beschrieben sind, desto schneller kann ein objektbezogenes Angebot vorbereitet werden.</p>
-            </div>
-            <div class="premium-panel">
-              <div class="eyebrow">Für eine Einschätzung</div>
-              <h3>Diese Informationen beschleunigen die Rückmeldung.</h3>
-              <div class="detail-list">
-                <div class="detail-item">Bezirk und Objektadresse oder grobe Lage</div>
-                <div class="detail-item">ungefähre Fläche und Anzahl der Räume</div>
-                <div class="detail-item">gewünschter Übergabe- oder Reinigungstermin</div>
-                <div class="detail-item">leer, teilgeräumt oder möbliert</div>
-                <div class="detail-item">Fotos von Küche, Bad, Böden und Gesamtzustand</div>
-                <div class="detail-item">Fenster und Rahmen: ja/nein/nach Abstimmung</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft die Zusammenarbeit ab.</h2></div><div class="horizontal-process"><div class="horizontal-process-track"><article class="horizontal-step" style="--h-step:0"><div class="horizontal-dot">01</div><h3>Fotos senden</h3><p>Bezirk, Objektart, Fläche, Termin und möglichst Fotos vom aktuellen Zustand übermitteln.</p></article><article class="horizontal-step" style="--h-step:1"><div class="horizontal-dot">02</div><h3>Zustand einordnen</h3><p>Wir prüfen Verschmutzung, Zugänglichkeit, Leistungsumfang und gewünschtes Ergebnis.</p></article><article class="horizontal-step" style="--h-step:2"><div class="horizontal-dot">03</div><h3>Angebot erhalten</h3><p>Sie erhalten eine objektbezogene Einschätzung mit klar abgegrenztem Umfang.</p></article><article class="horizontal-step" style="--h-step:3"><div class="horizontal-dot">04</div><h3>Reinigung durchführen</h3><p>Nach Freigabe erfolgt die Umsetzung im vereinbarten Zeitfenster und Umfang.</p></article></div></div></div></section>
 
       <section>
         <div class="container">

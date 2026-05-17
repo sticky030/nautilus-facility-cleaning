@@ -775,51 +775,18 @@
         column-gap: 22px;
         row-gap: 26px;
       }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
       .horizontal-step:not(:last-child)::before,
-      .horizontal-step:not(:last-child)::after {
-        content:"";
-        position:absolute;
-        top:22px;
-        left:44px;
-        height:2px;
-        width:calc(100% + 22px - 44px);
-        pointer-events:none;
-      }
+      .horizontal-step:not(:last-child)::after { content:""; position:absolute; top:22px; left:44px; height:2px; width:calc(100% + 22px - 44px); pointer-events:none; }
       .horizontal-step:not(:last-child)::before { background:#E5E1D8; }
       .horizontal-step:not(:last-child)::after { background:#B79B6C; transform-origin:left center; transform:scaleX(0); }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-        position:relative;
-        z-index:2;
-      }
-      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
-      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1;
-        animation-delay: calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .45s ease forwards; animation-delay: calc(.28s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .52s ease forwards; animation-delay: calc(.38s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation: horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay: calc(.62s + var(--h-step) * 1.05s); }
+      .horizontal-dot { width:44px; height:44px; border-radius:999px; border:1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; position:relative; z-index:2; }
+      .horizontal-step h3 { margin:0; color:#9A8D7D; font-size:18px; line-height:1.25; }
+      .horizontal-step p { margin:0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation:horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1; animation-delay:calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation:horizontalTitle .45s ease forwards; animation-delay:calc(.28s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation:horizontalText .52s ease forwards; animation-delay:calc(.38s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation:horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay:calc(.62s + var(--h-step) * 1.05s); }
       @keyframes horizontalSegment { to { transform:scaleX(1); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }
@@ -897,30 +864,7 @@
               <p style="margin-bottom:0;">Für Treppenhäuser, Allgemeinflächen, Sonderreinigung, Objektbedarf und einzelne Liegenschaften – mit klarer Leistungsabgrenzung, abgestimmtem Turnus, Zugangslösung und nachvollziehbarer Kommunikation.</p>
               
             </article></div></div></section>
-      <section><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft eine Anfrage für Reinigung in Lichtenberg ab.</h2><p class="section-text">Senden Sie Bezirk, Fläche, gewünschtes Zeitfenster, Objektart und Fotos. Wir prüfen den Bedarf, stellen gezielte Rückfragen und klären, ob ein objektbezogenes Angebot direkt möglich ist oder eine kurze Besichtigung sinnvoll wäre.</p></div><div class="grid district-grid-2 district-process-grid">
-            <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
-              <h3>1. Anfrage senden</h3>
-              <p style="margin-bottom:0;">Am schnellsten mit Bezirk, Fläche, gewünschtem Termin, Objektart und Fotos vom aktuellen Zustand. Bei Treppenhäusern oder Gewerbeobjekten helfen zusätzlich Angaben zu Turnus, Zugang und gewünschtem Leistungsumfang.</p>
-              
-            </article>
-
-            <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
-              <h3>2. Bedarf einordnen</h3>
-              <p style="margin-bottom:0;">Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Turnus, Zeitfenster und gewünschtes Ergebnis. So wird früh klar, ob eine direkte Einschätzung möglich ist oder ob vor Ort Details geklärt werden müssen.</p>
-              
-            </article>
-
-            <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
-              <h3>3. Angebot oder Besichtigung</h3>
-              <p style="margin-bottom:0;">Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung. Das gilt besonders bei größeren Flächen, unklarem Zustand, starkem Reinigungsbedarf oder wiederkehrenden Objekten.</p>
-              
-            </article>
-
-            <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
-              <h3>4. Reinigung nach abgestimmtem Leistungsumfang</h3>
-              <p style="margin-bottom:0;">Nach Freigabe erfolgt die Umsetzung nach klar vereinbartem Leistungsbild, Termin und Umfang. Damit ist vor Beginn nachvollziehbar, welche Bereiche enthalten sind und welche Zusatzleistungen separat abgestimmt wurden.</p>
-              
-            </article></div></div></section>
+      <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft die Zusammenarbeit ab.</h2></div><div class="horizontal-process"><div class="horizontal-process-track"><article class="horizontal-step" style="--h-step:0"><div class="horizontal-dot">01</div><h3>Objekt beschreiben</h3><p>Bezirk, Objektart, Fläche, Zustand und gewünschten Termin kurz übermitteln.</p></article><article class="horizontal-step" style="--h-step:1"><div class="horizontal-dot">02</div><h3>Bedarf prüfen</h3><p>Wir ordnen ein, welche Leistung zum Objekt passt und welche Bereiche relevant sind.</p></article><article class="horizontal-step" style="--h-step:2"><div class="horizontal-dot">03</div><h3>Angebot abstimmen</h3><p>Der Leistungsumfang wird objektbezogen und nachvollziehbar festgelegt.</p></article><article class="horizontal-step" style="--h-step:3"><div class="horizontal-dot">04</div><h3>Reinigung umsetzen</h3><p>Die Reinigung erfolgt in Berlin nach abgestimmtem Zeitfenster und klarer Leistung.</p></article></div></div></div></section>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Leistungsseiten</div><h2>Alle Leistungen mit Details und sauberer Suchintention.</h2><p class="section-text">Diese Bezirksseite zeigt den lokalen Zugang. Die folgenden Leistungsseiten vertiefen den konkreten Bedarf.</p></div><div class="grid district-grid-auto">
             <article class="card" style="display:flex; flex-direction:column; min-height:310px;">
               <h3>Reinigung nach Auszug</h3>

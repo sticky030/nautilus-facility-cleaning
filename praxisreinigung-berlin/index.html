@@ -769,51 +769,18 @@
         column-gap: 22px;
         row-gap: 26px;
       }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
       .horizontal-step:not(:last-child)::before,
-      .horizontal-step:not(:last-child)::after {
-        content:"";
-        position:absolute;
-        top:22px;
-        left:44px;
-        height:2px;
-        width:calc(100% + 22px - 44px);
-        pointer-events:none;
-      }
+      .horizontal-step:not(:last-child)::after { content:""; position:absolute; top:22px; left:44px; height:2px; width:calc(100% + 22px - 44px); pointer-events:none; }
       .horizontal-step:not(:last-child)::before { background:#E5E1D8; }
       .horizontal-step:not(:last-child)::after { background:#B79B6C; transform-origin:left center; transform:scaleX(0); }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-        position:relative;
-        z-index:2;
-      }
-      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
-      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1;
-        animation-delay: calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .45s ease forwards; animation-delay: calc(.28s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .52s ease forwards; animation-delay: calc(.38s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation: horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay: calc(.62s + var(--h-step) * 1.05s); }
+      .horizontal-dot { width:44px; height:44px; border-radius:999px; border:1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; position:relative; z-index:2; }
+      .horizontal-step h3 { margin:0; color:#9A8D7D; font-size:18px; line-height:1.25; }
+      .horizontal-step p { margin:0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation:horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1; animation-delay:calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation:horizontalTitle .45s ease forwards; animation-delay:calc(.28s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation:horizontalText .52s ease forwards; animation-delay:calc(.38s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation:horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay:calc(.62s + var(--h-step) * 1.05s); }
       @keyframes horizontalSegment { to { transform:scaleX(1); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }

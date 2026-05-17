@@ -8,6 +8,17 @@ app = app.replace(
   'className="grid grid-cols-1 gap-8 lg:grid-cols-3"'
 );
 
+// Premium select styling for homepage form.
+const oldSelectClass = 'className="w-full appearance-none rounded-lg border border-[#E5E1D8] bg-[#FCFBF8] px-5 py-3 pr-12 text-[15px] text-[#2C2C2C] outline-none transition-all duration-300 focus:border-[#B79B6C] cursor-pointer"';
+const newSelectClass = 'className="w-full appearance-none rounded-xl border border-[#E5E1D8] bg-white px-5 py-4 pr-12 text-[15px] font-medium text-[#2C2C2C] shadow-[inset_0_1px_0_rgba(255,255,255,.9)] outline-none transition-all duration-300 hover:border-[#D6C8B4] focus:border-[#B79B6C] focus:bg-[#FCFBF8] focus:ring-4 focus:ring-[#B79B6C]/10 cursor-pointer"';
+app = app.split(oldSelectClass).join(newSelectClass);
+
+// Add private customer option once in the homepage object type select.
+app = app.replace(
+  '<option>Büro & Kanzlei</option>\n                            <option>Arztpraxis</option>',
+  '<option>Privatperson / Wohnung</option>\n                            <option>Büro & Kanzlei</option>\n                            <option>Arztpraxis</option>'
+);
+
 writeFileSync(appFile, app, "utf8");
 
 const cssFile = "src/index.css";
@@ -46,4 +57,4 @@ if (!css.includes("Premium Phase 1 + 2")) {
   writeFileSync(cssFile, css, "utf8");
 }
 
-console.log("Premium source UI patched: homepage service grid restored to 3 columns and motion CSS ready.");
+console.log("Premium source UI patched: homepage service grid restored, form selects polished and private option added.");

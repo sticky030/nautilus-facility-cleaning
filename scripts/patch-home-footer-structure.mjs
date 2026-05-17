@@ -12,10 +12,10 @@ if (footerStart === -1 || footerEnd === -1) {
 
 const newFooter = `      <footer className="bg-white py-16 text-left border-t border-[#E5E1D8]">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
-          <div className="grid gap-12 border-b border-[#E5E1D8] pb-12 lg:grid-cols-[1.25fr_0.9fr_0.75fr]">
+          <div className="grid gap-12 border-b border-[#E5E1D8] pb-12 lg:grid-cols-[1fr_0.85fr_0.85fr_0.72fr]">
             <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Leistungen & Ratgeber</div>
-              <div className="mt-6 grid gap-x-8 gap-y-3 text-[14px] font-medium text-[#2C2C2C] sm:grid-cols-2">
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Leistungen</div>
+              <div className="mt-6 grid gap-x-8 gap-y-3 text-[14px] font-medium text-[#2C2C2C] sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                 <a href="/reinigung-nach-auszug-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Auszug</a>
                 <a href="/uebergabereinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Übergabereinigung</a>
                 <a href="/reinigung-nach-renovierung-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Renovierung</a>
@@ -27,6 +27,12 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
                 <a href="/kanzleireinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
                 <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
                 <a href="/fensterreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Ratgeber</div>
+              <div className="mt-6 flex flex-col gap-3 text-[14px] font-medium text-[#2C2C2C]">
                 <a href="/reinigung-kosten-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigungskosten Berlin</a>
                 <a href="/checkliste-wohnungsuebergabe-berlin/" className="hover:text-[#B79B6C] transition-colors">Checkliste Wohnungsübergabe</a>
                 <a href="/treppenhausreinigung-kosten-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung Kosten</a>
@@ -81,4 +87,4 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
 
 source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + "      </footer>".length)}`;
 writeFileSync(file, source, "utf8");
-console.log("Home footer structure patched: SEO cluster links added to premium footer.");
+console.log("Home footer structure patched: separate guide column added to premium footer.");

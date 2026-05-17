@@ -159,19 +159,27 @@
     if(!box) return;
     box.classList.remove('run-connected');
     var played = false;
+    function visibleEnough(){
+      var rect = box.getBoundingClientRect();
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      var visible = Math.min(rect.bottom, viewport) - Math.max(rect.top, 0);
+      var ratio = visible / Math.max(rect.height, 1);
+      return ratio >= 0.78 && rect.top < viewport * 0.62;
+    }
     function play(){
-      if(played) return;
+      if(played || !visibleEnough()) return;
       played = true;
       box.classList.remove('run-connected');
       void box.offsetWidth;
-      box.classList.add('run-connected');
+      setTimeout(function(){ box.classList.add('run-connected'); }, 180);
     }
+    window.addEventListener('scroll', play, { passive: true });
+    window.addEventListener('resize', play);
     var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting && entry.intersectionRatio > 0.35) play();
-      });
-    }, { threshold: [0.35, 0.55, 0.75], rootMargin: '0px 0px -12% 0px' });
+      entries.forEach(function(entry){ if(entry.isIntersecting) play(); });
+    }, { threshold: [0.65, 0.78, 0.9], rootMargin: '0px 0px -4% 0px' });
     observer.observe(box);
+    setTimeout(play, 600);
   });
 })();
 </script>

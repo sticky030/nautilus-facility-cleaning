@@ -64,61 +64,6 @@ if (!html.includes(".about-grid-2")) {
   html = html.replace("</style>", `${css}\n    </style>`);
 }
 
-const replacements = [
-  [
-    "Zum Beispiel vor Auszug, Einzug, Übergabe, Neuvermietung oder nach Renovierungsarbeiten.",
-    "Zum Beispiel vor Auszug, Einzug, Übergabe, Neuvermietung oder nach Renovierungsarbeiten. Wichtig sind dabei Zustand, Termin, Zugänglichkeit und das gewünschte Übergabeniveau – genau diese Punkte klären wir vorab.",
-  ],
-  [
-    "Zum Beispiel für Treppenhäuser, Allgemeinflächen, Übergaben, Grundreinigungen und einzelne Objektbedarfe.",
-    "Zum Beispiel für Treppenhäuser, Allgemeinflächen, Übergaben, Grundreinigungen und einzelne Objektbedarfe. Der Leistungsumfang wird nach Objekt, Turnus, Bewohnerstruktur, Zugang und Priorität der Flächen abgestimmt.",
-  ],
-  [
-    "Zum Beispiel für regelmäßige Reinigung außerhalb der Betriebszeiten, sensible Kontaktflächen und repräsentative Räume.",
-    "Zum Beispiel für regelmäßige Reinigung außerhalb der Betriebszeiten, sensible Kontaktflächen, Sanitärbereiche, Empfangszonen, Teeküchen und repräsentative Räume mit klar abgestimmtem Zeitfenster.",
-  ],
-  [
-    "Zum Beispiel als Anschlussreinigung nach Räumung, Renovierung, Malerarbeiten oder Bodenarbeiten.",
-    "Zum Beispiel als Anschlussreinigung nach Räumung, Renovierung, Malerarbeiten, Bodenarbeiten oder Trockenbau. Ziel ist ein Objekt, das nicht nur fertig bearbeitet, sondern auch sauber übergabebereit ist.",
-  ],
-  [
-    "Der Leistungsumfang wird vor Beginn nachvollziehbar eingeordnet. So ist klar, welche Bereiche enthalten sind und welche Leistungen separat abgestimmt werden müssen.",
-    "Der Leistungsumfang wird vor Beginn nachvollziehbar eingeordnet. So ist klar, welche Bereiche enthalten sind, welche Zusatzleistungen separat abgestimmt werden müssen und welches Ergebnis realistisch erwartet werden kann.",
-  ],
-  [
-    "Jedes Objekt ist anders. Deshalb kalkulieren wir nach Fläche, Zustand, Nutzung, Termin, Zugang und gewünschtem Ergebnis.",
-    "Jedes Objekt ist anders. Deshalb kalkulieren wir nach Fläche, Zustand, Nutzung, Termin, Zugang und gewünschtem Ergebnis – nicht nach pauschalen Annahmen, die später zu Reibung führen.",
-  ],
-  [
-    "Auftraggeber brauchen keine unnötige Reibung, sondern klare Rückmeldung, realistische Einschätzung und verbindliche Abstimmung.",
-    "Auftraggeber brauchen keine unnötige Reibung, sondern klare Rückmeldung, realistische Einschätzung und verbindliche Abstimmung. Besonders bei kurzfristigen Übergaben zählt eine saubere Kommunikation vor dem Einsatz.",
-  ],
-  [
-    "Gerade in Praxen, Kanzleien, Büros und verwalteten Objekten ist eine ruhige, diskrete und strukturierte Arbeitsweise entscheidend.",
-    "Gerade in Praxen, Kanzleien, Büros und verwalteten Objekten ist eine ruhige, diskrete und strukturierte Arbeitsweise entscheidend. Reinigung muss zum Betrieb, zum Objektalltag und zu den vereinbarten Zeitfenstern passen.",
-  ],
-  [
-    "Sie senden uns Bezirk, Fläche, Objektart, gewünschten Termin und nach Möglichkeit Fotos vom aktuellen Zustand.",
-    "Sie senden uns Bezirk, Fläche, Objektart, gewünschten Termin und nach Möglichkeit Fotos vom aktuellen Zustand. Bei wiederkehrenden Objekten helfen zusätzlich Turnus, Zugang und Zeitfenster.",
-  ],
-  [
-    "Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Zeitfenster und gewünschtes Ergebnis.",
-    "Wir prüfen Zustand, Leistungsumfang, Zugänglichkeit, Zeitfenster und gewünschtes Ergebnis. So wird früh klar, ob eine direkte Einschätzung möglich ist oder Details vor Ort geklärt werden sollten.",
-  ],
-  [
-    "Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung.",
-    "Je nach Objekt erhalten Sie ein objektbezogenes Angebot oder wir empfehlen eine kurze Besichtigung. Das gilt besonders bei größeren Flächen, unklarem Zustand oder laufenden Objektleistungen.",
-  ],
-  [
-    "Nach Freigabe erfolgt die Reinigung nach klar vereinbartem Leistungsbild, Termin und Umfang.",
-    "Nach Freigabe erfolgt die Reinigung nach klar vereinbartem Leistungsbild, Termin und Umfang. Damit ist vor Beginn nachvollziehbar, welche Bereiche enthalten sind und wie die Umsetzung geplant wird.",
-  ],
-];
-
-for (const [from, to] of replacements) {
-  html = html.split(from).join(to);
-}
-
 html = html
   .replace(/ about-grid-2/g, "")
   .replace(/ about-grid-3/g, "")
@@ -141,4 +86,4 @@ html = html.replace(/<div class="grid">([\s\S]*?)<\/div>/g, (match, inner) => {
 });
 
 writeFileSync(file, html, "utf8");
-console.log("About page polished: four-card sections use 2x2 layout, three-card sections stay aligned, copy density improved.");
+console.log("About page polished: layout only, no duplicated copy.");

@@ -41,51 +41,18 @@ const css = `
         column-gap: 22px;
         row-gap: 26px;
       }
-      .horizontal-step {
-        position: relative;
-        z-index: 1;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-      }
+      .horizontal-step { position: relative; z-index: 1; min-height: 220px; display: flex; flex-direction: column; gap: 18px; }
       .horizontal-step:not(:last-child)::before,
-      .horizontal-step:not(:last-child)::after {
-        content:"";
-        position:absolute;
-        top:22px;
-        left:44px;
-        height:2px;
-        width:calc(100% + 22px - 44px);
-        pointer-events:none;
-      }
+      .horizontal-step:not(:last-child)::after { content:""; position:absolute; top:22px; left:44px; height:2px; width:calc(100% + 22px - 44px); pointer-events:none; }
       .horizontal-step:not(:last-child)::before { background:#E5E1D8; }
       .horizontal-step:not(:last-child)::after { background:#B79B6C; transform-origin:left center; transform:scaleX(0); }
-      .horizontal-dot {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        border: 1px solid rgba(183,155,108,.32);
-        background:#fff;
-        color:#B79B6C;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        font-size:12px;
-        font-weight:850;
-        letter-spacing:.08em;
-        position:relative;
-        z-index:2;
-      }
-      .horizontal-step h3 { margin: 0; color:#9A8D7D; font-size: 18px; line-height:1.25; }
-      .horizontal-step p { margin: 0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
-      .horizontal-process.run-horizontal .horizontal-dot {
-        animation: horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1;
-        animation-delay: calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s);
-      }
-      .horizontal-process.run-horizontal .horizontal-step h3 { animation: horizontalTitle .45s ease forwards; animation-delay: calc(.28s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step p { animation: horizontalText .52s ease forwards; animation-delay: calc(.38s + var(--h-step) * 1.05s); }
-      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation: horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay: calc(.62s + var(--h-step) * 1.05s); }
+      .horizontal-dot { width:44px; height:44px; border-radius:999px; border:1px solid rgba(183,155,108,.32); background:#fff; color:#B79B6C; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:850; letter-spacing:.08em; position:relative; z-index:2; }
+      .horizontal-step h3 { margin:0; color:#9A8D7D; font-size:18px; line-height:1.25; }
+      .horizontal-step p { margin:0; color:#7E7367; font-size:14px; line-height:1.75; opacity:.42; transform:translate3d(0,8px,0); }
+      .horizontal-process.run-horizontal .horizontal-dot { animation:horizontalDot .52s ease forwards, horizontalPulse 1.05s ease 1; animation-delay:calc(.18s + var(--h-step) * 1.05s), calc(.18s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step h3 { animation:horizontalTitle .45s ease forwards; animation-delay:calc(.28s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step p { animation:horizontalText .52s ease forwards; animation-delay:calc(.38s + var(--h-step) * 1.05s); }
+      .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after { animation:horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards; animation-delay:calc(.62s + var(--h-step) * 1.05s); }
       @keyframes horizontalSegment { to { transform:scaleX(1); } }
       @keyframes horizontalDot { to { background:#B79B6C; color:#fff; border-color:#B79B6C; } }
       @keyframes horizontalTitle { to { color:#2C2C2C; } }
@@ -151,39 +118,54 @@ function inject(html) {
   return html;
 }
 
-function replaceAblaufSection(html, replacement) {
-  const sectionRegexes = [
-    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="steps">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="steps">[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid process-grid[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid process-grid[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-    /<section class="white">\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-    /<section>\s*<div class="container">\s*<div class="section-head">\s*<div class="eyebrow">Ablauf<\/div>[\s\S]*?<div class="grid"[^>]*>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/,
-  ];
-
-  for (const regex of sectionRegexes) {
-    if (regex.test(html)) {
-      return { html: html.replace(regex, replacement), changed: true };
+function findAblaufSections(html) {
+  const matches = [];
+  const eyebrowRegex = /<div class="eyebrow">[^<]*Ablauf[^<]*<\/div>/g;
+  let match;
+  while ((match = eyebrowRegex.exec(html)) !== null) {
+    const before = html.lastIndexOf("<section", match.index);
+    const after = html.indexOf("</section>", match.index);
+    if (before !== -1 && after !== -1) {
+      matches.push({ start: before, end: after + "</section>".length });
     }
   }
-  return { html, changed: false };
+  return matches;
+}
+
+function replaceAblaufSections(html, replacement) {
+  const sections = findAblaufSections(html);
+  if (!sections.length) return { html, changed: false };
+
+  let out = html;
+  let changed = false;
+  for (const section of sections.reverse()) {
+    const chunk = out.slice(section.start, section.end);
+    if (!chunk.includes("Ablauf")) continue;
+    out = out.slice(0, section.start) + replacement + out.slice(section.end);
+    changed = true;
+  }
+  return { html: out, changed };
 }
 
 const dirs = readdirSync(dist).filter((name) => name !== "index.html" && existsSync(join(dist, name, "index.html")));
 let changed = 0;
+const changedSlugs = [];
 for (const slug of dirs) {
   const file = join(dist, slug, "index.html");
   let html = readFileSync(file, "utf8");
-  if (!html.includes('<div class="eyebrow">Ablauf</div>')) continue;
+  if (!/class="eyebrow">[^<]*Ablauf/i.test(html)) continue;
 
   html = inject(html);
   const variant = variants[variantFor(slug)];
   const replacement = `<section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Ablauf</div><h2>So läuft die Zusammenarbeit ab.</h2></div>${processHtml(variant)}</div></section>`;
-  const result = replaceAblaufSection(html, replacement);
+  const result = replaceAblaufSections(html, replacement);
   html = result.html;
 
-  if (result.changed) changed++;
+  if (result.changed) {
+    changed++;
+    changedSlugs.push(slug);
+  }
   writeFileSync(file, html, "utf8");
 }
 
-console.log(`Horizontal connected process applied to ${changed} static pages.`);
+console.log(`Horizontal connected process applied to ${changed} static pages: ${changedSlugs.join(", ")}`);

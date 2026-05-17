@@ -713,6 +713,49 @@
       @media(max-width:980px){ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} }
       @media(max-width:760px){ .homepage-form-grid,.process-grid{grid-template-columns:1fr !important;} .about-owner-card{grid-template-columns:1fr;} }
 
+    
+      /* ===== Premium Effects Phase 1 + 2 ===== */
+      .premium-reveal { opacity:0; transform:translate3d(0,22px,0); transition:opacity .58s cubic-bezier(.22,1,.36,1), transform .58s cubic-bezier(.22,1,.36,1); will-change:opacity,transform; }
+      .premium-reveal.is-visible { opacity:1; transform:translate3d(0,0,0); }
+      .premium-reveal:nth-child(2) { transition-delay:.04s; }
+      .premium-reveal:nth-child(3) { transition-delay:.08s; }
+      .premium-reveal:nth-child(4) { transition-delay:.12s; }
+      .premium-reveal:nth-child(5) { transition-delay:.16s; }
+      .process-grid { grid-template-columns:repeat(4,minmax(0,1fr)) !important; gap:18px !important; }
+      .process-grid .card { min-height:220px !important; position:relative; overflow:hidden; padding-top:58px !important; }
+      .process-grid .card::before { content:attr(data-step); position:absolute; top:22px; left:24px; width:36px; height:36px; border-radius:999px; display:flex; align-items:center; justify-content:center; background:#B79B6C; color:#fff; font-size:12px; font-weight:850; letter-spacing:.08em; box-shadow:0 12px 26px rgba(183,155,108,.25); }
+      .process-grid .card h3 { margin-top:0 !important; }
+      .process-grid .card:hover { transform:translateY(-4px); box-shadow:0 24px 60px rgba(60,48,35,.09); }
+      .premium-marquee { overflow:hidden; border:1px solid #E5D9C8; border-radius:999px; background:#FCFBF8; margin-top:32px; }
+      .premium-marquee-track { display:flex; width:max-content; gap:34px; padding:12px 0; animation:premiumMarquee 34s linear infinite; }
+      .premium-marquee span { color:#6F6559; font-size:13px; font-weight:700; white-space:nowrap; letter-spacing:.02em; }
+      @keyframes premiumMarquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+      .premium-stack-section { background:#fff; padding:92px 0; border-top:1px solid #EEE8DE; border-bottom:1px solid #EEE8DE; }
+      .premium-stack { display:grid; gap:22px; margin-top:34px; }
+      .premium-stack-card { position:sticky; top:120px; border:1px solid #E5D9C8; border-radius:30px; padding:34px; background:#FCFBF8; box-shadow:0 24px 70px rgba(60,48,35,.07); display:grid; grid-template-columns:.82fr 1.18fr; gap:34px; align-items:start; }
+      .premium-stack-card:nth-child(2){top:142px;background:#fff;}
+      .premium-stack-card:nth-child(3){top:164px;background:#F7F4EE;}
+      .premium-stack-card:nth-child(4){top:186px;background:#fff;}
+      .premium-stack-kicker { color:#B79B6C; font-size:11px; text-transform:uppercase; letter-spacing:.28em; font-weight:850; }
+      .premium-stack-card h3 { margin:12px 0 0; color:#2C2C2C; font-size:28px; line-height:1.18; letter-spacing:-.04em; }
+      .premium-stack-card p { margin:0; color:#7E7367; font-size:16px; line-height:1.85; }
+      .home-services-bento > article { transform-style:preserve-3d; }
+      .home-services-bento > article:hover { transform:translateY(-7px) perspective(900px) rotateX(1.5deg) rotateY(-1.5deg) !important; }
+      .check-progress-wrap { margin:0; padding:22px 26px; border-bottom:1px solid #EEE8DE; background:#FCFBF8; }
+      .check-progress-label { display:flex; justify-content:space-between; gap:18px; color:#2C2C2C; font-size:14px; font-weight:750; margin-bottom:10px; }
+      .check-progress-bar { height:9px; border-radius:999px; background:#EEE8DE; overflow:hidden; }
+      .check-progress-fill { display:block; width:0%; height:100%; background:#B79B6C; border-radius:999px; transition:width .25s ease; }
+      .checklist-cta { margin-top:24px; border:1px solid #E5D9C8; border-radius:28px; padding:28px; background:#2C2C2C; color:#fff; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+      .checklist-cta h3 { margin:0 0 8px; color:#fff; font-size:24px; }
+      .checklist-cta p { margin:0; color:rgba(255,255,255,.76); line-height:1.65; }
+      .checklist-cta .button { background:#B79B6C; color:#fff; }
+      .rg-bento { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:34px; }
+      .rg-bento .card { min-height:230px !important; }
+      .rg-bento .card:nth-child(1) { grid-row:span 2; }
+      @media(max-width:980px){ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} .premium-stack-card{grid-template-columns:1fr; position:relative; top:auto !important;} .rg-bento{grid-template-columns:1fr;} .rg-bento .card:nth-child(1){grid-row:auto;} }
+      @media(max-width:760px){ .process-grid{grid-template-columns:1fr !important;} .checklist-cta{display:block;} .checklist-cta .button{margin-top:18px;} }
+      @media(prefers-reduced-motion:reduce){ .premium-reveal{opacity:1;transform:none;transition:none}.premium-marquee-track{animation:none}.home-services-bento > article:hover{transform:none!important} }
+
     </style>
   
     <script type="application/ld+json" data-schema="breadcrumb">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://nautilus-facility.de/"},{"@type":"ListItem","position":2,"name":"Leistungen","item":"https://nautilus-facility.de/#leistungen"},{"@type":"ListItem","position":3,"name":"Büroreinigung Berlin","item":"https://nautilus-facility.de/bueroreinigung-berlin/"}]}</script>

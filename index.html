@@ -112,8 +112,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="./assets/index-BtXwZFJj.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CVva8A9I.css">
+    <script type="module" crossorigin src="./assets/index-B7m4uR4D.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CwTOp5Ay.css">
   </head>
 
   <body>
@@ -151,5 +151,21 @@
       });
     </script>
 
+  <script>
+(function(){
+  var ready = function(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); };
+  ready(function(){
+    document.querySelectorAll('main h2, main .section-head, main .card, main .hero-card, main .cta, main .editorial-list, main .contact-panel, main .homepage-form-panel').forEach(function(el){ el.classList.add('premium-reveal'); });
+    var obs = new IntersectionObserver(function(entries){ entries.forEach(function(entry){ if(entry.isIntersecting) entry.target.classList.add('is-visible'); }); }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.premium-reveal').forEach(function(el){ obs.observe(el); });
+    document.querySelectorAll('.process-grid .card').forEach(function(el, i){ if(!el.getAttribute('data-step')) el.setAttribute('data-step', String(i+1).padStart(2,'0')); });
+    var checks = Array.prototype.slice.call(document.querySelectorAll('.interactive-checklist input[type="checkbox"]'));
+    var fill = document.querySelector('.check-progress-fill');
+    var count = document.querySelector('.check-progress-count');
+    function update(){ if(!checks.length || !fill || !count) return; var done = checks.filter(function(c){ return c.checked; }).length; var pct = Math.round(done / checks.length * 100); fill.style.width = pct + '%'; count.textContent = pct + '% vorbereitet'; }
+    checks.forEach(function(c){ c.addEventListener('change', update); }); update();
+  });
+})();
+</script>
   </body>
 </html>

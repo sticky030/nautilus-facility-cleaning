@@ -144,12 +144,8 @@ const cssBlock = `
   animation: connectedLineFill .42s cubic-bezier(.4,0,.2,1) forwards;
   animation-delay: calc(.46s + var(--step-index) * .52s);
 }
-.connected-right {
-  padding: 2px 0 30px;
-}
-.connected-step:last-child .connected-right {
-  padding-bottom: 0;
-}
+.connected-right { padding: 2px 0 30px; }
+.connected-step:last-child .connected-right { padding-bottom: 0; }
 .connected-right h4 {
   margin: 0 0 8px;
   color: #2C2C2C;
@@ -169,7 +165,7 @@ const cssBlock = `
 @keyframes connectedLineFill { to { height: 100%; } }
 @keyframes connectedDotGold { to { background: #B79B6C; color: #fff; border-color: #B79B6C; } }
 @media (prefers-reduced-motion: reduce) {
-  .connected-step, .connected-dot, .connected-segment span { animation: none; opacity: 1; transform: none; height: auto; }
+  .connected-step, .connected-dot, .connected-segment span { animation: none; opacity: 1; transform: none; }
   .connected-segment span { height: 100%; }
 }
 @media (max-width: 760px) {
@@ -177,14 +173,6 @@ const cssBlock = `
   .connected-step { grid-template-columns: 38px 1fr; gap: 18px; }
   .connected-dot { width: 38px; height: 38px; }
 }
-`;
-
-if (!css.includes("Homepage connected Ablauf test")) {
-  css += cssBlock;
-  writeFileSync(cssFile, css, "utf8");
-}
-
-console.log("Homepage connected Ablauf test applied.");
 `;
 
 if (!css.includes("Homepage connected Ablauf test")) {

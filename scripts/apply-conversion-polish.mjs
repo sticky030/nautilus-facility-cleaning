@@ -5,22 +5,24 @@ const formspreeAction = "https://formspree.io/f/mnjonren";
 const contactFile = "dist/kontakt/index.html";
 
 const polishCss = `
-      .direct-form-panel {
-        border: 1px solid #E5D9C8;
-        border-radius: 30px;
-        background: #FFFFFF;
-        padding: 34px;
-        box-shadow: 0 26px 80px rgba(60,48,35,.08);
+      .homepage-form-panel {
+        background:#fff;
+        border:1px solid #E5E1D8;
+        border-radius:24px;
+        padding:34px;
+        box-shadow:0 26px 80px rgba(60,48,35,.08);
+        position:relative;
+        overflow:hidden;
       }
-      .direct-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-      .direct-form-field { display:flex; flex-direction:column; gap:8px; }
-      .direct-form-field label { font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#8A7E70; }
-      .direct-form-field input, .direct-form-field select, .direct-form-field textarea {
-        width:100%; border:1px solid #E5D9C8; border-radius:14px; background:#FCFBF8; padding:14px 16px; color:#2C2C2C; font-size:15px; outline:none;
-      }
-      .direct-form-field input:focus, .direct-form-field select:focus, .direct-form-field textarea:focus { border-color:#B79B6C; background:#fff; }
-      .direct-form-field.full { grid-column:1 / -1; }
-      .direct-form-note { margin-top:14px; color:#8A7E70; font-size:12px; line-height:1.65; }
+      .homepage-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+      .homepage-form-field{display:flex;flex-direction:column;gap:8px;}
+      .homepage-form-field label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.2em;color:#8A7E70;}
+      .homepage-form-field input,.homepage-form-field select,.homepage-form-field textarea{width:100%;border:1px solid #E5E1D8;background:#FCFBF8;border-radius:10px;padding:13px 18px;color:#2C2C2C;font-size:15px;outline:none;transition:.25s ease;}
+      .homepage-form-field input:focus,.homepage-form-field select:focus,.homepage-form-field textarea:focus{border-color:#B79B6C;background:#fff;}
+      .homepage-form-field.full{grid-column:1/-1;}
+      .homepage-form-button{width:100%;border:0;cursor:pointer;border-radius:999px;background:#B79B6C;padding:16px 24px;margin-top:24px;color:#fff;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;box-shadow:0 8px 20px rgba(183,155,108,.25);transition:.25s ease;}
+      .homepage-form-button:hover{background:#A98E60;transform:translateY(-1px);box-shadow:0 12px 30px rgba(183,155,108,.35);}
+      .homepage-form-note{margin-top:16px;text-align:center;color:#9A8D7D;font-size:12px;display:flex;align-items:center;justify-content:center;gap:6px;line-height:1.55;}
       .process-grid { grid-template-columns:repeat(4,minmax(0,1fr)) !important; gap:18px !important; }
       .process-grid .card { min-height:220px !important; position:relative; overflow:hidden; padding-top:54px !important; }
       .process-grid .card::before { content:attr(data-step); position:absolute; top:22px; left:24px; width:34px; height:34px; border-radius:999px; background:#B79B6C; color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; letter-spacing:.08em; }
@@ -39,16 +41,16 @@ const polishCss = `
       .interactive-checklist label:last-child { border-bottom:0; }
       .interactive-checklist input { margin-top:4px; accent-color:#B79B6C; width:18px; height:18px; flex-shrink:0; }
       @media(max-width:980px){ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;} }
-      @media(max-width:760px){ .direct-form-grid,.process-grid{grid-template-columns:1fr !important;} .about-owner-card{grid-template-columns:1fr;} }
+      @media(max-width:760px){ .homepage-form-grid,.process-grid{grid-template-columns:1fr !important;} .about-owner-card{grid-template-columns:1fr;} }
 `;
 
 function injectCss(html) {
-  if (html.includes(".direct-form-panel")) return html;
+  if (html.includes(".homepage-form-panel")) return html;
   return html.replace("</style>", `${polishCss}\n    </style>`);
 }
 
 function contactFormHtml() {
-  return `<section id="kontaktformular" class="white"><div class="container"><div class="section-head"><div class="eyebrow">Anfrageformular</div><h2>Reinigungsanfrage direkt auf dieser Seite senden.</h2><p class="section-text">Das Formular bleibt auf der Kontaktseite. So können Sie Objektart, Termin, Zustand und Leistungsumfang strukturiert übermitteln, ohne zur Startseite wechseln zu müssen.</p></div><form class="direct-form-panel" action="${formspreeAction}" method="POST"><div class="direct-form-grid"><div class="direct-form-field"><label>Objektart</label><select name="Objektart"><option>Reinigung nach Auszug / Übergabe</option><option>Reinigung nach Renovierung</option><option>Bauendreinigung / Baufeinreinigung</option><option>Büro / Kanzlei</option><option>Praxis</option><option>Treppenhaus / Hausverwaltung</option><option>Sonstiger Reinigungsbedarf</option></select></div><div class="direct-form-field"><label>Bezirk / Lage</label><input name="Bezirk" placeholder="z. B. Lichtenberg, Pankow, Mitte" /></div><div class="direct-form-field"><label>Name</label><input name="Name" required placeholder="Ihr Name" /></div><div class="direct-form-field"><label>E-Mail</label><input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" /></div><div class="direct-form-field"><label>Telefon</label><input name="Telefon" placeholder="Für Rückfragen" /></div><div class="direct-form-field"><label>Wunschtermin</label><input name="Termin" placeholder="z. B. nächste Woche / nach Rücksprache" /></div><div class="direct-form-field full"><label>Objekt kurz beschreiben</label><textarea name="Nachricht" required rows="5" placeholder="Fläche, Zustand, Leistungsumfang, Zugang, Zeitfenster, Besonderheiten..."></textarea></div></div><button class="button" type="submit" style="width:100%; margin-top:22px; border:0; cursor:pointer;">Anfrage senden</button><p class="direct-form-note">Ihre Anfrage wird über Formspree an Nautilus Facility Cleaning übermittelt. Für sichtbaren Reinigungsbedarf können Sie zusätzlich Fotos per WhatsApp senden.</p></form></div></section>`;
+  return `<section id="kontaktformular" class="white"><div class="container"><div class="section-head"><div class="eyebrow">Anfrageformular</div><h2>Der erste Schritt zu einem makellosen Ergebnis.</h2><p class="section-text">Nutzen Sie auf der Kontaktseite dasselbe strukturierte Formular wie auf der Startseite. Ihre Anfrage wird direkt übermittelt und bleibt ohne Umweg auf dieser Seite.</p></div><form class="homepage-form-panel" action="${formspreeAction}" method="POST"><div class="homepage-form-grid"><div class="homepage-form-field"><label>Objektart</label><select name="Objektart"><option>Büro & Kanzlei</option><option>Arztpraxis</option><option>Treppenhaus & Objekt</option><option>Hausverwaltung</option><option>Bauprojekt</option></select></div><div class="homepage-form-field"><label>Turnus</label><select name="Turnus"><option>Täglich</option><option>Mehrmals pro Woche</option><option>Wöchentlich</option><option>Nach Bedarf</option></select></div><div class="homepage-form-field full"><label>Name</label><input type="text" name="Name" required placeholder="Ihr Name" /></div><div class="homepage-form-field full"><label>E-Mail</label><input type="email" name="E-Mail" required placeholder="kontakt@unternehmen.de" /></div><div class="homepage-form-field full"><label>Objekt kurz beschreiben</label><textarea rows="4" name="Nachricht" required placeholder="Größe, Besonderheiten, Wünsche..."></textarea></div></div><button type="submit" class="homepage-form-button">Anfrage senden</button><p class="homepage-form-note"><span aria-hidden="true">🔒</span><span>Ihre Daten werden SSL-verschlüsselt übertragen.</span></p></form></div></section>`;
 }
 
 function patchContactPage() {
@@ -58,6 +60,7 @@ function patchContactPage() {
   html = html.replace(/<a href="https:\/\/nautilus-facility\.de\/\?kontakt=1#kontakt"[^>]*>Formular auf der Startseite öffnen<\/a>/g, '<a href="#kontaktformular">Formular direkt hier nutzen</a>');
   html = html.replace(/href="https:\/\/nautilus-facility\.de\/\?kontakt=1#kontakt" onclick="sessionStorage\.setItem\('scrollToContact', '1'\)">Anfrageformular nutzen/g, 'href="#kontaktformular">Anfrageformular nutzen');
   html = html.replace(/href="https:\/\/nautilus-facility\.de\/\?kontakt=1#kontakt" onclick="sessionStorage\.setItem\('scrollToContact', '1'\)">Formular nutzen/g, 'href="#kontaktformular">Formular nutzen');
+  html = html.replace(/<section id="kontaktformular"[\s\S]*?<section><div class="container"><div class="cta"><div><div class="eyebrow">Direkt anfragen<\/div>/, `${contactFormHtml()}\n      <section><div class="container"><div class="cta"><div><div class="eyebrow">Direkt anfragen</div>`);
   if (!html.includes('id="kontaktformular"')) {
     html = html.replace('<section><div class="container"><div class="cta"><div><div class="eyebrow">Direkt anfragen</div>', `${contactFormHtml()}\n      <section><div class="container"><div class="cta"><div><div class="eyebrow">Direkt anfragen</div>`);
   }
@@ -129,4 +132,4 @@ patchDistrictPages();
 patchProcessSections();
 patchAboutOwner();
 patchRatgeberMetaAndChecklist();
-console.log("Conversion polish applied: contact form embedded, district repetition removed, process cards upgraded, about owner block added, guide meta and interactive checklist added.");
+console.log("Conversion polish applied: contact form now matches homepage form, district repetition removed, process cards upgraded, about owner block added, guide meta and interactive checklist added.");

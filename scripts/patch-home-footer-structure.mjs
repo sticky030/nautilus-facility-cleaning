@@ -65,7 +65,8 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
                 Objektbezogene Reinigung in Berlin für Wohnungen, Gewerbe, Praxen, Kanzleien, Treppenhäuser und verwaltete Objekte.
               </p>
             </div>
-            <div className="flex gap-8 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70]">
+            <div className="flex flex-wrap gap-x-8 gap-y-3 text-[13px] font-semibold uppercase tracking-widest text-[#8A7E70] lg:justify-end">
+              <a href="/ueber-uns/" className="hover:text-[#B79B6C] transition-colors">Über uns</a>
               <a href="/impressum/" className="hover:text-[#B79B6C] transition-colors">Impressum</a>
               <a href="/datenschutz/" className="hover:text-[#B79B6C] transition-colors">Datenschutz</a>
             </div>
@@ -75,4 +76,4 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
 
 source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + "      </footer>".length)}`;
 writeFileSync(file, source, "utf8");
-console.log("Home footer structure patched: balanced district links in premium footer.");
+console.log("Home footer structure patched: about page linked in premium footer.");

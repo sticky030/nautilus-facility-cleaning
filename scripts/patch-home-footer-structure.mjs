@@ -12,21 +12,26 @@ if (footerStart === -1 || footerEnd === -1) {
 
 const newFooter = `      <footer className="bg-white py-16 text-left border-t border-[#E5E1D8]">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 text-left">
-          <div className="grid gap-12 border-b border-[#E5E1D8] pb-12 lg:grid-cols-[1fr_0.85fr_0.85fr_0.72fr]">
+          <div className="grid gap-12 border-b border-[#E5E1D8] pb-12 lg:grid-cols-[1.12fr_0.8fr_0.9fr_0.72fr]">
             <div>
               <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#B79B6C]">Leistungen</div>
-              <div className="mt-6 grid gap-x-8 gap-y-3 text-[14px] font-medium text-[#2C2C2C] sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                <a href="/reinigung-nach-auszug-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Auszug</a>
-                <a href="/uebergabereinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Übergabereinigung</a>
-                <a href="/reinigung-nach-renovierung-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Renovierung</a>
-                <a href="/bauendreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Bauendreinigung</a>
-                <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
-                <a href="/hausverwaltungen-berlin/" className="hover:text-[#B79B6C] transition-colors">Hausverwaltungen</a>
-                <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
-                <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
-                <a href="/kanzleireinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
-                <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
-                <a href="/fensterreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+              <div className="mt-6 grid gap-x-10 gap-y-3 text-[14px] font-medium text-[#2C2C2C] sm:grid-cols-2">
+                <div className="flex flex-col gap-3">
+                  <a href="/reinigung-nach-auszug-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Auszug</a>
+                  <a href="/reinigung-nach-renovierung-berlin/" className="hover:text-[#B79B6C] transition-colors">Reinigung nach Renovierung</a>
+                  <a href="/treppenhausreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Treppenhausreinigung</a>
+                  <a href="/bueroreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Büroreinigung</a>
+                  <a href="/kanzleireinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Kanzleireinigung</a>
+                  <a href="/fensterreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Fensterreinigung</a>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <a href="/uebergabereinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Übergabereinigung</a>
+                  <a href="/bauendreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Bauendreinigung</a>
+                  <a href="/hausverwaltungen-berlin/" className="hover:text-[#B79B6C] transition-colors">Hausverwaltungen</a>
+                  <a href="/praxisreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Praxisreinigung</a>
+                  <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Grundreinigung</a>
+                  <a href="/grundreinigung-berlin/" className="hover:text-[#B79B6C] transition-colors">Sonderreinigung</a>
+                </div>
               </div>
             </div>
 
@@ -87,4 +92,4 @@ const newFooter = `      <footer className="bg-white py-16 text-left border-t bo
 
 source = `${source.slice(0, footerStart)}${newFooter}${source.slice(footerEnd + "      </footer>".length)}`;
 writeFileSync(file, source, "utf8");
-console.log("Home footer structure patched: separate guide column added to premium footer.");
+console.log("Home footer structure patched: service links aligned in premium footer.");

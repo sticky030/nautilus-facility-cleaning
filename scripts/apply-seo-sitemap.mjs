@@ -2,6 +2,7 @@ import { writeFileSync } from "node:fs";
 
 const urls = [
   "/",
+  "/ueber-uns/",
   "/praxisreinigung-berlin/",
   "/bueroreinigung-berlin/",
   "/treppenhausreinigung-berlin/",
@@ -21,7 +22,7 @@ const urls = [
   "/reinigungsfirma-friedrichshain-kreuzberg-berlin/",
   "/reinigungsfirma-berlin-mitte/",
   "/datenschutz/",
-  "/impressum/",
+  "/impressum/"
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

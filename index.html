@@ -159,27 +159,26 @@
     if(!box) return;
     box.classList.remove('run-connected');
     var played = false;
-    function visibleEnough(){
+    function centeredEnough(){
       var rect = box.getBoundingClientRect();
       var viewport = window.innerHeight || document.documentElement.clientHeight;
-      var visible = Math.min(rect.bottom, viewport) - Math.max(rect.top, 0);
-      var ratio = visible / Math.max(rect.height, 1);
-      return ratio >= 0.78 && rect.top < viewport * 0.62;
+      var boxCenter = rect.top + rect.height / 2;
+      var viewportCenter = viewport / 2;
+      var distance = Math.abs(boxCenter - viewportCenter);
+      var tolerance = Math.min(90, viewport * 0.11);
+      var fullyReadable = rect.top > viewport * 0.12 && rect.bottom < viewport * 0.92;
+      return fullyReadable && distance <= tolerance;
     }
     function play(){
-      if(played || !visibleEnough()) return;
+      if(played || !centeredEnough()) return;
       played = true;
       box.classList.remove('run-connected');
       void box.offsetWidth;
-      setTimeout(function(){ box.classList.add('run-connected'); }, 180);
+      setTimeout(function(){ box.classList.add('run-connected'); }, 120);
     }
     window.addEventListener('scroll', play, { passive: true });
     window.addEventListener('resize', play);
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){ if(entry.isIntersecting) play(); });
-    }, { threshold: [0.65, 0.78, 0.9], rootMargin: '0px 0px -4% 0px' });
-    observer.observe(box);
-    setTimeout(play, 600);
+    requestAnimationFrame(play);
   });
 })();
 </script>

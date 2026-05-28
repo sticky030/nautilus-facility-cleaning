@@ -944,34 +944,10 @@
     </style>
     <style>
       /* Ortsteil-specific additions */
-      .service-links-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 14px;
-        margin-top: 16px;
-      }
-      .card-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: #fff;
-        border: 1px solid #E5E1D8;
-        border-radius: 14px;
-        padding: 14px 20px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #2C2C2C;
-        text-decoration: none;
-        transition: border-color .3s, color .3s, transform .3s;
-      }
-      .card-link:hover { border-color: #B79B6C; color: #B79B6C; transform: translateY(-2px); }
       .breadcrumb { font-size: 13px; color: #9E9488; margin-bottom: 24px; }
       .breadcrumb a { color: #9E9488; text-decoration: none; }
       .breadcrumb a:hover { color: #B79B6C; }
       .breadcrumb span { margin: 0 6px; }
-      @media (max-width: 768px) {
-        .service-links-grid { grid-template-columns: 1fr 1fr; }
-      }
     </style>
   </head>
   <body>
@@ -1059,8 +1035,38 @@
             <h2>Alle Leistungen von Nautilus in Marzahn.</h2>
             <p class="section-text">Diese Seite zeigt den lokalen Zugang für Marzahn. Die folgenden Leistungsseiten vertiefen den jeweiligen Bedarf.</p>
           </div>
-          <div class="service-links-grid">
-            <a href="/treppenhausreinigung-berlin/" class="card-link">Treppenhausreinigung Berlin</a><a href="/hausverwaltungen-berlin/" class="card-link">Reinigung für Hausverwaltungen</a><a href="/reinigung-nach-auszug-berlin/" class="card-link">Reinigung nach Auszug</a><a href="/grundreinigung-berlin/" class="card-link">Grundreinigung</a><a href="/uebergabereinigung-berlin/" class="card-link">Übergabereinigung</a><a href="/bauendreinigung-berlin/" class="card-link">Bauendreinigung</a>
+          <div class="grid" style="align-items:stretch;">
+            
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Treppenhausreinigung Berlin</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Regelmäßige Treppenhausreinigung für Wohn- und Geschäftshäuser – zuverlässig nach individuellem Turnus.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/treppenhausreinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Reinigung für Hausverwaltungen</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Reinigung für Hausverwaltungen und verwaltete Objekte in Berlin – verlässlich, dokumentiert und objektbezogen.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/hausverwaltungen-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Reinigung nach Auszug</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Saubere Übergabe nach Auszug – Böden, Bad, Küche, Oberflächen. Abnahmebereit für Vermieter und Nachmieter.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/reinigung-nach-auszug-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Grundreinigung</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Einmalige oder jährliche Grundreinigung für Wohnungen, Büros und Gewerbeflächen – gründlich und termingerecht.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/grundreinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Übergabereinigung</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Professionelle Übergabereinigung für Wohnungen und Gewerbeflächen – pünktlich zum Übergabetermin.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/uebergabereinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:200px;">
+              <h3 style="margin-bottom:12px;">Bauendreinigung</h3>
+              <p style="flex:1;margin-bottom:0;color:#7E7367;line-height:1.72;font-size:14px;">Bauendreinigung nach Neubau oder Umbau – Bauschutt, Staub, Böden und Oberflächen vollständig gereinigt.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/bauendreinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Leistung ansehen</a></p>
+            </article>
           </div>
         </div>
       </section>
@@ -1161,6 +1167,33 @@
               <summary>Ist Nautilus in ganz Berlin tätig oder nur in Marzahn?</summary>
               <p>Nautilus Facility Cleaning ist im gesamten Berliner Stadtgebiet tätig – Marzahn ist ein Teil davon. Alle Berliner Bezirke und Ortsteile werden von uns bedient.</p>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="white" data-seo-crosslinks="true">
+        <div class="container">
+          <div class="section-head">
+            <div class="eyebrow">Weitere Leistungen</div>
+            <h2>Reinigungsleistungen für Objekte in Marzahn</h2>
+            <p class="section-text">Auszug, Treppenhaus oder Büro in Marzahn – diese Leistungen sind am häufigsten gefragt.</p>
+          </div>
+          <div class="grid grid-3" style="align-items:stretch;">
+            <article class="card" style="display:flex;flex-direction:column;min-height:220px;">
+              <h3 style="margin-bottom:12px;">Reinigung nach Auszug</h3>
+              <p style="flex:1;margin-bottom:0;">Saubere Übergabe nach Auszug aus Wohnung oder Gewerbe. Böden, Bad, Küche und alle Oberflächen – abnahmebereit für Vermieter und Nachmieter.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/reinigung-nach-auszug-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Auszugsreinigung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:220px;">
+              <h3 style="margin-bottom:12px;">Treppenhausreinigung Berlin</h3>
+              <p style="flex:1;margin-bottom:0;">Regelmäßige Treppenhausreinigung für Wohn- und Geschäftshäuser in Berlin – wöchentlich oder nach Bedarf, zuverlässig und dokumentiert.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/treppenhausreinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Treppenhausreinigung ansehen</a></p>
+            </article>
+            <article class="card" style="display:flex;flex-direction:column;min-height:220px;">
+              <h3 style="margin-bottom:12px;">Büroreinigung Berlin</h3>
+              <p style="flex:1;margin-bottom:0;">Regelmäßige Büroreinigung und Unterhaltsreinigung in Berlin – flexibel nach Ihren Öffnungszeiten, zuverlässig und diskret durchgeführt.</p>
+              <p style="margin-top:20px;margin-bottom:0;"><a href="/bueroreinigung-berlin/" style="color:#B79B6C;font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:12px;">Büroreinigung ansehen</a></p>
+            </article>
           </div>
         </div>
       </section>

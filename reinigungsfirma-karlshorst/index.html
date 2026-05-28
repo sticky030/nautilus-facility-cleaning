@@ -1133,34 +1133,34 @@
           </div>
           <div class="faq">
             
-    <div class="faq-item">
-      <div class="faq-q">Reinigt Nautilus Praxen in Karlshorst?</div>
-      <div class="faq-a">Ja. Wir reinigen Arztpraxen und therapeutische Praxen in Karlshorst – hygienisch, diskret und passend zu den Öffnungszeiten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Bietet Nautilus auch Auszugsreinigung in Karlshorst an?</div>
-      <div class="faq-a">Ja. Wir übernehmen Auszugsreinigungen in Karlshorst für Wohnungen, Häuser und kleinere Gewerbeobjekte. Terminabstimmung kurzfristig möglich.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wie kontaktiere ich Nautilus für ein Angebot in Karlshorst?</div>
-      <div class="faq-a">Am einfachsten über das Kontaktformular auf nautilus-facility.de oder telefonisch unter 0176 2284 4636. Wir melden uns schnell zurück.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wie läuft eine Anfrage für Karlshorst ab?</div>
-      <div class="faq-a">Kurze Beschreibung per Telefon oder Kontaktformular auf nautilus-facility.de genügt. Wir melden uns schnell zurück, klären Umfang und Termin und erstellen ein objektbezogenes Angebot ohne versteckte Kosten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Bietet Nautilus eine kostenfreie Besichtigung an?</div>
-      <div class="faq-a">Ja. Für größere Objekte oder wenn der Leistungsumfang vorab eingeordnet werden soll, bieten wir eine kostenfreie Besichtigung vor Ort an. Auf dieser Basis erstellen wir ein klares Angebot.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Reinigt Nautilus auch einmalig oder nur im Dauerauftrag?</div>
-      <div class="faq-a">Beides. Wir übernehmen Einmalreinigungen (z.B. Auszug, Grundreinigung, Übergabe) genauso wie regelmäßige Unterhaltsreinigung im Dauerauftrag – je nach Bedarf und Objekt.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Ist Nautilus in ganz Berlin tätig oder nur in Karlshorst?</div>
-      <div class="faq-a">Nautilus Facility Cleaning ist im gesamten Berliner Stadtgebiet tätig – Karlshorst ist ein Teil davon. Alle Berliner Bezirke und Ortsteile werden von uns bedient.</div>
-    </div>
+            <details>
+              <summary>Reinigt Nautilus Praxen in Karlshorst?</summary>
+              <p>Ja. Wir reinigen Arztpraxen und therapeutische Praxen in Karlshorst – hygienisch, diskret und passend zu den Öffnungszeiten.</p>
+            </details>
+            <details>
+              <summary>Bietet Nautilus auch Auszugsreinigung in Karlshorst an?</summary>
+              <p>Ja. Wir übernehmen Auszugsreinigungen in Karlshorst für Wohnungen, Häuser und kleinere Gewerbeobjekte. Terminabstimmung kurzfristig möglich.</p>
+            </details>
+            <details>
+              <summary>Wie kontaktiere ich Nautilus für ein Angebot in Karlshorst?</summary>
+              <p>Am einfachsten über das Kontaktformular auf nautilus-facility.de oder telefonisch unter 0176 2284 4636. Wir melden uns schnell zurück.</p>
+            </details>
+            <details>
+              <summary>Wie läuft eine Anfrage für Karlshorst ab?</summary>
+              <p>Kurze Beschreibung per Telefon oder Kontaktformular auf nautilus-facility.de genügt. Wir melden uns schnell zurück, klären Umfang und Termin und erstellen ein objektbezogenes Angebot ohne versteckte Kosten.</p>
+            </details>
+            <details>
+              <summary>Bietet Nautilus eine kostenfreie Besichtigung an?</summary>
+              <p>Ja. Für größere Objekte oder wenn der Leistungsumfang vorab eingeordnet werden soll, bieten wir eine kostenfreie Besichtigung vor Ort an. Auf dieser Basis erstellen wir ein klares Angebot.</p>
+            </details>
+            <details>
+              <summary>Reinigt Nautilus auch einmalig oder nur im Dauerauftrag?</summary>
+              <p>Beides. Wir übernehmen Einmalreinigungen (z.B. Auszug, Grundreinigung, Übergabe) genauso wie regelmäßige Unterhaltsreinigung im Dauerauftrag – je nach Bedarf und Objekt.</p>
+            </details>
+            <details>
+              <summary>Ist Nautilus in ganz Berlin tätig oder nur in Karlshorst?</summary>
+              <p>Nautilus Facility Cleaning ist im gesamten Berliner Stadtgebiet tätig – Karlshorst ist ein Teil davon. Alle Berliner Bezirke und Ortsteile werden von uns bedient.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -1202,5 +1202,30 @@
         </div>
       </div>
     </footer>
+  <script id="nfc-horizontal-process-js">
+(function(){
+  function ready(fn){ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn(); }
+  ready(function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.horizontal-process'));
+    if(!boxes.length) return;
+    function play(box){ if(box.dataset.played) return; box.dataset.played='1'; box.classList.add('run-horizontal'); }
+    function check(){
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      boxes.forEach(function(box){
+        if(box.dataset.played) return;
+        var rect = box.getBoundingClientRect();
+        var center = rect.top + rect.height/2;
+        var distance = Math.abs(center - viewport/2);
+        var tolerance = Math.min(170, viewport * 0.20);
+        var visible = rect.top < viewport * 0.88 && rect.bottom > viewport * 0.12;
+        if(visible && distance <= tolerance) play(box);
+      });
+    }
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+    requestAnimationFrame(check);
+  });
+})();
+  </script>
   </body>
 </html>

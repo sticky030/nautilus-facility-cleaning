@@ -1133,34 +1133,34 @@
           </div>
           <div class="faq">
             
-    <div class="faq-item">
-      <div class="faq-q">Macht Nautilus auch Auszugsreinigung in Friedrichshain?</div>
-      <div class="faq-a">Ja. Wir übernehmen Auszugsreinigungen in Altbauwohnungen, Apartments und Gewerbeflächen in Friedrichshain – auf Wunsch mit Übergabeprotokoll und besenreiner Übergabe.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wie schnell kann Nautilus in Friedrichshain tätig werden?</div>
-      <div class="faq-a">Nach kurzer telefonischer Abstimmung oder per Formular sind wir in der Regel innerhalb weniger Werktage vor Ort. Für dringende Fälle versuchen wir kurzfristige Termine zu ermöglichen.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Werden auch kleinere Büros in Friedrichshain gereinigt?</div>
-      <div class="faq-a">Ja. Wir reinigen auch kleinere Büroeinheiten, Agenturflächen und Co-Working-Plätze in Friedrichshain regelmäßig oder als Einmalreinigung.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wie läuft eine Anfrage für Friedrichshain ab?</div>
-      <div class="faq-a">Kurze Beschreibung per Telefon oder Kontaktformular auf nautilus-facility.de genügt. Wir melden uns schnell zurück, klären Umfang und Termin und erstellen ein objektbezogenes Angebot ohne versteckte Kosten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Bietet Nautilus eine kostenfreie Besichtigung an?</div>
-      <div class="faq-a">Ja. Für größere Objekte oder wenn der Leistungsumfang vorab eingeordnet werden soll, bieten wir eine kostenfreie Besichtigung vor Ort an. Auf dieser Basis erstellen wir ein klares Angebot.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Reinigt Nautilus auch einmalig oder nur im Dauerauftrag?</div>
-      <div class="faq-a">Beides. Wir übernehmen Einmalreinigungen (z.B. Auszug, Grundreinigung, Übergabe) genauso wie regelmäßige Unterhaltsreinigung im Dauerauftrag – je nach Bedarf und Objekt.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Ist Nautilus in ganz Berlin tätig oder nur in Friedrichshain?</div>
-      <div class="faq-a">Nautilus Facility Cleaning ist im gesamten Berliner Stadtgebiet tätig – Friedrichshain ist ein Teil davon. Alle Berliner Bezirke und Ortsteile werden von uns bedient.</div>
-    </div>
+            <details>
+              <summary>Macht Nautilus auch Auszugsreinigung in Friedrichshain?</summary>
+              <p>Ja. Wir übernehmen Auszugsreinigungen in Altbauwohnungen, Apartments und Gewerbeflächen in Friedrichshain – auf Wunsch mit Übergabeprotokoll und besenreiner Übergabe.</p>
+            </details>
+            <details>
+              <summary>Wie schnell kann Nautilus in Friedrichshain tätig werden?</summary>
+              <p>Nach kurzer telefonischer Abstimmung oder per Formular sind wir in der Regel innerhalb weniger Werktage vor Ort. Für dringende Fälle versuchen wir kurzfristige Termine zu ermöglichen.</p>
+            </details>
+            <details>
+              <summary>Werden auch kleinere Büros in Friedrichshain gereinigt?</summary>
+              <p>Ja. Wir reinigen auch kleinere Büroeinheiten, Agenturflächen und Co-Working-Plätze in Friedrichshain regelmäßig oder als Einmalreinigung.</p>
+            </details>
+            <details>
+              <summary>Wie läuft eine Anfrage für Friedrichshain ab?</summary>
+              <p>Kurze Beschreibung per Telefon oder Kontaktformular auf nautilus-facility.de genügt. Wir melden uns schnell zurück, klären Umfang und Termin und erstellen ein objektbezogenes Angebot ohne versteckte Kosten.</p>
+            </details>
+            <details>
+              <summary>Bietet Nautilus eine kostenfreie Besichtigung an?</summary>
+              <p>Ja. Für größere Objekte oder wenn der Leistungsumfang vorab eingeordnet werden soll, bieten wir eine kostenfreie Besichtigung vor Ort an. Auf dieser Basis erstellen wir ein klares Angebot.</p>
+            </details>
+            <details>
+              <summary>Reinigt Nautilus auch einmalig oder nur im Dauerauftrag?</summary>
+              <p>Beides. Wir übernehmen Einmalreinigungen (z.B. Auszug, Grundreinigung, Übergabe) genauso wie regelmäßige Unterhaltsreinigung im Dauerauftrag – je nach Bedarf und Objekt.</p>
+            </details>
+            <details>
+              <summary>Ist Nautilus in ganz Berlin tätig oder nur in Friedrichshain?</summary>
+              <p>Nautilus Facility Cleaning ist im gesamten Berliner Stadtgebiet tätig – Friedrichshain ist ein Teil davon. Alle Berliner Bezirke und Ortsteile werden von uns bedient.</p>
+            </details>
           </div>
         </div>
       </section>
@@ -1202,5 +1202,30 @@
         </div>
       </div>
     </footer>
+  <script id="nfc-horizontal-process-js">
+(function(){
+  function ready(fn){ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn(); }
+  ready(function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.horizontal-process'));
+    if(!boxes.length) return;
+    function play(box){ if(box.dataset.played) return; box.dataset.played='1'; box.classList.add('run-horizontal'); }
+    function check(){
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      boxes.forEach(function(box){
+        if(box.dataset.played) return;
+        var rect = box.getBoundingClientRect();
+        var center = rect.top + rect.height/2;
+        var distance = Math.abs(center - viewport/2);
+        var tolerance = Math.min(170, viewport * 0.20);
+        var visible = rect.top < viewport * 0.88 && rect.bottom > viewport * 0.12;
+        if(visible && distance <= tolerance) play(box);
+      });
+    }
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+    requestAnimationFrame(check);
+  });
+})();
+  </script>
   </body>
 </html>

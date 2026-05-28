@@ -78,4 +78,11 @@
   <url>
     <loc>https://nautilus-facility.de/impressum/</loc>
   </url>
+
+  <url>
+    <loc>https://nautilus-facility.de/praxisaufloesung-berlin/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

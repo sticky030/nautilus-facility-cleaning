@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Reinigung nach Renovierung Berlin – Einzugsbereit in 24h | Nautilus Facility Cleaning</title>
+  <link rel="icon" type="image/png" href="/images/reinigung-trans.png" />
+  <style>
+    :root {
+      --bg: #F7F4EE;
+      --cream: #F3EFE7;
+      --white: #FFFFFF;
+      --text: #2C2C2C;
+      --muted: #7E7367;
+      --line: #E5E1D8;
+      --gold: #B79B6C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .topbar {
+      background: rgba(247,244,238,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+    }
+
+    .topbar-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: #fff;
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      transition: background .2s;
+    }
+
+    .topbar-phone:hover { background: #a08a5f; }
+
+    .hero {
+      background: var(--cream);
+      padding: 64px 24px 72px;
+    }
+
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .36em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 72px);
+      line-height: .97;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.85;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 6px rgba(183,155,108,.6);
+    }
+
+    .form-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 36px 32px 32px;
+      box-shadow: 0 24px 72px rgba(60,48,35,.10);
+    }
+
+    .form-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .form-card-sub {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .lp-form { display: flex; flex-direction: column; gap: 14px; }
+
+    .lp-form label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .lp-form input,
+    .lp-form select {
+      width: 100%;
+      border: 1.5px solid var(--line);
+      background: #FCFBF8;
+      border-radius: 10px;
+      padding: 13px 16px;
+      color: var(--text);
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      appearance: none;
+    }
+
+    .lp-form input:focus,
+    .lp-form select:focus {
+      border-color: var(--gold);
+      background: #fff;
+    }
+
+    .select-wrap { position: relative; }
+
+    .select-wrap::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--gold);
+    }
+
+    .lp-submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      background: var(--gold);
+      padding: 16px 24px;
+      margin-top: 6px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      box-shadow: 0 8px 24px rgba(183,155,108,.30);
+      transition: background .2s, transform .2s, box-shadow .2s;
+    }
+
+    .lp-submit:hover {
+      background: #a08a5f;
+      transform: translateY(-1px);
+      box-shadow: 0 12px 32px rgba(183,155,108,.38);
+    }
+
+    .lp-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+
+    .form-trust {
+      margin-top: 14px;
+      text-align: center;
+      color: #9A8D7D;
+      font-size: 11.5px;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .form-result {
+      display: none;
+      margin-top: 16px;
+      border: 1px solid rgba(183,155,108,.35);
+      background: #FCFBF8;
+      border-radius: 14px;
+      padding: 16px;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .lp-form-wrap.is-success .form-result { display: block; }
+
+    .trust-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      padding: 20px 24px;
+    }
+
+    .trust-bar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px 48px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    section { padding: 80px 24px; }
+    section.white { background: #fff; }
+    section.cream { background: var(--cream); }
+
+    .section-inner { max-width: 1140px; margin: 0 auto; }
+
+    .section-eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .36em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 3.8vw, 48px);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      max-width: 680px;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .pain-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px 26px;
+    }
+
+    .pain-card .pain-icon { font-size: 28px; margin-bottom: 14px; }
+    .pain-card h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 10px; }
+    .pain-card p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+
+    .risk-list { margin-top: 36px; display: grid; gap: 16px; }
+
+    .risk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #fff;
+      border: 1px solid #F0E8E0;
+      border-left: 4px solid #D4896A;
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .risk-x { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .risk-item-text strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .risk-item-text p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+      align-items: start;
+    }
+
+    .solution-list { list-style: none; display: grid; gap: 14px; }
+
+    .solution-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    .stars { color: #F5A623; font-size: 15px; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-text { font-size: 14px; line-height: 1.75; color: var(--text); margin-bottom: 16px; font-style: italic; }
+    .review-author { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .process-step { border-top: 2px solid var(--gold); padding-top: 24px; }
+    .step-num { font-size: 11px; font-weight: 850; letter-spacing: .28em; color: var(--gold); margin-bottom: 14px; }
+    .process-step h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.025em; margin-bottom: 10px; }
+    .process-step p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+
+    .form2-wrap { max-width: 560px; margin: 48px auto 0; }
+
+    .urgency-bar {
+      background: var(--gold);
+      padding: 20px 24px;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .urgency-bar strong { font-weight: 800; }
+
+    .lp-footer {
+      background: var(--text);
+      padding: 24px;
+      text-align: center;
+      color: rgba(255,255,255,.45);
+      font-size: 12px;
+    }
+
+    .lp-footer a { color: rgba(255,255,255,.45); text-decoration: underline; }
+
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .solution-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      h1 { font-size: clamp(34px, 9vw, 56px); }
+    }
+
+    @media (max-width: 480px) {
+      .trust-bar-inner { gap: 16px 24px; }
+      .topbar-phone span.phone-label { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand">Nautilus Facility Cleaning</div>
+    <a class="topbar-phone" href="tel:+4917622844636">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.99 1.18 2 2 0 013 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      <span class="phone-label">Jetzt anrufen</span>
+      <strong>0176 2284 4636</strong>
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Reinigung nach Renovierung Berlin</div>
+        <h1>Reno fertig.<br>Jetzt einzugsbereit.</h1>
+        <p class="hero-sub">Professionelle Bauabschlussreinigung in Berlin — Bau- und Renovierungsstaub, Kalkspritzer, Farbreste, Folien. Alles weg. Bereit für den Einzug oder die Übergabe.</p>
+        <div class="hero-badges">
+          <span class="badge"><span class="badge-dot"></span>Baustaub komplett entfernt</span>
+          <span class="badge"><span class="badge-dot"></span>Festpreis</span>
+          <span class="badge"><span class="badge-dot"></span>24h Verfügbarkeit</span>
+          <span class="badge"><span class="badge-dot"></span>Ost-Berlin spezialisiert</span>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="form-card-title">Jetzt kostenlos anfragen</div>
+        <div class="form-card-sub">Antwort innerhalb von 30 Minuten — unverbindlich und kostenlos.</div>
+        <form class="lp-form lp-form-wrap" action="https://formspree.io/f/mnjonren" method="POST">
+          <div>
+            <label for="h-name">Ihr Name</label>
+            <input type="text" id="h-name" name="Name" required placeholder="Vorname reicht" autocomplete="given-name" />
+          </div>
+          <div>
+            <label for="h-phone">Telefonnummer</label>
+            <input type="tel" id="h-phone" name="Telefon" required placeholder="Wir rufen schnell zurück" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="h-date">Wann soll gereinigt werden?</label>
+            <div class="select-wrap">
+              <select id="h-date" name="Wunschtermin">
+                <option value="">Bitte wählen</option>
+                <option>So schnell wie möglich</option>
+                <option>Diese Woche</option>
+                <option>Nächste Woche</option>
+                <option>In 2–4 Wochen</option>
+                <option>Termin flexibel</option>
+              </select>
+            </div>
+          </div>
+          <input type="hidden" name="Quelle" value="LP Renovierungsreinigung" />
+          <button type="submit" class="lp-submit">JETZT KOSTENLOS ANFRAGEN →</button>
+          <p class="form-trust">🔒 SSL-verschlüsselt · Keine Weitergabe · Kostenlos & unverbindlich</p>
+          <div class="form-result"><strong>Anfrage gesendet ✓</strong><br>Vielen Dank — wir melden uns innerhalb von 30 Minuten bei Ihnen.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><span>⭐</span> 5,0 Google-Bewertung (11 Rezensionen)</div>
+      <div class="trust-item"><span>📍</span> Spezialisiert auf Ost-Berlin</div>
+      <div class="trust-item"><span>⚡</span> Rückmeldung in 30 Minuten</div>
+      <div class="trust-item"><span>🧹</span> Baustaub-Spezialist</div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="white">
+    <div class="section-inner">
+      <div class="section-eyebrow">Das kennen Sie</div>
+      <h2>Renovierung fertig — aber der Staub ist überall.</h2>
+      <p class="section-text">Handwerker weg, Rechnungen bezahlt — und jetzt liegt feiner Baustaub auf jedem Boden, jeder Oberfläche, in jedem Schrank. Farbreste, Kalkspritzer, Folienrückstände. Das ist kein Job für einen normalen Haushaltslappen.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">🏗️</div>
+          <h3>Baustaub zieht überall ein</h3>
+          <p>Renovierungsstaub ist feiner als normaler Hausstaub — er setzt sich in Ritzen, auf Böden, hinter Heizkörpern, überall.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">⏰</div>
+          <h3>Einzugstermin rückt näher</h3>
+          <p>Die neuen Mieter ziehen ein, oder Sie selbst wollen rein — aber der Zustand macht ein sofortiges Einziehen unmöglich.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">💪</div>
+          <h3>Keine normale Reinigung</h3>
+          <p>Kalkspritzer auf Fliesen, Farbreste auf Böden, Gipsstaub — das braucht professionelle Mittel und Erfahrung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGITATION -->
+  <section class="cream">
+    <div class="section-inner">
+      <div class="section-eyebrow">Was passiert ohne Profi-Reinigung</div>
+      <h2>Was es kostet, wenn Sie es selbst versuchen.</h2>
+      <div class="risk-list">
+        <div class="risk-item">
+          <div class="risk-x">✗</div>
+          <div class="risk-item-text">
+            <strong>Stundenlange Arbeit ohne Ergebnis</strong>
+            <p>Baustaub zieht sich beim Wischen nur um — ohne Industriesauger und Spezialreiniger verteilen Sie ihn nur weiter.</p>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-x">✗</div>
+          <div class="risk-item-text">
+            <strong>Böden und Oberflächen beschädigt</strong>
+            <p>Falsche Mittel auf frisch verlegten Böden oder neuen Fliesen können bleibende Kratzer oder Flecken hinterlassen.</p>
+          </div>
+        </div>
+        <div class="risk-item">
+          <div class="risk-x">✗</div>
+          <div class="risk-item-text">
+            <strong>Einzug verzögert sich</strong>
+            <p>Jeder Tag den Sie kämpfen ist ein Tag ohne Einzug, ohne Mieteinnahmen, oder mit unzufriedenen neuen Mietern.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="white">
+    <div class="section-inner">
+      <div class="section-eyebrow">Die Lösung</div>
+      <h2>Nach Nautilus ist Ihr Objekt einzugsbereit.</h2>
+      <p class="section-text">Wir kennen Baustellenreinigungen. Mit Industriesauger, Spezialreinigern und dem richtigen Know-how hinterlassen wir Ihr Objekt makellos — bereit für den Einzug oder die Übergabe.</p>
+      <div class="solution-grid">
+        <ul class="solution-list">
+          <li><span class="check">✓</span> Vollständige Entfernung von Bau- und Renovierungsstaub</li>
+          <li><span class="check">✓</span> Kalkspritzer und Farbreste von Böden & Fliesen</li>
+          <li><span class="check">✓</span> Fenster innen inkl. Rahmen und Dichtungen</li>
+          <li><span class="check">✓</span> Küche, Bad, Sanitäranlagen</li>
+          <li><span class="check">✓</span> Heizkörper, Fensterbänke, Türrahmen</li>
+          <li><span class="check">✓</span> Böden saugen und wischen</li>
+          <li><span class="check">✓</span> Festpreis vorab — keine versteckten Kosten</li>
+          <li><span class="check">✓</span> Ergebnis: einzugsbereit am selben Tag</li>
+        </ul>
+        <div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">„Nach der Kernsanierung war überall Staub. Nautilus hat das in einem Tag komplett in den Griff bekommen — neue Mieter konnten pünktlich einziehen."</p>
+            <div class="review-author">Andreas W. — Pankow</div>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">„Schnelle Rückmeldung, fairer Preis, hervorragende Arbeit. Die Wohnung war nach Malerarbeiten nicht wiederzuerkennen — im positiven Sinne."</p>
+            <div class="review-author">Julia S. — Marzahn</div>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">„Professionell, pünktlich und gründlich. Kann Nautilus für Baureinigungen in Berlin uneingeschränkt empfehlen."</p>
+            <div class="review-author">Markus T. — Prenzlauer Berg</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="cream">
+    <div class="section-inner">
+      <div class="section-eyebrow">So einfach geht's</div>
+      <h2>Drei Schritte bis zum einzugsbereiten Objekt.</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-num">SCHRITT 01</div>
+          <h3>Anfrage senden</h3>
+          <p>Formular ausfüllen — dauert 30 Sekunden. Wir brauchen nur Ihren Namen, Ihre Nummer und wann gereinigt werden soll.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">SCHRITT 02</div>
+          <h3>Angebot erhalten</h3>
+          <p>Wir melden uns innerhalb von 30 Minuten mit einer Einschätzung und einem verbindlichen Festpreis. Kein Verstecktes, keine Extras.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">SCHRITT 03</div>
+          <h3>Einzugsbereit</h3>
+          <p>Wir reinigen termingerecht und gründlich. Ihr Objekt ist danach bereit für neue Mieter, für den Einzug — oder für die Übergabe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM 2 -->
+  <section class="white">
+    <div class="section-inner" style="text-align:center;">
+      <div class="section-eyebrow">Jetzt anfragen</div>
+      <h2>Termin sichern — kostenlos und unverbindlich.</h2>
+      <p class="section-text" style="margin:0 auto;">Sagen Sie uns wann und wo — wir melden uns innerhalb von 30 Minuten mit einem Angebot.</p>
+      <div class="form2-wrap">
+        <form class="lp-form lp-form-wrap" action="https://formspree.io/f/mnjonren" method="POST" style="margin-top:32px;text-align:left;">
+          <div>
+            <label for="f2-name">Ihr Name</label>
+            <input type="text" id="f2-name" name="Name" required placeholder="Vorname reicht" autocomplete="given-name" />
+          </div>
+          <div>
+            <label for="f2-phone">Telefonnummer</label>
+            <input type="tel" id="f2-phone" name="Telefon" required placeholder="Wir rufen schnell zurück" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="f2-date">Wann soll gereinigt werden?</label>
+            <div class="select-wrap">
+              <select id="f2-date" name="Wunschtermin">
+                <option value="">Bitte wählen</option>
+                <option>So schnell wie möglich</option>
+                <option>Diese Woche</option>
+                <option>Nächste Woche</option>
+                <option>In 2–4 Wochen</option>
+                <option>Termin flexibel</option>
+              </select>
+            </div>
+          </div>
+          <input type="hidden" name="Quelle" value="LP Renovierungsreinigung (unten)" />
+          <button type="submit" class="lp-submit">JETZT KOSTENLOS ANFRAGEN →</button>
+          <p class="form-trust">🔒 SSL-verschlüsselt · Keine Weitergabe · Kostenlos & unverbindlich</p>
+          <div class="form-result"><strong>Anfrage gesendet ✓</strong><br>Vielen Dank — wir melden uns innerhalb von 30 Minuten bei Ihnen.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY -->
+  <div class="urgency-bar">
+    🗓️ Wir sind täglich in Ost-Berlin im Einsatz — <strong>Termine in dieser Woche noch verfügbar.</strong>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="lp-footer">
+    © 2025 Nautilus Facility Cleaning Berlin ·
+    <a href="/impressum/">Impressum</a> ·
+    <a href="/datenschutz/">Datenschutz</a>
+  </footer>
+
+  <script>
+  (function(){
+    function init(){
+      document.querySelectorAll('.lp-form-wrap').forEach(function(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var btn = form.querySelector('.lp-submit');
+          if(btn){ btn.disabled = true; btn.textContent = 'Wird gesendet…'; }
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          }).then(function(res){
+            if(!res.ok) throw new Error('x');
+            form.classList.add('is-success');
+            form.reset();
+            if(btn) btn.textContent = 'Gesendet ✓';
+          }).catch(function(){
+            var box = form.querySelector('.form-result');
+            if(box){ box.style.display = 'block'; box.innerHTML = '<strong>Übermittlung aktuell nicht möglich.</strong><br>Bitte schreiben Sie uns direkt: kontakt@nautilus-facility.de'; }
+            if(btn){ btn.disabled = false; btn.textContent = 'JETZT KOSTENLOS ANFRAGEN →'; }
+          });
+        });
+      });
+    }
+    document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+  })();
+  </script>
+</body>
+</html>

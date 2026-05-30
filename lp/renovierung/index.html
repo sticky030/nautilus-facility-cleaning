@@ -144,23 +144,33 @@
       bottom: 28px;
       right: 28px;
       z-index: 999;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #25D366;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 22px 14px 18px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      text-decoration: none;
       box-shadow: 0 8px 28px rgba(37,211,102,.42);
-      transition: transform .2s, box-shadow .2s;
+      transition: transform .2s, box-shadow .2s, background .2s;
     }
 
     .wa-float:hover {
-      transform: scale(1.08);
+      background: #1ebe5b;
+      transform: translateY(-2px);
       box-shadow: 0 12px 36px rgba(37,211,102,.52);
     }
 
-    .wa-float svg { width: 30px; height: 30px; }
+    .wa-float svg { width: 24px; height: 24px; flex-shrink: 0; }
+
+    @media (max-width: 480px) {
+      .wa-float { padding: 13px 16px 13px 14px; font-size: 13px; }
+    }
 
     .badge {
       display: inline-flex;
@@ -516,10 +526,6 @@
           <span class="badge"><span class="badge-dot"></span>Ost-Berlin spezialisiert</span>
         </div>
 
-        <a href="tel:+4917622844636" class="hero-phone-link">
-          <span class="ph-number">0176 2284 4636</span>
-          <span class="ph-label">Jetzt anrufen —<br>Sofortrückmeldung</span>
-        </a>
       </div>
 
       <div class="form-card">
@@ -766,11 +772,12 @@
   </script>
 
   <!-- WhatsApp Float Button -->
-  <a class="wa-float" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Reinigung%20nach%20Renovierung%20in%20Berlin." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a class="wa-float" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Reinigung%20nach%20Renovierung%20in%20Berlin." target="_blank" rel="noopener">
     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.676 4.88 1.857 6.91L2 30l7.302-1.823A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="#fff"/>
-      <path d="M22.003 19.57c-.31-.155-1.833-.903-2.118-.997-.284-.094-.491-.14-.698.155-.207.296-.8.997-1.007 1.204-.207.207-.414.233-.724.078-.31-.155-1.306-.481-2.487-1.534-.92-.82-1.54-1.832-1.72-2.142-.181-.31-.02-.477.136-.63.14-.138.31-.362.465-.543.156-.181.207-.31.31-.518.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.956-2.303-.252-.605-.508-.523-.698-.532l-.594-.01a1.14 1.14 0 0 0-.828.388c-.284.31-1.085 1.06-1.085 2.586 0 1.527 1.11 3.001 1.265 3.208.155.207 2.185 3.337 5.296 4.68.74.32 1.318.51 1.768.652.743.236 1.42.203 1.954.123.596-.089 1.833-.749 2.091-1.472.258-.724.258-1.344.181-1.472-.078-.129-.284-.207-.594-.362Z" fill="#25D366"/>
+      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.676 4.88 1.857 6.91L2 30l7.302-1.823A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="rgba(255,255,255,.25)"/>
+      <path d="M22.003 19.57c-.31-.155-1.833-.903-2.118-.997-.284-.094-.491-.14-.698.155-.207.296-.8.997-1.007 1.204-.207.207-.414.233-.724.078-.31-.155-1.306-.481-2.487-1.534-.92-.82-1.54-1.832-1.72-2.142-.181-.31-.02-.477.136-.63.14-.138.31-.362.465-.543.156-.181.207-.31.31-.518.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.956-2.303-.252-.605-.508-.523-.698-.532l-.594-.01a1.14 1.14 0 0 0-.828.388c-.284.31-1.085 1.06-1.085 2.586 0 1.527 1.11 3.001 1.265 3.208.155.207 2.185 3.337 5.296 4.68.74.32 1.318.51 1.768.652.743.236 1.42.203 1.954.123.596-.089 1.833-.749 2.091-1.472.258-.724.258-1.344.181-1.472-.078-.129-.284-.207-.594-.362Z" fill="#fff"/>
     </svg>
+    Direkt auf WhatsApp schreiben
   </a>
 </body>
 </html>

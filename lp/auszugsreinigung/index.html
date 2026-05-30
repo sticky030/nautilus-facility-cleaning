@@ -174,6 +174,205 @@
       .wa-float { padding: 13px 16px 13px 14px; font-size: 13px; }
     }
 
+    /* ── AVAILABILITY INDICATOR ── */
+    .avail-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(183,155,108,.12);
+      border: 1px solid rgba(183,155,108,.3);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #8a6f3f;
+      margin-bottom: 20px;
+    }
+
+    .avail-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c87941;
+      animation: pulse 1.6s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(.75); }
+    }
+
+    /* ── STICKY MOBILE CTA ── */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      padding: 12px 16px;
+      background: rgba(247,244,238,.97);
+      border-top: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .sticky-cta a {
+      display: block;
+      text-align: center;
+      background: var(--gold);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 15px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(183,155,108,.35);
+    }
+
+    @media (max-width: 860px) {
+      .sticky-cta { display: block; }
+      .wa-float { bottom: 88px; }
+    }
+
+    /* ── SOCIAL PROOF NOTIFICATION ── */
+    .sp-notif {
+      position: fixed;
+      bottom: 28px;
+      left: 24px;
+      z-index: 997;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 32px rgba(44,44,44,.12);
+      max-width: 280px;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .4s, transform .4s;
+      pointer-events: none;
+    }
+
+    .sp-notif.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    .sp-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .sp-text { font-size: 12.5px; line-height: 1.5; color: var(--text); }
+    .sp-text strong { display: block; font-size: 13px; }
+    .sp-time { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    @media (max-width: 860px) {
+      .sp-notif { bottom: 92px; max-width: 240px; }
+    }
+
+    /* ── EXIT POPUP ── */
+    .exit-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(44,44,44,.55);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .exit-overlay.open { display: flex; }
+
+    .exit-modal {
+      background: #fff;
+      border-radius: 24px;
+      padding: 44px 40px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(44,44,44,.20);
+    }
+
+    .exit-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      color: var(--muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .exit-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
+
+    .exit-modal h3 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .exit-modal p {
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .exit-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .02em;
+      padding: 16px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: background .2s;
+    }
+
+    .exit-wa:hover { background: #1ebe5b; }
+
+    .exit-call {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .exit-call:hover { color: var(--gold); }
+
+    .exit-sub {
+      margin-top: 14px !important;
+      font-size: 11.5px !important;
+      color: #bbb !important;
+      margin-bottom: 0 !important;
+    }
+
     .badge {
       display: inline-flex;
       align-items: center;
@@ -629,6 +828,7 @@
     <div class="hero-inner">
       <div>
         <div class="eyebrow">Auszugsreinigung Berlin</div>
+        <div class="avail-bar"><span class="avail-pulse"></span> Nur noch 3 freie Termine diese Woche</div>
         <h1>Makellose Übergabe.<br>Volle Kaution zurück.</h1>
         <p class="hero-sub">Beim Auszug zählt jede Stunde und jeder Quadratmeter. Wir reinigen Ihre Wohnung auf Vermieter-Standard — termingerecht, zum Festpreis, mit Übergabegarantie. Sie kümmern sich um den Umzug. Wir machen den Rest.</p>
         <div class="hero-badges">
@@ -640,7 +840,7 @@
 
       </div>
 
-      <div class="form-card">
+      <div class="form-card" id="hero-form">
         <div class="form-card-title">Kostenlose Einschätzung anfragen</div>
         <div class="form-card-sub">Vor- und Nachname, Telefon, Termin — wir melden uns in 30 Minuten persönlich bei Ihnen.</div>
         <form class="lp-form lp-form-wrap" action="https://formspree.io/f/mnjonren" method="POST">
@@ -884,6 +1084,92 @@
     document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
   })();
   </script>
+
+  <script>
+  (function(){
+    /* ── SOCIAL PROOF NOTIFICATIONS ── */
+    var leads = [
+      { initials:'AK', name:'Anna K. aus Friedrichshain',  time:'vor 6 Minuten' },
+      { initials:'MS', name:'Markus S. aus Prenzlauer Berg', time:'vor 14 Minuten' },
+      { initials:'LB', name:'Laura B. aus Mitte',           time:'vor 22 Minuten' },
+      { initials:'TW', name:'Thomas W. aus Lichtenberg',    time:'vor 31 Minuten' },
+      { initials:'SK', name:'Sarah K. aus Neukölln',        time:'vor 47 Minuten' },
+    ];
+    var idx = 0;
+    var notif = document.getElementById('sp-notif');
+    function showNotif(){
+      var d = leads[idx % leads.length]; idx++;
+      document.getElementById('sp-avatar').textContent = d.initials;
+      document.getElementById('sp-name').textContent   = d.name;
+      document.getElementById('sp-time').textContent   = d.time;
+      notif.classList.add('visible');
+      setTimeout(function(){ notif.classList.remove('visible'); }, 5000);
+    }
+    setTimeout(function(){ showNotif(); setInterval(showNotif, 28000); }, 8000);
+
+    /* ── EXIT INTENT ── */
+    var shown = false;
+    var overlay = document.getElementById('exit-overlay');
+    document.getElementById('exit-close').addEventListener('click', function(){
+      overlay.classList.remove('open');
+    });
+    overlay.addEventListener('click', function(e){
+      if(e.target === overlay) overlay.classList.remove('open');
+    });
+    document.addEventListener('mouseleave', function(e){
+      if(!shown && e.clientY < 10){
+        shown = true;
+        overlay.classList.add('open');
+      }
+    });
+    /* Mobile: trigger after 40s idle */
+    var mobileTimer;
+    function resetTimer(){ clearTimeout(mobileTimer); mobileTimer = setTimeout(function(){ if(!shown){ shown=true; overlay.classList.add('open'); } }, 40000); }
+    ['touchstart','scroll'].forEach(function(ev){ document.addEventListener(ev, resetTimer, { passive:true }); });
+    resetTimer();
+
+    /* ── STICKY CTA: hide when hero form visible ── */
+    var stickyCta = document.getElementById('sticky-cta');
+    var heroForm  = document.getElementById('hero-form');
+    if(stickyCta && heroForm && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        stickyCta.style.opacity = entries[0].isIntersecting ? '0' : '1';
+        stickyCta.style.pointerEvents = entries[0].isIntersecting ? 'none' : 'auto';
+      }, { threshold: 0.2 }).observe(heroForm);
+    }
+  })();
+  </script>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#hero-form">Jetzt kostenlos anfragen →</a>
+  </div>
+
+  <!-- Social Proof Notification -->
+  <div class="sp-notif" id="sp-notif">
+    <div class="sp-avatar" id="sp-avatar">AK</div>
+    <div class="sp-text">
+      <strong id="sp-name">Anna K. aus Friedrichshain</strong>
+      hat gerade eine Anfrage gesendet
+      <div class="sp-time" id="sp-time">vor 6 Minuten</div>
+    </div>
+  </div>
+
+  <!-- Exit Intent Popup -->
+  <div class="exit-overlay" id="exit-overlay">
+    <div class="exit-modal">
+      <button class="exit-close" id="exit-close">×</button>
+      <span class="exit-emoji">⏱️</span>
+      <h3>Noch nicht sicher?</h3>
+      <p>Kein Problem — schreiben Sie uns einfach kurz auf WhatsApp. Kostenlose Einschätzung, keine Verpflichtung, Antwort in unter 30 Minuten.</p>
+      <a class="exit-wa" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20ben%C3%B6tige%20eine%20Auszugsreinigung%20in%20Berlin." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.676 4.88 1.857 6.91L2 30l7.302-1.823A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="rgba(255,255,255,.3)"/><path d="M22.003 19.57c-.31-.155-1.833-.903-2.118-.997-.284-.094-.491-.14-.698.155-.207.296-.8.997-1.007 1.204-.207.207-.414.233-.724.078-.31-.155-1.306-.481-2.487-1.534-.92-.82-1.54-1.832-1.72-2.142-.181-.31-.02-.477.136-.63.14-.138.31-.362.465-.543.156-.181.207-.31.31-.518.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.956-2.303-.252-.605-.508-.523-.698-.532l-.594-.01a1.14 1.14 0 0 0-.828.388c-.284.31-1.085 1.06-1.085 2.586 0 1.527 1.11 3.001 1.265 3.208.155.207 2.185 3.337 5.296 4.68.74.32 1.318.51 1.768.652.743.236 1.42.203 1.954.123.596-.089 1.833-.749 2.091-1.472.258-.724.258-1.344.181-1.472-.078-.129-.284-.207-.594-.362Z" fill="#fff"/></svg>
+        Auf WhatsApp schreiben
+      </a>
+      <a class="exit-call" href="tel:+4917622844636">Oder anrufen: 0176 2284 4636</a>
+      <p class="exit-sub">🔒 Kostenlos & unverbindlich — keine Weitergabe Ihrer Daten</p>
+    </div>
+  </div>
 
   <!-- WhatsApp Float Button -->
   <a class="wa-float" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Auszugsreinigung%20in%20Berlin." target="_blank" rel="noopener">

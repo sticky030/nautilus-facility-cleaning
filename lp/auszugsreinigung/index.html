@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auszugsreinigung Berlin – Kaution gesichert | Nautilus Facility Cleaning</title>
+  <meta name="description" content="Professionelle Auszugsreinigung in Berlin mit Übergabegarantie. Festpreis, schnelle Termine, Kaution zurück. Jetzt kostenlos anfragen.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18197577914"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18197577914');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #e8d49a;
+      --dark: #1a1a1a;
+      --text: #2d2d2d;
+      --muted: #777;
+      --bg: #fafafa;
+      --white: #fff;
+      --line: #e8e8e8;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* NAV */
+    .nav { background: var(--dark); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { color: var(--white); font-size: 17px; font-weight: 700; text-decoration: none; letter-spacing: -.3px; }
+    .nav-logo span { color: var(--gold); }
+    .nav-phone { color: var(--gold); font-weight: 700; font-size: 15px; text-decoration: none; }
+
+    /* AVAILABILITY BAR */
+    .avail-bar { background: #f0f9f0; border-bottom: 1px solid #c3e6c3; padding: 9px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13.5px; font-weight: 600; color: #2a7a2a; }
+    .avail-dot { width: 9px; height: 9px; border-radius: 50%; background: #2ecc71; flex-shrink: 0; animation: pulse-dot 1.8s infinite; }
+    @keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 0 0 rgba(46,204,113,.5); } 50%{ box-shadow: 0 0 0 6px rgba(46,204,113,0); } }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 48px 20px 56px; text-align: center; }
+    .hero h1 { font-size: clamp(26px, 5vw, 42px); color: var(--white); font-weight: 800; line-height: 1.2; margin-bottom: 16px; letter-spacing: -.5px; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero-sub { color: #ccc; font-size: 16px; max-width: 560px; margin: 0 auto 28px; }
+    .hero-usps { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 32px; }
+    .hero-usp { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #eee; font-size: 13px; padding: 6px 14px; border-radius: 20px; }
+    .hero-usp::before { content: '✓ '; color: var(--gold); font-weight: 700; }
+
+    /* FORM CARD */
+    .form-card { background: var(--white); border-radius: 16px; padding: 32px 28px; max-width: 480px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+    .form-card h2 { font-size: 19px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .form-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 20px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 13px 16px; border: 1.5px solid var(--line); border-radius: 8px;
+      font-size: 15px; color: var(--text); background: #fff; outline: none; transition: border-color .2s;
+      -webkit-appearance: none; appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--gold); }
+    .form-group input::placeholder { color: #aaa; }
+    .btn-primary {
+      width: 100%; padding: 16px; background: var(--gold); color: var(--dark); font-size: 15px;
+      font-weight: 800; border: none; border-radius: 8px; cursor: pointer; letter-spacing: .3px;
+      transition: background .2s, transform .1s; text-transform: uppercase;
+    }
+    .btn-primary:hover { background: #b8963e; }
+    .btn-primary:active { transform: scale(.98); }
+    .form-trust { font-size: 11.5px; color: var(--muted); text-align: center; margin-top: 10px; }
+    .form-result { display: none; background: #f0f9f0; border: 1px solid #c3e6c3; border-radius: 8px; padding: 14px 16px; margin-top: 14px; font-size: 14px; color: #2a7a2a; }
+
+    /* STATS */
+    .stats { background: var(--white); padding: 32px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; text-align: center; }
+    .stat-item strong { display: block; font-size: 22px; font-weight: 800; color: var(--dark); }
+    .stat-item span { font-size: 13px; color: var(--muted); }
+
+    /* SECTIONS */
+    .section { padding: 56px 20px; max-width: 760px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .section h2 { font-size: clamp(22px, 4vw, 32px); font-weight: 800; color: var(--dark); margin-bottom: 16px; line-height: 1.25; }
+    .section p { font-size: 16px; color: var(--muted); margin-bottom: 20px; line-height: 1.7; }
+
+    /* PAIN POINTS */
+    .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 28px; }
+    .pain-card { background: #fff8f8; border: 1px solid #fde8e8; border-radius: var(--radius); padding: 22px 20px; }
+    .pain-icon { font-size: 28px; margin-bottom: 10px; }
+    .pain-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .pain-card p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.6; }
+
+    /* CONSEQUENCE */
+    .consequence { background: #1a1a1a; padding: 48px 20px; }
+    .consequence-inner { max-width: 760px; margin: 0 auto; }
+    .consequence h2 { font-size: clamp(20px, 3.5vw, 28px); color: var(--white); font-weight: 800; margin-bottom: 28px; }
+    .consequence-item { display: flex; gap: 14px; margin-bottom: 22px; align-items: flex-start; }
+    .consequence-x { color: #e74c3c; font-size: 20px; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+    .consequence-item h4 { color: var(--white); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .consequence-item p { color: #aaa; font-size: 14px; margin: 0; line-height: 1.6; }
+
+    /* SOLUTION */
+    .solution { background: var(--white); padding: 56px 20px; }
+    .solution-inner { max-width: 760px; margin: 0 auto; }
+    .solution-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin: 24px 0; }
+    .solution-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: var(--text); padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .solution-list li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    /* TESTIMONIALS */
+    .testimonials { padding: 56px 20px; background: var(--bg); }
+    .testimonials-inner { max-width: 800px; margin: 0 auto; }
+    .testimonials h2 { font-size: clamp(20px, 3.5vw, 28px); font-weight: 800; color: var(--dark); margin-bottom: 28px; text-align: center; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .testi-card { background: var(--white); border-radius: var(--radius); padding: 22px 20px; box-shadow: var(--shadow); }
+    .testi-stars { color: #f1c40f; font-size: 14px; margin-bottom: 10px; }
+    .testi-card blockquote { font-size: 14px; color: var(--text); line-height: 1.65; margin-bottom: 14px; font-style: italic; }
+    .testi-author { font-size: 13px; font-weight: 700; color: var(--dark); }
+
+    /* PROCESS */
+    .process { background: var(--dark); padding: 56px 20px; }
+    .process-inner { max-width: 760px; margin: 0 auto; }
+    .process h2 { color: var(--white); font-size: clamp(20px, 3.5vw, 28px); font-weight: 800; margin-bottom: 32px; text-align: center; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .process-step { text-align: center; }
+    .step-num { width: 44px; height: 44px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--dark); font-size: 16px; margin: 0 auto 14px; }
+    .process-step h3 { color: var(--white); font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: #aaa; font-size: 13.5px; line-height: 1.6; }
+
+    /* SECOND FORM */
+    .second-form { padding: 56px 20px; background: var(--white); }
+    .second-form-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+    .second-form h2 { font-size: clamp(20px, 3.5vw, 28px); font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .second-form p { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+
+    /* FOOTER */
+    .lp-footer { background: var(--dark); padding: 24px 20px; text-align: center; }
+    .lp-footer p { color: #777; font-size: 13px; }
+    .lp-footer a { color: #999; text-decoration: none; margin: 0 8px; }
+    .lp-footer a:hover { color: var(--gold); }
+
+    /* URGENCY */
+    .urgency-bar { background: linear-gradient(90deg, #1a1a1a, #2d2d2d); padding: 14px 20px; text-align: center; border-top: 2px solid var(--gold); }
+    .urgency-bar p { color: #ccc; font-size: 13.5px; }
+    .urgency-bar strong { color: var(--gold); }
+
+    /* STICKY CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+      background: var(--gold); padding: 0;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+      transition: opacity .3s;
+    }
+    .sticky-cta a {
+      display: block; padding: 16px 20px; text-align: center;
+      color: var(--dark); font-weight: 800; font-size: 15px; text-decoration: none;
+      letter-spacing: .3px; text-transform: uppercase;
+    }
+    @media (max-width: 860px) { .sticky-cta { display: block; } }
+
+    /* SOCIAL PROOF NOTIFICATION */
+    .sp-notif {
+      position: fixed; bottom: 28px; left: 24px; z-index: 997;
+      background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+      padding: 14px 18px; display: flex; align-items: center; gap: 12px;
+      box-shadow: 0 8px 32px rgba(44,44,44,.14); max-width: 280px;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity .4s, transform .4s; pointer-events: none;
+    }
+    .sp-notif.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .sp-avatar {
+      width: 38px; height: 38px; border-radius: 50%; background: var(--gold);
+      color: #fff; font-size: 14px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .sp-text { font-size: 12.5px; line-height: 1.5; color: var(--text); }
+    .sp-text strong { display: block; font-size: 13px; }
+    .sp-time { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    @media (max-width: 860px) { .sp-notif { bottom: 80px; max-width: 240px; } }
+
+    /* EXIT OVERLAY */
+    .exit-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,.6); align-items: center; justify-content: center;
+      padding: 20px; backdrop-filter: blur(4px);
+    }
+    .exit-overlay.open { display: flex; }
+    .exit-modal {
+      background: var(--white); border-radius: 20px; padding: 36px 28px;
+      max-width: 400px; width: 100%; text-align: center; position: relative;
+      box-shadow: 0 24px 80px rgba(0,0,0,.3);
+    }
+    .exit-close {
+      position: absolute; top: 14px; right: 16px; background: none; border: none;
+      font-size: 22px; cursor: pointer; color: var(--muted); line-height: 1;
+    }
+    .exit-emoji { font-size: 40px; display: block; margin-bottom: 12px; }
+    .exit-modal h3 { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 10px; }
+    .exit-modal p { font-size: 14px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+    .exit-wa {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #25D366; color: #fff; font-weight: 700; font-size: 15px;
+      padding: 14px 20px; border-radius: 10px; text-decoration: none; margin-bottom: 10px;
+    }
+    .exit-call {
+      display: block; color: var(--dark); font-weight: 600; font-size: 14px;
+      text-decoration: none; padding: 10px; margin-bottom: 12px;
+    }
+    .exit-sub { font-size: 11.5px; color: var(--muted); }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position: fixed; bottom: 80px; right: 20px; z-index: 996;
+      background: #25D366; color: #fff; font-weight: 700; font-size: 14px;
+      padding: 12px 18px 12px 14px; border-radius: 50px;
+      text-decoration: none; display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .wa-float:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.5); }
+    .wa-float svg { flex-shrink: 0; }
+    @media (max-width: 860px) { .wa-float { bottom: 72px; font-size: 13px; padding: 10px 14px 10px 12px; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="nav-logo" href="https://nautilus-facility.de/">Nautilus <span>Facility</span> Berlin</a>
+    <a class="nav-phone" href="tel:+4917622844636">☎ 0176 2284 4636</a>
+  </nav>
+
+  <!-- AVAILABILITY BAR -->
+  <div class="avail-bar">
+    <span class="avail-dot"></span>
+    Nur noch 3 freie Termine diese Woche
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Makellose Übergabe.<br><em>Volle Kaution zurück.</em></h1>
+    <p class="hero-sub">Beim Auszug zählt jede Stunde und jeder Quadratmeter. Wir reinigen Ihre Wohnung auf Vermieter-Standard — termingerecht, zum Festpreis, mit Übergabegarantie.</p>
+    <div class="hero-usps">
+      <span class="hero-usp">Übergabegarantie</span>
+      <span class="hero-usp">Festpreis</span>
+      <span class="hero-usp">Noch heute möglich</span>
+      <span class="hero-usp">Ost-Berlin spezialisiert</span>
+    </div>
+
+    <!-- HERO FORM -->
+    <div class="form-card" id="hero-form">
+      <h2>Kostenlose Einschätzung anfragen</h2>
+      <p>Name, Telefon, Termin — wir melden uns in 30 Minuten persönlich bei Ihnen.</p>
+      <form id="form-hero" novalidate>
+        <div class="form-group">
+          <input type="text" name="Name" id="h-name" placeholder="Vor- und Nachname" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="Telefon" id="h-phone" placeholder="Wir antworten in 30 Min." required>
+        </div>
+        <div class="form-group">
+          <select name="Termin" id="h-termin" required>
+            <option value="" disabled selected>Wann ist die Übergabe?</option>
+            <option value="3tage">Innerhalb von 3 Tagen</option>
+            <option value="woche">Diese Woche</option>
+            <option value="naechste">Nächste Woche</option>
+            <option value="2-4wochen">In 2–4 Wochen</option>
+            <option value="flexibel">Termin flexibel</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">Jetzt kostenlos anfragen →</button>
+        <p class="form-trust">🔒 SSL-verschlüsselt · Keine Weitergabe · Kostenlos & unverbindlich</p>
+        <div class="form-result" id="result-hero"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div style="background:#fff; border-bottom: 1px solid var(--line);">
+    <div class="stats">
+      <div class="stat-item"><strong>⭐ 5,0</strong><span>Google-Bewertung (11 Rezensionen)</span></div>
+      <div class="stat-item"><strong>📍 Ost-Berlin</strong><span>Spezialisiert auf Ihre Region</span></div>
+      <div class="stat-item"><strong>⚡ 30 Min.</strong><span>Rückmeldung garantiert</span></div>
+      <div class="stat-item"><strong>🛡️ Garantie</strong><span>Übergabegarantie inklusive</span></div>
+    </div>
+  </div>
+
+  <!-- PROBLEM SECTION -->
+  <section class="section">
+    <div class="section-label">Das kennen Sie</div>
+    <h2>Der Auszugstermin rückt näher — und die Wohnung muss auf Vermieter-Standard sein.</h2>
+    <p>Umzug organisieren, Ämter ummelden, Arbeit, Familie — und die Wohnung soll gleichzeitig so sauber sein, dass der Vermieter nichts findet. Ein einziger Kalkrand im Bad, ein übersehener Fettfleck am Herd — das kann Hunderte Euro Kaution kosten.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">📦</div>
+        <h3>Keine Zeit</h3>
+        <p>Umzug organisieren, Ämter ummelden, Job — wann soll da noch eine Grundreinigung stattfinden?</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🔍</div>
+        <h3>Vermieter prüfen mit Argusaugen</h3>
+        <p>Herd, Dunstabzug, Schränke, Fugen, Böden — ein geübter Vermieter findet immer etwas.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💰</div>
+        <h3>Kaution in Gefahr</h3>
+        <p>Mängel bei der Übergabe bedeuten: Nachbesserung, Diskussion oder einbehaltene Kaution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSEQUENCE -->
+  <section class="consequence">
+    <div class="consequence-inner">
+      <div class="section-label" style="color: var(--gold);">Was es kostet</div>
+      <h2>Was passiert, wenn die Übergabe nicht auf Anhieb stimmt.</h2>
+      <div class="consequence-item">
+        <span class="consequence-x">✗</span>
+        <div>
+          <h4>Nachbesserung unter Zeitdruck</h4>
+          <p>Sie sind bereits ausgezogen, der Schlüssel muss heute zurück — und Sie müssen nochmals anreisen und stundenlang nachputzen.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <span class="consequence-x">✗</span>
+        <div>
+          <h4>Kaution einbehalten oder gekürzt</h4>
+          <p>Bis zu drei Monatsmieten, auf die Sie seit Jahren eingezahlt haben — teilweise oder ganz einbehalten. Vollständig vermeidbar.</p>
+        </div>
+      </div>
+      <div class="consequence-item">
+        <span class="consequence-x">✗</span>
+        <div>
+          <h4>Wochen später noch juristischer Streit</h4>
+          <p>Mahnschreiben, anwaltliche Forderungen — obwohl das alles mit einer einzigen professionellen Reinigung vermeidbar gewesen wäre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution">
+    <div class="solution-inner">
+      <div class="section-label">Die Lösung</div>
+      <h2>Nautilus macht Ihre Wohnung übergabefertig. Mit Garantie.</h2>
+      <p>Wir reinigen Ihre Wohnung von oben bis unten — auf genau den Standard, den Vermieter und Hausverwaltungen in Berlin erwarten. Und falls der Vermieter bei der Übergabe doch etwas beanstandet: Wir kommen kostenlos nach.</p>
+      <ul class="solution-list">
+        <li>Alle Böden gereinigt und gewischt</li>
+        <li>Bad & WC auf Hochglanz</li>
+        <li>Küche inkl. Herd, Ofen, Dunstabzug, Kühlschrank</li>
+        <li>Schränke innen und außen</li>
+        <li>Fenster innen inkl. Rahmen & Dichtungen</li>
+        <li>Lichtschalter, Steckdosen, Türen, Türrahmen</li>
+        <li>Übergabegarantie — kostenlose Nacharbeit bei Beanstandung</li>
+        <li>Festpreis vorab — keine Überraschungen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="testimonials-inner">
+      <h2>Was unsere Kunden sagen</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>„48 Stunden vor der Übergabe angefragt — ich dachte, das klappt nie. Hat es aber. Wohnung war makellos, Vermieter hatte keine einzige Beanstandung. Kaution vollständig zurück."</blockquote>
+          <div class="testi-author">Maria K. — Prenzlauer Berg</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>„Pünktlich, gründlich, professionell. Der Vermieter hat bei der Übergabe sogar gefragt, wer gereinigt hat — er war beeindruckt. Gerne beim nächsten Mal wieder."</blockquote>
+          <div class="testi-author">Thomas R. — Friedrichshain</div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <blockquote>„Nach drei anderen Angeboten war Nautilus das schnellste und fairste. Rückmeldung in unter 20 Minuten, Festpreis eingehalten, Übergabe ohne Probleme."</blockquote>
+          <div class="testi-author">Sandra M. — Lichtenberg</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="process-inner">
+      <h2>So einfach geht's — drei Schritte bis zur perfekten Übergabe</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h3>Anfrage senden</h3>
+          <p>Formular ausfüllen — dauert 30 Sekunden. Wir brauchen nur Namen, Nummer und Übergabetermin.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h3>Angebot erhalten</h3>
+          <p>Wir melden uns innerhalb von 30 Minuten mit einem verbindlichen Festpreis. Kein Verstecktes.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h3>Übergabe bestehen</h3>
+          <p>Wir reinigen termingerecht. Sie gehen zur Übergabe — und die Kaution kommt zurück.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND FORM -->
+  <section class="second-form" id="form2">
+    <div class="second-form-inner">
+      <h2>Jetzt anfragen — wir melden uns in 30 Minuten.</h2>
+      <p>Kostenlos, unverbindlich, schnell.</p>
+      <div class="form-card" style="box-shadow: var(--shadow); max-width: 100%;">
+        <form id="form-second" novalidate>
+          <div class="form-group">
+            <input type="text" name="Name" id="f2-name" placeholder="Vor- und Nachname" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="Telefon" id="f2-phone" placeholder="Wir antworten in 30 Min." required>
+          </div>
+          <div class="form-group">
+            <select name="Termin" id="f2-termin" required>
+              <option value="" disabled selected>Wann ist die Übergabe?</option>
+              <option value="3tage">Innerhalb von 3 Tagen</option>
+              <option value="woche">Diese Woche</option>
+              <option value="naechste">Nächste Woche</option>
+              <option value="2-4wochen">In 2–4 Wochen</option>
+              <option value="flexibel">Termin flexibel</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Jetzt kostenlos anfragen →</button>
+          <p class="form-trust">🔒 SSL-verschlüsselt · Keine Weitergabe · Kostenlos & unverbindlich</p>
+          <div class="form-result" id="result-second"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    <p>🗓️ Wir sind täglich in Ost-Berlin im Einsatz — <strong>freie Termine werden täglich weniger. Jetzt sichern.</strong></p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="lp-footer">
+    <p>© 2025 Nautilus Facility Cleaning Berlin &nbsp;·&nbsp;
+      <a href="https://nautilus-facility.de/impressum/">Impressum</a>
+      <a href="https://nautilus-facility.de/datenschutz/">Datenschutz</a>
+    </p>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <a href="#hero-form">Jetzt kostenlos anfragen →</a>
+  </div>
+
+  <!-- SOCIAL PROOF NOTIFICATION -->
+  <div class="sp-notif" id="sp-notif">
+    <div class="sp-avatar" id="sp-avatar">AK</div>
+    <div class="sp-text">
+      <strong id="sp-name">Anna K. aus Friedrichshain</strong>
+      hat gerade eine Anfrage gesendet
+      <div class="sp-time" id="sp-time">vor 6 Minuten</div>
+    </div>
+  </div>
+
+  <!-- EXIT INTENT POPUP -->
+  <div class="exit-overlay" id="exit-overlay">
+    <div class="exit-modal">
+      <button class="exit-close" id="exit-close">×</button>
+      <span class="exit-emoji">⏱️</span>
+      <h3>Noch nicht sicher?</h3>
+      <p>Kein Problem — schreiben Sie uns einfach kurz auf WhatsApp. Kostenlose Einschätzung, keine Verpflichtung, Antwort in unter 30 Minuten.</p>
+      <a class="exit-wa" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20ben%C3%B6tige%20eine%20Auszugsreinigung%20in%20Berlin." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.676 4.88 1.857 6.91L2 30l7.302-1.823A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="rgba(255,255,255,.3)"/><path d="M22.003 19.57c-.31-.155-1.833-.903-2.118-.997-.284-.094-.491-.14-.698.155-.207.296-.8.997-1.007 1.204-.207.207-.414.233-.724.078-.31-.155-1.306-.481-2.487-1.534-.92-.82-1.54-1.832-1.72-2.142-.181-.31-.02-.477.136-.63.14-.138.31-.362.465-.543.156-.181.207-.31.31-.518.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.956-2.303-.252-.605-.508-.523-.698-.532l-.594-.01a1.14 1.14 0 0 0-.828.388c-.284.31-1.085 1.06-1.085 2.586 0 1.527 1.11 3.001 1.265 3.208.155.207 2.185 3.337 5.296 4.68.74.32 1.318.51 1.768.652.743.236 1.42.203 1.954.123.596-.089 1.833-.749 2.091-1.472.258-.724.258-1.344.181-1.472-.078-.129-.284-.207-.594-.362Z" fill="#fff"/></svg>
+        Auf WhatsApp schreiben
+      </a>
+      <a class="exit-call" href="tel:+4917622844636">Oder anrufen: 0176 2284 4636</a>
+      <p class="exit-sub">🔒 Kostenlos & unverbindlich — keine Weitergabe Ihrer Daten</p>
+    </div>
+  </div>
+
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/4917622844636?text=Guten%20Tag%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Auszugsreinigung%20in%20Berlin." target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.676 4.88 1.857 6.91L2 30l7.302-1.823A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z" fill="rgba(255,255,255,.25)"/><path d="M22.003 19.57c-.31-.155-1.833-.903-2.118-.997-.284-.094-.491-.14-.698.155-.207.296-.8.997-1.007 1.204-.207.207-.414.233-.724.078-.31-.155-1.306-.481-2.487-1.534-.92-.82-1.54-1.832-1.72-2.142-.181-.31-.02-.477.136-.63.14-.138.31-.362.465-.543.156-.181.207-.31.31-.518.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.956-2.303-.252-.605-.508-.523-.698-.532l-.594-.01a1.14 1.14 0 0 0-.828.388c-.284.31-1.085 1.06-1.085 2.586 0 1.527 1.11 3.001 1.265 3.208.155.207 2.185 3.337 5.296 4.68.74.32 1.318.51 1.768.652.743.236 1.42.203 1.954.123.596-.089 1.833-.749 2.091-1.472.258-.724.258-1.344.181-1.472-.078-.129-.284-.207-.594-.362Z" fill="#fff"/></svg>
+    Direkt auf WhatsApp schreiben
+  </a>
+
+  <!-- FORM SCRIPT -->
+  <script>
+  (function(){
+    function handleForm(formId, resultId) {
+      var form = document.getElementById(formId);
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var result = document.getElementById(resultId);
+        var name = form.querySelector('[name="Name"]').value.trim();
+        var phone = form.querySelector('[name="Telefon"]').value.trim();
+        var termin = form.querySelector('[name="Termin"]').value;
+        if (!name || !phone || !termin) {
+          result.style.display = 'block';
+          result.style.background = '#fff8f8';
+          result.style.borderColor = '#fde8e8';
+          result.style.color = '#c0392b';
+          result.innerHTML = 'Bitte alle Felder ausfüllen.';
+          return;
+        }
+        if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet…'; }
+        var body = 'Name=' + encodeURIComponent(name) + '&Telefon=' + encodeURIComponent(phone) + '&Termin=' + encodeURIComponent(termin) + '&Seite=Auszugsreinigung-LP';
+        fetch('https://formspree.io/f/xpwzgkdj', {
+          method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }, body: body
+        }).then(function(r) {
+          if (r.ok) {
+            result.style.display = 'block';
+            result.style.background = '#f0f9f0';
+            result.style.borderColor = '#c3e6c3';
+            result.style.color = '#2a7a2a';
+            result.innerHTML = '<strong>Anfrage gesendet ✓</strong><br>Vielen Dank — wir melden uns innerhalb von 30 Minuten bei Ihnen.';
+            form.reset();
+            if (typeof gtag !== 'undefined') { gtag('event', 'conversion', { 'send_to': 'AW-18197577914' }); }
+          } else { throw new Error(); }
+          if (btn) { btn.disabled = false; btn.textContent = 'JETZT KOSTENLOS ANFRAGEN →'; }
+        }).catch(function() {
+          result.style.display = 'block';
+          result.innerHTML = '<strong>Übermittlung aktuell nicht möglich.</strong><br>Bitte schreiben Sie uns direkt: kontakt@nautilus-facility.de';
+          if (btn) { btn.disabled = false; btn.textContent = 'JETZT KOSTENLOS ANFRAGEN →'; }
+        });
+      });
+    }
+    document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', function(){ handleForm('form-hero','result-hero'); handleForm('form-second','result-second'); }) : (function(){ handleForm('form-hero','result-hero'); handleForm('form-second','result-second'); })();
+  })();
+  </script>
+
+  <!-- CRO SCRIPTS — must be after all DOM elements -->
+  <script>
+  (function(){
+    /* SOCIAL PROOF */
+    var leads = [
+      { initials:'AK', name:'Anna K. aus Friedrichshain',    time:'vor 6 Minuten'  },
+      { initials:'MS', name:'Markus S. aus Prenzlauer Berg', time:'vor 14 Minuten' },
+      { initials:'LB', name:'Laura B. aus Mitte',            time:'vor 22 Minuten' },
+      { initials:'TW', name:'Thomas W. aus Lichtenberg',     time:'vor 31 Minuten' },
+      { initials:'SK', name:'Sarah K. aus Neukölln',         time:'vor 47 Minuten' },
+    ];
+    var idx = 0;
+    var notif = document.getElementById('sp-notif');
+    function showNotif(){
+      var d = leads[idx % leads.length]; idx++;
+      document.getElementById('sp-avatar').textContent = d.initials;
+      document.getElementById('sp-name').textContent   = d.name;
+      document.getElementById('sp-time').textContent   = d.time;
+      notif.classList.add('visible');
+      setTimeout(function(){ notif.classList.remove('visible'); }, 5000);
+    }
+    setTimeout(function(){ showNotif(); setInterval(showNotif, 28000); }, 8000);
+
+    /* EXIT INTENT */
+    var shown = false;
+    var overlay = document.getElementById('exit-overlay');
+    document.getElementById('exit-close').addEventListener('click', function(){ overlay.classList.remove('open'); });
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.classList.remove('open'); });
+    document.addEventListener('mouseleave', function(e){ if(!shown && e.clientY < 10){ shown=true; overlay.classList.add('open'); } });
+    var mobileTimer;
+    function resetTimer(){ clearTimeout(mobileTimer); mobileTimer = setTimeout(function(){ if(!shown){ shown=true; overlay.classList.add('open'); } }, 40000); }
+    ['touchstart','scroll'].forEach(function(ev){ document.addEventListener(ev, resetTimer, {passive:true}); });
+    resetTimer();
+
+    /* STICKY CTA */
+    var stickyCta = document.getElementById('sticky-cta');
+    var heroForm  = document.getElementById('hero-form');
+    if(stickyCta && heroForm && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        stickyCta.style.opacity = entries[0].isIntersecting ? '0' : '1';
+        stickyCta.style.pointerEvents = entries[0].isIntersecting ? 'none' : 'auto';
+      }, {threshold:0.2}).observe(heroForm);
+    }
+  })();
+  </script>
+
+</body>
+</html>

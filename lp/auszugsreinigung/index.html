@@ -1012,7 +1012,7 @@
             if (res.ok) {
               result.className = 'form-result ok'; result.style.display = 'block';
               result.innerHTML = '&#9989; Vielen Dank! Wir melden uns in 30 Minuten.';
-              form.reset(); btn.textContent = 'Gesendet &#10003;';
+              form.reset(); btn.textContent = 'Gesendet ✓';
               if (typeof gtag === 'function') { gtag('event','conversion',{send_to:'AW-18197577914/XIgtCMbTzLYcELqBpOVD',value:150,currency:'EUR'}); }
             } else { throw new Error(); }
           })
@@ -1080,6 +1080,31 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+</script>
+<script id="nfc-horizontal-process-js">
+(function(){
+  function ready(fn){ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn) : fn(); }
+  ready(function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.horizontal-process'));
+    if(!boxes.length) return;
+    function play(box){ if(box.dataset.played) return; box.dataset.played='1'; box.classList.add('run-horizontal'); }
+    function check(){
+      var viewport = window.innerHeight || document.documentElement.clientHeight;
+      boxes.forEach(function(box){
+        if(box.dataset.played) return;
+        var rect = box.getBoundingClientRect();
+        var center = rect.top + rect.height/2;
+        var distance = Math.abs(center - viewport/2);
+        var tolerance = Math.min(170, viewport * 0.20);
+        var visible = rect.top < viewport * 0.88 && rect.bottom > viewport * 0.12;
+        if(visible && distance <= tolerance) play(box);
+      });
+    }
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+    requestAnimationFrame(check);
+  });
+})();
 </script>
 </body>
 </html>

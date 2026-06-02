@@ -959,6 +959,76 @@
       
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Preisfaktoren</div><h2>Was Reinigungskosten in Berlin beeinflusst.</h2><p class="section-text">Ein kleiner Raum mit starkem Reinigungsbedarf kann mehr Aufwand verursachen als eine größere, gut vorbereitete Fläche. Deshalb betrachten wir nicht nur Quadratmeter, sondern den tatsächlichen Zustand, die Nutzung, den Leistungsumfang und das Ziel der Reinigung.</p></div><div class="grid cluster-grid-2"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Fläche und Objektart</h3><p>Wohnung, Treppenhaus, Büro, Praxis, Kanzlei oder Baustellenbereich haben unterschiedliche Anforderungen. Entscheidend sind Flächenstruktur, Nutzung, Material, Möblierung, Zugänglichkeit und die Frage, ob es um laufende Pflege, Übergabe oder Sonderreinigung geht.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Zustand und Verschmutzung</h3><p>Leichte Unterhaltsreinigung, Übergabezustand, Renovierungsstaub, Bauverschmutzung, Kalk, Fett oder intensive Grundreinigung liegen operativ weit auseinander. Der sichtbare Zustand entscheidet über Zeit, Mittel und Ablauf.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Leistungsumfang</h3><p>Böden, Sanitär, Küche, Kontaktflächen, Fenster, Rahmen, Türen, Heizkörper, Treppen, Aufzug und Allgemeinflächen müssen klar definiert sein. Nur so ist transparent, was enthalten ist und was separat abgestimmt wird.</p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Termin, Zugang und Zeitfenster</h3><p>Kurzfristige Termine, eingeschränkter Zugang, enge Zeitfenster, Schlüsselorganisation oder Arbeiten außerhalb normaler Zeiten beeinflussen Planung, Einsatzlogik und Aufwand. Diese Punkte gehören in die Einschätzung.</p></article></div></div></section>
       <section><div class="container"><div class="section-head"><div class="eyebrow">Reinigungsarten</div><h2>Unterschiedliche Leistungen, unterschiedliche Kalkulation.</h2></div><div class="grid cluster-grid-3 cluster-compact"><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Auszug & Übergabe</h3><p>Bei Auszug und Übergabe zählt der aktuelle Zustand. Küche, Bad, Böden, Fenster, Rahmen und schwer erreichbare Bereiche beeinflussen den Aufwand deutlich.</p><p style="margin-top:auto;"><a href="/reinigung-nach-auszug-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Auszug ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Renovierung & Bauendreinigung</h3><p>Nach Renovierung, Malerarbeiten, Bodenarbeiten oder Bauarbeiten geht es häufig um Staub, Rückstände, Rahmen, Kanten und eine übergabefähige Gesamtwirkung.</p><p style="margin-top:auto;"><a href="/reinigung-nach-renovierung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Renovierung ansehen</a></p></article><article class="card" style="display:flex; flex-direction:column; min-height:250px;"><h3>Treppenhaus & Gewerbe</h3><p>Bei Treppenhäusern, Büros, Praxen und Kanzleien sind Turnus, Zeitfenster, Leistungsbild, Kontaktflächen und Zugänglichkeit die zentralen Kostenfaktoren.</p><p style="margin-top:auto;"><a href="/treppenhausreinigung-berlin/"  style="color:#B79B6C; font-weight:750; letter-spacing:.08em; text-transform:uppercase; font-size:12px;">Treppenhaus ansehen</a></p></article></div></div></section>
+      
+      <section><div class="container">
+        <div class="section-head"><div class="eyebrow">So läuft es ab</div><h2>Von der Anfrage zum sauberen Ergebnis.</h2></div>
+        <style>
+          .horizontal-process{margin-top:8px;}
+          .horizontal-process-track{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+          .horizontal-step{position:relative;z-index:1;min-height:200px;display:flex;flex-direction:column;gap:16px;}
+          .horizontal-step:not(:last-child)::before,.horizontal-step:not(:last-child)::after{content:"";position:absolute;top:22px;left:44px;height:2px;width:calc(100% + 22px - 44px);pointer-events:none;}
+          .horizontal-step:not(:last-child)::before{background:#E5E1D8;}
+          .horizontal-step:not(:last-child)::after{background:#B79B6C;transform-origin:left center;transform:scaleX(0);}
+          .horizontal-dot{width:44px;height:44px;border-radius:999px;border:1px solid rgba(183,155,108,.32);background:#fff;color:#B79B6C;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:850;letter-spacing:.08em;position:relative;z-index:2;}
+          .horizontal-step h3{margin:0;color:#9A8D7D;font-size:17px;line-height:1.25;}
+          .horizontal-step p{margin:0;color:#7E7367;font-size:14px;line-height:1.75;opacity:.42;transform:translate3d(0,8px,0);}
+          .horizontal-process.run-horizontal .horizontal-dot{animation:horizontalDot .52s ease forwards,horizontalPulse 1.05s ease 1;animation-delay:calc(.18s + var(--h-step) * 1.05s),calc(.18s + var(--h-step) * 1.05s);}
+          .horizontal-process.run-horizontal .horizontal-step h3{animation:horizontalTitle .45s ease forwards;animation-delay:calc(.28s + var(--h-step) * 1.05s);}
+          .horizontal-process.run-horizontal .horizontal-step p{animation:horizontalText .52s ease forwards;animation-delay:calc(.38s + var(--h-step) * 1.05s);}
+          .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after{animation:horizontalSegment .86s cubic-bezier(.4,0,.2,1) forwards;animation-delay:calc(.62s + var(--h-step) * 1.05s);}
+          @keyframes horizontalSegment{to{transform:scaleX(1)}}
+          @keyframes horizontalDot{to{background:#B79B6C;color:#fff;border-color:#B79B6C}}
+          @keyframes horizontalTitle{to{color:#2C2C2C}}
+          @keyframes horizontalText{to{opacity:1;transform:translate3d(0,0,0)}}
+          @keyframes horizontalPulse{0%{box-shadow:0 0 0 0 rgba(183,155,108,.55),0 12px 28px rgba(183,155,108,.12);transform:scale(1)}38%{box-shadow:0 0 0 16px rgba(183,155,108,.18),0 18px 38px rgba(183,155,108,.24);transform:scale(1.08)}100%{box-shadow:0 0 0 24px rgba(183,155,108,0),0 12px 28px rgba(183,155,108,.16);transform:scale(1)}}
+          @media(max-width:700px){
+            .horizontal-process-track{grid-template-columns:1fr;gap:0;}
+            .horizontal-step{min-height:0;display:grid;grid-template-columns:44px 1fr;gap:10px 18px;padding-bottom:28px;}
+            .horizontal-step h3,.horizontal-step p{grid-column:2;}
+            .horizontal-dot{grid-row:1 / span 2;}
+            .horizontal-step:not(:last-child)::before,.horizontal-step:not(:last-child)::after{top:44px;left:21px;width:2px;height:calc(100% - 20px);transform-origin:top center;}
+            .horizontal-step:not(:last-child)::after{transform:scaleY(0);}
+            .horizontal-process.run-horizontal .horizontal-step:not(:last-child)::after{animation:horizontalSegmentMobile .86s cubic-bezier(.4,0,.2,1) forwards;animation-delay:calc(.62s + var(--h-step) * 1.05s);}
+            @keyframes horizontalSegmentMobile{to{transform:scaleY(1)}}
+          }
+          @media(prefers-reduced-motion:reduce){
+            .horizontal-process .horizontal-dot{background:#B79B6C;color:#fff;border-color:#B79B6C;}
+            .horizontal-step h3{color:#2C2C2C;}
+            .horizontal-step p{opacity:1;transform:none;}
+            .horizontal-step:not(:last-child)::after{transform:scaleX(1);}
+          }
+        </style>
+        <div class="horizontal-process" id="proc-wrap">
+          <div class="horizontal-process-track">
+            <article class="horizontal-step" style="--h-step:0"><div class="horizontal-dot">01</div><h3>Anfrage senden</h3><p>Fotos, Bezirk, Fläche und Termin – per WhatsApp oder Formular. Dauert unter eine Minute.</p></article>
+            <article class="horizontal-step" style="--h-step:1"><div class="horizontal-dot">02</div><h3>Einschätzung erhalten</h3><p>Wir melden uns in 30 Minuten mit einer objektbezogenen Kalkulation. Kein Pauschalpreis.</p></article>
+            <article class="horizontal-step" style="--h-step:2"><div class="horizontal-dot">03</div><h3>Termin abstimmen</h3><p>Zeitfenster, Zugang und Leistungsumfang werden vor dem Einsatz klar abgestimmt.</p></article>
+            <article class="horizontal-step" style="--h-step:3"><div class="horizontal-dot">04</div><h3>Sauber übergeben</h3><p>Pünktlicher Einsatz, sauberes Ergebnis, digitales Protokoll – ohne Nacharbeit Ihrerseits.</p></article>
+          </div>
+        </div>
+      </div></section>
+      <script id="nfc-horizontal-process-js">
+(function(){
+  function ready(fn){document.readyState==='loading'?document.addEventListener('DOMContentLoaded',fn):fn();}
+  ready(function(){
+    var boxes=Array.prototype.slice.call(document.querySelectorAll('.horizontal-process'));
+    if(!boxes.length)return;
+    function play(box){if(box.dataset.played)return;box.dataset.played='1';box.classList.add('run-horizontal');}
+    function check(){
+      var viewport=window.innerHeight||document.documentElement.clientHeight;
+      boxes.forEach(function(box){
+        if(box.dataset.played)return;
+        var rect=box.getBoundingClientRect();
+        var visible=rect.top<viewport*0.88&&rect.bottom>viewport*0.12;
+        if(visible)play(box);
+      });
+    }
+    window.addEventListener('scroll',check,{passive:true});
+    window.addEventListener('resize',check);
+    requestAnimationFrame(check);
+  });
+})();
+      </script>
       <section class="white"><div class="container"><div class="section-head"><div class="eyebrow">Einordnung</div><h2>Welche Informationen für eine realistische Einschätzung helfen.</h2><p class="section-text">Je klarer die Ausgangslage beschrieben ist, desto schneller kann der Aufwand eingeordnet werden. Fotos ersetzen nicht immer eine Besichtigung, beschleunigen aber viele Anfragen deutlich.</p></div><div class="editorial-list"><div class="editorial-row"><strong>Bezirk und Lage</strong><p>Der Einsatzort beeinflusst Planung, Anfahrt und Terminlogik. Für Berlin sind Bezirk, Lage im Gebäude und Erreichbarkeit des Objekts wichtige Basisdaten.</p></div><div class="editorial-row"><strong>Objektart und Fläche</strong><p>Wohnung, Büro, Praxis, Kanzlei, Treppenhaus oder Allgemeinfläche werden unterschiedlich kalkuliert. Neben der Fläche zählt vor allem die Struktur der Räume.</p></div><div class="editorial-row"><strong>Aktueller Zustand</strong><p>Leichte Pflege, Übergabezustand, Renovierungsstaub, Bauverschmutzung, Kalk oder Fett führen zu unterschiedlichen Abläufen und Zeitansätzen.</p></div><div class="editorial-row"><strong>Leistungsumfang</strong><p>Böden, Küche, Sanitär, Fenster, Rahmen, Türen, Heizkörper, Treppen oder Kontaktflächen sollten klar benannt werden, damit der Umfang belastbar bleibt.</p></div><div class="editorial-row"><strong>Termin und Zeitfenster</strong><p>Kurzfristige Termine, enge Übergabezeiten oder Reinigung außerhalb üblicher Zeiten beeinflussen die Einsatzplanung und damit die Kalkulation.</p></div><div class="editorial-row"><strong>Fotos und Zugang</strong><p>Fotos helfen bei der ersten Einschätzung. Zusätzlich wichtig sind Zugang, Schlüsselübergabe, Parkmöglichkeit und besondere Objektbedingungen.</p></div></div></div></section>
             <section data-seo-orientierungswerte="true">
         <div class="container">

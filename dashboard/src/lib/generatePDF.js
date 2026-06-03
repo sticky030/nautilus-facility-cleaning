@@ -223,7 +223,7 @@ export async function generateProtocolPDF({
         d.cell.styles.textColor = d.cell.raw === 'Gereinigt' ? GREEN : RED
       }
       if (d.section === 'body' && d.column.index === 2) {
-        d.cell.styles.textColor   = GRAY
+        d.cell.styles.textColor   = MUTED
         d.cell.styles.fontStyle   = 'italic'
         d.cell.styles.fontSize    = 7
       }
@@ -273,7 +273,7 @@ export async function generateProtocolPDF({
 
     doc.setFont('helvetica', 'italic')
     doc.setFontSize(8)
-    doc.setTextColor(...GRAY)
+    doc.setTextColor(...MUTED)
     doc.text(lines, M + 8, y + 7.5)
     y += bh + 12
   }
@@ -355,7 +355,7 @@ export async function generateProtocolPDF({
     doc.text(mitarbeiter || '—', M + 45, y, { align: 'center' })
     doc.setFont('helvetica', 'normal')
     doc.setFontSize(6.5)
-    doc.setTextColor(...GRAY)
+    doc.setTextColor(...MUTED)
     doc.text('Berlin, ' + fmtDate(datum), M + 5, y + 6)
     y += 14
 
@@ -434,7 +434,7 @@ export async function generateSchadenPDF({
 
     doc.setFont('helvetica', 'normal')
     doc.setFontSize(8)
-    doc.setTextColor(...GRAY)
+    doc.setTextColor(...MUTED)
     doc.text(lines, M + 8, y + 7.5)
     y += bh + 12
   }

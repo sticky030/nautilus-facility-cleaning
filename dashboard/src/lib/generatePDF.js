@@ -127,7 +127,7 @@ function drawFooter(doc, pageNum, totalPages) {
 
   doc.setFont('helvetica', 'normal')
   doc.setFontSize(6)
-  doc.setTextColor(...LIGHT)
+  doc.setTextColor(...MUTED)
   doc.text(
     'Nautilus Facility Cleaning  ·  Berlin  ·  kontakt@nautilus-facility.de  ·  nautilus-facility.de',
     M, 287
@@ -317,7 +317,7 @@ export async function generateProtocolPDF({
       }
       doc.setFont('helvetica', 'normal')
       doc.setFontSize(6)
-      doc.setTextColor(...LIGHT)
+      doc.setTextColor(...MUTED)
       doc.text(`Foto ${i + 1}  ·  ${fmtDate(datum)}`, fx + 4, y + fh + 7)
     }
     y += fh + 20
@@ -368,7 +368,7 @@ export async function generateProtocolPDF({
     leftBar(doc, M, y, 14)
     doc.setFont('helvetica', 'italic')
     doc.setFontSize(6.5)
-    doc.setTextColor(...LIGHT)
+    doc.setTextColor(...MUTED)
     doc.text(
       'Mit seiner Unterschrift bestätigt der Mitarbeiter die ordnungsgemäße Durchführung aller Reinigungsarbeiten.',
       M + 7, y + 5.5, { maxWidth: hw - 10 }
@@ -487,7 +487,7 @@ export async function generateSchadenPDF({
   leftBar(doc, M, y, 14)
   doc.setFont('helvetica', 'italic')
   doc.setFontSize(6.5)
-  doc.setTextColor(...LIGHT)
+  doc.setTextColor(...MUTED)
   doc.text(
     'Diese Schadensmeldung wurde automatisch durch das Nautilus Facility Cleaning System erstellt.',
     M + 7, y + 5.5, { maxWidth: PW - M * 2 - 10 }

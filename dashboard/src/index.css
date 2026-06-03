@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply antialiased;
+    background-color: #f7f4ee;
+    color: #6f6559;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply px-5 py-2.5 font-semibold rounded-lg text-sm transition-all duration-200;
+    background-color: #B79B6C;
+    color: white;
+  }
+  .btn-gold:hover {
+    background-color: #a08550;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(183,155,108,0.35);
+  }
+  .btn-gold:disabled {
+    opacity: 0.6;
+    transform: none;
+    cursor: not-allowed;
+  }
+  .card {
+    background: white;
+    border: 1px solid #e7ded0;
+    border-radius: 16px;
+  }
+  .input-field {
+    @apply w-full px-4 py-2.5 text-sm rounded-lg transition-all duration-200;
+    border: 1px solid #e7ded0;
+    background: #faf8f4;
+    color: #3d3530;
+    outline: none;
+  }
+  .input-field:focus {
+    border-color: #B79B6C;
+    box-shadow: 0 0 0 3px rgba(183,155,108,0.15);
+    background: white;
+  }
+}

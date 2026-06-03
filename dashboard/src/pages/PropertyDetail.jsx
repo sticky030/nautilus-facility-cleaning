@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import Navbar from '../components/Navbar'
-import { ArrowLeft, FileText, Camera, AlertTriangle, CheckCircle2, Calendar, Download } from 'lucide-react'
+import { ArrowLeft, FileText, AlertTriangle, CheckCircle2, Calendar, Download } from 'lucide-react'
+import { generateSchadenPDF } from '../lib/generatePDF'
 import { format } from 'date-fns'
 import { de } from 'date-fns/locale'
 
@@ -25,19 +26,17 @@ export default function PropertyDetail({ session }) {
   const [objekt, setObjekt] = useState(null)
   const [protokolle, setProtokolle] = useState([])
   const [schaeden, setSchaeden] = useState([])
-  const [fotos, setFotos] = useState([])
   const [tab, setTab] = useState('protokolle')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function load() {
-      const [{ data: obj }, { data: proto }, { data: sch }, { data: fot }] = await Promise.all([
+      const [{ data: obj }, { data: proto }, { data: sch }] = await Promise.all([
         supabase.from('objekte').select('*').eq('id', id).single(),
         supabase.from('protokolle').select('*').eq('objekt_id', id).order('datum', { ascending: false }),
         supabase.from('schadensmeldungen').select('*').eq('objekt_id', id).order('created_at', { ascending: false }),
-        supabase.from('fotos').select('*').eq('objekt_id', id).order('created_at', { ascending: false }),
       ])
-      setObjekt(obj); setProtokolle(proto||[]); setSchaeden(sch||[]); setFotos(fot||[])
+      setObjekt(obj); setProtokolle(proto||[]); setSchaeden(sch||[])
       setLoading(false)
     }
     load()
@@ -81,9 +80,6 @@ export default function PropertyDetail({ session }) {
           </Tab>
           <Tab active={tab==='schaden'} onClick={() => setTab('schaden')}>
             <span className="flex items-center gap-1.5"><AlertTriangle size={14}/> Schadensmeldungen ({schaeden.length})</span>
-          </Tab>
-          <Tab active={tab==='fotos'} onClick={() => setTab('fotos')}>
-            <span className="flex items-center gap-1.5"><Camera size={14}/> Fotos ({fotos.length})</span>
           </Tab>
         </div>
 
@@ -130,29 +126,32 @@ export default function PropertyDetail({ session }) {
                       Gemeldet: {format(new Date(s.created_at), 'dd.MM.yyyy', { locale: de })}
                     </p>
                   </div>
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                    style={s.behoben
-                      ? { background: '#f0fdf4', color: '#16a34a' }
-                      : { background: '#fef2f2', color: '#dc2626' }}>
-                    {s.behoben ? 'Behoben' : 'Offen'}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
+                      style={s.behoben
+                        ? { background: '#f0fdf4', color: '#16a34a' }
+                        : { background: '#fef2f2', color: '#dc2626' }}>
+                      {s.behoben ? 'Behoben' : 'Offen'}
+                    </span>
+                    <button
+                      onClick={async () => {
+                        const blob = await generateSchadenPDF({
+                          objekt, hausverwaltung: '', titel: s.titel,
+                          beschreibung: s.beschreibung, datum: s.created_at?.split('T')[0],
+                          fotoUrl: s.foto_url
+                        })
+                        const url = URL.createObjectURL(blob)
+                        const a = document.createElement('a')
+                        a.href = url; a.download = `Schadensmeldung_${s.titel?.slice(0,20)}.pdf`
+                        a.click(); URL.revokeObjectURL(url)
+                      }}
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition"
+                      style={{ background: 'rgba(183,155,108,0.1)', color: '#B79B6C' }}>
+                      <Download size={13}/> PDF
+                    </button>
+                  </div>
                 </div>
-                {s.foto_url && <img src={s.foto_url} alt="Schaden" className="mt-3 rounded-xl w-full max-h-52 object-cover" />}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {tab === 'fotos' && (
-          fotos.length === 0 ? <Empty icon={<Camera size={36}/>} text="Noch keine Fotos vorhanden." />
-          : <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {fotos.map(f => (
-              <div key={f.id} className="card overflow-hidden">
-                <img src={f.url} alt={f.beschreibung||'Foto'} className="w-full h-40 object-cover" />
-                {f.beschreibung && <p className="px-3 py-2 text-xs" style={{ color: '#6f6559' }}>{f.beschreibung}</p>}
-                <p className="px-3 pb-2 text-xs" style={{ color: '#a09080' }}>
-                  {format(new Date(f.created_at), 'dd.MM.yyyy', { locale: de })}
-                </p>
+                {s.foto_url && <img src={s.foto_url} alt="Schaden" className="mt-4 rounded-xl w-full object-cover" style={{ maxHeight: '400px' }} />}
               </div>
             ))}
           </div>

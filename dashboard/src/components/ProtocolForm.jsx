@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import SignaturePad from './SignaturePad'
 import { generateProtocolPDF } from '../lib/generatePDF'
@@ -19,6 +20,7 @@ const BEREICHE = [
 
 
 export default function ProtocolForm({ objekte, hausverwaltungen, onSuccess }) {
+  const navigate = useNavigate()
   const [selectedHV, setSelectedHV] = useState('')
   const [selectedObjekt, setSelectedObjekt] = useState('')
   const [filteredObjekte, setFilteredObjekte] = useState([])
@@ -99,6 +101,9 @@ export default function ProtocolForm({ objekte, hausverwaltungen, onSuccess }) {
       }).eq('id', selectedObjekt)
 
       onSuccess?.()
+      // Erfolg: Benachrichtigung + Redirect
+      alert('✓ Protokoll wurde erfolgreich gespeichert und als PDF erstellt!')
+      navigate('/dashboard')
     } catch (err) {
       console.error(err)
       alert('Fehler beim Speichern: ' + err.message)

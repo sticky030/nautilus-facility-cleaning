@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import Navbar from '../components/Navbar'
-import { ArrowLeft, FileText, AlertTriangle, CheckCircle2, Calendar, Download } from 'lucide-react'
+import { ArrowLeft, FileText, AlertTriangle, CheckCircle2, Calendar, Download, CheckCheck } from 'lucide-react'
 import { generateSchadenPDF } from '../lib/generatePDF'
 import { format } from 'date-fns'
 import { de } from 'date-fns/locale'
@@ -126,13 +126,25 @@ export default function PropertyDetail({ session }) {
                       Gemeldet: {format(new Date(s.created_at), 'dd.MM.yyyy', { locale: de })}
                     </p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 flex-wrap justify-end">
                     <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
                       style={s.behoben
                         ? { background: '#f0fdf4', color: '#16a34a' }
                         : { background: '#fef2f2', color: '#dc2626' }}>
                       {s.behoben ? 'Behoben' : 'Offen'}
                     </span>
+                    {!s.behoben && (
+                      <button
+                        onClick={async () => {
+                          await supabase.from('schadensmeldungen').update({ behoben: true }).eq('id', s.id)
+                          await supabase.from('objekte').update({ status: 'ok' }).eq('id', id)
+                          setSchaeden(prev => prev.map(x => x.id === s.id ? { ...x, behoben: true } : x))
+                        }}
+                        className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition"
+                        style={{ background: '#f0fdf4', color: '#16a34a' }}>
+                        <CheckCheck size={13}/> Als behoben markieren
+                      </button>
+                    )}
                     <button
                       onClick={async () => {
                         const blob = await generateSchadenPDF({

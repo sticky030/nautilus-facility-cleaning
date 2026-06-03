@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { generateSchadenPDF } from '../lib/generatePDF'
+import { sendEmail } from '../lib/sendEmail'
 import Navbar from '../components/Navbar'
 import ProtocolForm from '../components/ProtocolForm'
 import { FileText, AlertTriangle, Building2, Users, Check, ArrowLeft } from 'lucide-react'
@@ -78,6 +79,32 @@ export default function Admin({ session }) {
         beschreibung: schadenBeschreibung, foto_url: fotoUrl, behoben: false
       })
       await supabase.from('objekte').update({ status: 'dringend' }).eq('id', selectedObjekt)
+
+      // E-Mail an Hausverwaltung
+      const { data: hvFull } = await supabase.from('hausverwaltungen').select('email').eq('id', selectedHV).single()
+      if (hvFull?.email) {
+        await sendEmail({
+          to: hvFull.email,
+          subject: `Neue Schadensmeldung – ${objekt?.name}`,
+          html: `
+            <div style="font-family:sans-serif;max-width:520px;margin:0 auto;color:#2C2C2C">
+              <div style="background:#2C2C2C;padding:24px 32px">
+                <p style="color:#B79B6C;font-size:11px;letter-spacing:3px;margin:0">NAUTILUS FACILITY CLEANING</p>
+              </div>
+              <div style="padding:32px;border:1px solid #e5e1d8;border-top:none">
+                <h2 style="margin:0 0 16px;font-size:20px">Neue Schadensmeldung eingegangen</h2>
+                <p style="color:#6f6559;margin:0 0 8px">Für Ihr Objekt <strong>${objekt?.name}</strong> wurde ein Schaden gemeldet.</p>
+                <div style="background:#fef2f2;border-left:3px solid #ef4444;padding:12px 16px;margin:16px 0;border-radius:4px">
+                  <p style="margin:0;font-weight:600;color:#dc2626">${schadenTitel}</p>
+                  ${schadenBeschreibung ? `<p style="margin:8px 0 0;color:#6f6559;font-size:14px">${schadenBeschreibung}</p>` : ''}
+                </div>
+                <a href="https://dashboard.nautilus-facility.de" style="background:#B79B6C;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600">Im Dashboard ansehen</a>
+                <p style="color:#a09080;font-size:12px;margin-top:32px">Nautilus Facility Cleaning · Berlin · kontakt@nautilus-facility.de</p>
+              </div>
+            </div>
+          `
+        })
+      }
 
       setSchadenTitel(''); setSchadenBeschreibung(''); setSchadenFoto(null)
       showSuccess('Schadensmeldung + PDF gespeichert!')

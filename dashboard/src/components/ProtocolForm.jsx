@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import SignaturePad from './SignaturePad'
 import { generateProtocolPDF } from '../lib/generatePDF'
+import { sendEmail } from '../lib/sendEmail'
 import { Check, X } from 'lucide-react'
 
 const BEREICHE = [
@@ -100,8 +101,30 @@ export default function ProtocolForm({ objekte, hausverwaltungen, onSuccess }) {
         status: hatMaengel ? 'hinweis' : 'ok'
       }).eq('id', selectedObjekt)
 
+      // E-Mail an Hausverwaltung
+      const hv = hausverwaltungen.find(h => h.id === selectedHV)
+      const { data: hvFull } = await supabase.from('hausverwaltungen').select('email').eq('id', selectedHV).single()
+      if (hvFull?.email) {
+        await sendEmail({
+          to: hvFull.email,
+          subject: `Neues Reinigungsprotokoll – ${objekt.name}`,
+          html: `
+            <div style="font-family:sans-serif;max-width:520px;margin:0 auto;color:#2C2C2C">
+              <div style="background:#2C2C2C;padding:24px 32px">
+                <p style="color:#B79B6C;font-size:11px;letter-spacing:3px;margin:0">NAUTILUS FACILITY CLEANING</p>
+              </div>
+              <div style="padding:32px;border:1px solid #e5e1d8;border-top:none">
+                <h2 style="margin:0 0 16px;font-size:20px">Neues Reinigungsprotokoll verfügbar</h2>
+                <p style="color:#6f6559;margin:0 0 8px">Für Ihr Objekt <strong>${objekt.name}</strong> wurde ein neues Reinigungsprotokoll erstellt.</p>
+                <p style="color:#6f6559;margin:0 0 24px">Datum: ${datum ? datum.split('-').reverse().join('.') : ''} | Mitarbeiter: ${mitarbeiter}</p>
+                <a href="https://dashboard.nautilus-facility.de" style="background:#B79B6C;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600">Im Dashboard ansehen</a>
+                <p style="color:#a09080;font-size:12px;margin-top:32px">Nautilus Facility Cleaning · Berlin · kontakt@nautilus-facility.de</p>
+              </div>
+            </div>
+          `
+        })
+      }
       onSuccess?.()
-      // Erfolg: Benachrichtigung + Redirect
       alert('✓ Protokoll wurde erfolgreich gespeichert und als PDF erstellt!')
       navigate('/dashboard')
     } catch (err) {

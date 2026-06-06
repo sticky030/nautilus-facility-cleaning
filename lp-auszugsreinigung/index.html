@@ -217,10 +217,46 @@ footer a:hover{color:var(--c)}
   .lp-hero{grid-template-columns:1fr;padding:40px 20px}
   .calc-card{position:static}
   .proof-grid{grid-template-columns:repeat(2,1fr)}
-  .steps-grid{grid-template-columns:repeat(2,1fr)}
-  .steps-grid::before{display:none}
   .pain-inner{grid-template-columns:1fr}
   .reviews-grid{grid-template-columns:1fr}
+
+  /* Steps — mobile: vertikale Liste */
+  .steps-grid{
+    grid-template-columns:1fr;
+    gap:0;
+    padding-left:28px;
+  }
+  .steps-grid::before{
+    /* vertikale Linie links */
+    top:26px;left:20px;right:auto;
+    width:2px;height:calc(100% - 52px);
+    background:rgba(6,182,212,.15);
+  }
+  .steps-grid::after{
+    top:26px;left:20px;right:auto;
+    width:2px;
+    height:var(--line-w);
+    max-width:none;
+    max-height:calc(100% - 52px);
+    transition:height 0.7s ease;
+  }
+  .step{
+    text-align:left;
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    padding:0 0 28px 0;
+    position:relative;
+  }
+  .step-num{
+    margin:0;
+    flex-shrink:0;
+    position:relative;
+    z-index:2;
+    margin-left:-44px;
+  }
+  .step-content{flex:1}
+  .step-title{margin-bottom:4px}
 }
 @media(max-width:500px){
   .proof-grid{grid-template-columns:1fr 1fr}
@@ -230,7 +266,6 @@ footer a:hover{color:var(--c)}
 </head>
 <body>
 
-<div class="concept-banner">⚡ Konzept-Vorschau — Auszugsreinigung LP — Keine Änderung an der Live-Website</div>
 
 <header class="lp-header">
   <a href="/" class="lp-logo" style="gap:12px;align-items:center">
@@ -477,10 +512,10 @@ footer a:hover{color:var(--c)}
   <div class="steps-inner">
     <div class="steps-title">So einfach geht's</div>
     <div class="steps-grid">
-      <div class="step"><div class="step-num">1</div><div class="step-title">Preis berechnen</div><div class="step-desc">Zimmerzahl und Extras wählen — Richtpreis sofort sehen</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-title">Angebot erhalten</div><div class="step-desc">Fotos schicken — verbindliches Festpreisangebot in 30 Min.</div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-title">Termin bestätigen</div><div class="step-desc">Datum wählen — kein langes Telefonat, alles digital</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-title">Kaution kassieren</div><div class="step-desc">Protokoll mitnehmen, entspannt übergeben, Kaution zurück</div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Preis berechnen</div><div class="step-desc">Zimmerzahl und Extras wählen — Richtpreis sofort sehen</div></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Angebot erhalten</div><div class="step-desc">Fotos schicken — verbindliches Festpreisangebot in 30 Min.</div></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><div class="step-title">Termin bestätigen</div><div class="step-desc">Datum wählen — kein langes Telefonat, alles digital</div></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><div class="step-title">Kaution kassieren</div><div class="step-desc">Protokoll mitnehmen, entspannt übergeben, Kaution zurück</div></div></div>
     </div>
   </div>
 </div>
@@ -767,7 +802,8 @@ updateUI();
   const steps = document.querySelectorAll('.step');
   const n = steps.length; // 4
   // Line spans from step1 center to step4 center = ~76% of grid (left:12%)
-  const segments = [0, 25.3, 50.7, 76]; // % widths for each active step
+  const isMobile = window.innerWidth <= 900;
+  const segments = isMobile ? [0, 25.3, 50.7, 76] : [0, 25.3, 50.7, 76];
   let cur = 0;
 
   function activate(i){

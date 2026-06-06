@@ -744,17 +744,17 @@ function validateAndSend(e){
     e.preventDefault(); return false;
   }
   const {base, extras, fenster, total} = calcTotal();
-  let msg = `Hallo Nautilus! 👋\n\nIch möchte ein Angebot:\n`;
-  msg += `🧹 Leistung: ${state.service}\n`;
-  msg += `👤 Name: ${name}\n`;
-  msg += `📞 Kontakt: ${contact}\n`;
-  msg += `🏠 Zimmer: ${state.rooms} Zimmer\n`;
+  let msg = `Hallo Nautilus!\n\nIch möchte ein Angebot:\n`;
+  msg += `Leistung: ${state.service}\n`;
+  msg += `Name: ${name}\n`;
+  msg += `Kontakt: ${contact}\n`;
+  msg += `Zimmer: ${state.rooms} Zimmer\n`;
   if(state.extras.length > 0){
-    msg += `➕ Extras: ${state.extras.map(ex=>ex.name+' (+'+ex.price+' €)').join(', ')}\n`;
+    msg += `Extras: ${state.extras.map(ex=>ex.name+' (+'+ex.price+' EUR)').join(', ')}\n`;
   }
-  msg += `🪟 Fenster: ${state.fenster.name}${state.fenster.price > 0 ? ' (+'+state.fenster.price+' €)' : ''}\n`;
-  msg += `\n💶 Geschätzter Richtpreis: ab ${total} €\n`;
-  msg += `\nBitte senden Sie mir ein verbindliches Festpreisangebot nach Fotoübermittlung. Danke!`;
+  msg += `Fenster: ${state.fenster.name}${state.fenster.price > 0 ? ' (+'+state.fenster.price+' EUR)' : ''}\n`;
+  msg += `\nGeschaetzter Richtpreis: ab ${total} EUR\n`;
+  msg += `\nBitte senden Sie mir ein verbindliches Festpreisangebot nach Fotouebermittlung. Danke!`;
   waBtn.href = 'https://wa.me/4917622844636?text=' + encodeURIComponent(msg);
   return true;
 }

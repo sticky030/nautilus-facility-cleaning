@@ -365,8 +365,8 @@ footer a:hover{color:var(--c)}
         <div>
           <div class="calc-label">② Zimmeranzahl</div>
           <div class="calc-rooms">
-            <div class="calc-room" data-rooms="1">1 Zi.</div>
-            <div class="calc-room sel" data-rooms="2">2 Zi.</div>
+            <div class="calc-room sel" data-rooms="1">1 Zi.</div>
+            <div class="calc-room" data-rooms="2">2 Zi.</div>
             <div class="calc-room" data-rooms="3">3 Zi.</div>
             <div class="calc-room" data-rooms="4">4 Zi.</div>
             <div class="calc-room" data-rooms="5+">5+ Zi.</div>
@@ -696,7 +696,7 @@ function fmtLp(n){ return Number.isInteger(n) ? String(n) : n.toFixed(2).replace
 // State
 let state = {
   service: 'Auszugsreinigung',
-  rooms:   '2',
+  rooms:   '1',
   extras:  [],
   fenster: { name: 'Ohne Fensterreinigung', price: 0 }
 };

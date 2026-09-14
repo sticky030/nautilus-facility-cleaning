@@ -2,7 +2,7 @@
 
 Reinigungsdienstleister in Berlin. Alle Beträge sind Bruttofestpreise inklusive 19 % Mehrwertsteuer, Anfahrt innerhalb Berlins und Material. Stundensätze werden nicht abgerechnet. Der verbindliche Festpreis steht vor Auftragsbeginn schriftlich fest.
 
-Stand: 22. August 2026
+Stand: 14. September 2026
 Anbieter: Nautilus Security UG (haftungsbeschränkt), Geschäftsbereich Nautilus Facility Cleaning, Vincent-van-Gogh-Str. 14, 13057 Berlin
 Kontakt: kontakt@nautilus-facility.de, 0176 2284 4636
 Website: https://nautilus-facility.de
@@ -117,6 +117,22 @@ Ausschließlich Reinwasser und weiche Bürste, modulschonend und garantiekonform
 
 Faustregel zur Umrechnung: Kilowatt-Peak mal 2,5 ergibt die Modulzahl. Anlagen, die nur über das Dach erreichbar sind, werden ausschließlich nach Foto kalkuliert. Umland Brandenburg zuzüglich 40 €.
 
+## Ozonbehandlung und Geruchsneutralisation
+
+Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsquelle: Rauch und Nikotin, Tiergeruch, Leerstand, Küche, Fahrzeuge. Abgedichtetes Objekt, Warnschild, Behandlung nach Raumvolumen, Abklingzeit, Lüften, Messung in jedem Raum, Freigabe erst unter 0,05 ppm, Protokoll. Nicht bei Schimmel, Brandschaden mit Ruß, Todesfall mit Liegezeit oder Tatort. Alle Ozonpreise ohne Quellenreinigung, die Quellenreinigung wird als Sonder-, Auszugs- oder Grundreinigung nach Rechner kalkuliert.
+
+| Objekt | Festpreis |
+|---|---|
+| Einzelraum bis 25 m² | 149 € |
+| Wohnung bis 60 m² | 249 € |
+| Wohnung bis 100 m² | 349 € |
+| Haus bis 150 m² | 449 € |
+| über 150 m² | Festpreis nach Foto |
+
+Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 89 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 0,60 € je km ab Stadtgrenze brutto, Festpreis nach Adresse.
+
+Gewerbe, netto: Einzelraum 129 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 379 €. Büro oder Praxis bis 100 m² 119 € Bestandskunde, 199 € Neukunde; bis 200 m² 169 € / 279 €; bis 300 m² 229 € / 359 €. Pkw 69 € je Fahrzeug, ab 3 Fahrzeuge 55 €, ab 6 Fahrzeuge 45 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Anfahrt außerhalb Berlins 0,50 € je km netto ab Stadtgrenze. Die Rechnung weist die Mehrwertsteuer gesondert aus.
+
 ## Bauendreinigung und Baufeinreinigung
 
 Mindestauftragswert 350 €. Der Preis richtet sich nach Fläche und Reinigungsgrad.
@@ -204,13 +220,13 @@ Turnusnachlass: alle 3 Monate minus 15 %, alle 6 Monate minus 10 %, einmal jähr
 
 ## Bedingungen und Grenzen
 
-- Alle Preise sind Bruttofestpreise inklusive 19 % Mehrwertsteuer. Es gibt keine Stundensätze.
+- Alle Preise sind Bruttofestpreise inklusive 19 % Mehrwertsteuer. Ausnahmen, ausdrücklich netto genannt: der Quadratmeterpreis für Gewerbeglas sowie der Gewerbeblock der Ozonbehandlung. Es gibt keine Stundensätze.
 - Anfahrt innerhalb Berlins und sämtliches Material sind enthalten. Brandenburger Umland zuzüglich 40 €.
 - Für Privathaushalte sind 20 % der Arbeitskosten nach § 35a EStG steuerlich absetzbar. Voraussetzung ist die Zahlung per Überweisung. Zahlung ist bar oder per Überweisung möglich.
 - Zahlungsziel: sofort nach Rechnungserhalt, spätestens innerhalb von 3 Kalendertagen.
 - Reaktionszeit: Privatanfragen erhalten das Angebot innerhalb von 30 Minuten. Gewerbeanfragen erhalten eine Antwort innerhalb von 2 Stunden und das Angebot innerhalb von 24 Stunden.
 - Die Abnahme erfolgt gemeinsam vor Ort, Nachbesserung ist im Preis enthalten.
-- Nicht im Leistungsumfang: Putz-, Klinker-, Beton- und WDVS-Fassadenreinigung, Algen- und Graffitientfernung an Bauwerksfassaden, Dachbegehungen ohne gesicherten Zugang.
+- Nicht im Leistungsumfang: Putz-, Klinker-, Beton- und WDVS-Fassadenreinigung, Algen- und Graffitientfernung an Bauwerksfassaden, Dachbegehungen ohne gesicherten Zugang, Ozon bei Schimmel, Brandschaden mit Ruß, Todesfall mit Liegezeit oder Tatort.
 - Trübungen und eingebrannte mineralische Beläge im Glas selbst sind durch keine Reinigung entfernbar. Betroffene Stellen werden vorab benannt.
 
 ## Profile und Bewertungen
@@ -219,9 +235,10 @@ Turnusnachlass: alle 3 Monate minus 15 %, alle 6 Monate minus 10 %, einmal jähr
 - MyHammer: https://www.my-hammer.de/auftragnehmer/nautilus-facility-cleaning-ug-haftungsbeschraenkt
 - Gelbe Seiten: https://www.gelbeseiten.de/gsbiz/4d17fff9-c9a7-498a-9e68-8eca593df6bf
 - GoLocal: https://www.golocal.de/berlin/gebaeudereinigung/nautilus-facility-cleaning-MJo0R/
+- ProvenExpert: https://www.provenexpert.com/de-de/nautilus-facility-cleaning/
 
 Bewertung: 5,0 Sterne bei Google.
 
 ## Einsatzgebiet
 
-Gesamtberlin, Schwerpunkt nordöstliches und östliches Berlin: Mitte, Moabit, Tiergarten, Wedding, Friedrichshain, Kreuzberg, Prenzlauer Berg, Pankow, Niederschönhausen, Weißensee, Lichtenberg, Friedrichsfelde, Karlshorst, Rummelsburg, Alt-Hohenschönhausen, Neu-Hohenschönhausen, Marzahn, Hellersdorf, Biesdorf, Kaulsdorf, Mahlsdorf, Rudow. Für Wintergarten- und Glasdachreinigung zusätzlich das nähere Brandenburger Umland: Ahrensfelde, Bernau, Hoppegarten, Mühlenbeck, Panketal.
+Gesamtberlin, Schwerpunkt nordöstliches und östliches Berlin: Mitte, Moabit, Tiergarten, Wedding, Friedrichshain, Kreuzberg, Prenzlauer Berg, Pankow, Niederschönhausen, Weißensee, Lichtenberg, Friedrichsfelde, Karlshorst, Rummelsburg, Alt-Hohenschönhausen, Neu-Hohenschönhausen, Marzahn, Hellersdorf, Biesdorf, Kaulsdorf, Mahlsdorf, Rudow. Für Wintergarten- und Glasdachreinigung zusätzlich das nähere Brandenburger Umland: Ahrensfelde, Bernau, Hoppegarten, Mühlenbeck, Panketal. Für Ozonbehandlungen ebenfalls das Umland gegen Kilometerpauschale ab Stadtgrenze.

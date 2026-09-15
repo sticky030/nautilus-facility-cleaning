@@ -129,7 +129,7 @@ Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsq
 | Haus bis 150 m² | 449 € |
 | über 150 m² | Festpreis nach Foto |
 
-Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 89 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 0,60 € je km ab Stadtgrenze brutto, Festpreis nach Adresse.
+Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 69 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 0,60 € je km ab Stadtgrenze brutto, Festpreis nach Adresse.
 
 Gewerbe, netto: Einzelraum 129 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 379 €. Büro oder Praxis bis 100 m² 119 € Bestandskunde, 199 € Neukunde; bis 200 m² 169 € / 279 €; bis 300 m² 229 € / 359 €. Pkw 69 € je Fahrzeug, ab 3 Fahrzeuge 55 €, ab 6 Fahrzeuge 45 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Anfahrt außerhalb Berlins 0,50 € je km netto ab Stadtgrenze. Die Rechnung weist die Mehrwertsteuer gesondert aus.
 

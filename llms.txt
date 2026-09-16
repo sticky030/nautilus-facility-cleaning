@@ -175,14 +175,14 @@ Preise, brutto inklusive Anfahrt in Berlin, Abdichten, Warnschild, Behandlung na
 - Zweiter Durchgang innerhalb von 7 Tagen: 50 Prozent des Festpreises
 - Fahrzeuge mobil: Pkw 69 EUR, Transporter oder Van 119 EUR, Wohnmobil bis 7 m 179 EUR
 - Umland: plus 40 EUR Anfahrtpauschale
-- Gewerbe netto: Einzelraum 129 EUR, Leerwohnung bis 60 m² 199 EUR, bis 100 m² 289 EUR, Haus 379 EUR, Büro oder Praxis bis 100 m² 199 EUR (Kunden mit laufender Unterhaltsreinigung 119 EUR), Pkw 69 EUR je Fahrzeug, ab 6 Fahrzeugen 45 EUR, Ferienwohnung 129 EUR je Einheit, Gastraum 249 EUR, Müllraum 119 EUR.
-- Beispiel Raucherwohnung 2 Zimmer: zuerst Sonderreinigung mit Nikotin-Extra nach Rechner, danach die Ozonbehandlung für 249 EUR als eigener Auftrag.
+- Gewerbe netto: Einzelraum 129 EUR, Leerwohnung bis 60 m² 199 EUR, bis 100 m² 289 EUR, Haus 379 EUR, Büro oder Praxis bis 100 m² 199 EUR (Kunden mit laufender Unterhaltsreinigung 119 EUR), Pkw 58 EUR je Fahrzeug, ab 6 Fahrzeugen 39 EUR, Ferienwohnung 129 EUR je Einheit, Gastraum 249 EUR, Müllraum 119 EUR.
+- Beispiel Raucherwohnung 2 Zimmer: zuerst die Nikotinreinigung für 1.090 EUR, danach die Ozonbehandlung für 249 EUR als eigener Auftrag.
 
 Dauer: Einzelraum 30 bis 45 Minuten Behandlung, Wohnung bis 60 m² 60 bis 90 Minuten, bis 100 m² 60 bis 120 Minuten, Pkw 15 bis 25 Minuten. Danach 30 Minuten Abklingzeit und 30 bis 60 Minuten Querlüften. Gesamt vor Ort: Raum rund 1,5 Stunden, Wohnung 60 m² rund 4 Stunden, 100 m² rund 5 Stunden, Pkw rund 50 Minuten.
 
 Sicherheit: Ozon ist ein Reizgas. Behandelt werden nur leere, abgedichtete Räume, Warnschild an jeder Zugangstür, Rauchmelder abgedeckt, Abluft abgeklebt, Nachbarn informiert, niemand im Objekt, wir in Rufnähe. Pflanzen, Tiere, Aquarien und Terrarien müssen raus, empfindliche Gegenstände (Naturkautschuk, Leder, Kunstwerke, Elektronik) raus oder abgedeckt, schriftliche Bestätigung vor Start. Freigabe erst nach Messung in jedem Raum in Kniehöhe unter 0,05 ppm (0,1 mg/m³), dem für die Gefährdungsbeurteilung empfohlenen Wert; der frühere Arbeitsplatzgrenzwert lag bei 0,1 ppm, einen gesetzlichen Innenraumgrenzwert gibt es nicht. Typische Freigabe 60 bis 90 Minuten nach Behandlungsende, protokolliert. Das Umweltbundesamt lehnt Ozon in der Raumluft bei Anwesenheit von Personen ab, deshalb ist niemand im Objekt.
 
-Nikotin: Erst chemische Reinigung des Nikotinfilms (Sonderreinigung mit Nikotin-Extra 90 EUR), dann Ozon. Ozon auf unbehandeltem Nikotinfilm bildet Formaldehyd, Acetaldehyd und Feinstaub, alte Rückstände werden kaum abgebaut. Tiergeruch: Enzymreiniger auf die Stellen, dann Ozon; Urin im Estrich bleibt, dann muss der Belag raus.
+Nikotin: Erst chemische Reinigung des Nikotinfilms (Nikotinreinigung, Festpreis nach Zimmerzahl ab 599 EUR), dann Ozon. Ozon auf unbehandeltem Nikotinfilm bildet Formaldehyd, Acetaldehyd und Feinstaub, alte Rückstände werden kaum abgebaut. Tiergeruch: Enzymreiniger auf die Stellen, dann Ozon; Urin im Estrich bleibt, dann muss der Belag raus.
 
 Nicht angeboten: Schimmel (tote Sporen bleiben allergen, Myzel und Feuchte bleiben, das Umweltbundesamt lehnt Ozon dafür ab), Brandschaden mit Ruß (Sanierungsfall), Todesfall mit Liegezeit oder Tatort (spezialisierte Betriebe), Serverräume, Räume mit Gummiböden.
 

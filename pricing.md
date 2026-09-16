@@ -133,6 +133,20 @@ Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlun
 
 Gewerbe, netto: Einzelraum 129 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 379 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 € (Kunden mit laufender Unterhaltsreinigung 119 / 169 / 229 €). Pkw 69 € je Fahrzeug, ab 3 Fahrzeuge 55 €, ab 6 Fahrzeuge 45 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 40 € Anfahrtpauschale brutto. Die Rechnung weist die Mehrwertsteuer gesondert aus.
 
+## Nikotinreinigung und Raucherwohnung reinigen
+
+| Objekt, leergeräumt | Festpreis leicht bis mittel | stark verraucht |
+|---|---|---|
+| Einzelraum bis 20 m² | 599 € | ab 899 € |
+| 1 Zimmer bis 35 m² | 799 € | ab 1.199 € |
+| 2 Zimmer bis 55 m² | 1.090 € | ab 1.639 € |
+| 3 Zimmer bis 75 m² | 1.490 € | ab 2.239 € |
+| 4 Zimmer bis 95 m² | 1.790 € | ab 2.689 € |
+| ab 5 Zimmer oder Haus | nach Besichtigung | nach Besichtigung |
+
+Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 919 / 1.249 / 1.499 €. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
+.
+
 ## Bauendreinigung und Baufeinreinigung
 
 Mindestauftragswert 350 €. Der Preis richtet sich nach Fläche und Reinigungsgrad.
@@ -241,4 +255,4 @@ Bewertung: 5,0 Sterne bei Google.
 
 ## Einsatzgebiet
 
-Gesamtberlin, Schwerpunkt nordöstliches und östliches Berlin: Mitte, Moabit, Tiergarten, Wedding, Friedrichshain, Kreuzberg, Prenzlauer Berg, Pankow, Niederschönhausen, Weißensee, Lichtenberg, Friedrichsfelde, Karlshorst, Rummelsburg, Alt-Hohenschönhausen, Neu-Hohenschönhausen, Marzahn, Hellersdorf, Biesdorf, Kaulsdorf, Mahlsdorf, Rudow. Für Wintergarten- und Glasdachreinigung zusätzlich das nähere Brandenburger Umland: Ahrensfelde, Bernau, Hoppegarten, Mühlenbeck, Panketal. Für Ozonbehandlungen ebenfalls das Umland gegen Kilometerpauschale ab Stadtgrenze.
+Gesamtberlin, Schwerpunkt nordöstliches und östliches Berlin: Mitte, Moabit, Tiergarten, Wedding, Friedrichshain, Kreuzberg, Prenzlauer Berg, Pankow, Niederschönhausen, Weißensee, Lichtenberg, Friedrichsfelde, Karlshorst, Rummelsburg, Alt-Hohenschönhausen, Neu-Hohenschönhausen, Marzahn, Hellersdorf, Biesdorf, Kaulsdorf, Mahlsdorf, Rudow. Für Wintergarten- und Glasdachreinigung zusätzlich das nähere Brandenburger Umland: Ahrensfelde, Bernau, Hoppegarten, Mühlenbeck, Panketal. Für Ozonbehandlungen und Nikotinreinigungen ebenfalls das Umland gegen die Anfahrtpauschale von 40 EUR

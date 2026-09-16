@@ -131,7 +131,7 @@ Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsq
 
 Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 69 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 40 € Anfahrtpauschale.
 
-Gewerbe, netto: Einzelraum 129 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 379 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 € (Kunden mit laufender Unterhaltsreinigung 119 / 169 / 229 €). Pkw 58 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 40 € Anfahrtpauschale brutto. Die Rechnung weist die Mehrwertsteuer gesondert aus.
+Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 379 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 € (Kunden mit laufender Unterhaltsreinigung 119 / 169 / 229 €). Pkw 58 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 40 € Anfahrtpauschale brutto. Die Rechnung weist die Mehrwertsteuer gesondert aus.
 
 ## Nikotinreinigung und Raucherwohnung reinigen
 
@@ -144,7 +144,7 @@ Gewerbe, netto: Einzelraum 129 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 
 | 4 Zimmer bis 95 m² | 1.790 € | ab 2.689 € |
 | ab 5 Zimmer oder Haus | nach Besichtigung | nach Besichtigung |
 
-Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 919 / 1.249 / 1.499 €. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
+Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 915 / 1.249 / 1.499 €. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
 .
 
 ## Bauendreinigung und Baufeinreinigung

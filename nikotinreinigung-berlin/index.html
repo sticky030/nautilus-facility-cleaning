@@ -294,6 +294,8 @@ footer{background:#030810;border-top:1px solid var(--bd);padding:40px 48px}
 .bk-price-lbl{font-size:9px;color:var(--mt);margin-bottom:2px}
 .bk-price-val{font-size:26px;font-weight:900;color:var(--white);letter-spacing:-1px;line-height:1}
 .bk-price-unit{font-size:9px;color:var(--mt);margin-top:3px}
+.bk-stark-note{font-size:10px;line-height:1.5;color:var(--mt);background:rgba(6,182,212,.05);border:1px solid var(--bd);border-radius:9px;padding:9px 11px}
+.bk-extra-gross{border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.05)}
 .bk-breakdown{margin-top:7px;padding-top:7px;border-top:1px solid var(--bd);font-size:9px;color:var(--mt);display:flex;flex-direction:column;gap:2px}
 .bk-breakdown-line{display:flex;justify-content:space-between}
 .bk-breakdown-line.total{color:var(--tx);font-weight:700;margin-top:3px;padding-top:3px;border-top:1px solid var(--bd)}
@@ -311,6 +313,7 @@ footer{background:#030810;border-top:1px solid var(--bd);padding:40px 48px}
 .bk-room{font-size:12px}
 .bk-price-lbl{font-size:11px}
 .bk-price-unit{font-size:11px}
+.bk-stark-note{font-size:12px}
 .bk-btn-sub{font-size:11px}
 .bk-breakdown{font-size:12px}
 .bk-kaution{font-size:11px}
@@ -525,30 +528,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="bk-gew-only" id="bk-flaeche-wrap" style="margin-top:8px"><input type="number" class="bk-flaeche" id="bk-flaeche" min="0" max="2000" step="1" placeholder="Nutzfläche in m², z. B. 120" inputmode="numeric"></div>
           </div>
           <div id="bk-belastung-wrap">
-            <div class="bk-label">② Belastung</div>
-            <div class="bk-services" id="bk-belastung">
-              <div class="bk-svc sel" data-belastung="mittel"><div class="bk-svc-name">Leicht bis mittel</div><div class="bk-svc-hint">Gelbfilm, Vergilbung sichtbar: Festpreis</div></div>
-              <div class="bk-svc" data-belastung="stark"><div class="bk-svc-name">Stark</div><div class="bk-svc-hint">Teerfilm, Tropfnasen: „ab", Festpreis nach Fotos</div></div>
-            </div>
+            <div class="bk-stark-note">Der Preis gilt für den Normalfall: Gelbfilm und sichtbare Vergilbung. Bei starkem Teerfilm mit braunen Tropfnasen liegt der Festpreis höher, das sagen wir Ihnen nach den drei Fotos, vorher nicht.</div>
           </div>
           <div id="bk-decke-wrap">
-            <div class="bk-label">③ Umfang</div>
+            <div class="bk-label">② Umfang</div>
             <div class="bk-services" id="bk-decke">
               <div class="bk-svc sel" data-decke="1"><div class="bk-svc-name">Wände und Decken</div><div class="bk-svc-hint">Standard, Decke trägt den meisten Film</div></div>
               <div class="bk-svc" data-decke="0"><div class="bk-svc-name">Nur Wände</div><div class="bk-svc-hint">Decke neu oder abgehängt</div></div>
             </div>
           </div>
           <div id="bk-zusatz-wrap">
-            <div class="bk-label">④ Zusatz</div>
+            <div class="bk-label">③ Zusatz</div>
             <div class="bk-fenster">
               <div class="bk-count" id="bk-hk"><div class="bk-count-txt"><div class="bk-extra-name">Heizkörper innen mit Bürste und Dampf</div><div class="bk-extra-price">25 EUR je Stück, außen ist im Festpreis</div></div><div class="bk-count-ctrl"><div class="bk-count-btn" data-hk="-1">−</div><div class="bk-count-val" id="bk-hk-val">0</div><div class="bk-count-btn" data-hk="1">+</div></div></div>
               <div class="bk-extra" id="bk-kueche"><div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">Küche intensiv mit Nikotinwäsche</div><div class="bk-extra-price">399 EUR, Fronten, Fliesenspiegel, Dunstabzug</div></div></div>
-              <div class="bk-extra" id="bk-sperr"><div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">Nikotinsperrgrund im Anschluss</div><div class="bk-extra-price">Eigener Termin nach Trocknung, 490 bis 1.649 EUR nach Zimmerzahl</div></div></div>
+              <div class="bk-extra bk-extra-gross" id="bk-sperr"><div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">Nikotinsperrgrund im Anschluss</div><div class="bk-extra-price">Eigener Termin nach Trocknung, 490 bis 1.649 EUR nach Zimmerzahl</div></div></div>
               <div class="bk-extra" id="bk-ozon"><div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">Ozonbehandlung nach der Reinigung</div><div class="bk-extra-price">Eigener Termin, 149 / 249 / 349 EUR nach Wohnfläche</div></div></div>
             </div>
           </div>
           <div>
-            <div class="bk-label">⑤ Lage</div>
+            <div class="bk-label">④ Lage</div>
             <div class="bk-services" id="bk-lage">
               <div class="bk-svc sel" data-umland="0"><div class="bk-svc-name">Berlin</div><div class="bk-svc-hint">Anfahrt inklusive</div></div>
               <div class="bk-svc" data-umland="1"><div class="bk-svc-name">Umland</div><div class="bk-svc-hint">plus 40 EUR Anfahrtpauschale</div></div>
@@ -561,6 +560,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="bk-price-lbl" id="bk-price-lbl">Ihr Festpreis</div>
                 <div class="bk-price-val" id="bk-price">799,00</div>
                 <div class="bk-price-unit" id="bk-price-unit">EUR inkl. MwSt.</div>
+                <div class="bk-price-unit" id="bk-price-qm" style="color:var(--gr);font-weight:600"></div>
               </div>
               <div style="text-align:right">
                 <div class="bk-price-lbl">inkl.</div>
@@ -1115,7 +1115,7 @@ var NFC_NIKOTIN = (function () {
   var SPERRGRUND_AKTIV = true;        /* Sperrgrund als waehlbare Zusatzoption mit Festpreis (Philipp, 16.09.2026) */
   var HEIZKOERPER_MAX = 12;
 
-  var HINWEIS_EHRLICH = 'Leergeräumte Wohnung, Belastung leicht bis mittel. Wände und Decken werden sauber und geruchsarm, nicht weiß: Vergilbung im Anstrich oder Putz bleibt sichtbar.';
+  var HINWEIS_EHRLICH = 'Leergeräumte Wohnung. Wände und Decken werden sauber und geruchsarm, aber nicht wieder weiß: Vergilbung im Anstrich oder Putz bleibt sichtbar.';
   var HINWEIS_SPERRGRUND = 'Weiß wird es erst mit Sperrgrund. Den übernehmen wir als eigenen Termin nach der Trocknung, der Deckanstrich bleibt beim Maler.';
   var HINWEIS_OZON = 'Geruchsneutral wird die Wohnung erst mit einer Ozonbehandlung nach der Reinigung, nie davor.';
   var HINWEIS_STARK = 'Belastung stark: Der Richtpreis ist ein „ab"-Wert. Den verbindlichen Festpreis nennen wir nach drei Fotos (Wand, Decke, Heizkörper) in 30 Minuten.';
@@ -1323,7 +1323,6 @@ var NFC_NIKOTIN = (function () {
     }
   }
   choice('bk-objekt', 'data-objekt', function(v){ st.objekt = v; var pw = $('bk-flaeche-wrap'); if (pw) pw.style.display = (v === 'buero' || v === 'gastro') ? '' : 'none'; deckeUI(); flaechenUI(); });
-  choice('bk-belastung', 'data-belastung', function(v){ st.belastung = v; });
   choice('bk-decke', 'data-decke', function(v){ st.decke = v === '1'; });
   choice('bk-lage', 'data-umland', function(v){ st.umland = v === '1'; });
   toggle('bk-kueche', function(on){ st.kueche = on; });
@@ -1366,7 +1365,14 @@ var NFC_NIKOTIN = (function () {
     } else {
       priceEl.textContent = 'Bitte wählen'; priceEl.style.fontSize = '19px'; lbl.textContent = 'Ihr Festpreis'; unit.textContent = ''; scTxt = 'Bitte wählen';
     }
-    hint.textContent = erg.hinweise.join(' ');
+    var qm = $('bk-price-qm');
+    if (qm) {
+      var o = L.OBJEKTE[st.objekt];
+      if (privat && erg.status === 'ok' && o && o.flaeche && st.objekt !== 'raum') {
+        qm.textContent = 'rund ' + fmtT(Math.round(erg.total / o.flaeche * 100) / 100) + ' EUR je m\u00b2 Wand und Decke, zwei Durchg\u00e4nge';
+      } else { qm.textContent = ''; }
+    }
+    hint.textContent = erg.hinweise.slice(0, 2).join(' ');
     bd.innerHTML = lines;
     if (sc) sc.textContent = scTxt;
     var txt = privat ? L.waTextPrivat(st, erg) : L.waTextGewerbe(st, erg);

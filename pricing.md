@@ -67,16 +67,16 @@ Zubuchbar je Reinigung: Fenster innen und Rahmen 15 €, Küche intensiv 20 €,
 
 Innen und außen, inklusive Rahmen, Falze und Fensterbänke. Seit August 2026 mit Reinwasser-Teleskopsystem bis rund 15 Meter Arbeitshöhe, ohne Gerüst und ohne Hubbühne.
 
-| Fensterzahl | Einmalig | Im 3-Monats-Rhythmus je Termin |
+| Fensterzahl | Einmalig | Im Halbjahres-Rhythmus je Termin |
 |---|---|---|
-| 1 bis 5 | 89 € | 75 € |
-| 6 bis 10 | 137 € | 115 € |
-| 11 bis 15 | 184 € | 155 € |
-| 16 bis 20 | 256 € | 215 € |
-| 21 bis 25 | 321 € | 270 € |
+| 1 bis 5 | 89 € | 80 € |
+| 6 bis 10 | 137 € | 123 € |
+| 11 bis 15 | 184 € | 166 € |
+| 16 bis 20 | 256 € | 230 € |
+| 21 bis 25 | 321 € | 289 € |
 | ab 26 | 321 € plus 12 € je weiterem Fenster | auf Anfrage |
 
-Zählregeln: Ein normales Fenster, auch zweiflügelig, sowie Balkontür und Dachfenster zählen als eins. Sprossen- und Kastenfenster zählen als anderthalb, ein kleines Kellerfenster als halb. Rollläden und Jalousien 19 € je Stück.
+Zählregeln: Ein normales Fenster, auch zweiflügelig, sowie Balkontür und Dachfenster zählen als eins. Sprossen- und Kastenfenster zählen als anderthalb, ein kleines Kellerfenster als halb.
 
 ## Wintergartenreinigung
 
@@ -251,7 +251,7 @@ Turnusnachlass: alle 3 Monate minus 15 %, alle 6 Monate minus 10 %, einmal jähr
 - GoLocal: https://www.golocal.de/berlin/gebaeudereinigung/nautilus-facility-cleaning-MJo0R/
 - ProvenExpert: https://www.provenexpert.com/de-de/nautilus-facility-cleaning/
 
-Bewertung: 5,0 Sterne bei Google.
+Bewertung: 4,9 Sterne bei Google.
 
 ## Einsatzgebiet
 

@@ -145,7 +145,22 @@ Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 
 | ab 5 Zimmer oder Haus | nach Besichtigung | nach Besichtigung |
 
 Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 915 / 1.249 / 1.499 €. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
-.
+
+## Parkettreinigung und Parkett nachölen
+
+Geöltes Parkett wird maschinell intensiv gereinigt (Einscheibenmaschine, WOCA Intensivreiniger) und am selben Tag mit WOCA Pflegeöl nachgeölt. Kein Schleifen, kein Holzabtrag, kein Staub. Reinigung rund 2 Std, Trocknung 3 bis 4 Std, Ölen rund 2 Std, abends in Socken begehbar, Möbel nach 24 Std. Preise brutto, inklusive Anfahrt in Berlin, Maschine, Reiniger, Pflegeöl, Probefläche und Abnahmeprotokoll.
+
+| Leistung | Preis |
+|---|---|
+| Geöltes Parkett, Reinigung plus Nachölen, bis 40 m² | 599 € |
+| Geöltes Parkett, je weiterem m² bis 120 m² | plus 7,50 € (60 m² = 749 €, 80 m² = 899 €, 100 m² = 1.049 €) |
+| Lackiertes Parkett, nur Intensivreinigung ohne Öl, bis 40 m² | 299 € |
+| Lackiertes Parkett, je weiterem m² bis 120 m² | plus 5 € (60 m² = 399 €, 80 m² = 499 €, 100 m² = 599 €) |
+| Über 120 m² | Festpreis nach Aufmaß |
+| Stark verschlissen (Laufstraßen bis auf Holzfarbe, nur geöltes Parkett) | Richtpreis mal 1,3 als „ab", Festpreis nach Fotos |
+| Anfahrtpauschale Umland | 40 € |
+
+Mindestauftragswert 599 € bei geöltem und 299 € bei lackiertem Parkett, Flächen unter 20 m² nur als Zusatz zu einer gebuchten Reinigung. Gewerbe netto: 499 € bis 40 m², darüber plus 6,30 € je m² (60 m² = 625 €, 80 m² = 751 €, 100 m² = 877 €), Anfahrt Umland 33 € netto. Grenzen: Kratzer im Holz, schwarze Wasserflecken und Schleifbedarf bleiben, das sagen wir nach den Fotos. Schleifen bieten wir nicht an.
 
 ## Bauendreinigung und Baufeinreinigung
 

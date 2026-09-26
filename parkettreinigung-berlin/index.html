@@ -220,7 +220,7 @@ footer{background:#030810;border-top:1px solid var(--bd);padding:40px 48px}
 .form-label-row svg{color:var(--mt);flex-shrink:0}
 .contact-form-box h3{font-size:1.1rem;font-weight:700;color:#f1f5f9;margin-bottom:6px}
 .contact-form-box .form-sub{font-size:.83rem;color:var(--mt);margin-bottom:28px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.form-group{min-width:0}
 .form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
 .form-group label{font-size:.8rem;font-weight:600;color:var(--mt);text-transform:uppercase;letter-spacing:.04em}
 .form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:#f1f5f9;font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s,background .2s;appearance:none;-webkit-appearance:none}
@@ -904,7 +904,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="form-group"><label for="cf-termin"><span class="form-label-row">Wunschtermin</span></label><input type="text" id="cf-termin" name="Wunschtermin" placeholder="z. B. nächste Woche, Samstag"></div>
           </div>
           <div class="form-group"><label for="cf-msg"><span class="form-label-row">Weitere Hinweise</span></label><textarea id="cf-msg" name="message" placeholder="z. B. 55 m² Wohnzimmer, Flur und Küche, geölt, seit 3 Jahren nicht nachgeölt"></textarea></div>
-          <label class="form-gdpr"><input type="checkbox" name="gdpr" id="cf-gdpr" required><span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="https://nautilus-facility.de/datenschutz/" target="_blank">Datenschutzerklärung</a> zu. *</span></label>
+          <label class="form-gdpr"><input type="checkbox" name="gdpr" id="cf-gdpr" required><span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="https://nautilus-facility.de/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> zu. *</span></label>
           <button type="submit" class="form-submit" id="cf-submit">Kostenlos anfragen →</button>
           <div class="form-feedback form-success" id="cf-success">✓ Ihre Anfrage wurde gesendet. Privat melden wir uns innerhalb von 30 Minuten, gewerblich innerhalb von 2 Stunden.</div>
           <div class="form-feedback form-error" id="cf-error">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns per WhatsApp.</div>

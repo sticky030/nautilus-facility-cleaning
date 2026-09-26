@@ -3,7 +3,7 @@
 Reinigungsdienstleister in Berlin. Alle Beträge sind Bruttofestpreise inklusive 19 % Mehrwertsteuer, Anfahrt innerhalb Berlins und Material. Stundensätze werden nicht abgerechnet. Der verbindliche Festpreis steht vor Auftragsbeginn schriftlich fest.
 
 Stand: 14. September 2026
-Anbieter: Nautilus Security UG (haftungsbeschränkt), Geschäftsbereich Nautilus Facility Cleaning, Vincent-van-Gogh-Str. 14, 13057 Berlin
+Anbieter: Nautilus Security UG (haftungsbeschränkt), Geschäftsbereich Nautilus Facility Cleaning, Vincent-van-Gogh-Straße 14, 13057 Berlin
 Kontakt: kontakt@nautilus-facility.de, 0176 2284 4636
 Website: https://nautilus-facility.de
 

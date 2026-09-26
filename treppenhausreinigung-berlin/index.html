@@ -312,7 +312,7 @@ footer{background:#030810;border-top:1px solid var(--bd);padding:40px 48px}
 .form-label-row svg{color:var(--mt);flex-shrink:0}
 .contact-form-box h3{font-size:1.1rem;font-weight:700;color:#f1f5f9;margin-bottom:6px}
 .contact-form-box .form-sub{font-size:.83rem;color:var(--mt);margin-bottom:28px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.form-group{min-width:0}
 .form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
 .form-group label{font-size:.8rem;font-weight:600;color:var(--mt);text-transform:uppercase;letter-spacing:.04em}
 .form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:#f1f5f9;font-family:inherit;font-size:.9rem;outline:none;transition:border-color .2s,background .2s;appearance:none;-webkit-appearance:none}
@@ -368,7 +368,9 @@ table.aip-table tbody tr:last-child th,table.aip-table tbody tr:last-child td{bo
 table.aip-table tbody th{font-weight:600;color:var(--tx,#cbd5e1)}
 table.aip-table tbody td{color:var(--w,#f0f9ff);font-weight:700}
 .aip-note{font-size:12.5px;line-height:1.75;color:var(--mt,#94a3b8);margin:16px 0 0}
-@media(max-width:560px){table.aip-table th,table.aip-table td{padding:9px 10px;font-size:12.5px}}
+.aip-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
+@media(max-width:640px){table.aip-table th,table.aip-table td{padding:9px 9px;font-size:12px}
+table.aip-table{min-width:540px}}
 /* == ai-seo meta 22.08.2026 == */
 .ai-meta{max-width:1100px;margin:0 auto;padding:26px 24px 34px;border-top:1px solid var(--bd,rgba(255,255,255,.07))}
 .ai-meta p{margin:0;font-size:12.5px;line-height:1.75;color:var(--mt,#94a3b8)}
@@ -400,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <div class="nav-inner">
     <a href="https://nautilus-facility.de/" class="nav-logo">
-      <img src="nautilus-logo.png" alt="Nautilus Facility Cleaning" title="Nautilus Facility Cleaning" width="100" height="100">
+      <img src="/nautilus-logo.png" alt="Nautilus Facility Cleaning" title="Nautilus Facility Cleaning" width="100" height="100">
       <span class="nav-logo-text"><span style="color:var(--c)">Nautilus</span> Facility Cleaning</span>
     </a>
     <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -830,7 +832,7 @@ Verwaltung entlastet.</h2>
           </div>
           <label class="form-gdpr">
             <input type="checkbox" name="gdpr" id="cf-gdpr" required>
-            <span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="https://nautilus-facility.de/datenschutz/" target="_blank">Datenschutzerklärung</a> zu. *</span>
+            <span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="https://nautilus-facility.de/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> zu. *</span>
           </label>
           <button type="submit" class="form-submit" id="cf-submit">Kostenlos anfragen →</button>
           <div class="form-feedback form-success" id="cf-success">✓ Ihre Anfrage wurde gesendet. Wir melden uns innerhalb von 2 Stunden bei Ihnen.</div>

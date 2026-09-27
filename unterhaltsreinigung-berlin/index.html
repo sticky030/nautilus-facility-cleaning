@@ -989,7 +989,7 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
         body:new FormData(form),
         headers:{Accept:'application/json'}
       });
-      if(res.ok){ok.style.display='block';form.reset();}
+      if(res.ok){ok.style.display='block';form.reset();(window.dataLayer=window.dataLayer||[]).push({event:'anfrage_gesendet'});}
       else{err.style.display='block';}
     }catch(ex){err.style.display='block';}
     finally{btn.disabled=false;btn.textContent='Kostenlos anfragen →';}

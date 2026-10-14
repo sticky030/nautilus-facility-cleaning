@@ -76,7 +76,7 @@ Innen und außen, inklusive Rahmen, Falze und Fensterbänke. Seit August 2026 mi
 | 21 bis 25 | 321 € | 289 € |
 | ab 26 | 321 € plus 12 € je weiterem Fenster | auf Anfrage |
 
-Zählregeln: Ein normales Fenster, auch zweiflügelig, sowie Balkontür und Dachfenster zählen als eins. Sprossen- und Kastenfenster zählen als anderthalb, ein kleines Kellerfenster als halb.
+Zählregeln: Ein normales Fenster, auch zweiflügelig, sowie Balkontür und Dachfenster zählen als eins. Sprossen- und Kastenfenster sowie bodentiefe und große Fenster ab etwa 2,5 m² Glasfläche zählen als anderthalb, ein kleines Kellerfenster als halb.
 
 ## Wintergartenreinigung
 

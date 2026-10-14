@@ -915,7 +915,7 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     bd.innerHTML=lines;
     document.getElementById('mc-price').textContent=fmt(brutto());
     document.getElementById('mc-unit').textContent=c.unit;
-    var nt=document.getElementById('mc-note');if(nt)nt.textContent=(st.l==='Fensterreinigung')?'Sprossen- und Kastenfenster zählen wegen des Mehraufwands als anderthalb Fenster.':'';
+    var nt=document.getElementById('mc-note');if(nt)nt.textContent=(st.l==='Fensterreinigung')?'Sprossen- und Kastenfenster sowie bodentiefe und große Fenster ab etwa 2,5 m² Glasfläche zählen als anderthalb Fenster.':'';
     document.getElementById('mc-badges').innerHTML=c.badges.map(function(b){return '<div style="font-size:10px;color:var(--green);font-weight:600;margin-top:2px">'+b+'</div>';}).join('');
     document.getElementById('mc-wa').href='https://wa.me/4917622844636?text='+encodeURIComponent(waMsg());
   }

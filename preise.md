@@ -162,6 +162,30 @@ Geöltes Parkett wird maschinell intensiv gereinigt (Einscheibenmaschine, WOCA I
 
 Mindestauftragswert 599 € bei geöltem und 299 € bei lackiertem Parkett, Flächen unter 20 m² nur als Zusatz zu einer gebuchten Reinigung. Gewerbe netto: 499 € bis 40 m², darüber plus 6,30 € je m² (60 m² = 625 €, 80 m² = 751 €, 100 m² = 877 €), Anfahrt Umland 33 € netto. Grenzen: Kratzer im Holz, schwarze Wasserflecken und Schleifbedarf bleiben, das sagen wir nach den Fotos. Schleifen bieten wir nicht an.
 
+## Winterdienst, Saisonpauschale
+
+Räumen und Streuen des Gehwegs vor dem Grundstück in Berlin und im Umland (Ahrensfelde mit Eiche, Blumberg, Mehrow, Lindenberg; Hoppegarten mit Hönow und Dahlwitz-Hoppegarten; Neuenhagen nur mit Zustimmung der Gemeinde). Saison 01.11. bis 31.03., bis zu 20 Einsatztage in der Pauschale enthalten, ab dem 21. Einsatztag fester Preis je Einsatztag. Handräumung, abstumpfendes Streugut (in Berlin kein Salz auf Gehwegen), Foto mit Uhrzeit bei jedem Einsatz. Nach 20 Uhr gefallener Schnee bis 7 Uhr geräumt, sonn- und feiertags bis 9 Uhr. Privat 5 Monatsraten, bar oder per Überweisung, Gewerbe Saisonrechnung im November per Überweisung. Annahmeschluss 30.11.
+
+| Gehweg vor dem Grundstück, privat brutto | Saison | Mehreinsatz ab dem 21. Einsatztag |
+|---|---|---|
+| bis 15 m | 349 € | 27 € |
+| bis 25 m | 449 € | 35 € |
+| bis 40 m | 599 € | 47 € |
+| bis 60 m | 799 € | 60 € |
+| über 60 m | nach Besichtigung | |
+
+| Option, privat brutto je Saison | Saison | Mehreinsatz |
+|---|---|---|
+| Zuwegung bis zur Haustür, bis 15 m | 129 € | 12 € |
+| Einfahrt oder Stellplatz bis 30 m² | 169 € | 18 € |
+| Außentreppe bis 8 Stufen | 89 € | 6 € |
+| Müllplatz oder Tonnenstellplatz bis 10 m² | 59 € | 5 € |
+| Hydrant vor dem Grundstück freihalten | 69 € | 5 € |
+| Streugut aufnehmen nach Saisonende, Gehweg bis 25 m | 49 € | entfällt |
+| Umland Brandenburg | 99 € | 5 € |
+
+Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, bis 60 m 669 €, bis 100 m 1.090 € (Mehreinsatz 22/29/39/50/80 €). Optionen netto: Zuwegung 108 €, Einfahrt 142 €, Außentreppe 74 €, Müllplatz 49 €, Hydrant 57 €, Umland 83 € (Mehreinsatz 10/15/5/4/4/4 €). Hof, Parkplatz oder Müllplatz in Handräumung 30 bis 150 m²: 4,50 € netto je m² und Saison, Mehreinsatz 0,50 € je m². Größere Flächen nach Besichtigung.
+
 ## Bauendreinigung und Baufeinreinigung
 
 Mindestauftragswert 350 €. Der Preis richtet sich nach Fläche und Reinigungsgrad.

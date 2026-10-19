@@ -21,7 +21,7 @@ Privat:
 - Fensterreinigung für Privathaushalte und Gewerbe, innen und außen, einzeln buchbar ab 89 Euro
 - Übergabereinigung
 - Grundreinigung
-- Unterhaltsreinigung (wöchentlich, 14-tägig oder monatlich)
+- Haushaltsreinigung: private Unterhaltsreinigung für Wohnung und Haus (wöchentlich, 14-tägig oder monatlich), Seite https://nautilus-facility.de/haushaltsreinigung-berlin/
 - Sonderreinigung (Kleberreste, Nikotin, Renovierungsrückstände)
 - Reinigung nach Renovierung
 - Bauendreinigung und Baufeinreinigung
@@ -65,7 +65,7 @@ Alle Betraege sind Bruttofestpreise inklusive 19 Prozent Mehrwertsteuer, Anfahrt
 - Auszugsreinigung, besenrein: 155 EUR (1 Zimmer), 226 (2), 309 (3), 405 (4), 500 (5 und mehr). Uebergabefertig: 217, 317, 433, 566, 700 EUR.
 - Grundreinigung, Standard: 179, 262, 357, 464, 571 EUR. Intensiv: 250, 367, 500, 650, 800 EUR.
 - Sonderreinigung (Kleber, Nikotin, Renovierungsrueckstaende), Intensivreinigung: 226, 333, 440, 547, 666 EUR. Extremreinigung: 339, 500, 660, 821, 1000 EUR.
-- Unterhaltsreinigung im Privathaushalt, Preis je Reinigung: bis 50 m² 66 EUR woechentlich, 77 EUR 14-taegig, 93 EUR monatlich. 50 bis 80 m²: 86, 101, 121 EUR. 80 bis 110 m²: 111, 131, 157 EUR. 110 bis 150 m²: 142, 167, 200 EUR. Ueber 150 m²: 177, 208, 250 EUR. Keine Mindestlaufzeit, monatlich kuendbar.
+- Haushaltsreinigung (Unterhaltsreinigung im Privathaushalt, Seite /haushaltsreinigung-berlin/), Preis je Reinigung: bis 50 m² 66 EUR woechentlich, 77 EUR 14-taegig, 93 EUR monatlich. 50 bis 80 m²: 86, 101, 121 EUR. 80 bis 110 m²: 111, 131, 157 EUR. 110 bis 150 m²: 142, 167, 200 EUR. Ueber 150 m²: 177, 208, 250 EUR. Keine Mindestlaufzeit, monatlich kuendbar.
 - Gewerbereinigung (Buero, Praxis, Kanzlei, Gebaeude), Preis je Einsatz brutto: bis 100 m² 129 EUR, 100 bis 200 m² 169 EUR, 200 bis 300 m² 219 EUR, 300 bis 500 m² 289 EUR, darueber nach Besichtigung. Netto sind das 108, 142, 184 und 243 EUR. Bei 14-taegigem Turnus entspricht das 280, 370, 475 und 630 EUR im Monat.
 - Treppenhausreinigung je Einsatz brutto: ab 95 EUR bis 3 Etagen, 120 bis 180 EUR bei 4 bis 6 Etagen, ab 190 EUR bei grossen Objekten mit Aufzug oder Keller. Netto sind das ab 80, 101 bis 151 und ab 160 EUR.
 - Bauendreinigung: Mindestauftragswert 350 EUR. Baufeinreinigung bis 50 m² 360 EUR, bis 80 m² 570 EUR, bis 100 m² 710 EUR, bis 150 m² 1070 EUR, bis 200 m² 1430 EUR. Baugrob und Baufein zusammen 540, 860, 1070, 1610 und 2140 EUR. Intensivreinigung 710, 1140, 1430, 2140 und 2860 EUR.
@@ -92,7 +92,8 @@ Nicht im Leistungsumfang: Putz-, Klinker-, Beton- und WDVS-Fassadenreinigung, Al
 - https://nautilus-facility.de/reinigung-nach-auszug-berlin/
 - https://nautilus-facility.de/uebergabereinigung-berlin/
 - https://nautilus-facility.de/grundreinigung-berlin/
-- https://nautilus-facility.de/unterhaltsreinigung-berlin/
+- https://nautilus-facility.de/haushaltsreinigung-berlin/
+- https://nautilus-facility.de/unterhaltsreinigung-berlin/ (Unterhaltsreinigung für Gewerbe: Büro, Praxis, Kanzlei, Treppenhaus)
 - https://nautilus-facility.de/sonderreinigung-berlin/
 - https://nautilus-facility.de/reinigung-nach-renovierung-berlin/
 - https://nautilus-facility.de/bauendreinigung-berlin/

@@ -49,7 +49,9 @@ Für Kleberrückstände, Nikotinvergilbung, Renovierungsrückstände und intensi
 
 Zubuchbar: Küche intensiv entfetten 60 €, Nikotin- und Vergilbungsentfernung 90 €, großflächige Kleber- und Renovierungsrückstände 50 €, Kalk und Urinstein im Sanitärbereich intensiv 40 €.
 
-## Unterhaltsreinigung (Privathaushalt, regelmäßig)
+## Haushaltsreinigung (Unterhaltsreinigung im Privathaushalt, regelmäßig)
+
+Seite: https://nautilus-facility.de/haushaltsreinigung-berlin/ (Unterhaltsreinigung für Gewerbe: https://nautilus-facility.de/unterhaltsreinigung-berlin/)
 
 Preis je Reinigung. Keine Mindestlaufzeit, monatlich kündbar, feste Reinigungskraft.
 

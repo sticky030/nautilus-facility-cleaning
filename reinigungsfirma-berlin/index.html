@@ -847,43 +847,45 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     'Auszugsreinigung':{hint:'nach dem Umzug',sizeLabel:'② Wohnungsgröße',artLabel:'③ Leistungsart',min:0,unit:'EUR inkl. MwSt.',perClean:false,
       badges:['✓ Übergabeprotokoll','✓ Nachbesserung inklusive'],
       sizes:[['1 Zi.',130],['2 Zi.',190],['3 Zi.',260],['4 Zi.',340],['5+ Zi.',420]],
-      arten:[['Besenrein',1.0,'Standard-Auszug, Grundanforderung'],['Übergabefertig',1.4,'Intensiv inkl. Fugen und Heizkörper']],
-      extras:[['Backofen und Kühlschrank (innen)',40],['Einbauküche (Schränke innen)',80],['Kellerabteil/Dachboden besenrein',30],['Balkon/Terrasse reinigen',20]],
+      arten:[['Besenrein',1.0,'geleert, gesaugt und gewischt, ohne Kalk, Fett und Fugen'],['Übergabefertig',1.4,'mit Kalk im Bad, Fett in der Küche, Fugen und Heizkörpern']],
+      extras:[['Backofen und Kühlschrank (innen)',49],['Einbauküche (Schränke innen, ohne Backofen)',95],['Kellerabteil/Dachboden besenrein',35],['Balkon/Terrasse (offen, bis ca. 10 m²)',25],['Zweites Bad oder Gäste-WC',29,'bad'],['Umland Brandenburg (Anfahrt)',40]],
       fenster:true},
     'Grundreinigung':{hint:'intensiv, tief',sizeLabel:'② Wohnungsgröße',artLabel:'③ Leistungsart',min:0,unit:'EUR inkl. MwSt.',perClean:false,
-      badges:['✓ Kalk, Fett und Fugen','✓ Küche und Bad intensiv'],
+      badges:['✓ Alle Räume gründlich','✓ Küche und Bad inklusive'],
       sizes:[['1 Zi.',150],['2 Zi.',220],['3 Zi.',300],['4 Zi.',390],['5+ Zi.',480]],
-      arten:[['Standard',1.0,'Gründliche Grundreinigung'],['Intensiv',1.4,'Bei starker Verschmutzung']],
-      extras:[['Backofen und Kühlschrank (innen)',40],['Einbauküche (Schränke innen)',80],['Kellerabteil/Dachboden besenrein',30],['Balkon/Terrasse reinigen',20]],
+      arten:[['Standard',1.0,'Gründliche Grundreinigung'],['Intensiv',1.4,'festgesetzter Kalk, verharztes Fett, stark verschmutzte Fugen']],
+      extras:[['Backofen und Kühlschrank (innen)',49],['Einbauküche (Schränke innen, ohne Backofen)',95],['Kellerabteil/Dachboden besenrein (geräumt)',35],['Balkon/Terrasse (offen, bis ca. 10 m²)',25],['Zweites Bad oder Gäste-WC',29,'bad'],['Umland Brandenburg (Anfahrt)',40]],
       fenster:true},
-    'Sonderreinigung':{hint:'Nikotin, Kleber, extrem',sizeLabel:'② Wohnungsgröße',artLabel:'③ Leistungsart',min:0,unit:'EUR inkl. MwSt.',perClean:false,
-      badges:['✓ Für harte Fälle','✓ Festpreis nach Anfrage'],
+    'Sonderreinigung':{hint:'Kleber, Renovierung, stark verschmutzt',sizeLabel:'② Wohnungsgröße',artLabel:'③ Leistungsart',min:0,unit:'EUR inkl. MwSt.',perClean:false,
+      badges:['✓ Für harte Fälle','✓ Festpreis nach Fotos'],
       sizes:[['1 Zi.',190],['2 Zi.',280],['3 Zi.',370],['4 Zi.',460],['5+ Zi.',560]],
       arten:[['Intensivreinigung',1.0,'Starke Verschmutzung'],['Extremreinigung',1.5,'Sehr starke Verschmutzung']],
-      extras:[['Küche intensiv entfetten',60],['Nikotin-/Vergilbungsentfernung',90],['Kleber- und Renovierungsrückstände großflächig',50],['Kalk- und Urinstein Sanitär intensiv',40]],
+      extras:[['Backofen und Dunstabzug innen entfetten',69],['Nikotin an einzelnen Flächen',0],['Kleber- und Renovierungsrückstände punktuell',59],['Festgesetzter Urinstein in WC und Urinal',49],['Einbauküche und Kühlschrank (innen)',95],['Zweites Bad oder Gäste-WC',39,'bad'],['Umland Brandenburg (Anfahrt)',40]],
       fenster:true},
-    'Unterhaltsreinigung':{hint:'regelmäßig',sizeLabel:'② Wohnfläche',artLabel:'③ Turnus',min:0,unit:'EUR je Reinigung inkl. MwSt.',perClean:true,
+    'Haushaltsreinigung':{hint:'regelmäßig',sizeLabel:'② Wohnfläche',artLabel:'③ Turnus',min:0,unit:'EUR je Reinigung inkl. MwSt.',perClean:true,def:1,
       badges:['✓ Feste Kraft, fester Termin','✓ Monatlich kündbar'],
       sizes:[['bis 50 m²',65],['50 bis 80 m²',85],['80 bis 110 m²',110],['110 bis 150 m²',140],['über 150 m²',175]],
       arten:[['wöchentlich',0.85,'Bester Preis je Reinigung'],['14-tägig',1.0,'Der beliebte Standard'],['monatlich',1.2,'Für kleine Haushalte']],
-      extras:[['Fenster innen und Rahmen',15],['Küche intensiv (Backofen, Kühlschrank)',20],['Balkon / Terrasse',15],['Wäsche und Bügelservice',20]],
+      extras:[['Fenster innen und Rahmen (bis 6 Fenster)',19],['Backofen oder Kühlschrank innen (im Wechsel)',29],['Balkon / Terrasse',19],['Wäsche und Bügeln (bis 30 Minuten)',25],['Umland Brandenburg (Anfahrt je Termin)',40]],
       fenster:false},
-    'Fensterreinigung':{hint:'innen und außen',sizeLabel:'② Anzahl Fenster',artLabel:'③ Fenstertyp',min:0,unit:'EUR inkl. MwSt.',perClean:false,
-      badges:['✓ Streifenfrei innen und außen','✓ Rahmen und Falze inklusive'],
+    'Fensterreinigung':{hint:'innen und außen',sizeLabel:'② Gezählte Fenster',artLabel:'③ Rhythmus',min:0,unit:'EUR inkl. MwSt.',perClean:false,
+      badges:['✓ Streifenfrei innen und außen','✓ Rahmen, Falze und Fensterbänke'],
       sizes:[['1 bis 5',75],['6 bis 10',115],['11 bis 15',155],['16 bis 20',215],['21 bis 25',270]],
-      arten:[['Standard',1.0,'']],
-      extras:[['Bau- und Farbreste am Glas ablösen',40]],
+      arten:[['Einmalig',1.0,'ein Termin, ein Festpreis'],['Alle 6 Monate',0.9,'minus 10 %, ohne Vertrag']],
+      extras:[['Bau- und Farbreste am Glas ablösen',40],['Umland Brandenburg (Anfahrt je Termin)',40]],
       fenster:false}
   };
-  var FEN=[['Ohne Fensterreinigung',0,''],['Paket S',35,'ca. 5 bis 8 Fenster'],['Paket M',65,'ca. 9 bis 14 Fenster'],['Paket L',95,'15+ Fenster']];
+  var FEN=[['Ohne Fensterreinigung',0,''],['Paket S',69,'bis 8 Fenster'],['Paket M',109,'9 bis 14 Fenster'],['Paket L',149,'15 bis 20 Fenster']];
   var lWrap=document.getElementById('mc-leistung'),sWrap=document.getElementById('mc-size'),aWrap=document.getElementById('mc-art'),
       eWrap=document.getElementById('mc-extras'),fWrap=document.getElementById('mc-fen'),fenWrap=document.getElementById('mc-fen-wrap');
   if(!lWrap||!sWrap)return;
   var st={l:'Auszugsreinigung',size:0,art:0,extras:[],fen:0};
-  function fmt(n){return n.toFixed(2).replace('.',',');}
+  function fmt(n){return n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function exP(c,i){var x=c.extras[i];return x[2]==='bad'?(c.arten[st.art][1]>1?39:x[1]):x[1];}
+  function ab(){return st.size===4&&st.l!=='Fensterreinigung'?'ab ':'';}
   function cfg(){return CFG[st.l];}
   function baseBrutto(){var c=cfg();return Math.round(c.sizes[st.size][1]*c.arten[st.art][1]*1.19);}
-  function extrasSum(){var c=cfg(),s=0;st.extras.forEach(function(i){s+=c.extras[i][1];});if(c.fenster)s+=FEN[st.fen][1];return s;}
+  function extrasSum(){var c=cfg(),s=0;st.extras.forEach(function(i){s+=exP(c,i);});if(c.fenster)s+=FEN[st.fen][1];return s;}
   function brutto(){return baseBrutto()+extrasSum();}
   function pick(wrap,sel){wrap.querySelectorAll('.sel').forEach(function(x){x.classList.remove('sel');});sel.classList.add('sel');}
   function renderL(){
@@ -891,7 +893,7 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     Object.keys(CFG).forEach(function(k){
       var el=document.createElement('div');el.className='bk-svc'+(k===st.l?' sel':'');
       el.innerHTML='<div class="bk-svc-name">'+k+'</div><div class="bk-svc-hint">'+CFG[k].hint+'</div>';
-      el.addEventListener('click',function(){st.l=k;st.size=0;st.art=0;st.extras=[];st.fen=0;pick(lWrap,el);renderAll();});
+      el.addEventListener('click',function(){st.l=k;st.size=0;st.art=CFG[k].def||0;st.extras=[];st.fen=0;pick(lWrap,el);renderAll();});
       lWrap.appendChild(el);
     });
   }
@@ -918,7 +920,7 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     var c=cfg();eWrap.innerHTML='';
     c.extras.forEach(function(x,i){
       var el=document.createElement('div');el.className='bk-extra'+(st.extras.indexOf(i)>=0?' sel':'');
-      el.innerHTML='<div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">'+x[0]+'</div><div class="bk-extra-price">+'+x[1]+' EUR</div></div>';
+      el.innerHTML='<div class="bk-extra-check"></div><div class="bk-extra-txt"><div class="bk-extra-name">'+x[0]+'</div><div class="bk-extra-price">'+(x[1]?'+'+exP(c,i)+' EUR':'nach Fotos')+'</div></div>';
       el.addEventListener('click',function(){
         var p=st.extras.indexOf(i);
         if(p>=0){st.extras.splice(p,1);el.classList.remove('sel');}else{st.extras.push(i);el.classList.add('sel');}
@@ -942,13 +944,15 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
   function update(){
     var c=cfg(),bd=document.getElementById('mc-break'),lines='';
     lines+='<div class="bk-breakdown-line"><span>Basis ('+c.sizes[st.size][0]+(c.arten.length>1?' × '+c.arten[st.art][0]:'')+')</span><span>'+fmt(baseBrutto())+' EUR</span></div>';
-    st.extras.forEach(function(i){lines+='<div class="bk-breakdown-line"><span>'+c.extras[i][0]+'</span><span>+'+fmt(c.extras[i][1])+' EUR</span></div>';});
+    st.extras.forEach(function(i){lines+='<div class="bk-breakdown-line"><span>'+c.extras[i][0]+'</span><span>'+(c.extras[i][1]?'+'+fmt(exP(c,i))+' EUR':'nach Fotos')+'</span></div>';});
+    eWrap.querySelectorAll('.bk-extra').forEach(function(x,i){var pe=x.querySelector('.bk-extra-price');if(pe&&c.extras[i]&&c.extras[i][2]==='bad')pe.textContent='+'+exP(c,i)+' EUR';});
     if(c.fenster&&FEN[st.fen][1]>0)lines+='<div class="bk-breakdown-line"><span>Fenster '+FEN[st.fen][0]+'</span><span>+'+fmt(FEN[st.fen][1])+' EUR</span></div>';
-    lines+='<div class="bk-breakdown-line total"><span>'+(c.perClean?'Je Reinigung inkl. MwSt.':'Gesamt inkl. MwSt.')+'</span><span>'+fmt(brutto())+' EUR</span></div>';
+    lines+='<div class="bk-breakdown-line total"><span>'+(c.perClean?'Je Reinigung inkl. MwSt.':'Gesamt inkl. MwSt.')+'</span><span>'+ab()+fmt(brutto())+' EUR</span></div>';
+    if(ab())lines+='<div class="bk-breakdown-line"><span>'+(c.perClean?'Über 150 m² oder mehr als zwei Bäder':'Ab 6 Zimmern, Haus oder über ca. 130 m²')+'</span><span>Festpreis nach Fotos</span></div>';
     bd.innerHTML=lines;
-    document.getElementById('mc-price').textContent=fmt(brutto());
+    document.getElementById('mc-price').textContent=ab()+fmt(brutto());
     document.getElementById('mc-unit').textContent=c.unit;
-    var nt=document.getElementById('mc-note');if(nt)nt.textContent=(st.l==='Fensterreinigung')?'Sprossen- und Kastenfenster sowie bodentiefe und große Fenster ab etwa 2,5 m² Glasfläche zählen als anderthalb Fenster.':'';
+    var nt=document.getElementById('mc-note');if(nt)nt.innerHTML=(st.l==='Fensterreinigung')?'Richtpreis für normale Dreh-Kipp-Fenster, den verbindlichen Festpreis nennen wir nach Fotos. Kasten-, Sprossen- und bodentiefe Fenster zählen 1,5, kleine Kellerfenster 0,5. Mehr als 25 Fenster oder genau zählen: <a href="/fensterreinigung-berlin/#rechner">Fensterrechner</a>.':(c.fenster?'Fensterpakete: Kasten-, Sprossen- und bodentiefe Fenster zählen 1,5. Mehr als 20 Fenster: <a href="/fensterreinigung-berlin/#rechner">Fensterrechner</a>.':'');
     document.getElementById('mc-badges').innerHTML=c.badges.map(function(b){return '<div style="font-size:10px;color:var(--green);font-weight:600;margin-top:2px">'+b+'</div>';}).join('');
     document.getElementById('mc-wa').href='https://wa.me/4917622844636?text='+encodeURIComponent(waMsg());
   }
@@ -957,15 +961,15 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     var ex=st.extras.length?st.extras.map(function(i){return c.extras[i][0];}).join(', '):'Keine';
     var t='Leistung: '+st.l+'\nGröße: '+c.sizes[st.size][0]+(c.arten.length>1?'\n'+c.artLabel.replace(/^③ /,'')+': '+c.arten[st.art][0]:'')+'\nExtras: '+ex;
     if(c.fenster)t+='\nFensterreinigung: '+FEN[st.fen][0];
-    t+='\nRichtpreis: '+fmt(brutto())+' '+c.unit;
+    t+='\nRichtpreis: '+ab()+fmt(brutto())+' '+c.unit;
     return t;
   }
-  function waMsg(){return 'Hallo, ich möchte ein Angebot anfragen.\n'+confTxt()+'\nBitte bestätigen Sie mir den Termin.';}
+  function waMsg(){return 'Hallo, ich möchte ein Angebot anfragen.\n'+confTxt()+'\nFotos schicke ich mit. Welchen Termin können Sie mir anbieten?';}
   document.getElementById('mc-email').addEventListener('click',function(){
     var msg=document.getElementById('cf-msg');
-    if(msg)msg.value='Angebot aus dem Preisrechner:\n'+confTxt();
-    var art=document.getElementById('cf-art');
-    if(art){for(var i=0;i<art.options.length;i++){if(art.options[i].text.toLowerCase().indexOf(st.l.substring(0,7).toLowerCase())>=0){art.selectedIndex=i;break;}}}
+    if(msg){var alt=msg.value.replace(/Angebot aus dem Preisrechner:[\s\S]*?Richtpreis[^\n]*(\n|$)/,'').trim();msg.value='Angebot aus dem Preisrechner:\n'+confTxt()+(alt?'\n\n'+alt:'');}
+    var art=document.getElementById('cf-art'),ziel=st.l==='Haushaltsreinigung'?'Haushaltsreinigung (privat)':st.l;
+    if(art){for(var i=0;i<art.options.length;i++){if(art.options[i].text===ziel){art.selectedIndex=i;break;}}}
   });
   function renderAll(){renderS();renderA();renderE();renderF();update();}
   renderL();renderAll();

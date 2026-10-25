@@ -21,7 +21,7 @@ Alle Begriffe bezeichnen dieselbe Leistung. "Besenrein" ist die Grundanforderung
 | 4 Zimmer | 405 € | 566 € |
 | 5 Zimmer und mehr | 500 € | 700 € |
 
-Zubuchbar: Backofen und Kühlschrank innen 40 €, Einbauküche mit Schränken innen 80 €, Keller oder Dachboden besenrein 30 €, Balkon oder Terrasse 20 €. Fensterpakete: ca. 5 bis 8 Fenster 35 €, ca. 9 bis 14 Fenster 65 €, ab 15 Fenster 95 €.
+Zubuchbar (feste Bruttobeträge): Backofen und Kühlschrank innen 49 €, Einbauküche mit Schränken innen 95 €, Keller oder Dachboden besenrein 35 €, Balkon oder Terrasse (offen, bis ca. 10 m²) 25 €, zweites Bad oder Gäste-WC 29 € (besenrein) bzw. 39 € (übergabefertig), Umland Brandenburg 40 €. Fensterpakete: bis 8 Fenster 69 €, 9 bis 14 Fenster 109 €, 15 bis 20 Fenster 149 €, mehr Fenster nach dem Fensterrechner; Kasten-, Sprossen- und bodentiefe Fenster zählen 1,5. Ab 6 Zimmern, für Häuser oder über ca. 130 m² Festpreis nach Fotos.
 
 ## Grundreinigung
 
@@ -47,9 +47,9 @@ Für Kleberrückstände, Nikotinvergilbung, Renovierungsrückstände und intensi
 | 4 Zimmer | 547 € | 821 € |
 | 5 Zimmer und mehr | 666 € | 1.000 € |
 
-Zubuchbar: Küche intensiv entfetten 60 €, Nikotin- und Vergilbungsentfernung auf einzelnen Flächen ab 90 €, Kleber- und Renovierungsrückstände an einzelnen Stellen 50 € (flächige Kleberschichten nach Fotos), Kalk und Urinstein im Sanitärbereich intensiv 40 €.
+Zubuchbar: Backofen und Dunstabzug innen entfetten 69 €, Nikotin auf einzelnen Flächen nach Fotos (ganze Raucherwohnung: Nikotinreinigung ab 599 €), Kleber- und Renovierungsrückstände an einzelnen Stellen 59 € (flächige Kleberschichten nach Fotos), festgesetzter Urinstein in WC und Urinal 49 €, Einbauküche und Kühlschrank innen 95 €, zweites Bad oder Gäste-WC 39 €, Umland Brandenburg 40 €.
 
-Reinigung nach Renovierung: dieselben Festpreise, Stufen „Standard“ (Feinstaub, Farbspritzer, Kleberreste) und „Intensiv“ (flächige Farb-, Kleber- und Silikonreste). Renovierungsrückstände sind dort im Preis enthalten, zubuchbar sind Backofen und Kühlschrank innen 40 €, Einbauküche innen 80 €, Keller oder Dachboden 30 €, Balkon oder Terrasse 20 €, Fensterpakete 35, 65 oder 95 €.
+Reinigung nach Renovierung: dieselben Festpreise, Stufen „Standard“ (Feinstaub, Farbspritzer, Kleberreste) und „Intensiv“ (flächige Farb-, Kleber- und Silikonreste). Renovierungsrückstände sind dort im Preis enthalten, zubuchbar sind Backofen und Kühlschrank innen 49 €, Einbauküche innen 95 €, Keller oder Dachboden 35 €, Balkon oder Terrasse 25 €, zweites Bad 29 oder 39 €, Fensterpakete 69, 109 oder 149 €, Umland 40 €.
 
 ## Haushaltsreinigung (Unterhaltsreinigung im Privathaushalt, regelmäßig)
 
@@ -65,7 +65,7 @@ Preis je Reinigung. Keine Mindestlaufzeit, monatlich kündbar, feste Reinigungsk
 | 110 bis 150 m² | 142 € | 167 € | 200 € |
 | über 150 m² | 177 € | 208 € | 250 € |
 
-Zubuchbar je Reinigung: Fenster innen und Rahmen 15 €, Küche intensiv 20 €, Balkon oder Terrasse 15 €, Wäsche- und Bügelservice 20 €.
+Zubuchbar je Reinigung: Fenster innen und Rahmen bis 6 Fenster 19 €, Backofen oder Kühlschrank innen im Wechsel 29 €, Balkon oder Terrasse 19 €, Wäsche und Bügeln bis 30 Minuten 25 €, Umland Brandenburg 40 € je Termin. Über 150 m² oder mehr als zwei Bäder: Festpreis nach Besichtigung.
 
 ## Fensterreinigung
 
@@ -94,7 +94,7 @@ Reinwasser, ohne Hochdruck, Dachfläche vom Boden per Teleskopsystem. Maßgeblic
 
 Wichtig für die Einordnung: Grundfläche ist nicht Glasfläche. 12 m² Grundfläche entsprechen grob 35 m² Glas, 20 m² Grundfläche grob 50 m² Glas. Vergleiche mit Anbietern, die nach Glasfläche abrechnen, führen ohne diese Umrechnung zu einem falschen Bild.
 
-Zuschläge: Raffstores und Beschattung 25 € je Element beidseitig, Anfahrt ins Brandenburger Umland 40 €, Dach-Intensivbehandlung bei Wetterschleier ab 89 €, Rinnenreinigung ab 49 €.
+Zuschläge: Raffstores und Beschattung 25 € je Element beidseitig (bis 12 Elemente, darüber nach Foto), über 30 m² Grundfläche Festpreis nach Foto, Anfahrt ins Brandenburger Umland 40 €, Dach-Intensivbehandlung bei Wetterschleier ab 89 €, Rinnenreinigung ab 49 €.
 
 ## Glasdach- und Terrassendachreinigung
 
@@ -119,7 +119,7 @@ Ausschließlich Reinwasser und weiche Bürste, modulschonend und garantiekonform
 | 36 bis 50 | 329 € |
 | ab 51 oder Gewerbedach | Festpreis nach Foto |
 
-Faustregel zur Umrechnung: Kilowatt-Peak mal 2,5 ergibt die Modulzahl. Anlagen, die nur über das Dach erreichbar sind, werden ausschließlich nach Foto kalkuliert. Umland Brandenburg zuzüglich 40 €.
+Faustregel zur Umrechnung für neuere Module: Kilowatt-Peak mal 2,5 ergibt die Modulzahl, bei Anlagen vor etwa 2018 besser die Module zählen. Anlagen, die nur über das Dach erreichbar sind, werden ausschließlich nach Foto kalkuliert. Umland Brandenburg zuzüglich 40 €.
 
 ## Ozonbehandlung und Geruchsneutralisation
 
@@ -135,7 +135,7 @@ Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsq
 
 Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 69 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 40 € Anfahrtpauschale.
 
-Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 57 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 33 € Anfahrtpauschale netto (39,27 € brutto). Die Rechnung weist die Mehrwertsteuer gesondert aus.
+Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 57 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 41 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 33 € Anfahrtpauschale netto (39,27 € brutto). Die Rechnung weist die Mehrwertsteuer gesondert aus.
 
 ## Nikotinreinigung und Raucherwohnung reinigen
 
@@ -164,7 +164,7 @@ Geöltes Parkett wird maschinell intensiv gereinigt (Einscheibenmaschine, WOCA I
 | Stark verschlissen (Laufstraßen bis auf Holzfarbe, nur geöltes Parkett) | Richtpreis mal 1,3 als „ab", Festpreis nach Fotos |
 | Anfahrtpauschale Umland | 40 € |
 
-Mindestauftragswert 599 € bei geöltem und 299 € bei lackiertem Parkett, Flächen unter 20 m² nur als Zusatz zu einer gebuchten Reinigung. Gewerbe netto: 499 € bis 40 m², darüber plus 6,30 € je m² (60 m² = 625 €, 80 m² = 751 €, 100 m² = 877 €), Anfahrt Umland 33 € netto. Grenzen: Kratzer im Holz, schwarze Wasserflecken und Schleifbedarf bleiben, das sagen wir nach den Fotos. Schleifen bieten wir nicht an.
+Mindestauftragswert 599 € bei geöltem und 299 € bei lackiertem Parkett, Flächen unter 20 m² nur als Zusatz zu einer gebuchten Reinigung. Gewerbe netto: 499 € bis 40 m², darüber plus 6,30 € je m² (60 m² = 625 €, 80 m² = 751 €, 100 m² = 877 €), lackiert nur Intensivreinigung 251 € bis 40 m², darüber plus 4,20 € je m² (60 m² = 335 €, 80 m² = 419 €, 100 m² = 503 €), Anfahrt Umland 33 € netto. Grenzen: Kratzer im Holz, schwarze Wasserflecken und Schleifbedarf bleiben, das sagen wir nach den Fotos. Schleifen bieten wir nicht an.
 
 ## Winterdienst, Saisonpauschale
 
@@ -188,7 +188,7 @@ Räumen und Streuen des Gehwegs vor dem Grundstück in ganz Berlin und im Umland
 | Streugut aufnehmen nach Saisonende, Gehweg bis 25 m | 49 € | entfällt |
 | Umland Brandenburg, je Saison, alle Einsätze inklusive | 99 € | entfällt |
 
-Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, bis 60 m 669 €, bis 100 m 1.090 € (Mehreinsatz 22/29/39/50/80 €). Optionen netto: Zuwegung 108 €, Einfahrt 142 €, Außentreppe 74 €, Müllplatz 49 €, Hydrant 57 €, Umland 83 € je Saison, alle Einsätze inklusive (Mehreinsatz Optionen 10/15/5/4/4 €). Hof, Parkplatz oder Müllplatz in Handräumung 30 bis 150 m²: 4,50 € netto je m² und Saison, Mehreinsatz 0,50 € je m². Größere Flächen nach Besichtigung.
+Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, bis 60 m 669 €, bis 100 m 1.090 € (Mehreinsatz 22/29/39/50/80 €). Optionen netto: Zuwegung 108 €, Einfahrt 142 €, Außentreppe 74 €, Müllplatz 49 €, Hydrant 57 €, Streugut aufnehmen bis 25 m 41 €, Umland 83 € je Saison, alle Einsätze inklusive (Mehreinsatz Optionen 10/15/5/4/4 €). Hof oder Parkplatz in Handräumung 30 bis 150 m²: 4,50 € netto je m² und Saison, Mehreinsatz 0,50 € je m². Größere Flächen nach Besichtigung.
 
 ## Bauendreinigung und Baufeinreinigung
 
@@ -202,9 +202,9 @@ Der Preis richtet sich nach Fläche und Reinigungsgrad.
 | bis 150 m² | 1.070 € | 1.610 € | 2.140 € |
 | bis 200 m² | 1.430 € | 2.140 € | 2.860 € |
 | bis 400 m² | 2.860 € | 4.280 € | 5.710 € |
-| ab 500 m² | nach Aufmaß | nach Aufmaß | nach Aufmaß |
+| über 400 m² | nach Aufmaß | nach Aufmaß | nach Aufmaß |
 
-Zusatzpositionen: Fensterreinigung inklusive Schutzfolien, Aufklebern und Farbresten 1,50 € je m² Grundfläche, Sanitäranlagen intensiv 2,00 € je m², Bauschutt- und Folienentsorgung pauschal 150 €.
+Zusatzpositionen: Fensterreinigung inklusive Schutzfolien, Aufklebern und Farbresten 1,79 € je m² Grundfläche, Sanitäranlagen intensiv 89 € je Bad oder WC, Bauschutt- und Folienentsorgung bis ca. 2 m³ pauschal 179 €, Umland Brandenburg 40 €.
 
 ## Treppenhausreinigung und Objektbetreuung für Hausverwaltungen
 
@@ -240,9 +240,10 @@ Bei wöchentlichem Turnus sind rund 4,33 Einsätze je Monat anzusetzen. Behandlu
 | 100 bis 200 m² | 890 € | 1.335 € |
 | 200 bis 350 m² | 1.430 € | 2.145 € |
 | 350 bis 500 m² | 2.080 € | 3.120 € |
-| über 500 m² | 2.980 € | 4.470 € |
+| 500 bis 750 m² | 2.980 € | 4.470 € |
+| über 750 m² | nach Besichtigung | nach Besichtigung |
 
-Zusatzpositionen: Bau- und Feinstaubreinigung 120 €, Gastro- und Küchenfett intensiv 90 €, Kleber- und Renovierungsrückstände 80 €, Kalk und Urinstein im Sanitärbereich 50 €.
+Zusatzpositionen: Bau- und Feinstaubreinigung 120 / 200 / 320 / 450 / 600 € und Gastro- und Küchenfett intensiv 90 / 150 / 240 / 340 / 450 € je nach Flächenstufe, Kleber- und Renovierungsrückstände 80 €, Kalk und Urinstein im Sanitärbereich 50 €, Einsatz abends oder am Wochenende 150 €, Fensterpakete 69 / 109 / 149 €.
 
 ## Praxisauflösung
 
@@ -254,9 +255,10 @@ Eigene Preisstruktur, nicht identisch mit der Gewerbe-Sonderreinigung.
 | 100 bis 200 m² | 780 € | 1.014 € |
 | 200 bis 350 m² | 1.200 € | 1.560 € |
 | 350 bis 500 m² | 1.700 € | 2.210 € |
-| über 500 m² | 2.400 € | 3.120 € |
+| 500 bis 750 m² | 2.400 € | 3.120 € |
+| über 750 m² | nach Besichtigung | nach Besichtigung |
 
-Zusatzpositionen: Entsorgung von Restmüll und Kleinteilen 70 €, Kleber- und Renovierungsrückstände 80 €, Express- oder Wochenendtermin 150 €.
+Zusatzpositionen: Restmüll bis 1 m³ (keine Praxis-, Sonder- oder Medikamentenabfälle) 70 €, Kleber- und Renovierungsrückstände 80 €, Express- oder Wochenendtermin 20 % des Grundpreises, mindestens 150 €, Fensterpakete 69 / 109 / 149 €.
 
 ## Glas- und Rahmenreinigung für Gewerbekunden
 

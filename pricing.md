@@ -69,7 +69,7 @@ Zubuchbar je Reinigung: Fenster innen und Rahmen 15 €, Küche intensiv 20 €,
 
 ## Fensterreinigung
 
-Innen und außen, inklusive Rahmen, Falze und Fensterbänke. Seit August 2026 mit Reinwasser-Teleskopsystem bis rund 15 Meter Arbeitshöhe, ohne Gerüst und ohne Hubbühne.
+Innen und außen, inklusive Rahmen, Falze und Fensterbänke. Seit August 2026 mit Reinwasser-Teleskopsystem bis rund 15 Meter Arbeitshöhe, ohne Gerüst und ohne Hubbühne. Im Brandenburger Umland plus 40 € Anfahrtspauschale.
 
 | Fensterzahl | Einmalig | Im Halbjahres-Rhythmus je Termin |
 |---|---|---|

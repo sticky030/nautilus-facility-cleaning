@@ -1066,7 +1066,7 @@ setTimeout(()=>document.querySelectorAll('.hero .reveal').forEach(el=>el.classLi
     const err=document.getElementById('cf-error');
     ok.style.display='none';err.style.display='none';
     if(!form.checkValidity()){form.reportValidity();return;}
-    (function(){var sj=form.querySelector('[name="_subject"]'),a=form.querySelector('#cf-art');if(sj){sj.value='Neue Anfrage: '+((a&&a.value)?a.value:'Reinigung')+' | '+document.title.split('|')[0].trim();}})();
+    (function(){var sj=form.querySelector('[name="_subject"]'),a=form.querySelector('#cf-art')||form.querySelector('#cf-leistung');if(sj){sj.value='Neue Anfrage: '+((a&&a.value)?a.value:'Reinigung')+' | '+document.title.split('|')[0].trim();}})();
     btn.disabled=true;btn.textContent='Wird gesendet …';
     try{
       const res=await fetch('https://formspree.io/f/mnjonren',{

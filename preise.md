@@ -152,7 +152,7 @@ Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper a
 
 ## Parkettreinigung und Parkett nachölen
 
-Geöltes Parkett wird maschinell intensiv gereinigt (Einscheibenmaschine, WOCA Intensivreiniger) und am selben Tag mit WOCA Pflegeöl nachgeölt. Kein Schleifen, kein Holzabtrag, kein Staub. Reinigung rund 2 Std, Trocknung 3 bis 4 Std, Ölen rund 2 Std, abends in Socken begehbar, Möbel nach 24 Std. Preise brutto, inklusive Anfahrt in Berlin, Maschine, Reiniger, Pflegeöl, Probefläche und Abnahmeprotokoll.
+Geöltes Parkett wird maschinell intensiv gereinigt (Einscheibenmaschine, Intensivreiniger aus dem Pflegesystem des Bodenherstellers) und am selben Tag mit dem Pflegeöl nachgeölt, das der Hersteller für die Oberfläche vorgibt. Kein Schleifen, kein Holzabtrag, kein Staub. Reinigung rund 2 Std, Trocknung 3 bis 4 Std, Ölen rund 2 Std, abends in Socken begehbar, Möbel nach 24 Std. Preise brutto, inklusive Anfahrt in Berlin, Maschine, Reiniger, Pflegeöl, Probefläche und Abnahmeprotokoll.
 
 | Leistung | Preis |
 |---|---|

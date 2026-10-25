@@ -47,7 +47,9 @@ Für Kleberrückstände, Nikotinvergilbung, Renovierungsrückstände und intensi
 | 4 Zimmer | 547 € | 821 € |
 | 5 Zimmer und mehr | 666 € | 1.000 € |
 
-Zubuchbar: Küche intensiv entfetten 60 €, Nikotin- und Vergilbungsentfernung 90 €, großflächige Kleber- und Renovierungsrückstände 50 €, Kalk und Urinstein im Sanitärbereich intensiv 40 €.
+Zubuchbar: Küche intensiv entfetten 60 €, Nikotin- und Vergilbungsentfernung auf einzelnen Flächen ab 90 €, Kleber- und Renovierungsrückstände an einzelnen Stellen 50 € (flächige Kleberschichten nach Fotos), Kalk und Urinstein im Sanitärbereich intensiv 40 €.
+
+Reinigung nach Renovierung: dieselben Festpreise, Stufen „Standard“ (Feinstaub, Farbspritzer, Kleberreste) und „Intensiv“ (flächige Farb-, Kleber- und Silikonreste). Renovierungsrückstände sind dort im Preis enthalten, zubuchbar sind Backofen und Kühlschrank innen 40 €, Einbauküche innen 80 €, Keller oder Dachboden 30 €, Balkon oder Terrasse 20 €, Fensterpakete 35, 65 oder 95 €.
 
 ## Haushaltsreinigung (Unterhaltsreinigung im Privathaushalt, regelmäßig)
 
@@ -105,7 +107,7 @@ Freistehendes Glas- oder Terrassendach ohne Seitenwände.
 | 25 bis 40 m² | 279 € | 369 € |
 | über 40 m² | Festpreis nach Foto | Festpreis nach Foto |
 
-## PV- und Solarreinigung
+## Photovoltaik-Reinigung
 
 Ausschließlich Reinwasser und weiche Bürste, modulschonend und garantiekonform, vom Boden beziehungsweise per Teleskopsystem bis rund 15 Meter Arbeitshöhe.
 
@@ -133,7 +135,7 @@ Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsq
 
 Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 69 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 40 € Anfahrtpauschale.
 
-Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 58 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 40 € Anfahrtpauschale brutto. Die Rechnung weist die Mehrwertsteuer gesondert aus.
+Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 58 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 33 € Anfahrtpauschale netto (39,27 € brutto). Die Rechnung weist die Mehrwertsteuer gesondert aus.
 
 ## Nikotinreinigung und Raucherwohnung reinigen
 
@@ -146,7 +148,7 @@ Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 
 | 4 Zimmer bis 95 m² | 1.790 € | ab 2.689 € |
 | ab 5 Zimmer oder Haus | nach Besichtigung | nach Besichtigung |
 
-Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 915 / 1.249 / 1.499 €. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
+Enthalten: Wände und Decken, Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 € je Stück, Küche intensiv 399 €, Nikotinsperrgrund 490 / 649 / 949 / 1.290 / 1.649 € nach Zimmerzahl als eigener Termin nach der Trocknung, Ozonbehandlung 149 bis 349 €. Umland plus 40 € Anfahrtpauschale. Gewerbe netto: 499 / 669 / 915 / 1.249 / 1.499 €, Nikotinsperrgrund 411 / 545 / 797 / 1.084 / 1.385 €, Umland plus 33 € netto. Ergebnis: sauber und geruchsarm, Vergilbung wird heller, nicht wieder weiß.
 
 ## Parkettreinigung und Parkett nachölen
 
@@ -206,7 +208,7 @@ Zusatzpositionen: Fensterreinigung inklusive Schutzfolien, Aufklebern und Farbre
 
 ## Treppenhausreinigung und Objektbetreuung für Hausverwaltungen
 
-Preis je Einsatz. Bei festem Turnus im Rahmenvertrag wird der einzelne Einsatz günstiger.
+Preis je Einsatz. Die genannten Preise gelten für den festen Turnus, Einzeleinsätze ohne Turnus nennen wir als eigenen Festpreis.
 
 | Objekt | Je Einsatz netto | Je Einsatz brutto |
 |---|---|---|
@@ -227,7 +229,7 @@ Preis je Einsatz, unabhängig vom gewählten Turnus. Reinigung außerhalb der Be
 | 300 bis 500 m² | 243 € | 289 € | 630 € |
 | ab 500 m² | nach Besichtigung | nach Besichtigung | nach Besichtigung |
 
-Bei wöchentlichem Turnus sind rund 4,33 Einsätze je Monat anzusetzen. Behandlungsräume in Praxen mit erhöhtem Hygieneaufwand werden gesondert auf Grundlage des Hygieneplans kalkuliert. Die Rechnung weist die Mehrwertsteuer gesondert aus, sie ist für gewerbliche Auftraggeber in voller Höhe vorsteuerabzugsfähig. 
+Bei wöchentlichem Turnus sind rund 4,33 Einsätze je Monat anzusetzen. Behandlungsräume in Praxen mit erhöhtem Hygieneaufwand werden gesondert auf Grundlage des Hygieneplans kalkuliert. Die Rechnung weist die Mehrwertsteuer gesondert aus, sie ist für vorsteuerabzugsberechtigte Auftraggeber in voller Höhe als Vorsteuer abziehbar. 
 
 ## Gewerbe-Sonderreinigung
 

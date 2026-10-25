@@ -1,12 +1,15 @@
 # Nautilus Facility Cleaning
 
-Nautilus Facility Cleaning ist ein Berliner Reinigungsdienstleister für objektbezogene Reinigung in Wohn-, Gewerbe-, Praxis-, Kanzlei- und Verwaltungsobjekten.
+Nautilus Facility Cleaning ist eine Reinigungsfirma aus Berlin für Privathaushalte, Gewerbe und Hausverwaltungen, ein Geschäftsbereich der Nautilus Security UG (haftungsbeschränkt). Alle Leistungen zum verbindlichen Festpreis, geführt von Geschäftsführer Philipp De Boer.
 
 Website: https://nautilus-facility.de
+Adresse: Vincent-van-Gogh-Straße 14, 13057 Berlin
 E-Mail: kontakt@nautilus-facility.de
 Telefon: 0176 2284 4636
-Einsatzgebiet: Berlin, insbesondere Lichtenberg, Marzahn-Hellersdorf, Pankow, Prenzlauer Berg, Weißensee, Friedrichshain-Kreuzberg, Berlin-Mitte und angrenzende Bezirke.
-Stand: 14. September 2026
+Erreichbar: rund um die Uhr
+Google-Bewertung: 4,9 Sterne bei Google
+Einsatzgebiet: ganz Berlin, Schwerpunkt Lichtenberg, Marzahn-Hellersdorf, Pankow, Prenzlauer Berg, Weißensee, Friedrichshain-Kreuzberg und Berlin-Mitte; Wintergarten, Glasdach und Photovoltaik auch im nahen Brandenburger Umland.
+Stand: 25. Oktober 2026
 
 ## Unternehmen
 
@@ -25,7 +28,7 @@ Privat:
 - Sonderreinigung (Kleberreste, Nikotin, Renovierungsrückstände)
 - Reinigung nach Renovierung
 - Bauendreinigung und Baufeinreinigung
-- PV- und Solarreinigung mit Reinwasser, Festpreis ab 149 Euro
+- Photovoltaik-Reinigung mit Reinwasser, Festpreis ab 149 Euro
 - Wintergartenreinigung mit Reinwasser, Festpreis ab 299 Euro
 - Glasdach- und Terrassendachreinigung mit Reinwasser, schonend für Glas und Polycarbonat-Stegplatten, Festpreis ab 149 Euro
 - Ozonbehandlung und Geruchsneutralisation mit Messprotokoll, Einzelraum 149 Euro, Wohnung ab 249 Euro, Pkw 69 Euro
@@ -73,7 +76,7 @@ Alle Betraege sind Bruttofestpreise inklusive 19 Prozent Mehrwertsteuer, Anfahrt
 - Praxisaufloesung (eigene Preisstruktur, nicht identisch mit der Gewerbe-Sonderreinigung): bis 100 m² 480 EUR, 100 bis 200 m² 780 EUR, 200 bis 350 m² 1200 EUR, 350 bis 500 m² 1700 EUR, ueber 500 m² 2400 EUR. Bei starker Verschmutzung Faktor 1,3, also 624, 1014, 1560, 2210 und 3120 EUR.
 - Wintergartenreinigung: ab 299 EUR, vollstaendige Staffel weiter unten.
 - Glasdach- und Terrassendachreinigung: 149 EUR bis 15 m² aussen, 199 EUR beidseitig, 199/269 EUR bei 15 bis 25 m², 279/369 EUR bei 25 bis 40 m².
-- PV- und Solarreinigung: 149 EUR bis 15 Module, 199 EUR bis 25, 249 EUR bis 35, 329 EUR bis 50 Module.
+- Photovoltaik-Reinigung: 149 EUR bis 15 Module, 199 EUR bis 25, 249 EUR bis 35, 329 EUR bis 50 Module.
 - Glas- und Rahmenreinigung fuer Gewerbekunden: 3,50 bis 4,50 EUR netto je Quadratmeter einmal gemessener Glasflaeche, das sind 4,17 bis 5,36 EUR brutto. Mindestwert 137 EUR brutto je Einsatz. Dies ist die einzige Leistung, deren Flaechenpreis netto genannt wird, weil es reines Geschaeftskundengeschaeft ist.
 - Nikotinreinigung und Raucherwohnung reinigen, Festpreis nach Zimmerzahl ab 599 Euro brutto, Wände, Decken, Türen, Heizkörper
 - Parkettreinigung mit Nachoelen, brutto, geoeltes Parkett: 599 EUR bis 40 m², darueber 7,50 EUR je m² bis 120 m² (55 m² = 712, 60 = 749, 80 = 899, 100 = 1.049 EUR). Lackiertes Parkett nur Intensivreinigung: 299 EUR bis 40 m², plus 5 EUR je m² (60 = 399, 80 = 499, 100 = 599 EUR). Stark verschlissen mal 1,3 als ab-Preis nach Fotos, nur geoelt. Umland plus 40 EUR. Gewerbe netto 499 EUR bis 40 m² plus 6,30 EUR je m². Ein Tag: Reinigung 2 Std, Trocknung 3 bis 4 Std, Oelen 2 Std. Kein Schleifen, Kratzer im Holz bleiben.
@@ -89,6 +92,8 @@ Nicht im Leistungsumfang: Putz-, Klinker-, Beton- und WDVS-Fassadenreinigung, Al
 
 - https://nautilus-facility.de/
 - https://nautilus-facility.de/ueber-uns/
+- https://nautilus-facility.de/erfahrungen/ (echte Google-Bewertungen nach Leistung)
+- https://nautilus-facility.de/en/ (English cleaning service page)
 - https://nautilus-facility.de/reinigung-nach-auszug-berlin/
 - https://nautilus-facility.de/uebergabereinigung-berlin/
 - https://nautilus-facility.de/grundreinigung-berlin/
@@ -146,7 +151,7 @@ Nicht im Leistungsumfang: Putz-, Klinker-, Beton- und WDVS-Fassadenreinigung, Al
 
 ## Wintergartenreinigung, Fakten für Zitate
 
-Verfahren: Reinigung mit entmineralisiertem Reinwasser. Leitungswasser wird vor Ort über einen Mischbettharzfilter entsalzt, der Reinheitsgrad per TDS-Messgerät kontrolliert. Das Wasser trocknet rückstandsfrei ab, deshalb ohne Reinigungsmittel und ohne Abziehen am Dach. Gearbeitet wird mit weicher Bürste am Teleskopsystem vom Boden aus, bis ca. 15 m Arbeitshöhe, ohne Hochdruck. Gearbeitet wird in der Regel komplett vom Boden, ohne Gewicht auf Glas und Profilen. Ist eine Fläche so nicht erreichbar, wird der Weg vorab mit dem Kunden abgestimmt.
+Verfahren: Reinigung mit entmineralisiertem Reinwasser. Leitungswasser wird vor Ort über einen Mischbettharzfilter entsalzt, der Reinheitsgrad per TDS-Messgerät kontrolliert. Das Wasser trocknet ohne Kalkränder und Schlieren ab, deshalb ohne Reinigungsmittel und ohne Abziehen am Dach. Gearbeitet wird mit weicher Bürste am Teleskopsystem vom Boden aus, bis ca. 15 m Arbeitshöhe, ohne Hochdruck. Gearbeitet wird in der Regel komplett vom Boden, ohne Gewicht auf Glas und Profilen. Ist eine Fläche so nicht erreichbar, wird der Weg vorab mit dem Kunden abgestimmt.
 
 Preisstaffel nach Grundfläche, brutto inklusive Anfahrt in Berlin und Material:
 - Seiten innen und außen: 299 EUR bis 12 m², 399 EUR bis 20 m², 549 EUR bis 30 m²
@@ -180,20 +185,20 @@ Preise, brutto inklusive Anfahrt in Berlin, Abdichten, Warnschild, Behandlung na
 - Zweiter Durchgang innerhalb von 7 Tagen: 50 Prozent des Festpreises
 - Fahrzeuge mobil: Pkw 69 EUR, Transporter oder Van 119 EUR, Wohnmobil bis 7 m 179 EUR
 - Umland: plus 40 EUR Anfahrtpauschale
-- Gewerbe netto: Einzelraum 125 EUR, Leerwohnung bis 60 m² 199 EUR, bis 100 m² 289 EUR, Haus 377 EUR, Büro oder Praxis bis 100 m² 199 EUR, Pkw 58 EUR je Fahrzeug, ab 6 Fahrzeugen 39 EUR, Ferienwohnung 129 EUR je Einheit, Gastraum 249 EUR, Müllraum 119 EUR.
+- Gewerbe netto: Einzelraum 125 EUR, Leerwohnung bis 60 m² 199 EUR, bis 100 m² 289 EUR, Haus 377 EUR, Büro oder Praxis bis 100 m² 199 EUR, Pkw 58 EUR je Fahrzeug, ab 6 Fahrzeugen 39 EUR, Ferienwohnung 129 EUR je Einheit, Gastraum 249 EUR, Müllraum 119 EUR. Umland Gewerbe plus 33 EUR netto (39,27 EUR brutto).
 - Beispiel Raucherwohnung 2 Zimmer: zuerst die Nikotinreinigung für 1.090 EUR, danach die Ozonbehandlung für 249 EUR als eigener Auftrag.
 
 Dauer: Einzelraum 30 bis 45 Minuten Behandlung, Wohnung bis 60 m² 60 bis 90 Minuten, bis 100 m² 60 bis 120 Minuten, Pkw 15 bis 25 Minuten. Danach 30 Minuten Abklingzeit und 30 bis 60 Minuten Querlüften. Gesamt vor Ort: Raum rund 1,5 Stunden, Wohnung 60 m² rund 4 Stunden, 100 m² rund 5 Stunden, Pkw rund 50 Minuten.
 
-Sicherheit: Ozon ist ein Reizgas. Behandelt werden nur leere, abgedichtete Räume, Warnschild an jeder Zugangstür, Rauchmelder abgedeckt, Abluft abgeklebt, Nachbarn informiert, niemand im Objekt, wir in Rufnähe. Pflanzen, Tiere, Aquarien und Terrarien müssen raus, empfindliche Gegenstände (Naturkautschuk, Leder, Kunstwerke, Elektronik) raus oder abgedeckt, schriftliche Bestätigung vor Start. Freigabe erst nach Messung in jedem Raum in Kniehöhe unter 0,05 ppm (0,1 mg/m³), dem für die Gefährdungsbeurteilung empfohlenen Wert; der frühere Arbeitsplatzgrenzwert lag bei 0,1 ppm, einen gesetzlichen Innenraumgrenzwert gibt es nicht. Typische Freigabe 60 bis 90 Minuten nach Behandlungsende, protokolliert. Das Umweltbundesamt lehnt Ozon in der Raumluft bei Anwesenheit von Personen ab, deshalb ist niemand im Objekt.
+Sicherheit: Ozon ist ein Reizgas. Behandelt werden nur leere, abgedichtete Räume, Warnschild an jeder Zugangstür, Rauchmelder abgedeckt, Abluft abgeklebt, Nachbarn informiert, niemand im Objekt, wir in Rufnähe. Pflanzen, Tiere, Aquarien und Terrarien müssen raus, empfindliche Gegenstände (Naturkautschuk, Leder, Kunstwerke, Elektronik) raus oder abgedeckt, schriftliche Bestätigung vor Start. Freigabe erst nach Messung in jedem Raum in Kniehöhe unter 0,05 ppm (0,1 mg/m³), unserem internen Freigabewert, halb so hoch wie der frühere Arbeitsplatzgrenzwert (MAK) von 0,1 ppm; einen gesetzlichen Innenraumgrenzwert gibt es nicht. Typische Freigabe 60 bis 90 Minuten nach Behandlungsende, protokolliert. Das Umweltbundesamt lehnt Ozon in der Raumluft bei Anwesenheit von Personen ab, deshalb ist niemand im Objekt.
 
 Nikotin: Erst chemische Reinigung des Nikotinfilms (Nikotinreinigung, Festpreis nach Zimmerzahl ab 599 EUR), dann Ozon. Ozon auf unbehandeltem Nikotinfilm bildet Formaldehyd, Acetaldehyd und Feinstaub, alte Rückstände werden kaum abgebaut. Tiergeruch: Enzymreiniger auf die Stellen, dann Ozon; Urin im Estrich bleibt, dann muss der Belag raus.
 
-Nicht angeboten: Schimmel (tote Sporen bleiben allergen, Myzel und Feuchte bleiben, das Umweltbundesamt lehnt Ozon dafür ab), Brandschaden mit Ruß (Sanierungsfall), Todesfall mit Liegezeit oder Tatort (spezialisierte Betriebe), Serverräume, Räume mit Gummiböden.
+Nicht angeboten: Schimmel (Myzel, Sporen und Feuchte bleiben, das Umweltbundesamt lehnt Ozon dafür ab), Brandschaden mit Ruß (Sanierungsfall), Todesfall mit Liegezeit oder Tatort (spezialisierte Betriebe), Serverräume, Räume mit Gummiböden.
 
 Mietgerät als Alternative: In Berlin ab 15 EUR am Tag, ausreichend für einen Raum mit leichtem Küchengeruch. Bei Raucherwohnung, Tiergeruch oder Leerstand fehlen Quellenreinigung, Dosierung nach Raumvolumen und Messung zur Freigabe.
 
-Ablauf: Fotos, Fläche und Geruchsart per WhatsApp an 0176 2284 4636, Angebot in 30 Minuten als Festpreis mit Hinweis, ob die Geruchsquelle vorher gereinigt werden muss, Begehung mit Referenzmessung, Behandlung, Freigabe mit Protokoll, Zahlung bar oder per Überweisung nach Abnahme. Für Privatkunden in Wohnung oder Haus 20 Prozent der Arbeitskosten nach § 35a EStG absetzbar bei Überweisung, Fahrzeuge nicht. Betriebshaftpflicht Gothaer Allgemeine Versicherung AG.
+Ablauf: Fotos, Fläche und Geruchsart per WhatsApp an 0176 2284 4636, Angebot in 30 Minuten als Festpreis mit Hinweis, ob die Geruchsquelle vorher gereinigt werden muss, Begehung mit Referenzmessung, Behandlung, Freigabe mit Protokoll, Zahlung privat bar oder per Überweisung, für Gewerbekunden per Überweisung, nach Abnahme. Für Privatkunden in Wohnung oder Haus 20 Prozent der Arbeitskosten nach § 35a EStG absetzbar bei Überweisung, Fahrzeuge nicht. Betriebshaftpflicht Gothaer Allgemeine Versicherung AG.
 
 ## Parkettreinigung, Fakten für Zitate
 
@@ -217,13 +222,13 @@ Preise brutto je Saison 01.11. bis 31.03., bis zu 20 Einsatztage enthalten: Gehw
 
 Leistung: Abwaschen des Nikotinfilms in Raucherwohnungen mit alkalischem Anlauger, in Bahnen von unten nach oben, Einwirkzeit, Abnehmen, Nachwaschen mit klarem Wasser, Wischtest je Fläche. Flächen: Wände und Decken, dazu Türen, Zargen, Fensterrahmen innen, Heizkörper außen, Schalter und Steckdosenblenden. Zwei Durchgänge bei mittlerer Belastung.
 
-Preise, brutto, inklusive Anfahrt in Berlin und Material, Wohnung leergeräumt, Belastung leicht bis mittel: Einzelraum bis 20 m² 599 EUR, 1 Zimmer bis 35 m² 799 EUR, 2 Zimmer bis 55 m² 1.090 EUR, 3 Zimmer bis 75 m² 1.490 EUR, 4 Zimmer bis 95 m² 1.790 EUR, ab 5 Zimmer oder Haus nach Besichtigung. Starke Belastung (Teerfilm, Tropfnasen): Richtpreis mal 1,5, verbindlicher Festpreis nach Fotos. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 EUR je Stück, Küche intensiv 399 EUR, Nikotinsperrgrund als Zusatzoption 490 bis 1.649 EUR nach Zimmerzahl (eigener Termin nach Trocknung), Ozonbehandlung 149 bis 349 EUR. Umland plus 40 EUR Anfahrtpauschale. Gewerbe netto: Einzelraum 499, 1 Zimmer 669, 2 Zimmer 915, 3 Zimmer 1.249, 4 Zimmer 1.499 EUR.
+Preise, brutto, inklusive Anfahrt in Berlin und Material, Wohnung leergeräumt, Belastung leicht bis mittel: Einzelraum bis 20 m² 599 EUR, 1 Zimmer bis 35 m² 799 EUR, 2 Zimmer bis 55 m² 1.090 EUR, 3 Zimmer bis 75 m² 1.490 EUR, 4 Zimmer bis 95 m² 1.790 EUR, ab 5 Zimmer oder Haus nach Besichtigung. Starke Belastung (Teerfilm, Tropfnasen): Richtpreis mal 1,5, verbindlicher Festpreis nach Fotos. Ohne Decken minus 20 Prozent. Optionen: Heizkörper innen 25 EUR je Stück, Küche intensiv 399 EUR, Nikotinsperrgrund als Zusatzoption 490 bis 1.649 EUR nach Zimmerzahl (eigener Termin nach Trocknung), Ozonbehandlung 149 bis 349 EUR. Umland plus 40 EUR Anfahrtpauschale. Gewerbe netto: Einzelraum 499, 1 Zimmer 669, 2 Zimmer 915, 3 Zimmer 1.249, 4 Zimmer 1.499 EUR. Nikotinsperrgrund Gewerbe 411 / 545 / 797 / 1.084 / 1.385 EUR netto, Umland Gewerbe plus 33 EUR netto.
 
 Ergebnis, ehrlich gesagt: Belag und der Großteil des Geruchs sind weg, Vergilbung im Anstrich oder Putz wird heller, nicht wieder weiß. Weiß wird es erst mit Nikotinsperrgrund und Deckanstrich. Restgeruch aus Boden, Fugen, Holz oder Tapete ist möglich, dafür gibt es die Ozonbehandlung danach.
 
 Reihenfolge und Grund: abwaschen, trocknen, Nikotinsperrgrund, Deckanstrich. Nikotin ist wasserlöslich, ohne Reinigung löst es sich im frischen Anstrich, schwimmt auf und schlägt durch. Überstreichen allein hält Tage bis Wochen.
 
-Ablauf: Zimmerzahl und drei Fotos per WhatsApp an 0176 2284 4636, Festpreis in 30 Minuten, Begehung mit Wischtest und Testfläche, Reinigung an ein bis zwei Tagen, Abnahmeprotokoll, Zahlung bar oder per Überweisung.
+Ablauf: Zimmerzahl und drei Fotos per WhatsApp an 0176 2284 4636, Festpreis in 30 Minuten, Begehung mit Wischtest und Testfläche, Reinigung an ein bis zwei Tagen, Abnahmeprotokoll, Zahlung privat bar oder per Überweisung, für Gewerbekunden per Überweisung.
 
 ## Ratgeber und Einordnung
 

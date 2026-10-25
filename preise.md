@@ -135,7 +135,7 @@ Geruchsneutralisation der Raumluft mit Ozongenerator nach Reinigung der Geruchsq
 
 Zweiter Durchgang innerhalb von 7 Tagen: 50 % des Festpreises. Die Ozonbehandlung ist immer ein eigener Auftrag. Fahrzeuge mobil beim Kunden, brutto: Pkw 69 €, Transporter oder Van 119 €, Wohnmobil bis 7 m 179 €. Umland: plus 40 € Anfahrtpauschale.
 
-Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 58 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 33 € Anfahrtpauschale netto (39,27 € brutto). Die Rechnung weist die Mehrwertsteuer gesondert aus.
+Gewerbe, netto: Einzelraum 125 €, Leerwohnung bis 60 m² 199 €, bis 100 m² 289 €, Haus 377 €. Büro oder Praxis bis 100 m² 199 €, bis 200 m² 279 €, bis 300 m² 359 €. Pkw 57 € je Fahrzeug, ab 3 Fahrzeuge 49 €, ab 6 Fahrzeuge 39 €. Transporter 84 €, ab 3 Fahrzeuge 69 €. Wohnmobil oder Boot 149 €. Ferienwohnung bis 40 m² 129 € je Einheit, im Rahmen ab 3 Einheiten 109 €, Express plus 49 € je Einheit. Kühlraum oder Lager bis 20 m³ 149 €. Gastraum bis 100 m² 249 €. Müllraum bis 15 m² 119 €, Saisonabo mit 5 Behandlungen 89 € je Behandlung. Umland: plus 33 € Anfahrtpauschale netto (39,27 € brutto). Die Rechnung weist die Mehrwertsteuer gesondert aus.
 
 ## Nikotinreinigung und Raucherwohnung reinigen
 
@@ -192,7 +192,7 @@ Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, b
 
 ## Bauendreinigung und Baufeinreinigung
 
-Mindestauftragswert 350 €. Der Preis richtet sich nach Fläche und Reinigungsgrad.
+Der Preis richtet sich nach Fläche und Reinigungsgrad.
 
 | Fläche | Baufeinreinigung, bezugsfertig | Baugrob und Baufein | Intensivreinigung |
 |---|---|---|---|
@@ -233,7 +233,6 @@ Bei wöchentlichem Turnus sind rund 4,33 Einsätze je Monat anzusetzen. Behandlu
 
 ## Gewerbe-Sonderreinigung
 
-Mindestauftragswert 250 €.
 
 | Fläche | Intensivreinigung | Extremreinigung |
 |---|---|---|
@@ -247,7 +246,7 @@ Zusatzpositionen: Bau- und Feinstaubreinigung 120 €, Gastro- und Küchenfett i
 
 ## Praxisauflösung
 
-Eigene Preisstruktur, nicht identisch mit der Gewerbe-Sonderreinigung. Mindestauftragswert 250 €.
+Eigene Preisstruktur, nicht identisch mit der Gewerbe-Sonderreinigung.
 
 | Fläche | Normal | Stark verschmutzt |
 |---|---|---|

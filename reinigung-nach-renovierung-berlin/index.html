@@ -492,13 +492,13 @@ table.aip-table{min-width:540px}}
 .ba-section{padding:24px 24px 60px}
 .ba-wrap{max-width:820px;margin:0 auto;text-align:center}
 .ba-sub{font-size:13.5px;color:var(--mt);margin:6px 0 18px}
-.ba-slider{position:relative;width:100%;max-width:760px;margin:18px auto 0;aspect-ratio:3/2;border-radius:18px;overflow:hidden;border:1px solid var(--bd);touch-action:none;cursor:ns-resize}
+.ba-slider{position:relative;width:100%;max-width:760px;margin:18px auto 0;aspect-ratio:3/2;border-radius:18px;overflow:hidden;border:1px solid var(--bd);touch-action:pan-y;cursor:ew-resize}
 .ba-img{position:absolute;inset:0}
 .ba-img-el{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.ba-before{clip-path:inset(0 0 55% 0)}
+.ba-before{clip-path:inset(0 55% 0 0)}
 .ba-tag{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.55);color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;padding:4px 10px;border-radius:99px}
-.ba-tag-b{top:auto;bottom:14px}
-.ba-handle{position:absolute;left:0;right:0;top:45%;height:3px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,.35);z-index:2;pointer-events:none}
+.ba-tag-b{left:auto;right:14px}
+.ba-handle{position:absolute;top:0;bottom:0;left:45%;width:3px;transform:translateX(-50%);background:#fff;box-shadow:0 0 8px rgba(0,0,0,.35);z-index:2;pointer-events:none}
 .ba-slider input{position:absolute;inset:0;width:100%;height:100%;opacity:0;z-index:3;margin:0;-webkit-appearance:none;pointer-events:none}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://nautilus-facility.de/#website","url":"https://nautilus-facility.de/","name":"Nautilus Facility Cleaning","inLanguage":"de-DE","publisher":{"@id":"https://nautilus-facility.de/#organization"}}</script>
@@ -699,7 +699,7 @@ table.aip-table{min-width:540px}}
     <div class="ba-slider" id="ba-slider">
       <div class="ba-img ba-after"><img class="ba-img-el" src="/images/renovierung-nachher.jpg" alt="Boden in einer Berliner Wohnung nach der Reinigung nach Renovierung, ohne Farbspritzer und Schuhabdrücke" width="1200" height="800" loading="lazy" decoding="async"><span class="ba-tag ba-tag-b">NACHHER</span></div>
       <div class="ba-img ba-before" id="ba-before"><img class="ba-img-el" src="/images/renovierung-vorher.jpg" alt="Boden in einer Berliner Wohnung nach Malerarbeiten, mit Farbspritzern, Schuhabdrücken und Kleisterschleiern" width="1200" height="800" loading="lazy" decoding="async"><span class="ba-tag">VORHER</span></div>
-      <input type="range" min="0" max="100" value="45" id="ba-range" aria-label="Vorher-Nachher-Vergleich, senkrecht ziehen">
+      <input type="range" min="0" max="100" value="45" id="ba-range" aria-label="Vorher-Nachher-Vergleich, waagerecht ziehen">
       <div class="ba-handle" id="ba-handle"></div>
     </div>
   </div>
@@ -1273,8 +1273,8 @@ updateBreakdown(); updateWA();
   var range=document.getElementById('ba-range'),before=document.getElementById('ba-before'),handle=document.getElementById('ba-handle'),slider=document.getElementById('ba-slider');
   if(!range||!before||!handle||!slider)return;
   var drag=false;
-  function setP(p){p=Math.max(0,Math.min(100,p));before.style.clipPath='inset(0 0 '+(100-p)+'% 0)';handle.style.top=p+'%';range.value=Math.round(p);}
-  function fromY(e){var r=slider.getBoundingClientRect();setP((e.clientY-r.top)/r.height*100);}
+  function setP(p){p=Math.max(0,Math.min(100,p));before.style.clipPath='inset(0 '+(100-p)+'% 0 0)';handle.style.left=p+'%';range.value=Math.round(p);}
+  function fromY(e){var r=slider.getBoundingClientRect();setP((e.clientX-r.left)/r.width*100);}
   slider.addEventListener('pointerdown',function(e){drag=true;try{slider.setPointerCapture(e.pointerId);}catch(_){ }fromY(e);e.preventDefault();});
   slider.addEventListener('pointermove',function(e){if(drag)fromY(e);});
   slider.addEventListener('pointerup',function(){drag=false;});

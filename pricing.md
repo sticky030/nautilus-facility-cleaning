@@ -190,6 +190,25 @@ Räumen und Streuen des Gehwegs vor dem Grundstück in ganz Berlin und im Umland
 
 Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, bis 60 m 669 €, bis 100 m 1.090 € (Mehreinsatz 22/29/39/50/80 €). Optionen netto: Zuwegung 108 €, Einfahrt 142 €, Außentreppe 74 €, Müllplatz 49 €, Hydrant 57 €, Streugut aufnehmen bis 25 m 41 €, Umland 83 € je Saison, alle Einsätze inklusive (Mehreinsatz Optionen 10/15/5/4/4 €). Hof oder Parkplatz in Handräumung 30 bis 150 m²: 4,50 € netto je m² und Saison, Mehreinsatz 0,50 € je m². Größere Flächen nach Besichtigung.
 
+## Entrümpelung, Wohnungsauflösung und Kellerentrümpelung
+
+Entrümpelung von Wohnungen, Häusern, Kellern, Dachböden und Garagen in ganz Berlin, mit Abbau der Möbel, Tragen, Trennung, Entsorgung bei zugelassenen Annahmestellen mit Beleg und besenreiner Übergabe. Abrechnung nach Kubikmetern, verbindlicher Festpreis nach Fotos oder Besichtigung. Seite: https://nautilus-facility.de/entruempelung-berlin/
+
+| Objekt, privat brutto, normal eingerichtet | Menge | Richtpreis |
+|---|---|---|
+| Einzelne Möbel | bis 3 m³ | 335 € |
+| Kellerabteil | rund 6 m³ | 551 € |
+| 1 Zimmer | rund 12 m³ | 963 € |
+| 2 Zimmer | rund 20 m³ | 1.459 € |
+| 3 Zimmer | rund 28 m³ | 1.931 € |
+| 4 Zimmer | rund 36 m³ | 2.363 € |
+| 5 Zimmer | rund 44 m³ | 2.795 € |
+| ab 6 Zimmern | | nach Fotos |
+
+Berechnung privat brutto: Grundpauschale 119 € plus 72 € je m³ bis 10 m³, 62 € vom 11. bis 25. m³, 54 € ab dem 26. m³. Zuschläge: ab dem 3. Obergeschoss ohne Aufzug 4 € je m³ und Etage, Laufweg über 30 m 3 € je m³, Halteverbotszone 120 €, Einbauküche abbauen 59 € je laufendem Meter, Teppich oder PVC lose 5 € je m², Elektro-Großgerät 25 € je Stück, Umland bis 25 km 49 €, Express-Termin innerhalb von 3 Werktagen nach Verfügbarkeit plus 10 %. Kaum eingerichtet Faktor 0,6, sehr voll Faktor 1,4. Schadstoffe und Asbest holen zugelassene Fachbetriebe ab, im selben Festpreisangebot.
+
+Gewerbe-Entrümpelung und Büroauflösung, netto zuzüglich 19 % MwSt.: bis 3 m³ 280 €, Lager oder Keller 10 m³ 700 €, Büro 80 m² 1.705 €, Büro 120 m² 2.425 €, Büroetage 200 m² 3.865 €, ab 300 m² nach Besichtigung. Berechnung netto: Grundpauschale 100 € plus 60 € je m³ bis 10 m³, 52 € bis 25 m³, 45 € darüber. Zuschläge netto: Etage ohne Aufzug ab 3. OG 3,30 € je m³ und Etage, Laufweg über 30 m 2,50 € je m³, Halteverbotszone 100 €, Küchenzeile 49 € je laufendem Meter, Teppich oder PVC 4 € je m², Elektro-Großgerät 21 €, Umland 41 €, Express plus 10 %. Seite: https://nautilus-facility.de/gewerbe-entruempelung-berlin/
+
 ## Bauendreinigung und Baufeinreinigung
 
 Der Preis richtet sich nach Fläche und Reinigungsgrad.

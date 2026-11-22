@@ -314,6 +314,7 @@ Turnusnachlass: alle 3 Monate minus 15 %, alle 6 Monate minus 10 %, einmal jähr
 - GoLocal: https://www.golocal.de/berlin/gebaeudereinigung/nautilus-facility-cleaning-MJo0R/
 - ProvenExpert: https://www.provenexpert.com/de-de/nautilus-facility-cleaning/
 - Facebook: https://www.facebook.com/profile.php?id=61589433373537
+- Bing Places: https://www.bing.com/maps?ss=ypid.YNF44867BE1BFC085A
 
 Bewertung: 4,9 Sterne bei Google.
 

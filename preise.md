@@ -192,7 +192,7 @@ Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, b
 
 ## Entrümpelung, Wohnungsauflösung und Kellerentrümpelung
 
-Entrümpelung von Wohnungen, Häusern, Kellern, Dachböden und Garagen in ganz Berlin, mit Abbau der Möbel, Tragen, Trennung, Entsorgung bei zugelassenen Annahmestellen mit Beleg und besenreiner Übergabe. Abrechnung nach Kubikmetern, verbindlicher Festpreis nach Fotos oder Besichtigung. Seite: https://nautilus-facility.de/entruempelung-berlin/
+Entrümpelung von Wohnungen, Häusern, Kellern, Dachböden und Garagen in ganz Berlin, mit Abbau der Möbel, Tragen, Trennung, fachgerechter Entsorgung bei zugelassenen Annahmestellen und besenreiner Übergabe. Abrechnung nach Kubikmetern, verbindlicher Festpreis nach Fotos oder Besichtigung. Seite: https://nautilus-facility.de/entruempelung-berlin/
 
 | Objekt, privat brutto, normal eingerichtet | Menge | Richtpreis |
 |---|---|---|

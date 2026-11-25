@@ -190,6 +190,25 @@ Räumen und Streuen des Gehwegs vor dem Grundstück in ganz Berlin und im Umland
 
 Gewerbe netto je Saison: bis 15 m 293 €, bis 25 m 375 €, bis 40 m 499 €, bis 60 m 669 €, bis 100 m 1.090 € (Mehreinsatz 22/29/39/50/80 €). Optionen netto: Zuwegung 108 €, Einfahrt 142 €, Außentreppe 74 €, Müllplatz 49 €, Hydrant 57 €, Streugut aufnehmen bis 25 m 41 €, Umland 83 € je Saison, alle Einsätze inklusive (Mehreinsatz Optionen 10/15/5/4/4 €). Hof oder Parkplatz in Handräumung 30 bis 150 m²: 4,50 € netto je m² und Saison, Mehreinsatz 0,50 € je m². Größere Flächen nach Besichtigung.
 
+## Rohrreinigung und Abflussreinigung
+
+Seite: https://nautilus-facility.de/rohrreinigung-berlin/ (privat), https://nautilus-facility.de/gewerbe-rohrreinigung-berlin/ (Gewerbe). Festpreis je Ablaufstelle, schriftlich vor der Anfahrt, Anfahrt in Berlin und bis zu 60 Minuten inklusive. Nicht lösbar vor Ort: 0 EUR.
+
+| Leistung | Privat brutto | Gewerbe netto |
+|---|---|---|
+| Waschbecken oder Küchenspüle | 139 EUR | 116 EUR |
+| Dusche oder Badewanne | 149 EUR | 125 EUR |
+| WC | 169 EUR | 142 EUR |
+| Weitere Ablaufstelle im selben Termin | 69 EUR | 57 EUR |
+| Weiteres WC im selben Termin | 89 EUR | 74 EUR |
+| Mehrzeit über 60 Minuten, nach Rückfrage, je angefangene halbe Stunde | 49 EUR | 41 EUR |
+| Anfahrt Umland | 40 EUR | 33 EUR |
+| Zuschlag abends 18 bis 22 Uhr und samstags | 49 EUR | 41 EUR |
+| Zuschlag nachts 22 bis 7 Uhr und sonntags | 99 EUR | 83 EUR |
+| Zuschlag Feiertag | 129 EUR | 108 EUR |
+
+Es gilt nur der höhere Zuschlag. Nicht im Angebot: Fallstrang, Grund-, Hof- und Kellerleitungen, Hebeanlagen, Fettabscheider, Hochdruck.
+
 ## Entrümpelung, Wohnungsauflösung und Kellerentrümpelung
 
 Entrümpelung von Wohnungen, Häusern, Kellern, Dachböden und Garagen in ganz Berlin, mit Abbau der Möbel, Tragen, Trennung, fachgerechter Entsorgung bei zugelassenen Annahmestellen und besenreiner Übergabe. Abrechnung nach Kubikmetern, verbindlicher Festpreis nach Fotos oder Besichtigung. Seite: https://nautilus-facility.de/entruempelung-berlin/

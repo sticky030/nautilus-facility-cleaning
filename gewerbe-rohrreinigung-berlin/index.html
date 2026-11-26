@@ -511,10 +511,14 @@ table.aip-table tfoot td{font-size:12px;color:var(--mt);font-weight:400;border-t
 .sc-not svg{width:14px;height:14px;flex-shrink:0}
 @media(max-width:480px){.sticky-cta{gap:8px;padding-left:10px;padding-right:10px}.sc-btns{gap:6px}.sc-btn{padding:10px 9px;font-size:12px;gap:4px}.sc-lbl{font-size:9px;letter-spacing:.3px}.sc-price{font-size:16px}}
 @media(max-width:350px){.sc-btn{padding:10px 7px;font-size:11.5px}.sc-not svg{display:none}.sc-price{font-size:15px}}
-.notfall-float{position:fixed;right:22px;bottom:22px;z-index:140;display:none;align-items:center;gap:9px;padding:11px 18px 11px 15px;border-radius:999px;background:rgba(4,12,24,.92);border:1px solid rgba(239,68,68,.55);color:#fecaca;font-size:14px;font-weight:700;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.4);text-decoration:none;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s,background .2s,color .2s}
-.notfall-float.nf-zeigen{opacity:1;transform:none;pointer-events:auto}
-.notfall-float:hover,.notfall-float:focus-visible{background:#dc2626;color:#fff;border-color:#dc2626}
-.nf-dot{width:9px;height:9px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 4px rgba(239,68,68,.22)}
+.notfall-float{position:fixed;right:22px;bottom:22px;z-index:140;display:none;align-items:center;gap:10px;padding:12px 20px 12px 16px;border-radius:999px;background:linear-gradient(135deg,#ef4444,#b91c1c);border:1px solid #fca5a5;color:#fff;font-size:14.5px;font-weight:800;line-height:1;letter-spacing:.2px;text-decoration:none;box-shadow:0 0 0 0 rgba(239,68,68,.55),0 0 22px rgba(239,68,68,.55),0 8px 24px rgba(0,0,0,.4);white-space:nowrap;overflow:hidden;max-width:320px;animation:nfGlow 2.2s ease-in-out infinite;transition:max-width .3s,padding .3s,box-shadow .25s,filter .25s}
+.notfall-float .nf-txt{transition:opacity .2s}
+.notfall-float.nf-kompakt{max-width:50px;padding:14px 16px;gap:0}
+.notfall-float.nf-kompakt .nf-txt{opacity:0;width:0}
+.notfall-float:hover,.notfall-float:focus-visible{filter:brightness(1.12);box-shadow:0 0 0 6px rgba(239,68,68,.3),0 0 40px rgba(239,68,68,.9),0 10px 28px rgba(0,0,0,.45);animation:none}
+@keyframes nfGlow{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.55),0 0 18px rgba(239,68,68,.5),0 8px 24px rgba(0,0,0,.4)}50%{box-shadow:0 0 0 8px rgba(239,68,68,0),0 0 34px rgba(239,68,68,.85),0 8px 24px rgba(0,0,0,.4)}}
+.nf-dot{flex:none;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.3),0 0 8px #fff}
+@media(prefers-reduced-motion:reduce){.notfall-float{animation:none}}
 @media(min-width:901px){.notfall-float{display:inline-flex}}
 @media print{.notfall-float{display:none!important}}
 
@@ -654,7 +658,7 @@ table.aip-table tfoot td{font-size:12px;color:var(--mt);font-weight:400;border-t
   </div>
 <!-- footer-unterhalt-gewerbe --><!-- footer-haushalt --></footer>
 <div class="sticky-cta" id="stickyCta"><div><div class="sc-lbl">Ihr Richtpreis</div><div class="sc-price" id="stickyPreis">116 €</div></div><div class="sc-btns"><a class="sc-btn sc-calc" id="stickyAnfrage" href="#anfrage">Anfragen</a><a class="sc-btn sc-wa" id="stickyWa" href="https://wa.me/4917622844636?text=Hallo%2C%20wir%20haben%20eine%20Abflussst%C3%B6rung%20im%20Betrieb%20und%20m%C3%B6chten%20eine%20Rohrreinigung%20anfragen." target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="sc-btn sc-not" href="tel:+4917622844636" title="Rund um die Uhr erreichbar, Einsätze nach Verfügbarkeit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg>Notfall</a></div></div>
-<a class="notfall-float" href="tel:+4917622844636" title="Rund um die Uhr erreichbar, Einsätze nach Verfügbarkeit" aria-label="Notfall: 0176 2284 4636 anrufen"><span class="nf-dot" aria-hidden="true"></span>Notfall: 0176 2284 4636</a>
+<a class="notfall-float" href="tel:+4917622844636" title="Rund um die Uhr erreichbar, Einsätze nach Verfügbarkeit" aria-label="Notfall: 0176 2284 4636 anrufen"><span class="nf-dot" aria-hidden="true"></span><span class="nf-txt">Notfall: 0176 2284 4636</span></a>
 <script id="nfc-rohr-logik">
 var NFC_ROHR = (function () {
   "use strict";
@@ -712,16 +716,19 @@ var NFC_ROHR = (function () {
 </script>
 <script id="nfc-rohr-seite">
 (function () {
-  /* Notfall-Pille Desktop: nur sichtbar, wenn Hero mit Rechner, Anfrage und Footer nicht im Bild sind */
+  /* Notfall-Pille Desktop: immer sichtbar; überlappt sie den Preisrechner oder das Formular, schrumpft sie zum Punkt */
   var nf = document.querySelector('.notfall-float');
-  if (nf && 'IntersectionObserver' in window) {
-    var sicht = new Set();
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) sicht.add(e.target); else sicht.delete(e.target); });
-      nf.classList.toggle('nf-zeigen', sicht.size === 0);
-    }, { threshold: 0 });
-    ['.hero-wrap', '#anfrage', 'footer'].forEach(function (q) { var el = document.querySelector(q); if (el) io.observe(el); });
-  } else if (nf) { nf.classList.add('nf-zeigen'); }
+  if (nf) {
+    var ziele = ['.hero-right', '#anfrage .contact-form, #anfrage form'].map(function (q) { return document.querySelector(q); }).filter(Boolean);
+    var nfPruef = function () {
+      var r = { left: window.innerWidth - 22 - 260, right: window.innerWidth - 22, top: window.innerHeight - 22 - 46, bottom: window.innerHeight - 22 };
+      var hit = ziele.some(function (el) { var b = el.getBoundingClientRect(); return b.left < r.right && b.right > r.left && b.top < r.bottom && b.bottom > r.top; });
+      nf.classList.toggle('nf-kompakt', hit);
+    };
+    window.addEventListener('scroll', nfPruef, { passive: true });
+    window.addEventListener('resize', nfPruef);
+    nfPruef();
+  }
 
   "use strict";
   if (typeof document === "undefined" || typeof NFC_ROHR === "undefined") { return; }

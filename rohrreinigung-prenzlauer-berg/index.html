@@ -506,12 +506,12 @@ table.aip-table tfoot td{font-size:12px;color:var(--mt);font-weight:400;border-t
 @media(max-width:560px){.kt-btns{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:360px){.sc-btn{padding:11px 10px;font-size:12.5px}.sc-price{font-size:18px}nav{padding:0 12px}}
 
-/* Notfall-Button (26.11.2026): mobil in der Sticky-Leiste, Desktop als kleine mitlaufende Pille unten rechts */
+/* Notfall-Button (26.11.2026): mobil in der Sticky-Leiste, Desktop als schmaler senkrechter Reiter am rechten Rand */
 .sc-not{background:#dc2626;color:#fff}
 .sc-not svg{width:14px;height:14px;flex-shrink:0}
 @media(max-width:480px){.sticky-cta{gap:8px;padding-left:10px;padding-right:10px}.sc-btns{gap:6px}.sc-btn{padding:10px 9px;font-size:12px;gap:4px}.sc-lbl{font-size:9px;letter-spacing:.3px}.sc-price{font-size:16px}}
 @media(max-width:350px){.sc-btn{padding:10px 7px;font-size:11.5px}.sc-not svg{display:none}.sc-price{font-size:15px}}
-.notfall-float{position:fixed;right:18px;bottom:18px;z-index:140;display:none;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(4,12,24,.92);border:1px solid rgba(239,68,68,.5);color:#fca5a5;font-size:13px;font-weight:700;line-height:1;box-shadow:0 6px 18px rgba(0,0,0,.35);backdrop-filter:blur(8px);text-decoration:none;transition:background .2s,color .2s}
+.notfall-float{position:fixed;right:0;top:50%;z-index:140;display:none;align-items:center;gap:8px;padding:14px 8px;border-radius:10px 0 0 10px;background:rgba(4,12,24,.94);border:1px solid rgba(239,68,68,.5);border-right:0;color:#fca5a5;font-size:12.5px;font-weight:700;line-height:1;letter-spacing:.3px;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);box-shadow:0 6px 18px rgba(0,0,0,.35);text-decoration:none;transition:background .2s,color .2s}
 .notfall-float:hover,.notfall-float:focus-visible{background:#dc2626;color:#fff;border-color:#dc2626}
 .nf-dot{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.25)}
 @media(min-width:901px){.notfall-float{display:inline-flex}}

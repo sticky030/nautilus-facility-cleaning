@@ -511,9 +511,10 @@ table.aip-table tfoot td{font-size:12px;color:var(--mt);font-weight:400;border-t
 .sc-not svg{width:14px;height:14px;flex-shrink:0}
 @media(max-width:480px){.sticky-cta{gap:8px;padding-left:10px;padding-right:10px}.sc-btns{gap:6px}.sc-btn{padding:10px 9px;font-size:12px;gap:4px}.sc-lbl{font-size:9px;letter-spacing:.3px}.sc-price{font-size:16px}}
 @media(max-width:350px){.sc-btn{padding:10px 7px;font-size:11.5px}.sc-not svg{display:none}.sc-price{font-size:15px}}
-.notfall-float{position:fixed;right:0;top:50%;z-index:140;display:none;align-items:center;gap:8px;padding:14px 8px;border-radius:10px 0 0 10px;background:rgba(4,12,24,.94);border:1px solid rgba(239,68,68,.5);border-right:0;color:#fca5a5;font-size:12.5px;font-weight:700;line-height:1;letter-spacing:.3px;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);box-shadow:0 6px 18px rgba(0,0,0,.35);text-decoration:none;transition:background .2s,color .2s}
+.notfall-float{position:fixed;right:22px;bottom:22px;z-index:140;display:none;align-items:center;gap:9px;padding:11px 18px 11px 15px;border-radius:999px;background:rgba(4,12,24,.92);border:1px solid rgba(239,68,68,.55);color:#fecaca;font-size:14px;font-weight:700;line-height:1;box-shadow:0 8px 24px rgba(0,0,0,.4);text-decoration:none;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s,transform .25s,background .2s,color .2s}
+.notfall-float.nf-zeigen{opacity:1;transform:none;pointer-events:auto}
 .notfall-float:hover,.notfall-float:focus-visible{background:#dc2626;color:#fff;border-color:#dc2626}
-.nf-dot{width:8px;height:8px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.25)}
+.nf-dot{width:9px;height:9px;border-radius:50%;background:#ef4444;box-shadow:0 0 0 4px rgba(239,68,68,.22)}
 @media(min-width:901px){.notfall-float{display:inline-flex}}
 @media print{.notfall-float{display:none!important}}
 
@@ -711,6 +712,17 @@ var NFC_ROHR = (function () {
 </script>
 <script id="nfc-rohr-seite">
 (function () {
+  /* Notfall-Pille Desktop: nur sichtbar, wenn Hero mit Rechner, Anfrage und Footer nicht im Bild sind */
+  var nf = document.querySelector('.notfall-float');
+  if (nf && 'IntersectionObserver' in window) {
+    var sicht = new Set();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) sicht.add(e.target); else sicht.delete(e.target); });
+      nf.classList.toggle('nf-zeigen', sicht.size === 0);
+    }, { threshold: 0 });
+    ['.hero-wrap', '#anfrage', 'footer'].forEach(function (q) { var el = document.querySelector(q); if (el) io.observe(el); });
+  } else if (nf) { nf.classList.add('nf-zeigen'); }
+
   "use strict";
   if (typeof document === "undefined" || typeof NFC_ROHR === "undefined") { return; }
   var E = NFC_ROHR, C = E.CFG, st = JSON.parse(JSON.stringify(C.start)), anfrage = "";
